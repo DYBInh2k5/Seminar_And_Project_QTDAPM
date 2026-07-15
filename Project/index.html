@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Đăng ký Học phần & Quản trị Dự án HSU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background glows -->
+    <div class="glow-bg-container">
+        <div class="glow-sphere glow-1"></div>
+        <div class="glow-sphere glow-2"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Top App Bar -->
+        <header class="app-header">
+            <div class="brand">
+                <span class="brand-hsu">HSU</span>
+                <span class="brand-sub">CoursePortal</span>
+            </div>
+            
+            <!-- Portal Tabs Switches -->
+            <nav class="portal-nav">
+                <button class="portal-tab-btn active" data-portal="student-portal">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Cổng Sinh viên
+                </button>
+                <button class="portal-tab-btn" data-portal="admin-portal">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    Phòng Đào tạo
+                </button>
+                <button class="portal-tab-btn" data-portal="pm-portal">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    Quản lý Dự án (PM)
+                </button>
+            </nav>
+
+            <div class="header-right">
+                <button id="dark-light-btn" class="icon-btn" title="Chuyển chế độ Sáng/Tối">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" class="sun-icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <div class="user-profile" id="user-profile-badge">
+                    <span class="user-avatar">VT</span>
+                    <span class="user-name">Võ Trường Tú</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Body Area -->
+        <main class="app-body">
+            
+            <!-- 1. PORTAL: STUDENT -->
+            <section class="portal-pane active" id="student-portal">
+                <!-- Login section if not authenticated -->
+                <div class="login-wrapper flex-center" id="login-section" style="display: none;">
+                    <div class="login-card glass-card">
+                        <h2>ĐĂNG NHẬP CỔNG SINH VIÊN</h2>
+                        <p class="login-subtitle">Vui lòng sử dụng thông tin tài khoản HSU được cấp</p>
+                        <form id="login-form" onsubmit="event.preventDefault();">
+                            <div class="form-group">
+                                <label for="student-id">Mã số sinh viên (MSSV)</label>
+                                <input type="text" id="student-id" placeholder="Nhập 22013149..." value="22013149">
+                            </div>
+                            <div class="form-group">
+                                <label for="student-pass">Mật khẩu</label>
+                                <input type="password" id="student-pass" placeholder="••••••••" value="password">
+                            </div>
+                            <button type="submit" id="login-submit-btn" class="primary-btn">Đăng nhập</button>
+                        </form>
+                        <div class="login-hint">💡 Gợi ý: Dùng MSSV: <strong>22013149</strong> để tải hồ sơ mẫu.</div>
+                    </div>
+                </div>
+
+                <!-- Main Student Dashboard -->
+                <div class="dashboard-layout" id="student-dashboard">
+                    <!-- Sidebar menu -->
+                    <aside class="dashboard-sidebar">
+                        <nav class="sidebar-menu">
+                            <button class="menu-item active" data-view="register-view">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                                Đăng ký học phần
+                            </button>
+                            <button class="menu-item" data-view="timetable-view">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                Thời khóa biểu tuần
+                            </button>
+                            <button class="menu-item" data-view="curriculum-view">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                                Chương trình đào tạo
+                            </button>
+                            <button class="menu-item" data-view="history-view">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                Lịch sử giao dịch
+                            </button>
+                        </nav>
+
+                        <div class="sidebar-student-info glass-card">
+                            <span class="info-title">Thông tin sinh viên</span>
+                            <span class="info-name">Võ Trường Tú</span>
+                            <span class="info-id">MSSV: 22013149</span>
+                            <span class="info-class">Lớp: SW403DE01</span>
+                            <button id="logout-btn" class="text-btn">Đăng xuất</button>
+                        </div>
+                    </aside>
+
+                    <!-- Main view area -->
+                    <div class="dashboard-main-view">
+                        
+                        <!-- VIEW: Register Classes -->
+                        <div class="view-pane active" id="register-view">
+                            <div class="view-header-row">
+                                <h2>Đăng Ký Học Phần Trực Tuyến - Học Kỳ Mới</h2>
+                                <div class="registration-status-badge open">Cổng đang mở</div>
+                            </div>
+
+                            <!-- Rules Checklist Box -->
+                            <div class="rules-summary-box glass-card">
+                                <h3>Điều kiện ràng buộc đăng ký:</h3>
+                                <div class="rules-flex-grid">
+                                    <div class="rule-indicator-card" id="rule-credits">
+                                        <div class="r-icon">
+                                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                        </div>
+                                        <div class="r-info">
+                                            <span class="lbl">Số tín chỉ đăng ký:</span>
+                                            <strong id="student-credits-sum">0 / 20 tín chỉ</strong>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="rule-indicator-card success" id="rule-clash">
+                                        <div class="r-icon">
+                                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                                        </div>
+                                        <div class="r-info">
+                                            <span class="lbl">Kiểm tra trùng lịch:</span>
+                                            <strong id="rule-clash-status">Không trùng lịch</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="rule-indicator-card success" id="rule-prereq">
+                                        <div class="r-icon">
+                                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                        </div>
+                                        <div class="r-info">
+                                            <span class="lbl">Môn tiên quyết:</span>
+                                            <strong id="rule-prereq-status">Hợp lệ</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- List of Available Classes -->
+                            <div class="table-section glass-card">
+                                <h3>Danh sách lớp học phần mở đăng ký</h3>
+                                <div class="responsive-table-wrapper">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Mã lớp HP</th>
+                                                <th>Tên môn học</th>
+                                                <th>Tín chỉ</th>
+                                                <th>Môn tiên quyết</th>
+                                                <th>Lịch học</th>
+                                                <th>Sĩ số</th>
+                                                <th>Trạng thái</th>
+                                                <th>Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="open-classes-table-body">
+                                            <!-- Dynamic rows -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- List of Registered Classes -->
+                            <div class="table-section glass-card" style="margin-top: 20px;">
+                                <h3>Học phần đã đăng ký thành công</h3>
+                                <div class="responsive-table-wrapper">
+                                    <table class="data-table registered-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Mã lớp HP</th>
+                                                <th>Tên môn học</th>
+                                                <th>Tín chỉ</th>
+                                                <th>Lịch học</th>
+                                                <th>Hành động</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="registered-classes-table-body">
+                                            <tr>
+                                                <td colspan="5" style="text-align: center; color: var(--text-secondary);">Chưa đăng ký môn học nào.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VIEW: Weekly Timetable -->
+                        <div class="view-pane" id="timetable-view">
+                            <h2>Thời Khóa Biểu Tuần Cá Nhân</h2>
+                            <p class="section-desc">Thời khóa biểu dạng lịch tuần giúp sinh viên dễ dàng nhận diện lịch và tránh trùng tiết học:</p>
+                            
+                            <div class="timetable-grid-container glass-card">
+                                <div class="timetable-grid">
+                                    <div class="grid-header">Tiết</div>
+                                    <div class="grid-header">Thứ Hai</div>
+                                    <div class="grid-header">Thứ Ba</div>
+                                    <div class="grid-header">Thứ Tư</div>
+                                    <div class="grid-header">Thứ Năm</div>
+                                    <div class="grid-header">Thứ Sáu</div>
+                                    <div class="grid-header">Thứ Bảy</div>
+                                    
+                                    <!-- Rows generated by JS -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VIEW: Curriculum -->
+                        <div class="view-pane" id="curriculum-view">
+                            <h2>Chương Trình Đào Tạo Ngành Công Nghệ Phần Mềm</h2>
+                            <p class="section-desc">Theo dõi các môn học đã hoàn thành và xem điều kiện tiên quyết của các môn tiếp theo:</p>
+                            
+                            <div class="curriculum-container glass-card">
+                                <div class="curriculum-summary-banner">
+                                    <div class="sum-item">
+                                        <span>Tổng tín chỉ tích lũy:</span>
+                                        <strong>124 / 130 tín chỉ</strong>
+                                    </div>
+                                    <div class="sum-item">
+                                        <span>Điểm trung bình (GPA):</span>
+                                        <strong>3.42 / 4.00</strong>
+                                    </div>
+                                    <div class="sum-item">
+                                        <span>Trạng thái:</span>
+                                        <strong class="color-success">Đủ điều kiện làm khóa luận</strong>
+                                    </div>
+                                </div>
+
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã môn</th>
+                                            <th>Tên môn học</th>
+                                            <th>Số TC</th>
+                                            <th>Loại môn</th>
+                                            <th>Môn tiên quyết</th>
+                                            <th>Điểm tích lũy</th>
+                                            <th>Trạng thái</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="curriculum-table-body">
+                                        <!-- Dynamic rows -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- VIEW: History of Transaction logs -->
+                        <div class="view-pane" id="history-view">
+                            <h2>Lịch Sử Giao Dịch Đăng Ký Học Phần</h2>
+                            <p class="section-desc">Ghi nhận chi tiết thời gian và trạng thái thực hiện các thao tác đăng ký / hủy môn:</p>
+                            
+                            <div class="history-list-box glass-card">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Thời gian</th>
+                                            <th>Loại giao dịch</th>
+                                            <th>Mã lớp HP</th>
+                                            <th>Tên môn học</th>
+                                            <th>Trạng thái hệ thống</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="history-table-body">
+                                        <!-- Dynamic rows -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 2. PORTAL: ADMIN (Phòng Đào Tạo) -->
+            <section class="portal-pane" id="admin-portal">
+                <div class="dashboard-layout">
+                    <!-- Sidebar Admin -->
+                    <aside class="dashboard-sidebar">
+                        <nav class="sidebar-menu">
+                            <button class="menu-item active" data-view="admin-classes-view">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="9"></line><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="15" y2="17"></line></svg>
+                                Lớp học phần mở
+                            </button>
+                            <button class="menu-item" data-view="admin-stats-view">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                                Báo cáo thống kê
+                            </button>
+                        </nav>
+
+                        <div class="sidebar-student-info glass-card">
+                            <span class="info-title">Nhân viên Phòng Đào tạo</span>
+                            <span class="info-name">Lê Thanh Tùng</span>
+                            <span class="info-id">Mã số: PĐT018</span>
+                        </div>
+                    </aside>
+
+                    <!-- Main View Admin -->
+                    <div class="dashboard-main-view">
+                        <!-- VIEW: Admin Classes Management -->
+                        <div class="view-pane active" id="admin-classes-view">
+                            <div class="view-header-row">
+                                <h2>Quản Lý Lớp Học Phần Học Kỳ</h2>
+                                <div class="admin-controls-flex">
+                                    <button id="toggle-registration-btn" class="primary-btn pulse-border">Đóng Cổng Đăng Ký</button>
+                                </div>
+                            </div>
+
+                            <div class="table-section glass-card">
+                                <h3>Quản lý sĩ số lớp và Trạng thái mở đăng ký</h3>
+                                <div class="responsive-table-wrapper">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Mã lớp HP</th>
+                                                <th>Tên môn học</th>
+                                                <th>Lịch học</th>
+                                                <th>Sĩ số tối đa</th>
+                                                <th>Số chỗ trống</th>
+                                                <th>Trạng thái lớp</th>
+                                                <th>Điều chỉnh sĩ số</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="admin-classes-table-body">
+                                            <!-- Dynamic rows -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VIEW: Admin Statistics -->
+                        <div class="view-pane" id="admin-stats-view">
+                            <h2>Báo Cáo Thống Kê & Đăng Ký</h2>
+                            
+                            <div class="admin-stats-summary-grid">
+                                <div class="stat-card glass-card">
+                                    <span>Tổng số lớp học phần:</span>
+                                    <strong id="stat-total-classes">5</strong>
+                                </div>
+                                <div class="stat-card glass-card">
+                                    <span>Số sinh viên đã đăng ký:</span>
+                                    <strong id="stat-total-students">148</strong>
+                                </div>
+                                <div class="stat-card glass-card">
+                                    <span>Tỉ lệ lớp đầy sĩ số (&gt;90%):</span>
+                                    <strong id="stat-filled-ratio">40%</strong>
+                                </div>
+                            </div>
+
+                            <div class="table-section glass-card" style="margin-top: 20px;">
+                                <div class="view-header-row">
+                                    <h3>Thống kê số lượng sinh viên theo môn học</h3>
+                                    <button id="export-excel-btn" class="nav-btn">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                        Xuất Báo cáo Excel (.xlsx)
+                                    </button>
+                                </div>
+                                
+                                <div class="responsive-table-wrapper">
+                                    <table class="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Mã học phần</th>
+                                                <th>Tên môn học</th>
+                                                <th>Tín chỉ</th>
+                                                <th>Số lớp đã mở</th>
+                                                <th>Tổng số lượt đăng ký</th>
+                                                <th>Doanh thu dự kiến ($)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="admin-stats-table-body">
+                                            <!-- Dynamic rows -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 3. PORTAL: PROJECT MANAGEMENT (PM PORTAL) -->
+            <section class="portal-pane" id="pm-portal">
+                <div class="pm-portal-layout">
+                    <!-- Top PM summary card -->
+                    <div class="pm-summary-header glass-card">
+                        <div class="pm-title-desc">
+                            <h2>Dashboard Quản Trị Tiến Độ & Rủi Ro Dự Án</h2>
+                            <p>Phân tích tiến độ dự án <strong>Hệ thống Đăng ký Học phần trực tuyến HSU</strong> (12 Tuần)</p>
+                        </div>
+                        <div class="pm-meta-metrics">
+                            <div class="pm-metric-box">
+                                <span class="lbl">Tiến độ tổng thể</span>
+                                <strong>85%</strong>
+                            </div>
+                            <div class="pm-metric-box" id="pm-delivery-status">
+                                <span class="lbl">Ngày bàn giao dự kiến</span>
+                                <strong class="color-success">Tuần 12 (Đúng Hạn)</strong>
+                            </div>
+                            <div class="pm-metric-box">
+                                <span class="lbl">Trạng thái đường găng</span>
+                                <strong class="color-critical">Chặt chẽ</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main grid layout -->
+                    <div class="pm-grid">
+                        
+                        <!-- Left panel: Gantt & Critical Path controls -->
+                        <div class="pm-col-left glass-card">
+                            <div class="view-header-row">
+                                <h3>Trình Giả Lập Trễ Tiến Độ (Critical Path Simulator)</h3>
+                                <button id="reset-schedule-btn" class="text-btn">Khôi phục tiến độ ban đầu</button>
+                            </div>
+                            <p class="section-desc" style="margin-bottom: 15px;">Dự án có các công việc thuộc <strong>Đường găng (Critical Path)</strong>. Nếu một công việc trên đường găng bị trễ, ngày hoàn thành dự án sẽ bị lùi lại. Các công việc ngoài đường găng có thời gian đệm (Float time) nhất định.</p>
+                            
+                            <div class="simulator-sliders-box">
+                                <!-- Sliders for delay simulation -->
+                                <div class="delay-slider-card critical">
+                                    <div class="slider-info-row">
+                                        <span class="task-title">🔴 1. Thu thập yêu cầu (Đường găng)</span>
+                                        <span class="float-badge">Đệm: 0 tuần</span>
+                                        <span id="delay-val-1" class="delay-num">Trễ: 0 tuần</span>
+                                    </div>
+                                    <input type="range" class="delay-slider" data-task-id="1" min="0" max="4" value="0">
+                                </div>
+
+                                <div class="delay-slider-card critical">
+                                    <div class="slider-info-row">
+                                        <span class="task-title">🔴 2. Lập trình Backend (Đường găng)</span>
+                                        <span class="float-badge">Đệm: 0 tuần</span>
+                                        <span id="delay-val-2" class="delay-num">Trễ: 0 tuần</span>
+                                    </div>
+                                    <input type="range" class="delay-slider" data-task-id="2" min="0" max="4" value="0">
+                                </div>
+
+                                <div class="delay-slider-card">
+                                    <div class="slider-info-row">
+                                        <span class="task-title">🟢 3. Lập trình Frontend (Ngoài đường găng)</span>
+                                        <span class="float-badge success-bg">Đệm: 1 tuần</span>
+                                        <span id="delay-val-3" class="delay-num">Trễ: 0 tuần</span>
+                                    </div>
+                                    <input type="range" class="delay-slider" data-task-id="3" min="0" max="4" value="0">
+                                </div>
+
+                                <div class="delay-slider-card">
+                                    <div class="slider-info-row">
+                                        <span class="task-title">🟢 4. Thiết kế Database (Ngoài đường găng)</span>
+                                        <span class="float-badge success-bg">Đệm: 2 tuần</span>
+                                        <span id="delay-val-4" class="delay-num">Trễ: 0 tuần</span>
+                                    </div>
+                                    <input type="range" class="delay-slider" data-task-id="4" min="0" max="4" value="0">
+                                </div>
+                            </div>
+
+                            <!-- Critical path visualizer flowchart -->
+                            <div class="flowchart-box" style="margin-top: 20px;">
+                                <h4>Đường Găng Quyết Định Tiến Độ (Critical Path Flow)</h4>
+                                <div class="gantt-flowchart">
+                                    <div class="flow-node active">Yêu cầu</div>
+                                    <div class="flow-arrow">→</div>
+                                    <div class="flow-node active">Phân tích</div>
+                                    <div class="flow-arrow">→</div>
+                                    <div class="flow-node active">Thiết kế</div>
+                                    <div class="flow-arrow">→</div>
+                                    <div class="flow-node active">Backend</div>
+                                    <div class="flow-arrow">→</div>
+                                    <div class="flow-node active">Tích hợp</div>
+                                    <div class="flow-arrow">→</div>
+                                    <div class="flow-node active">Kiểm thử</div>
+                                    <div class="flow-arrow">→</div>
+                                    <div class="flow-node active">Deploy</div>
+                                    <div class="flow-arrow">→</div>
+                                    <div class="flow-node active">Bàn giao</div>
+                                </div>
+                                <p class="table-note" style="margin-top: 10px;">*Các công việc Backend, Tích hợp, Kiểm thử, Deploy là các mốc chịu ảnh hưởng dây chuyền trực tiếp từ giai đoạn thu thập yêu cầu.</p>
+                            </div>
+                        </div>
+
+                        <!-- Right panel: Interactive Gantt chart graph -->
+                        <div class="pm-col-right glass-card">
+                            <h3>Biểu đồ Gantt Trực Quan Hóa Tiến Độ Dự Án</h3>
+                            <div class="gantt-chart-wrapper">
+                                <!-- Gantt Grid header -->
+                                <div class="gantt-grid-header">
+                                    <div class="gantt-task-name-header">Công việc</div>
+                                    <div class="gantt-weeks-header">
+                                        <span>T1</span><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>T8</span><span>T9</span><span>T10</span><span>T11</span><span>T12</span><span class="extended-week week-13">T13</span><span class="extended-week week-14">T14</span><span class="extended-week week-15">T15</span><span class="extended-week week-16">T16</span>
+                                    </div>
+                                </div>
+
+                                <!-- Gantt Bars container -->
+                                <div class="gantt-bars-container" id="gantt-bars-wrapper">
+                                    <!-- Bars generated dynamically by JS -->
+                                </div>
+                            </div>
+                            
+                            <!-- Risk Register Matrix at bottom -->
+                            <div class="pm-risk-register-section" style="margin-top: 20px;">
+                                <h3>Bảng Quản Lý Rủi Ro Tiến Độ (Project Risk Register)</h3>
+                                <div class="responsive-table-wrapper">
+                                    <table class="data-table risk-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Mã rủi ro</th>
+                                                <th>Mô tả rủi ro</th>
+                                                <th>Xác suất</th>
+                                                <th>Mức ảnh hưởng</th>
+                                                <th>Điểm số rủi ro</th>
+                                                <th>Biện pháp ứng phó tiến độ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="risk-row-high">
+                                                <td>RSK-01</td>
+                                                <td>Thay đổi yêu cầu liên tục (Scope creep)</td>
+                                                <td>Cao</td>
+                                                <td>Cao</td>
+                                                <td><span class="risk-badge high">9 (Cao)</span></td>
+                                                <td>Chốt ký duyệt SRS ở cuối tuần 2, lập quy trình CCB</td>
+                                            </tr>
+                                            <tr class="risk-row-medium">
+                                                <td>RSK-02</td>
+                                                <td>Lỗi tích hợp hệ thống Frontend - Backend</td>
+                                                <td>Trung bình</td>
+                                                <td>Cao</td>
+                                                <td><span class="risk-badge medium">6 (Trung bình)</span></td>
+                                                <td>Tích hợp sớm và thường xuyên, đặc tả API chi tiết</td>
+                                            </tr>
+                                            <tr class="risk-row-medium">
+                                                <td>RSK-03</td>
+                                                <td>Thành viên cốt lõi nghỉ việc đột ngột</td>
+                                                <td>Trung bình</td>
+                                                <td>Cao</td>
+                                                <td><span class="risk-badge medium">6 (Trung bình)</span></td>
+                                                <td>Đào tạo chéo (Cross-training), chia sẻ mã nguồn</td>
+                                            </tr>
+                                            <tr class="risk-row-medium">
+                                                <td>RSK-04</td>
+                                                <td>Nghẽn tải máy chủ khi mở cổng</td>
+                                                <td>Trung bình</td>
+                                                <td>Cao</td>
+                                                <td><span class="risk-badge medium">6 (Trung bình)</span></td>
+                                                <td>Tối ưu hóa Database, Load Test hiệu năng ở tuần 9</td>
+                                            </tr>
+                                            <tr class="risk-row-high">
+                                                <td>RSK-05</td>
+                                                <td>Trễ tiến độ các mốc trên Đường găng</td>
+                                                <td>Cao</td>
+                                                <td>Rất cao</td>
+                                                <td><span class="risk-badge high">10 (Cao)</span></td>
+                                                <td>Họp rà soát hàng tuần, ưu tiên phát triển module lõi trước</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <!-- Toast message feedback -->
+        <div class="toast-container" id="toast-wrapper"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
