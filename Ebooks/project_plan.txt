@@ -1,0 +1,140 @@
+
+
+
+
+
+
+
+
+
+
+<Project Name>
+
+Software Development Plan  
+
+Version <1.0>
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date:
+
+
+
+Edition:
+
+
+
+Status:
+
+Baseline
+
+Author:
+
+Development Team
+
+Reviewed By:
+
+Development Team
+
+Approved By:
+
+Development Team
+
+
+
+
+
+
+
+
+
+
+
+Introduction 
+
+Project Purpose, Scope, and Objectives
+
+[A brief description of the purpose and objectives of this project and a brief description of what deliverables the project is expected to deliver.]
+
+Assumptions and Constraints
+
+[A list of assumptions that this plan is based and any constraints, for example. budget, staff, equipment, schedule, that apply to the project.]
+
+Project Deliverables
+
+[List the work products that will be delivered to the acquirer, the delivery dates, delivery locations, and quantities required to satisfy the terms of the project agreement. In addition, this sub clause shall specify the delivery media and any special instructions for packaging and handling]
+
+Project Organization
+
+Organizational Structure
+
+[Describe the organizational structure of the project team, including management, authority, responsibility, and other review authorities.]
+
+Roles and Responsibilities
+
+[Identify and state the nature of each major work activity and supporting process and the organizational units that are responsible for those processes and activities. A matrix of work activities and supporting processes vs. organizational units may be used to depict project roles and responsibilities.]
+
+Work Plan
+
+[Specify the work activities, schedule, resources, and budget details for the software project.]
+
+Work Activities
+
+Schedule 
+
+Resources
+
+Budget
+
+Risk Management Plan
+
+[Describes how risks will be identified, analyzed, prioritized, monitored, and mitigated in the project.]
+
+Tasks
+
+[How to identify risks and how the risk list will be analyzed and prioritized. The risk management strategies will be used, including mitigation, avoidance, and/or prevention strategies for the most significant risks. How the status of each significant risk and its mitigation activities will be monitored.]
+
+Responsibilities
+
+[A list of the specific groups or individuals involved in the project’s risk management activities. Also  a description of the tasks and responsibilities of each. Create a matrix.]
+
+Tools and Techniques
+
+[A list of the tools and techniques that will be used to store risk information, evaluate risks, track the status of risks or generate risk management reports.(CM plan and Risk List)]
+
+Risk Item List
+
+[Refer to Risk List Document.]
+
+Close-out Plan
+
+[Describe the activities for the orderly completion of the project, including staff reassignment, archiving of project materials, post-mortem debriefings and reports, and so forth.]
+
+Technical Process Plans
+
+Process Model
+
+Methods, Tools, and Techniques
+
+[List the documented project technical standards, etc., by reference]
+
+Concluson
+
+
+
+
+
+
+
+
+

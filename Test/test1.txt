@@ -1,0 +1,80 @@
+What is a project? 
+
+A project is a temporary endeavor undertaken to create a unique product, service, or result. For example, developing a new software application to improve customer service is a project. It has a defined start and end date, specific objectives, and a set of tasks to achieve those objectives.
+
+What is a successful project?
+
+ A successful project is one that meets or exceeds the expectations of stakeholders. This typically means it is completed on time, within budget, and to the required quality standards. Additionally, it should fulfill the project’s objectives and deliver the expected benefits.
+
+What are the knowledge areas in project management? 
+
+The Project Management Body of Knowledge (PMBOK) defines ten knowledge areas12:
+
+Project Integration Management
+
+Project Scope Management
+
+Project Schedule Management
+
+Project Cost Management
+
+Project Quality Management
+
+Project Resource Management
+
+Project Communications Management
+
+Project Risk Management
+
+Project Procurement Management
+
+Project Stakeholder Management
+
+Who are the key stakeholders in software project management?
+
+ Key stakeholders in software project management typically include:
+
+Project Sponsor: The person or group who provides the financial resources.
+
+Project Manager: The person responsible for leading the project.
+
+Development Team: The group of individuals who develop the software.
+
+End Users: The individuals who will use the software.
+
+Clients/Customers: The entities for whom the project is being undertaken.
+
+Vendors/Suppliers: External parties providing goods or services.
+
+Regulatory Bodies: Organizations ensuring compliance with laws and regulations.
+
+
+
+What factors make software projects successful? 
+
+Several factors contribute to the success of software projects:
+
+Clear Objectives: Well-defined goals and requirements.
+
+Effective Planning: Detailed project plans and schedules.
+
+Strong Leadership: Competent and experienced project managers.
+
+Stakeholder Engagement: Active involvement and communication with stakeholders.
+
+Skilled Team: A team with the necessary skills and experience.
+
+Risk Management: Identifying and mitigating potential risks.
+
+Quality Assurance: Ensuring the software meets quality standards.
+
+Adaptability: Flexibility to adapt to changes and unforeseen challenges.
+
+
+
+
+
+
+
+
+

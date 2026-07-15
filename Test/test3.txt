@@ -1,0 +1,292 @@
+Your information:
+
+Student name: Võ Trường Tú
+
+Student ID: 22013149
+
+1/ Choose True or False
+
+Intrinsic motivation causes people to participate in an activity for their own enjoyment
+
+A. True
+
+B. False
+
+Is Gantt chart one of the ways to present a plan true or false?
+
+A. True
+
+B. False
+
+Extrinsic motivation causes people to do something for a reward or to avoid a penalty
+
+A. True
+
+B. False
+
+Is it not important to choose an expert who is familiar with and knowledgeable about the application area and the technologies true or false?
+
+A. True
+
+B. False
+
+Schedule management is not one of 10 knowledge areas in project management
+
+A. True
+
+B. False
+
+Cost management is one of 10 knowledge areas in project management
+
+A. True
+
+B. False
+
+Power is much stronger than influence, because it is often used to force people to change their behavior
+
+A. True
+
+B. False
+
+Stakeholders do not include banks and other financial institutions
+
+A. True
+
+B. False
+
+Project managers must have knowledge and skills in all 10 knowledge areas (scope, schedule, cost, quality, resource, communications, risk, procurement, stakeholder, and project integration management)
+
+A. True
+
+B. False
+
+WBS is work breakdown structure
+
+A. True
+
+B. False
+
+2/ From the information of three projects in the following tables, please select a project using Financial Analyses Methods:
+
+Net present value (NPV) analysis
+
+Return on investment (ROI)
+
+Which project is the best? and why?
+
+
+
+Discount rate
+
+5%
+
+
+
+
+
+
+
+
+
+1
+
+2
+
+3
+
+4
+
+Project A
+
+Year 1
+
+Year 2
+
+Year 3
+
+Year 4
+
+Benefits
+
+500
+
+1,000
+
+1,000
+
+2,000
+
+Costs
+
+2,000
+
+500
+
+500
+
+0
+
+
+
+
+
+
+
+
+
+
+
+Project B
+
+Year 1
+
+Year 2
+
+Year 3
+
+Year 4
+
+Benefits
+
+0
+
+1,000
+
+3,000
+
+5,000
+
+Cost
+
+3,000
+
+1,000
+
+1,000
+
+1,000
+
+
+
+Project C
+
+Year 1
+
+Year 2
+
+Year 3
+
+Year 4
+
+Benefits
+
+1000
+
+1000
+
+3,000
+
+3,000
+
+Cost
+
+5,000
+
+2,000
+
+1,000
+
+1,000
+
+
+
+3/ Find the critical path of the following network diagram
+
+
+
+
+
+I = 7
+
+If the number of working days for task J is changed from 3 to 5, how will it affect the project completion time?
+
+
+
+4/You are the project manager of a mobile course registration application at Hoa Sen University to replace the old laptop-based system. Analyze the SWOT model of this project.
+
+
+
+
+
+
+
+
+
+
+
+Your Answer:
+
+2: Best Project: Project B
+
+Because Project B has the highest NPV at 1161.49 and a solid ROI of 50%. Despite having an upfront cost, it returns significant benefits over the years, making it the most financially sound choice among the three projects. Project A has a positive NPV but is less beneficial than Project B, while Project C is not a viable option due to its negative NPV and negative ROI.
+
+
+
+3: If the number of working days for task J is changed from 3 to 5, it will affect the project completion time increase 2 days.  And the critical path of the following network diagram is 1 – 4 – 7 – 6 - 8
+
+
+
+4: Following the SWOT model to this project. I analyzed: 
+
+Strengths
+
+Accessibility: Mobile apps offer greater flexibility, allowing students to register for courses anytime, anywhere.
+
+User Experience: Modern UI/UX design can enhance student satisfaction and engagement.
+
+Speed: Mobile apps generally load faster than web-based systems, improving the overall efficiency.
+
+Innovation: Positions the university as a forward-thinking institution, boosting its reputation.
+
+Weaknesses
+
+Development Costs: Developing and maintaining a mobile app can be more expensive.
+
+Tech Limitations: Not all students may have access to smartphones, which could limit usage.
+
+Learning Curve: Users accustomed to the old system may find the transition challenging.
+
+Security Risks: Mobile platforms can be more vulnerable to certain types of cyber attacks.
+
+Opportunities
+
+New Features: Add functionalities like push notifications for deadlines, real-time updates, and easy access to support.
+
+Market Expansion: Can attract more students, especially those who prioritize tech-savvy institutions.
+
+Feedback Integration: Easier to collect and implement user feedback for continuous improvement.
+
+Partnerships: Collaborate with tech companies for better features and sponsorships.
+
+Threats
+
+Technical Issues: Bugs and crashes could deter users and tarnish the app's reputation.
+
+Competitor Advantage: Other universities might develop superior apps, reducing competitive edge.
+
+Compliance: Must ensure the app complies with privacy laws and university policies.
+
+Adoption Resistance: Users resistant to change could stick with the old system or cause friction during the transition.
+
+
+
+
+
+
+
+
+
+
+
+
+

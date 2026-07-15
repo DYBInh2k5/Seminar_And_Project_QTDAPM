@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar: Quản trị Rủi ro Dự án Phần mềm & Risk Utility Theory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background glow elements -->
+    <div class="glow-bg-container">
+        <div class="glow-sphere glow-sphere-1"></div>
+        <div class="glow-sphere glow-sphere-2"></div>
+        <div class="glow-sphere glow-sphere-3"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="presentation-container">
+        <!-- Top glassmorphism header -->
+        <header class="pres-header">
+            <div class="header-logo">
+                <span class="logo-accent">HSU</span> RiskMgmt
+            </div>
+            <div class="header-topic">Seminar: Quản trị rủi ro phần mềm (SW403DE01)</div>
+            <div class="header-controls">
+                <button id="theme-toggle-btn" class="icon-btn" title="Chuyển chế độ sáng/tối">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <button id="fullscreen-btn" class="icon-btn" title="Toàn màn hình">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Slides Area -->
+        <main class="slides-wrapper">
+            <!-- SLIDE 1: Title -->
+            <section class="slide active" id="slide-1">
+                <div class="slide-content title-slide-layout">
+                    <div class="title-glow-badge">SEMINAR CHUYÊN ĐỀ HSU</div>
+                    <h1 class="main-title">QUẢN TRỊ RỦI RO<br><span class="gradient-text">TRONG DỰ ÁN PHẦN MỀM</span></h1>
+                    <p class="subtitle">Nghiên cứu các nguồn rủi ro phổ biến, lập kế hoạch ứng phó & Lý thuyết hữu dụng của rủi ro (Risk Utility Theory)</p>
+                    
+                    <div class="metadata-grid">
+                        <div class="meta-item">
+                            <span class="meta-label">Môn học / Mã lớp:</span>
+                            <span class="meta-val">Quản trị Dự án Phần mềm (SW403DE01)</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Tài liệu tích hợp:</span>
+                            <span class="meta-val">HSU SDP Template & Case Study Đề thi 3</span>
+                        </div>
+                    </div>
+                    <div class="start-hint">Nhấp chuột hoặc dùng phím <span class="key-badge">→</span> / <span class="key-badge">Space</span> để bắt đầu</div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: Overview & Process -->
+            <section class="slide" id="slide-2">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">02/10</span>
+                        <h2>Tổng Quan & Quy Trình Quản Trị Rủi Ro</h2>
+                    </div>
+                    
+                    <div class="two-col-grid">
+                        <div class="col-left glass-card">
+                            <h3>Định nghĩa cốt lõi</h3>
+                            <p class="emphasized-text"><strong>Rủi ro dự án:</strong> Là một sự kiện hoặc điều kiện không chắc chắn mà nếu xảy ra, sẽ tác động tiêu cực hoặc tích cực đến các mục tiêu của dự án (Tiến độ, Chi phí, Chất lượng, Phạm vi).</p>
+                            <p>Quản trị rủi ro phần mềm là quá trình chủ động (proactive) chứ không phải phản ứng thụ động (reactive). Nó đòi hỏi sự liên tục đánh giá và điều hướng trong suốt vòng đời phát triển.</p>
+                            <div class="quote-box">
+                                <p>"Những người không nhớ gì về quá khứ đều bị kết án phải lặp lại nó."</p>
+                                <cite>— George Santayana</cite>
+                            </div>
+                        </div>
+                        
+                        <div class="col-right">
+                            <h3>6 Bước Quy trình Quản trị Rủi ro (PMBOK)</h3>
+                            <div class="process-steps-list">
+                                <div class="step-card">
+                                    <div class="step-num">1</div>
+                                    <div class="step-info">
+                                        <h4>Lập kế hoạch quản trị rủi ro</h4>
+                                        <p>Định nghĩa phương pháp luận, vai trò và phân bổ ngân sách cho hoạt động rủi ro.</p>
+                                    </div>
+                                </div>
+                                <div class="step-card">
+                                    <div class="step-num">2</div>
+                                    <div class="step-info">
+                                        <h4>Nhận diện rủi ro</h4>
+                                        <p>Xác định và lập danh mục các rủi ro có thể tác động đến dự án.</p>
+                                    </div>
+                                </div>
+                                <div class="step-card">
+                                    <div class="step-num">3</div>
+                                    <div class="step-info">
+                                        <h4>Phân tích định tính</h4>
+                                        <p>Xếp hạng mức độ ưu tiên bằng tích số Xác suất (P) và Tác động (I).</p>
+                                    </div>
+                                </div>
+                                <div class="step-card">
+                                    <div class="step-num">4</div>
+                                    <div class="step-info">
+                                        <h4>Phân tích định lượng</h4>
+                                        <p>Dùng toán học và mô phỏng để tính tổng ảnh hưởng tài chính/thời gian.</p>
+                                    </div>
+                                </div>
+                                <div class="step-card">
+                                    <div class="step-num">5</div>
+                                    <div class="step-info">
+                                        <h4>Hoạch định ứng phó</h4>
+                                        <p>Xây dựng các phương án phòng ngừa, giảm thiểu, chuyển giao hoặc chấp nhận.</p>
+                                    </div>
+                                </div>
+                                <div class="step-card">
+                                    <div class="step-num">6</div>
+                                    <div class="step-info">
+                                        <h4>Kiểm soát rủi ro</h4>
+                                        <p>Theo dõi rủi ro cũ, nhận diện rủi ro mới và đánh giá các kế hoạch ứng phó.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: Common Risk Sources -->
+            <section class="slide" id="slide-3">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">03/10</span>
+                        <h2>4 Nguồn Rủi Ro Phổ Biến Trong Dự Án Phần Mềm</h2>
+                    </div>
+                    <p class="section-desc">Nhấp chọn nguồn rủi ro để xem nguyên nhân chi tiết và phương pháp phòng ngừa:</p>
+                    
+                    <div class="risk-tabs-container">
+                        <div class="tabs-list">
+                            <button class="tab-btn active" data-tab="tab-market-2">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" class="tab-icon"><path d="M3 3v18h18M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path></svg>
+                                Thị trường
+                            </button>
+                            <button class="tab-btn" data-tab="tab-financial-2">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" class="tab-icon"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                Tài chính
+                            </button>
+                            <button class="tab-btn" data-tab="tab-technology-2">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" class="tab-icon"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                                Công nghệ
+                            </button>
+                            <button class="tab-btn" data-tab="tab-people-2">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" class="tab-icon"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                Con người
+                            </button>
+                        </div>
+
+                        <div class="tab-content-wrapper">
+                            <!-- Tab Market -->
+                            <div class="tab-pane active" id="tab-market-2">
+                                <div class="tab-grid">
+                                    <div class="tab-col-left">
+                                        <div class="source-badge badge-market">Market Risk</div>
+                                        <h3>Rủi ro Thị trường</h3>
+                                        <p>Rủi ro xuất phát từ những biến động bên ngoài tổ chức phát triển phần mềm, làm suy giảm giá trị thực tế hoặc khả năng thương mại của sản phẩm sau khi hoàn thành.</p>
+                                        <div class="metric-warning-box">
+                                            <strong>Dấu hiệu cảnh báo:</strong> Khách hàng liên tục thay đổi ý kiến, đối thủ cạnh tranh đột ngột công bố chiến dịch mới, chính sách pháp lý thay đổi.
+                                        </div>
+                                    </div>
+                                    <div class="tab-col-right">
+                                        <div class="sub-card">
+                                            <h4>Nguyên nhân chính</h4>
+                                            <ul>
+                                                <li>Thị hiếu người dùng dịch chuyển quá nhanh so với thời gian phát triển sản phẩm.</li>
+                                                <li>Sản phẩm ra mắt quá muộn (Trễ Time-to-Market) khiến đối thủ chiếm mất thị phần.</li>
+                                                <li>Thay đổi chính sách pháp lý, luật an ninh mạng, bản quyền dữ liệu.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="sub-card card-action">
+                                            <h4>Cách ứng phó tiêu biểu</h4>
+                                            <p>Áp dụng mô hình phát triển linh hoạt (Agile/Scrum), kiểm thử giả thuyết thị trường bằng phiên bản MVP nhanh nhất có thể. Thực hiện khảo sát người dùng định kỳ để điều chỉnh backlog.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab Financial -->
+                            <div class="tab-pane" id="tab-financial-2">
+                                <div class="tab-grid">
+                                    <div class="tab-col-left">
+                                        <div class="source-badge badge-financial">Financial Risk</div>
+                                        <h3>Rủi ro Tài chính</h3>
+                                        <p>Rủi ro liên quan đến ngân sách phát triển dự án, chi phí phát sinh ngoài kế hoạch và khả năng thu hồi vốn đầu tư (ROI).</p>
+                                        <div class="metric-warning-box">
+                                            <strong>Dấu hiệu cảnh báo:</strong> Chi phí thực tế vượt xa chi phí dự báo qua từng tháng, tiến trình thanh toán từ phía khách hàng bị gián đoạn.
+                                        </div>
+                                    </div>
+                                    <div class="tab-col-right">
+                                        <div class="sub-card">
+                                            <h4>Nguyên nhân chính</h4>
+                                            <ul>
+                                                <li>Ước tính ngân sách thiếu cơ sở thực tế hoặc bị ảnh hưởng bởi sự lạc quan thái quá.</li>
+                                                <li>Chi phí phát sinh do thay đổi yêu cầu liên tục (Scope creep).</li>
+                                                <li>Nhà tài trợ cắt giảm dòng vốn hoặc rút vốn do dự án kéo dài.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="sub-card card-action">
+                                            <h4>Cách ứng phó tiêu biểu</h4>
+                                            <p>Xây dựng dự phòng quản lý (Management Reserve) và dự phòng rủi ro (Contingency Reserve). Áp dụng Earned Value Management (EVM) để phát hiện sớm các dấu hiệu vượt ngân sách.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab Technology -->
+                            <div class="tab-pane" id="tab-technology-2">
+                                <div class="tab-grid">
+                                    <div class="tab-col-left">
+                                        <div class="source-badge badge-technology">Technology Risk</div>
+                                        <h3>Rủi ro Công nghệ</h3>
+                                        <p>Rủi ro liên quan đến sự thất bại trong thiết kế kiến trúc hệ thống, hiệu năng, bảo mật và khả năng tương thích của các công cụ phát triển phần mềm.</p>
+                                        <div class="metric-warning-box">
+                                            <strong>Dấu hiệu cảnh báo:</strong> Việc tích hợp các module liên tục xảy ra lỗi lớn, hiệu năng hệ thống giảm mạnh khi dữ liệu phình to.
+                                        </div>
+                                    </div>
+                                    <div class="tab-col-right">
+                                        <div class="sub-card">
+                                            <h4>Nguyên nhân chính</h4>
+                                            <ul>
+                                                <li>Áp dụng các công nghệ, framework quá mới chưa được cộng đồng chứng thực.</li>
+                                                <li>Tích hợp với hệ thống cũ (Legacy Systems) của khách hàng gặp xung đột kiến trúc.</li>
+                                                <li>Thiếu thiết kế bảo mật, lỗ hổng rò rỉ dữ liệu hoặc không có khả năng mở rộng (Scalability).</li>
+                                            </ul>
+                                        </div>
+                                        <div class="sub-card card-action">
+                                            <h4>Cách ứng phó tiêu biểu</h4>
+                                            <p>Xây dựng các mô hình thử nghiệm kỹ thuật (PoC/Spike) trước khi chọn công nghệ. Thuê các chuyên gia tư vấn kiến trúc bên ngoài, tăng tỷ lệ tự động hóa kiểm thử bảo mật.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab People -->
+                            <div class="tab-pane" id="tab-people-2">
+                                <div class="tab-grid">
+                                    <div class="tab-col-left">
+                                        <div class="source-badge badge-people">People Risk</div>
+                                        <h3>Rủi ro Con người</h3>
+                                        <p>Rủi ro xuất phát từ hành vi, kỹ năng, tinh thần làm việc nhóm và biến động nhân sự của các thành viên trực tiếp tham gia dự án.</p>
+                                        <div class="metric-warning-box">
+                                            <strong>Dấu hiệu cảnh báo:</strong> Nhân viên liên tục làm thêm giờ kéo dài, tinh thần làm việc uể oải, năng suất sụt giảm rõ rệt.
+                                        </div>
+                                    </div>
+                                    <div class="tab-col-right">
+                                        <div class="sub-card">
+                                            <h4>Nguyên nhân chính</h4>
+                                            <ul>
+                                                <li>Sự ra đi đột ngột của các nhân sự cốt cán (Key-person risk).</li>
+                                                <li>Sự chênh lệch về năng lực kỹ năng của đội ngũ (Skill gaps) dẫn đến chậm tiến trình.</li>
+                                                <li>Xung đột nội bộ hoặc khả năng giao tiếp, tương tác nhóm kém.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="sub-card card-action">
+                                            <h4>Cách ứng phó tiêu biểu</h4>
+                                            <p>Xây dựng văn hóa chia sẻ kiến thức (Cross-training, Pair programming) để hạn chế phụ thuộc vào một cá nhân. Có chính sách động viên nhân sự hợp lý và cải thiện kỹ năng mềm của đội ngũ.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: HSU SWOT Analysis -->
+            <section class="slide" id="slide-4">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">04/10</span>
+                        <h2>Mô hình SWOT Nhận Diện Rủi Ro - Dự Án HSU</h2>
+                    </div>
+                    <p class="section-desc">Phân tích SWOT cho dự án: <strong>Ứng dụng di động Đăng ký môn học HSU</strong> (thay thế hệ thống cũ trên laptop):</p>
+                    
+                    <div class="swot-grid">
+                        <div class="swot-card swot-s">
+                            <div class="swot-header">
+                                <span class="swot-letter">S</span>
+                                <h3>Điểm mạnh (Strengths)</h3>
+                            </div>
+                            <ul>
+                                <li><strong>Độ cơ động cao:</strong> Đăng ký mọi lúc mọi nơi trên smartphone.</li>
+                                <li><strong>Trải nghiệm tốt:</strong> UI/UX hiện đại, điều hướng mượt mà hơn web.</li>
+                                <li><strong>Tốc độ xử lý:</strong> Tối ưu API giảm nghẽn lưu lượng hơn laptop.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="swot-card swot-w">
+                            <div class="swot-header">
+                                <span class="swot-letter">W</span>
+                                <h3>Điểm yếu (Weaknesses)</h3>
+                            </div>
+                            <ul>
+                                <li><strong>Chi phí cao:</strong> Ngân sách xây dựng ứng dụng iOS/Android lớn.</li>
+                                <li><strong>Hạn chế thiết bị:</strong> Smartphone cũ khó tương thích mượt mà.</li>
+                                <li><strong>Học cách sử dụng:</strong> Giai đoạn đầu bỡ ngỡ đối với sinh viên mới.</li>
+                                <li><strong>Bảo mật di động:</strong> Dễ rò rỉ dữ liệu qua Wi-Fi công cộng.</li>
+                            </ul>
+                        </div>
+
+                        <div class="swot-card swot-o">
+                            <div class="swot-header">
+                                <span class="swot-letter">O</span>
+                                <h3>Cơ hội (Opportunities)</h3>
+                            </div>
+                            <ul>
+                                <li><strong>Push Notification:</strong> Báo lịch học, hạn học phí lập tức.</li>
+                                <li><strong>Tích hợp dịch vụ:</strong> Kết nối thanh toán học phí, thẻ sinh viên số.</li>
+                                <li><strong>Phản hồi nhanh:</strong> Đánh giá, báo lỗi trực tiếp trên app store.</li>
+                            </ul>
+                        </div>
+
+                        <div class="swot-card swot-t">
+                            <div class="swot-header">
+                                <span class="swot-letter">T</span>
+                                <h3>Thách thức (Threats)</h3>
+                            </div>
+                            <ul>
+                                <li><strong>Nghẽn sập mạng:</strong> Crash app khi hàng vạn sinh viên đăng ký cùng lúc.</li>
+                                <li><strong>Cập nhật hệ điều hành:</strong> Đội IT phải liên tục nâng cấp theo iOS/Android.</li>
+                                <li><strong>Từ chối tải app:</strong> Sinh viên đòi dùng web cũ do ngại thay đổi.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: Risk Utility Theory -->
+            <section class="slide" id="slide-5">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">05/10</span>
+                        <h2>Lý Thuyết Hữu Dụng Của Rủi Ro (Risk Utility Theory)</h2>
+                    </div>
+                    
+                    <div class="two-col-grid">
+                        <div class="col-left glass-card">
+                            <h3>Khái niệm & Định nghĩa</h3>
+                            <p><strong>Lý thuyết Hữu dụng của Rủi ro (Risk Utility Theory):</strong> Phân tích hành vi và mức độ hài lòng nhận thức (Utility - Hữu dụng) của một đối tượng khi đưa ra quyết định trong điều kiện không chắc chắn.</p>
+                            <p>Giá trị thỏa mãn thực tế của một người đối với tiền bạc hoặc kết quả không tăng đều theo tỷ lệ tuyến tính. Nó phụ thuộc vào <strong>khẩu vị rủi ro (Risk Tolerance)</strong> của họ.</p>
+                            
+                            <div class="behavior-box border-averse">
+                                <strong>1. Né tránh rủi ro (Risk-Averse):</strong>
+                                <p>Thích sự chắc chắn. Thà nhận $50k chắc chắn hơn là mạo hiểm với cơ hội 50% được $120k và 50% được $0 (độ thoả mãn giảm dần khi phần thưởng lớn - Hàm lồi Concave).</p>
+                            </div>
+                            <div class="behavior-box border-neutral">
+                                <strong>2. Trung lập rủi ro (Risk-Neutral):</strong>
+                                <p>Đánh giá dự án thuần túy dựa trên Giá trị tiền tệ kỳ vọng (EMV) (độ thoả mãn tăng đều tuyến tính - Hàm tuyến tính Linear).</p>
+                            </div>
+                            <div class="behavior-box border-seeking">
+                                <strong>3. Thích rủi ro (Risk-Seeking):</strong>
+                                <p>Sẵn sàng mạo hiểm. Thích cơ hội nhỏ nhận phần thưởng cực lớn (độ thoả mãn tăng nhanh khi phần thưởng tăng - Hàm lõm Convex).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-right flex-center">
+                            <div class="chart-illustration-box glass-card">
+                                <h3>Đồ thị Hàm hữu dụng U(x) minh họa</h3>
+                                <div class="mini-chart-desc">
+                                    <span class="indicator averse">Né tránh</span>
+                                    <span class="indicator neutral">Trung lập</span>
+                                    <span class="indicator seeking">Thích rủi ro</span>
+                                </div>
+                                <div class="svg-container">
+                                    <svg viewBox="0 0 300 250" class="mini-svg-chart">
+                                        <line x1="30" y1="20" x2="30" y2="220" stroke="#444" stroke-width="1"></line>
+                                        <line x1="30" y1="220" x2="280" y2="220" stroke="#444" stroke-width="1"></line>
+                                        <text x="280" y="240" fill="#888" font-size="10" text-anchor="end">Giá trị tài sản/Payoff (x)</text>
+                                        <text x="15" y="25" fill="#888" font-size="10" transform="rotate(-90 15 25)" text-anchor="end">Độ thỏa mãn/Utility (U)</text>
+                                        
+                                        <!-- Curves -->
+                                        <path d="M 30 220 Q 150 70 270 50" fill="none" stroke="#f06292" stroke-width="3" stroke-linecap="round"></path>
+                                        <line x1="30" y1="220" x2="270" y2="50" stroke="#4fc3f7" stroke-width="2" stroke-dasharray="4"></line>
+                                        <path d="M 30 220 Q 150 200 270 50" fill="none" stroke="#a78bfa" stroke-width="3" stroke-linecap="round"></path>
+                                    </svg>
+                                </div>
+                                <p class="chart-caption">Độ cong của hàm hữu dụng thể hiện thái độ đối với rủi ro của người ra quyết định.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: Risk Utility Interactive Simulator -->
+            <section class="slide" id="slide-6">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">06/10</span>
+                        <h2>Trình Mô Phỏng Hàm Hữu Dụng Tương Tác</h2>
+                    </div>
+                    
+                    <div class="simulator-layout">
+                        <!-- Controls panel -->
+                        <div class="sim-controls glass-card">
+                            <h3>Bảng Điều Khiển Mô Phỏng</h3>
+                            <p class="desc-text">Kéo thanh trượt để thay đổi giá trị tài sản ($x$) và xem mức độ thỏa mãn hữu dụng ($U$) thay đổi thế nào dựa trên từng nhóm thái độ:</p>
+                            
+                            <div class="slider-group">
+                                <div class="slider-header">
+                                    <span>Giá trị tài sản (x):</span>
+                                    <span id="x-value-display" class="highlight-val">$50,000</span>
+                                </div>
+                                <input type="range" id="x-slider" min="0" max="100" value="50" class="modern-slider">
+                            </div>
+
+                            <div class="results-table-box">
+                                <table class="sim-results-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Thái độ</th>
+                                            <th>Hàm toán học</th>
+                                            <th>Mức hữu dụng (U)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="row-averse">
+                                            <td class="lbl"><span class="dot dot-averse"></span>Né tránh</td>
+                                            <td>U(x) = x<sup>0.5</sup></td>
+                                            <td id="val-averse" class="val">7.07</td>
+                                        </tr>
+                                        <tr class="row-neutral">
+                                            <td class="lbl"><span class="dot dot-neutral"></span>Trung lập</td>
+                                            <td>U(x) = x / 10</td>
+                                            <td id="val-neutral" class="val">5.00</td>
+                                        </tr>
+                                        <tr class="row-seeking">
+                                            <td class="lbl"><span class="dot dot-seeking"></span>Mạo hiểm</td>
+                                            <td>U(x) = x<sup>2</sup> / 1000</td>
+                                            <td id="val-seeking" class="val">2.50</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="calculator-box">
+                                <h4>Bộ tính toán so sánh bài toán đầu tư</h4>
+                                <p class="sub-desc">So sánh Dự án A (An toàn, 100% ăn $50k) vs Dự án B (Mạo hiểm, 50% ăn $120k & 50% ăn $0):</p>
+                                <div class="calc-results">
+                                    <div class="calc-row">
+                                        <span>EMV Kỳ Vọng:</span>
+                                        <span>Dự án A: <strong>$50k</strong> | Dự án B: <strong>$60k</strong></span>
+                                    </div>
+                                    <div class="calc-row">
+                                        <span>Hữu Dụng Kỳ Vọng (Risk-Averse):</span>
+                                        <span>A: <strong class="color-averse">223.6</strong> &gt; B: <strong class="color-averse">173.2</strong></span>
+                                    </div>
+                                    <div class="calc-row decision-conclusion">
+                                        <span>Kết luận quyết định:</span>
+                                        <span id="decision-text">Người Né tránh rủi ro sẽ chọn <strong>Dự án A (An toàn)</strong> dù EMV thấp hơn!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Chart display -->
+                        <div class="sim-chart-container glass-card">
+                            <h3>Đồ Thị Hàm Hữu Dụng Tương Tác Thực Tế</h3>
+                            <div class="chart-wrapper-interactive">
+                                <svg viewBox="0 0 500 400" id="interactive-svg-chart">
+                                    <!-- Grid lines background -->
+                                    <g stroke="#222" stroke-width="1">
+                                        <line x1="50" y1="50" x2="50" y2="350"></line>
+                                        <line x1="50" y1="350" x2="450" y2="350"></line>
+                                        <line x1="150" y1="50" x2="150" y2="350" stroke-dasharray="3"></line>
+                                        <line x1="250" y1="50" x2="250" y2="350" stroke-dasharray="3"></line>
+                                        <line x1="350" y1="50" x2="350" y2="350" stroke-dasharray="3"></line>
+                                        <line x1="50" y1="275" x2="450" y2="275" stroke-dasharray="3"></line>
+                                        <line x1="50" y1="200" x2="450" y2="200" stroke-dasharray="3"></line>
+                                        <line x1="50" y1="125" x2="450" y2="125" stroke-dasharray="3"></line>
+                                    </g>
+                                    
+                                    <!-- Axes arrows -->
+                                    <path d="M 450 350 L 440 345 M 450 350 L 440 355" stroke="#888" stroke-width="2"></path>
+                                    <path d="M 50 50 L 45 60 M 50 50 L 55 60" stroke="#888" stroke-width="2"></path>
+                                    
+                                    <!-- Labels -->
+                                    <text x="450" y="380" fill="#888" font-size="12" text-anchor="end">Giá trị payoff (x)</text>
+                                    <text x="25" y="60" fill="#888" font-size="12" transform="rotate(-90 25 60)" text-anchor="end">Độ thỏa mãn / Hữu dụng (U)</text>
+                                    
+                                    <!-- Plotting Curves -->
+                                    <path id="path-averse" d="" fill="none" stroke="#f06292" stroke-width="4" stroke-linecap="round"></path>
+                                    <path id="path-neutral" d="" fill="none" stroke="#4fc3f7" stroke-width="3" stroke-dasharray="5"></path>
+                                    <path id="path-seeking" d="" fill="none" stroke="#a78bfa" stroke-width="4" stroke-linecap="round"></path>
+                                    
+                                    <!-- Interactive indicator lines and dots -->
+                                    <line id="guide-x" x1="50" y1="350" x2="50" y2="350" stroke="#ffeb3b" stroke-width="1.5" stroke-dasharray="2"></line>
+                                    
+                                    <circle id="dot-averse" cx="50" cy="350" r="7" fill="#f06292" stroke="#fff" stroke-width="2"></circle>
+                                    <circle id="dot-neutral" cx="50" cy="350" r="7" fill="#4fc3f7" stroke="#fff" stroke-width="2"></circle>
+                                    <circle id="dot-seeking" cx="50" cy="350" r="7" fill="#a78bfa" stroke="#fff" stroke-width="2"></circle>
+                                    
+                                    <text id="chart-marker-txt" x="50" y="350" fill="#ffeb3b" font-size="11" text-anchor="middle" dy="-12">x</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: HSU Interactive Financial Calculator -->
+            <section class="slide" id="slide-7">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">07/10</span>
+                        <h2>Tính Toán Tài Chính Dự Án (NPV/ROI) & Quản Trị Rủi Ro Đầu Tư</h2>
+                    </div>
+                    
+                    <div class="npv-calculator-layout">
+                        <!-- Inputs Left -->
+                        <div class="npv-inputs glass-card">
+                            <h3>Bảng Nhập Thông Số Dòng Tiền</h3>
+                            
+                            <div class="input-row-flex">
+                                <div class="form-group-flex">
+                                    <label for="project-select">Chọn Dự án mẫu:</label>
+                                    <select id="project-select" class="modern-select">
+                                        <option value="project-b">Dự án B (Khuyên dùng - Đề thi)</option>
+                                        <option value="project-a">Dự án A (An toàn)</option>
+                                        <option value="project-c">Dự án C (Lỗ)</option>
+                                        <option value="custom">Tùy chỉnh dòng tiền...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-flex">
+                                    <label>Tỷ suất chiết khấu (r): <span id="r-val-display" class="highlight-val">5%</span></label>
+                                    <input type="range" id="r-slider" min="0" max="20" value="5" class="modern-slider">
+                                </div>
+                            </div>
+
+                            <!-- Cashflow Table -->
+                            <table class="cashflow-input-table">
+                                <thead>
+                                    <tr>
+                                        <th>Loại dòng tiền</th>
+                                        <th>Năm 1</th>
+                                        <th>Năm 2</th>
+                                        <th>Năm 3</th>
+                                        <th>Năm 4</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Lợi ích ($)</td>
+                                        <td><input type="number" class="cf-input b-in" data-year="0" value="0"></td>
+                                        <td><input type="number" class="cf-input b-in" data-year="1" value="1000"></td>
+                                        <td><input type="number" class="cf-input b-in" data-year="2" value="3000"></td>
+                                        <td><input type="number" class="cf-input b-in" data-year="3" value="5000"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chi phí ($)</td>
+                                        <td><input type="number" class="cf-input c-in" data-year="0" value="3000"></td>
+                                        <td><input type="number" class="cf-input c-in" data-year="1" value="1000"></td>
+                                        <td><input type="number" class="cf-input c-in" data-year="2" value="1000"></td>
+                                        <td><input type="number" class="cf-input c-in" data-year="3" value="1000"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="table-note">*Tính toán tự động chiết khấu dòng tiền bắt đầu từ Năm 1 ($DF_t = 1 / (1+r)^t$).</p>
+                        </div>
+
+                        <!-- Outputs Right -->
+                        <div class="npv-outputs glass-card">
+                            <h3>Kết Quả Tính Toán & Đánh Giá</h3>
+                            <div class="output-metrics-grid">
+                                <div class="metric-card-box">
+                                    <span class="lbl">PV Lợi ích (PV_B)</span>
+                                    <strong id="out-pv-b">$7,612.05</strong>
+                                </div>
+                                <div class="metric-card-box">
+                                    <span class="lbl">PV Chi phí (PV_C)</span>
+                                    <strong id="out-pv-c">$5,450.71</strong>
+                                </div>
+                                <div class="metric-card-box highlight-npv">
+                                    <span class="lbl">Giá trị hiện tại ròng (NPV)</span>
+                                    <strong id="out-npv">$2,161.34</strong>
+                                </div>
+                                <div class="metric-card-box highlight-roi">
+                                    <span class="lbl">Tỷ suất sinh lợi (ROI)</span>
+                                    <strong id="out-roi">39.65%</strong>
+                                </div>
+                            </div>
+
+                            <!-- Bar Chart Visualizing PV_B, PV_C and NPV -->
+                            <div class="chart-visualizer-box">
+                                <h4>So sánh giá trị tài chính dự án</h4>
+                                <div class="bar-chart-container">
+                                    <div class="bar-row">
+                                        <span class="bar-lbl">PV_B</span>
+                                        <div class="bar-track"><div id="bar-pv-b" class="bar-fill fill-benefit" style="width: 76%"></div></div>
+                                        <span id="bar-pv-b-val" class="bar-val">$7.6k</span>
+                                    </div>
+                                    <div class="bar-row">
+                                        <span class="bar-lbl">PV_C</span>
+                                        <div class="bar-track"><div id="bar-pv-c" class="bar-fill fill-cost" style="width: 54%"></div></div>
+                                        <span id="bar-pv-c-val" class="bar-val">$5.4k</span>
+                                    </div>
+                                    <div class="bar-row">
+                                        <span class="bar-lbl">NPV</span>
+                                        <div class="bar-track"><div id="bar-npv" class="bar-fill fill-npv" style="width: 21%"></div></div>
+                                        <span id="bar-npv-val" class="bar-val">$2.1k</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="decision-comment-box" id="calc-decision-comment">
+                                <strong>Khuyên dùng:</strong> Dự án có hiệu quả tài chính tối ưu. NPV dương lớn và tỷ suất ROI cao giúp giảm thiểu rủi ro đầu tư.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: Risk Response Strategies -->
+            <section class="slide" id="slide-8">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">08/10</span>
+                        <h2>Hoạch Định Phản Hồi Rủi Ro</h2>
+                    </div>
+                    
+                    <div class="response-strategies-grid">
+                        <div class="strategy-card border-avoid">
+                            <div class="card-icon-header">
+                                <svg viewBox="0 0 24 24" width="30" height="30" stroke="#f43f5e" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+                                <h3>Tránh Rủi Ro (Avoidance)</h3>
+                            </div>
+                            <p class="strat-desc">Thay đổi kế hoạch hoặc kiến trúc dự án để triệt tiêu hoàn toàn khả năng xảy ra rủi ro.</p>
+                            <div class="strat-example">
+                                <strong>Ví dụ:</strong> Loại bỏ một tính năng thanh toán quá phức tạp khỏi phạm vi bàn giao đợt 1 nếu đội ngũ không đủ năng lực xử lý.
+                            </div>
+                        </div>
+
+                        <div class="strategy-card border-mitigate">
+                            <div class="card-icon-header">
+                                <svg viewBox="0 0 24 24" width="30" height="30" stroke="#10b981" stroke-width="2" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                <h3>Giảm Thiểu (Mitigation)</h3>
+                            </div>
+                            <p class="strat-desc">Thực hiện các hành động phòng ngừa sớm nhằm giảm xác suất xảy ra hoặc giảm thiểu thiệt hại.</p>
+                            <div class="strat-example">
+                                <strong>Ví dụ:</strong> Đào tạo chuyển giao công nghệ sớm cho lập trình viên, viết Unit Test tự động cho các luồng xử lý cốt lõi.
+                            </div>
+                        </div>
+
+                        <div class="strategy-card border-transfer">
+                            <div class="card-icon-header">
+                                <svg viewBox="0 0 24 24" width="30" height="30" stroke="#3b82f6" stroke-width="2" fill="none"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                                <h3>Chuyển Giao (Transfer)</h3>
+                            </div>
+                            <p class="strat-desc">Chuyển giao gánh nặng tài chính hoặc trách nhiệm pháp lý sang bên thứ ba (thường trả phí).</p>
+                            <div class="strat-example">
+                                <strong>Ví dụ:</strong> Ký hợp đồng thuê đơn vị thứ ba uy tín xử lý cổng thanh toán trực tuyến thay vì tự phát triển.
+                            </div>
+                        </div>
+
+                        <div class="strategy-card border-accept">
+                            <div class="card-icon-header">
+                                <svg viewBox="0 0 24 24" width="30" height="30" stroke="#f59e0b" stroke-width="2" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <h3>Chấp Nhận (Acceptance)</h3>
+                            </div>
+                            <p class="strat-desc">Chấp nhận sống chung với rủi ro và thành lập quỹ dự phòng (thời gian hoặc tiền tài) để đối phó.</p>
+                            <div class="strat-example">
+                                <strong>Ví dụ:</strong> Thiết lập quỹ dự phòng khẩn cấp chiếm 10% ngân sách và 15 ngày đệm tiến độ dự kiến bàn giao.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: SDP Integration -->
+            <section class="slide" id="slide-9">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">09/10</span>
+                        <h2>Tích Hợp Quản Trị Rủi Ro Vào Kế Hoạch SDP (Project Plan)</h2>
+                    </div>
+                    
+                    <div class="two-col-grid">
+                        <div class="col-left glass-card">
+                            <h3>Kế hoạch quản lý rủi ro trong SDP HSU</h3>
+                            <p>Theo mẫu tài liệu chuẩn của trường **Đại học Hoa Sen (`Project Plan.docx`)**, phần Quản trị rủi ro là một thành phần cốt lõi trong Kế hoạch phát triển phần mềm (SDP).</p>
+                            <p>Nó đảm bảo dự án phần mềm không bị rơi vào thế thụ động khi gặp trục trặc về tiến độ hoặc chi phí phát sinh.</p>
+                            <div class="quote-box">
+                                <strong>Cấu trúc mẫu SDP yêu cầu:</strong>
+                                <p>Cần quy định rõ quy trình nhận diện, người chịu trách nhiệm (RACI) và các công cụ ghi chép dữ liệu rủi ro định kỳ.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-right">
+                            <h3>3 Cột Trụ Tích Hợp Rủi Ro Vào SDP</h3>
+                            <div class="sdp-pillars">
+                                <div class="sdp-pillar-card">
+                                    <div class="p-icon">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                    </div>
+                                    <div class="p-info">
+                                        <h4>1. Quy trình quản lý (Tasks)</h4>
+                                        <p>Xác định phương pháp brainstorm nhận diện, định tính điểm số ưu tiên và cơ chế giám sát rủi ro liên tục qua từng Sprint.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="sdp-pillar-card">
+                                    <div class="p-icon">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                    </div>
+                                    <div class="p-info">
+                                        <h4>2. Phân công trách nhiệm (Responsibilities)</h4>
+                                        <p>Thiết lập rõ ràng ai là người sở hữu rủi ro (Risk Owner), ai triển khai phương án phản hồi và ai phê duyệt ngân sách contingency.</p>
+                                    </div>
+                                </div>
+
+                                <div class="sdp-pillar-card">
+                                    <div class="p-icon">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="9"></line><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="15" y2="17"></line></svg>
+                                    </div>
+                                    <div class="p-info">
+                                        <h4>3. Công cụ lưu trữ (Tools & Techniques)</h4>
+                                        <p>Sử dụng Bản đăng ký rủi ro (Risk Item List) liên tục cập nhật cùng Kế hoạch quản lý cấu hình (Configuration Management plan).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 10: Case Study JWD Consulting & Conclusion -->
+            <section class="slide" id="slide-10">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">10/10</span>
+                        <h2>Thực Tế JWD Consulting & Kết Luận</h2>
+                    </div>
+                    
+                    <div class="jwd-grid">
+                        <div class="jwd-sidebar glass-card">
+                            <h3>Bối cảnh JWD</h3>
+                            <ul>
+                                <li><strong>Dự án:</strong> Intranet chia sẻ biểu mẫu quản trị dự án.</li>
+                                <li><strong>Quản lý:</strong> Erica Bell</li>
+                                <li><strong>Sponsor:</strong> Joe Fleming (CEO)</li>
+                                <li><strong>Ngân sách:</strong> $150,000 thực tế</li>
+                            </ul>
+                            <div class="jwd-source-link">
+                                Tài liệu tham khảo môn học:<br>
+                                <a href="file:///d:/HSU/2534Semester 4(2025-2026)/QT_DA_PM/Seminar/jwd_case_study.txt" class="doc-link">jwd_case_study.txt</a>
+                            </div>
+                        </div>
+
+                        <div class="jwd-main">
+                            <div class="hsu-case-boxes">
+                                <div class="mini-case-box">
+                                    <h5>Thiếu ý kiến nội bộ (Rủi ro 1)</h5>
+                                    <p>Erica nhờ CEO gửi email chỉ thị trực tiếp, mở đợt thi đua tặng **5 ngày phép** cho chuyên viên đóng góp biểu mẫu tốt nhất.</p>
+                                </div>
+                                <div class="mini-case-box">
+                                    <h5>Vượt ngân sách outsource (Rủi ro 4, 5)</h5>
+                                    <p>Thuyết phục dev mua module thanh toán và hỏi đáp thay vì tự code. Xin CEO cấp thêm $10k để bảo mật hệ thống.</p>
+                                </div>
+                                <div class="mini-case-box">
+                                    <h5>Thái độ Michael Chen (Rủi ro 8)</h5>
+                                    <p>PM giảm tối đa họp với Michael, để anh tự chủ module chuyên gia và làm việc gián tiếp qua trợ lý Jill Anderson.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="conclusion-box-bottom glass-card">
+                                <h4>Bài học kinh nghiệm cốt lõi</h4>
+                                <p>1. Quản trị rủi ro phải diễn ra liên tục. 2. Cần sự hỗ trợ trực tiếp từ Ban lãnh đạo (Sponsor). 3. Sử dụng linh hoạt các chiến lược (mua ngoài thay vì tự code) và điều hoà mối quan hệ nhân sự khéo léo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom navigation bar -->
+        <footer class="pres-footer">
+            <div class="nav-controls">
+                <button id="prev-btn" class="nav-btn" disabled>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    Trước
+                </button>
+                <div class="slide-dots" id="dots-container">
+                    <!-- Dots generated by JS -->
+                </div>
+                <button id="next-btn" class="nav-btn">
+                    Tiếp
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progress-bar"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

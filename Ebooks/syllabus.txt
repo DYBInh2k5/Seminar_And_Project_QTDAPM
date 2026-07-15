@@ -1,0 +1,1030 @@
+                
+
+COURSE SYLLABUS
+
+Course ID
+
+Course Title
+
+Credits
+
+SW403DE01
+
+QUẢN TRỊ DỰ ÁN PHẦN MỀM
+
+03
+
+Software Project Management
+
+
+
+(Applied to Semester: 1A, Academic year: 2023-2024 Decision No. . . . ./QĐ-ĐHHS dated . . . . . .)
+
+
+
+Course Specifications:
+
+Periods
+
+Periods in classroom
+
+Total periods*
+
+Lecture/  Seminar
+
+Activity
+
+Self-study periods
+
+Lecture room
+
+Lab room
+
+Fieldwork
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+(7)
+
+45
+
+45
+
+0
+
+90
+
+45
+
+0
+
+0
+
+(1) = (2) + (3) = (5) + (6) + (7)
+
+
+
+Other related Subjects: 
+
+Other related Subjects
+
+Course ID
+
+Course title
+
+Previous subject:
+
+1. 
+
+SW210D
+
+Công nghệ phần mềm
+
+or
+
+IT206D
+
+Phân tích thiết kế hướng đối tượng 
+
+or
+
+IT208D
+
+Phân tích, thiết kế và phát triển hệ thống hướng đối tượng 
+
+
+
+or
+
+MIS302D
+
+Phân tích hệ thống nghiệp vụ
+
+
+
+Course Description:
+
+Project management software equippes student with the knowledge, techniques and tools required to manage the process of building software products. Students will be exposed to the materials necessary for a project manager to plan a process for building software using skills to estimate size and effort efficiently. From there, to control the process of implementing projects with high productivity and quality. Based on the gained knowledge and guidance from instructor, students will have to learn through case studies exercise methods of modern project management and discussed in class.
+
+
+
+Course Objectives:
+
+No.
+
+Course Objectives
+
+1
+
+Understand the content requirements of a project development plan
+
+2
+
+Ability to develop a plan for a simple software project
+
+3
+
+Understand the role of management in each phase of software development
+
+
+
+Learning Outcomes:
+
+No.
+
+Learning Outcomes
+
+Contribution to Program Outcomes
+
+ 1
+
+Explain the similarities and differences of software production process compared to other production processes
+
+PLO4(5)
+
+2
+
+Determining factors of quality, productivity, and reducing risk in the process of project management
+
+PLO4(5)
+
+3
+
+Describe, compare and distinguish the nature of the resource estimation model in project management related to: costs, human resources, physical resources, planned duration, size and complexity project.
+
+PLO5(4)
+
+4
+
+Explain the advantages and disadvantages when using models to manage risks
+
+PLO5(4)
+
+5
+
+Identify, compare, distinguish the organizational plan of a project team
+
+PLO5(4)
+
+6
+
+Describe methods of monitoring and control of resources in the project development process.
+
+PLO7(3)
+
+7
+
+Define objectives and determine forms to be used in stages in taking requirements, initial designs, detailed designs, and delivery of products.
+
+PLO7(3)
+
+8
+
+Identify options for managing software quality assurance.
+
+PLO7(3)
+
+9
+
+Identify important indicators of a project and build the plan to respond to the change of these indicators.
+
+PLO7(3)
+
+
+
+Instructional Modes:
+
+
+
+Room
+
+Periods
+
+1
+
+Lecture room
+
+45
+
+
+
+Total
+
+45
+
+Lectures will be combined with in-class discussion and group presentation with some requirements : 
+
++ Students must read book, do homework, practice and prepare lesson before going to the class.
+
+
+
+Textbooks and teaching aids:
+
+Textbooks: 
+
+[1] Kathy Schwalbe, Information Technology Project Management, 9th Edition, 2019 Course Technology, Cengage Learning 
+
+ 
+
+References: 
+
+[2] Jennifer Greene, Andrew Stellman Applied Software Project Management, O’Reilly 2005
+
+[3] Bob Hughes & Mike Cotterell, Software Project Management, 2nd edition, McGrawHill, 1999
+
+
+
+Software: 
+
+Microsoft Project 2003 or newer version
+
+
+
+Assessment Methods (Requirements for Completion of the Course):
+
+1. Description of learning outcomes assessment
+
+
+
+1) Group Case-study Presentation
+
+Students form groups of 3-5 persons. Each group will chose one topic at week two and will present from week 10.
+
+Student group must submit all documentations at week 9 includes: topic materials, reporting word file, presentation file and worked schedule file.
+
+Grading base on 3 parts: 40% final result, 40% working progress and 20% personal answering. 
+
+2) In-class test
+
+3 Test on class will proceed for 1 hour at week 4, 8, and 12. The test will consist of multiple choice questions from the quiz has already done. Students will NOT allow to use study materials.
+
+4) Final project
+
+Students work in group projects (3-5 students) to apply and check the knowledge they have learned in real projects. Each group will chose one project at week two and will present from week 13.
+
+Student group must submit all documentations at week 12 includes: project materials, project management planning file, presentation file and worked schedule file.
+
+
+
+
+
+2. Summary of learning outcomes assessment
+
+* For main semester:
+
+Components
+
+Duration
+
+Assessment Forms
+
+Percentage
+
+Schedule
+
+Seminar
+
+
+
+Group present
+
+20%
+
+Week 10 - 15
+
+In-class Test
+
+60’
+
+3 Test in class will proceed for 1 hour. Closed book test
+
+30%
+
+Week 4, 8, and 12
+
+Final project
+
+
+
+Doing project instructed by lecturer
+
+50%
+
+Week 12 -15
+
+Total
+
+100%
+
+
+
+
+
+*  For extra semester:
+
+Components
+
+Duration
+
+Assessment Forms
+
+Percentage
+
+Schedule
+
+Seminar
+
+
+
+Group present
+
+20%
+
+Session 10 – 15
+
+Test
+
+60’
+
+3 Test in class will proceed for 1 hour. Closed book test
+
+30%
+
+Session 4, 8, and 12
+
+Final project
+
+
+
+Doing project instructed by lecturer
+
+50%
+
+Week 12 -15
+
+Total
+
+100%
+
+
+
+
+
+Academic integrity
+
+Academic integrity is a fundamental value that affects the quality of teaching, learning, and research at a university. To ensure the maintenance of academic integrity at Hoa Sen University, students are required to: 
+
+1. Work independently on individual assignments  Collaborating on individual assignments is considered cheating. 
+
+2. Avoid plagiarism. Plagiarism is an act of fraud that involves the use of ideas or words of another person without proper attribution. Students will be accused of plagiarism if they: 
+
+a. Copy in their work one or more sentences from another person without proper citation. 
+
+b. Rephrase, paraphrase, or translate another person’s ideas or words without proper attribution. 
+
+c. Reuse their own assignments, in whole or in part, and submit them for another class. 
+
+d. Work responsibly within a working group. 
+
+3. In cooperative group assignments, all students are required to stay on task and contribute equally to the projects. Group reports should clearly state the contribution of each group member. Any acts of academic dishonesty will result in a grade of zero for the task at hand and/or immediate failure of the course, depending on the seriousness of the fraud. Please consult Hoa Sen University’s Policy on Plagiarism at http://thuvien.hoasen.edu.vn/chinh-sach-phong-tranh-dao- van 
+
+To ensure the maintenance of academic integrity, the university asks that students report cases of academic dishonesty to the teacher and/or the Dean. The names of those students will be kept anonymous..
+
+
+
+Teaching Staff:
+
+No.
+
+Lecturer’s name
+
+Email, Phone number,  Office location
+
+Office hours
+
+Position
+
+1
+
+Lê Thanh Tùng
+
+Tung.LeThanh @hoasen.edu.vn
+
+
+
+Lecturer
+
+2
+
+Nguyễn Ngọc Tú
+
+Tu.NguyenNgoc@hoasen.edu.vn
+
+
+
+
+
+
+
+Outline of Topics to be covered:
+
+For main semester: 
+
+
+
+Week
+
+Lecture Content
+
+Reference Material
+
+
+
+
+
+
+
+1
+
+Chapter 1 Introduction to Project Management
+
+What Is a Project?
+
+What Is Project Management?
+
+The Role of the Project Manager
+
+The cause of the failure of software projects
+
+ Factors affecting the success of the project
+
+[1] Chapter 1
+
+[2] Chapter 1
+
+2
+
+Chapter 2 The Project Management and Information Technplogy Context
+
+A Systems View of Project Management
+
+Understanding Organizations
+
+Stakeholder Management
+
+The Context of Information Technology Projects
+
+Recent Trends Affecting Information Technology Project Management
+
+[1] Chapter 2
+
+3
+
+Chapter 3 The Project Management Process Groups: A Case Study
+
+Project Management Process Groups
+
+Mapping the Process Groups to the Knowledge Areas
+
+Developing an Information Technology Project Management Methodology
+
+Case Study: JWD Consulting's Project Management Intranet Site Project
+
+[1] Chapter 3
+
+4
+
+Chapter 4 Project Integration Management
+
+What Is Project Integration Management?
+
+Strategic Planning and Project Selection
+
+Developing a Project Management Plan
+
+Monitoring and Controlling Project Work
+
+Performing Integrated Change Control
+
+Closing Projects or Phases
+
+Using Software to Assist in Project Integration Management
+
+[1] Chapter 4
+
+Test 1
+
+5
+
+
+
+Chapter 5 Project Scope Management
+
+What Is Project Scope Management?
+
+Collecting Requirements
+
+Defining Scope
+
+Creating the Work Breakdown Structure
+
+Verifying Scope
+
+Controlling Scope
+
+[1] Chapter 5
+
+
+
+6
+
+Chapter 6 Project Time Management
+
+The Importance of Project Schedules
+
+Defining Activities
+
+Sequencing Activities
+
+Estimating Activity Resources
+
+Estimating Activity Durations
+
+Developing the Schedule
+
+Controlling the Schedule
+
+[1] Chapter 6
+
+7
+
+Chapter 7 Project Cost Management
+
+The Importance of Project Cost Management
+
+Basic Principles of Cost Management
+
+Estimating Costs
+
+Determining the Budget
+
+Controlling Costs
+
+Earned Value Management
+
+Project Portfolio Management
+
+[1] Chapter 7
+
+8
+
+Chapter 8 Project Quality Management
+
+The Importance of Project Quality Management
+
+What Is Project Quality Management?
+
+Planning Quality
+
+Performing Quality Assurance
+
+Performing Quality Control
+
+Tools and Techniques for Quality Control
+
+Modem Quality Management
+
+Improving Information Technology Project Quality
+
+[1] Chapter 8
+
+Test 2
+
+9
+
+Chapter 9 Project Human Resource Management
+
+The Importance of Human Resource Management
+
+What Is Project Human Resource Management?
+
+Keys to Managing People
+
+Developing the Human Resource Plan
+
+Acquiring the Project Team
+
+Developing the Project Team
+
+Managing the Project Team
+
+[1] Chapter 9
+
+10
+
+Chapter 10 Project Communications Management
+
+The Importance of Project Communications Management
+
+Identifying Stakeholders
+
+Planning Communications
+
+Distributing Information
+
+Managing Stakeholders
+
+Reporting Performance
+
+Suggestions for Improving Project Communications
+
+[1] Chapter 10
+
+11
+
+Chapter 11 Project Risk Management
+
+The Importance of Project Risk Management
+
+Planning Risk Management
+
+Common Sources of Risk on Information Technology Projects
+
+Identifying Risks
+
+Performing Qualitative Risk Analysis
+
+Performing Quantitative Risk Analysis
+
+Planning Risk Responses
+
+Monitoring and Controlling Risks
+
+[1] Chapter 11
+
+12
+
+Understanding Change
+
+Why Change Fails
+
+How to Make Change Succeed
+
+[2] Chapter 9
+
+Test 3
+
+
+
+13
+
+Chapter 12 Project Procurement Management
+
+The Importance of Project Procurement Management
+
+Planning Procurements
+
+Conducting Procurements
+
+Administering Procurements
+
+Closing Procurements
+
+Using Software to Assist in Project Procurement Management
+
+[1] Chapter 12
+
+14
+
+Seminar 
+
+
+
+15
+
+Review  
+
+
+
+
+
+
+
+For extra semester:
+
+
+
+Session
+
+Lecture Content
+
+Reference Material
+
+
+
+
+
+
+
+1
+
+Chapter 1 Introduction to Project Management
+
+What Is a Project?
+
+What Is Project Management?
+
+The Role of the Project Manager
+
+The cause of the failure of software projects
+
+ Factors affecting the success of the project
+
+[1] Chapter 1
+
+[2] Chapter 1
+
+2
+
+Chapter 2 The Project Management and Information Technplogy Context
+
+A Systems View of Project Management
+
+Understanding Organizations
+
+Stakeholder Management
+
+The Context of Information Technology Projects
+
+Recent Trends Affecting Information Technology Project Management
+
+[1] Chapter 2
+
+3
+
+Chapter 3 The Project Management Process Groups: A Case Study
+
+Project Management Process Groups
+
+Mapping the Process Groups to the Knowledge Areas
+
+Developing an Information Technology Project Management Methodology
+
+Case Study: JWD Consulting's Project Management Intranet Site Project
+
+[1] Chapter 3
+
+4
+
+Chapter 4 Project Integration Management
+
+What Is Project Integration Management?
+
+Strategic Planning and Project Selection
+
+Developing a Project Management Plan
+
+Monitoring and Controlling Project Work
+
+Performing Integrated Change Control
+
+Closing Projects or Phases
+
+Using Software to Assist in Project Integration Management
+
+[1] Chapter 4
+
+Test 1
+
+5
+
+
+
+Chapter 5 Project Scope Management
+
+What Is Project Scope Management?
+
+Collecting Requirements
+
+Defining Scope
+
+Creating the Work Breakdown Structure
+
+Verifying Scope
+
+Controlling Scope
+
+[1] Chapter 5
+
+
+
+6
+
+Chapter 6 Project Time Management
+
+The Importance of Project Schedules
+
+Defining Activities
+
+Sequencing Activities
+
+Estimating Activity Resources
+
+Estimating Activity Durations
+
+Developing the Schedule
+
+Controlling the Schedule
+
+[1] Chapter 6
+
+7
+
+Chapter 7 Project Cost Management
+
+The Importance of Project Cost Management
+
+Basic Principles of Cost Management
+
+Estimating Costs
+
+Determining the Budget
+
+Controlling Costs
+
+Earned Value Management
+
+Project Portfolio Management
+
+[1] Chapter 7
+
+8
+
+Chapter 8 Project Quality Management
+
+The Importance of Project Quality Management
+
+What Is Project Quality Management?
+
+Planning Quality
+
+Performing Quality Assurance
+
+Performing Quality Control
+
+Tools and Techniques for Quality Control
+
+Modem Quality Management
+
+Improving Information Technology Project Quality
+
+[1] Chapter 8
+
+Test 2
+
+9
+
+Chapter 9 Project Human Resource Management
+
+The Importance of Human Resource Management
+
+What Is Project Human Resource Management?
+
+Keys to Managing People
+
+Developing the Human Resource Plan
+
+Acquiring the Project Team
+
+Developing the Project Team
+
+Managing the Project Team
+
+[1] Chapter 9
+
+10
+
+Chapter 10 Project Communications Management
+
+The Importance of Project Communications Management
+
+Identifying Stakeholders
+
+Planning Communications
+
+Distributing Information
+
+Managing Stakeholders
+
+Reporting Performance
+
+Suggestions for Improving Project Communications
+
+[1] Chapter 10
+
+11
+
+Chapter 11 Project Risk Management
+
+The Importance of Project Risk Management
+
+Planning Risk Management
+
+Common Sources of Risk on Information Technology Projects
+
+Identifying Risks
+
+Performing Qualitative Risk Analysis
+
+Performing Quantitative Risk Analysis
+
+Planning Risk Responses
+
+Monitoring and Controlling Risks
+
+[1] Chapter 11
+
+12
+
+Understanding Change
+
+Why Change Fails
+
+How to Make Change Succeed
+
+[2] Chapter 9
+
+Test 3
+
+
+
+13
+
+Chapter 12 Project Procurement Management
+
+The Importance of Project Procurement Management
+
+Planning Procurements
+
+Conducting Procurements
+
+Administering Procurements
+
+Closing Procurements
+
+Using Software to Assist in Project Procurement Management
+
+[1] Chapter 12
+
+14
+
+Seminar 
+
+
+
+15
+
+Review  
+
+
+
+
+
+
+
+Date:……………
+
+The lecturer
+
+(Signature and the full name)
+
+Date:……………
+
+Programme Chair
+
+(Signature and the full name)
+
+Date:……………
+
+Dean/ Vice Dean
+
+(Signature and the full name)
+
+
+
+
+
+
+
+
+
