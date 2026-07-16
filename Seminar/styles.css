@@ -293,6 +293,7 @@ body {
 .gradient-text {
     background: linear-gradient(135deg, var(--primary) 30%, var(--accent-seeking) 70%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1582,7 +1583,7 @@ body {
     transition: width 0.5s ease;
 }
 
-/* Responsive adjustment */
+/* Responsive & Zooming Adjustments */
 @media (max-width: 1024px) {
     .main-title { font-size: 2.8rem; }
     .two-col-grid, .tab-grid, .simulator-layout, .jwd-grid, .npv-calculator-layout {
@@ -1613,3 +1614,134 @@ body {
         display: block;
     }
 }
+
+/* Height-based media queries for Zooming / Small displays */
+@media (max-height: 780px) {
+    .presentation-container {
+        height: 95vh;
+        max-height: 700px;
+    }
+    .main-title {
+        font-size: 2.6rem;
+        margin-bottom: 12px;
+    }
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    .metadata-grid {
+        margin-bottom: 25px;
+        gap: 15px;
+    }
+    .slide-header {
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+    }
+    .slide-header h2 {
+        font-size: 1.45rem;
+    }
+    .slide {
+        padding: 20px 35px;
+    }
+    .pres-header, .pres-footer {
+        height: 55px;
+        padding: 0 20px;
+    }
+    .risk-tabs-container {
+        gap: 10px;
+        height: calc(100% - 65px);
+    }
+    .tab-btn {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+    .glass-card {
+        padding: 15px;
+    }
+}
+
+@media (max-height: 640px) {
+    .presentation-container {
+        height: 98vh;
+        max-height: 580px;
+    }
+    .main-title {
+        font-size: 2rem;
+    }
+    .slide-header h2 {
+        font-size: 1.2rem;
+    }
+    .slide {
+        padding: 12px 25px;
+    }
+    .two-col-grid, .tab-grid, .simulator-layout, .jwd-grid, .npv-calculator-layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        overflow-y: auto;
+    }
+    .col-left {
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    .emphasized-text {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+    .quote-box {
+        margin-top: 10px;
+        padding: 8px;
+    }
+    .step-card {
+        padding: 8px 12px;
+    }
+}
+
+/* Light Mode Contrast Overrides */
+[data-theme="light"] .dot-indicator {
+    background: rgba(0, 0, 0, 0.18);
+}
+[data-theme="light"] .dot-indicator.active {
+    background: var(--primary);
+}
+[data-theme="light"] .icon-btn,
+[data-theme="light"] .nav-btn {
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--text-primary);
+}
+[data-theme="light"] .icon-btn:hover,
+[data-theme="light"] .nav-btn:hover:not(:disabled) {
+    background: rgba(0, 0, 0, 0.08);
+}
+[data-theme="light"] .nav-btn:disabled {
+    opacity: 0.35;
+    background: rgba(0, 0, 0, 0.02);
+}
+[data-theme="light"] .key-badge {
+    background: rgba(0, 0, 0, 0.05);
+}
+[data-theme="light"] .step-card {
+    background: rgba(0, 0, 0, 0.015);
+}
+[data-theme="light"] .step-card:hover {
+    background: rgba(0, 0, 0, 0.03);
+}
+[data-theme="light"] .glass-card {
+    background: rgba(255, 255, 255, 0.9);
+}
+[data-theme="light"] .meta-item {
+    background: rgba(0, 0, 0, 0.015);
+}
+[data-theme="light"] .tab-btn {
+    background: rgba(0, 0, 0, 0.02);
+}
+[data-theme="light"] .tab-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+[data-theme="light"] .tab-btn.active {
+    background: var(--primary-glow);
+    color: var(--primary);
+}
+[data-theme="light"] .calculator-col-left {
+    background: rgba(0, 0, 0, 0.015);
+}
+

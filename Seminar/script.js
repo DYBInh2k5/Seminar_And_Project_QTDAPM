@@ -122,6 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="moon-icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             `;
         }
+        
+        // Recalculate financials to update text colors for light/dark mode
+        calculateFinancials();
     });
 
 
@@ -374,21 +377,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Render comments
         const commentBox = document.getElementById('calc-decision-comment');
+        const isLightTheme = document.body.getAttribute('data-theme') === 'light';
         if (npv < 0) {
             commentBox.innerHTML = `<strong>Đánh giá rủi ro đầu tư:</strong> Dự án không khả thi về tài chính (NPV âm). Rủi ro thua lỗ cực kỳ cao, không nên đầu tư.`;
-            commentBox.style.background = 'rgba(244, 63, 94, 0.05)';
+            commentBox.style.background = isLightTheme ? 'rgba(244, 63, 94, 0.08)' : 'rgba(244, 63, 94, 0.05)';
             commentBox.style.borderLeftColor = '#f43f5e';
-            commentBox.style.color = '#ffccd5';
+            commentBox.style.color = isLightTheme ? '#991b1b' : '#ffccd5';
         } else if (roi >= 35) {
             commentBox.innerHTML = `<strong>Đánh giá rủi ro đầu tư:</strong> Khuyên dùng! NPV dương lớn ($${npv.toLocaleString(undefined, {maximumFractionDigits: 0})}) và ROI đạt ${roi.toFixed(1)}%. Dự án mang lại dòng tiền tối ưu và ít rủi ro tài chính nhất.`;
-            commentBox.style.background = 'rgba(16, 185, 129, 0.05)';
+            commentBox.style.background = isLightTheme ? 'rgba(16, 185, 129, 0.08)' : 'rgba(16, 185, 129, 0.05)';
             commentBox.style.borderLeftColor = '#10b981';
-            commentBox.style.color = '#b9f6ca';
+            commentBox.style.color = isLightTheme ? '#065f46' : '#b9f6ca';
         } else {
             commentBox.innerHTML = `<strong>Đánh giá rủi ro đầu tư:</strong> Chấp nhận được. Dự án có NPV dương nhưng tỷ lệ sinh lời vừa phải. Cần kiểm soát chặt chẽ chi phí phát sinh (Scope creep).`;
-            commentBox.style.background = 'rgba(245, 158, 11, 0.05)';
+            commentBox.style.background = isLightTheme ? 'rgba(245, 158, 11, 0.08)' : 'rgba(245, 158, 11, 0.05)';
             commentBox.style.borderLeftColor = '#f59e0b';
-            commentBox.style.color = '#ffecb3';
+            commentBox.style.color = isLightTheme ? '#92400e' : '#ffecb3';
         }
     }
 
