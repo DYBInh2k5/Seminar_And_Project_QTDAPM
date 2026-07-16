@@ -2,8 +2,12 @@
 
 Đây là sản phẩm dự án (Project) cho môn học **Quản trị dự án phần mềm (SW403DE01)** tại trường Đại học Hoa Sen (HSU).
 
-* **Sinh viên thực hiện:** Võ Trường Tú
-* **MSSV:** 22013149
+* **Nhóm thực hiện:** Nhóm 3
+* **Sinh viên thực hiện:**
+  * Võ Duy Bình - MSSV: 22301500 (Nhóm trưởng)
+  * Hồng Bảo Khang - MSSV: 22101347
+  * Trần Bá Lợi - MSSV: 22300236
+  * Nguyễn Thanh Quang - MSSV: 22110739
 * **Lớp:** SW403DE01
 
 ---
@@ -20,7 +24,7 @@
 
 ### Phân hệ 1: Cổng Sinh viên (Student Portal)
 Mô phỏng trải nghiệm đăng ký môn học trực tuyến của sinh viên HSU:
-* **Xác thực:** Đăng nhập thử nghiệm bằng MSSV: `22013149` (Võ Trường Tú).
+* **Xác thực:** Đăng nhập thử nghiệm bằng MSSV: `22301500` (Võ Duy Bình - Nhóm trưởng) hoặc bất kỳ MSSV nào của thành viên nhóm.
 * **Đăng ký / Hủy học phần:** Chọn đăng ký nhanh các môn học đang mở lớp. Hệ thống tự động kiểm tra:
   * *Số tín chỉ tối đa:* Báo lỗi nếu đăng ký quá 20 tín chỉ trong học kỳ.
   * *Môn tiên quyết:* Ngăn cấm đăng ký lớp nếu chưa hoàn thành môn học tiên quyết.

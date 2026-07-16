@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
         activeAdminView: 'admin-classes-view',
         
         student: {
-            id: '22013149',
-            name: 'Võ Trường Tú',
-            class: 'SW403DE01',
+            id: '22301500',
+            name: 'Võ Duy Bình',
+            class: 'Nhóm 3 - SW403DE01',
             completedCourses: ['CO101', 'CO102'], // Completed prerequisites
             registeredClasses: [] // Array of class codes
         },
@@ -209,9 +209,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const profileBadge = document.getElementById('user-profile-badge');
         if (portalId === 'student-portal') {
             profileBadge.style.display = 'flex';
-            profileBadge.querySelector('.user-avatar').innerText = 'VT';
+            profileBadge.querySelector('.user-avatar').innerText = 'DB';
             profileBadge.querySelector('.user-avatar').style.background = 'var(--accent)';
-            profileBadge.querySelector('.user-name').innerText = 'Võ Trường Tú';
+            profileBadge.querySelector('.user-name').innerText = 'Võ Duy Bình';
         } else if (portalId === 'admin-portal') {
             profileBadge.style.display = 'flex';
             profileBadge.querySelector('.user-avatar').innerText = 'LT';
@@ -950,12 +950,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Student Login Submit
     document.getElementById('login-submit-btn').addEventListener('click', () => {
         const id = document.getElementById('student-id').value.trim();
-        if (id === '22013149') {
+        const members = {
+            '22301500': 'Võ Duy Bình',
+            '22101347': 'Hồng Bảo Khang',
+            '22300236': 'Trần Bá Lợi',
+            '22110739': 'Nguyễn Thanh Quang'
+        };
+        
+        if (members[id]) {
+            state.student.id = id;
+            state.student.name = members[id];
+            saveState();
+            
+            // Update UI elements
+            document.querySelector('.sidebar-student-info .info-name').innerText = members[id];
+            document.querySelector('.sidebar-student-info .info-id').innerText = 'MSSV: ' + id;
+            document.getElementById('user-profile-badge').querySelector('.user-name').innerText = members[id];
+            
+            // Get initials
+            const names = members[id].split(' ');
+            const initials = names.length >= 2 ? (names[names.length - 2][0] + names[names.length - 1][0]) : names[0].substring(0, 2);
+            document.getElementById('user-profile-badge').querySelector('.user-avatar').innerText = initials.toUpperCase();
+            
             document.getElementById('login-section').style.display = 'none';
             document.getElementById('student-dashboard').style.display = 'grid';
-            showToast('Đăng nhập thành công! Đã tải hồ sơ sinh viên Võ Trường Tú.', 'success');
+            showToast(`Đăng nhập thành công! Đã tải hồ sơ sinh viên ${members[id]}.`, 'success');
         } else {
-            showToast('Lỗi: MSSV mẫu hợp lệ là 22013149', 'error');
+            showToast('Lỗi: MSSV không thuộc Nhóm 3 (Ví dụ: 22301500, 22101347, 22300236, 22110739)', 'error');
         }
     });
 

@@ -6,7 +6,12 @@ Tài liệu này cung cấp cái nhìn tổng quan về nội dung Chuyên đề
 
 ## 1. Tổng quan đề tài Chuyên đề (Seminar Overview)
 * **Tên đề tài:** Quản trị rủi ro trong các dự án phần mềm: Nghiên cứu các nguồn rủi ro phổ biến, lập kế hoạch ứng phó và ứng dụng Lý thuyết hữu dụng của rủi ro (Risk Utility Theory).
-* **Sinh viên thực hiện:** Võ Trường Tú (MSSV: 22013149).
+* **Nhóm thực hiện:** Nhóm 3 (Quản lý dự án phần mềm)
+* **Sinh viên thực hiện:** 
+  * Võ Duy Bình - MSSV: 22301500 (Nhóm trưởng)
+  * Hồng Bảo Khang - MSSV: 22101347
+  * Trần Bá Lợi - MSSV: 22300236
+  * Nguyễn Thanh Quang - MSSV: 22110739
 * **Lớp:** SW403DE01.
 * **Mục tiêu đề tài:** 
   1. Phân tích 4 nguồn rủi ro phần mềm cốt lõi (Thị trường, Tài chính, Công nghệ, Con người).

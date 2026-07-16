@@ -3,7 +3,12 @@
 
 * **Môn học:** Quản trị dự án phần mềm (SW403DE01)
 * **Trường:** Đại học Hoa Sen (HSU)
-* **Sinh viên thực hiện:** Võ Trường Tú – MSSV: 22013149
+* **Nhóm thực hiện:** Nhóm 3
+* **Sinh viên thực hiện:**
+  * Võ Duy Bình - MSSV: 22301500 (Nhóm trưởng)
+  * Hồng Bảo Khang - MSSV: 22101347
+  * Trần Bá Lợi - MSSV: 22300236
+  * Nguyễn Thanh Quang - MSSV: 22110739
 * **Giảng viên hướng dẫn:** Lê Thanh Tùng / Nguyễn Ngọc Tú
 
 ---

@@ -2,10 +2,16 @@
 ## Đề tài: Nghiên cứu các nguồn rủi ro phổ biến, lập kế hoạch ứng phó và ứng dụng Lý thuyết hữu dụng của rủi ro (Risk Utility Theory)
 
 * **Môn học:** Quản trị dự án phần mềm (Mã môn: `SW403DE01` - Đại học Hoa Sen)
+* **Nhóm thực hiện:** Nhóm 3
+* **Sinh viên thực hiện:**
+  * Võ Duy Bình - MSSV: 22301500 (Nhóm trưởng)
+  * Hồng Bảo Khang - MSSV: 22101347
+  * Trần Bá Lợi - MSSV: 22300236
+  * Nguyễn Thanh Quang - MSSV: 22110739
 * **Tài liệu tham khảo chính:** 
   * *Information Technology Project Management (9th Edition)* – Kathy Schwalbe
   * *Mẫu Kế hoạch phát triển phần mềm (SDP HSU)* – `Project Plan.docx`
-  * *Đề thi & Bài làm mẫu HSU:* `Test 3 - 30.10.24.docx` (Bài làm của Võ Trường Tú - MSSV 22013149)
+  * *Đề thi & Bài làm mẫu HSU:* `Test 3 - 30.10.24.docx` (Bài thi HSU)
   * *JWD Consulting Case Study* (Predictive Approach)
 
 ---
@@ -170,7 +176,7 @@ Giả sử nhà quản trị dự án là người **Né tránh rủi ro (Risk-A
 *   $PV_C = \frac{3000}{1.05^1} + \frac{1000}{1.05^2} + \frac{1000}{1.05^3} + \frac{1000}{1.05^4} = 2857.14 + 907.03 + 863.84 + 822.70 = 5450.71$
 *   $NPV_B = 7612.05 - 5450.71 = 2161.34$
 *   $ROI_B = \frac{2161.34}{5450.71} \times 100\% = 39.65\%$
-*(Lưu ý: Nếu tính theo tỷ lệ ROI danh nghĩa không chiết khấu, dự án B đạt mức ROI là $\frac{9000 - 6000}{6000} = 50\%$. Học sinh Võ Trường Tú làm bài thi đạt kết quả lựa chọn Dự án B là chính xác).*
+*(Lưu ý: Nếu tính theo tỷ lệ ROI danh nghĩa không chiết khấu, dự án B đạt mức ROI là $\frac{9000 - 6000}{6000} = 50\%$. Lựa chọn Dự án B là phương án tối ưu nhất).*
 
 ##### 3. Dự án C:
 *   $PV_B = \frac{1000}{1.05^1} + \frac{1000}{1.05^2} + \frac{3000}{1.05^3} + \frac{3000}{1.05^4} = 952.38 + 907.03 + 2591.51 + 2468.10 = 6919.03$
