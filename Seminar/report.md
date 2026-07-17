@@ -44,43 +44,52 @@
 
 ## 1. Giới thiệu về Quản trị rủi ro trong dự án phần mềm
 
-Dự án phần mềm có đặc thù là tính vô hình của sản phẩm, tính biến động cao của yêu cầu công nghệ và sự phụ thuộc lớn vào yếu tố con người. Theo Standish Group Chaos Report, tỷ lệ dự án phần mềm thất bại hoặc gặp trục trặc (chậm tiến độ, vượt ngân sách, thiếu tính năng) luôn ở mức cao (thường trên 50-60%). Nguyên nhân cốt lõi phần lớn xuất phát từ việc thiếu chủ động quản trị rủi ro.
+Quản trị rủi ro (Risk Management) là quá trình xác định, phân tích, đánh giá, lập kế hoạch ứng phó và giám sát các rủi ro có thể xảy ra trong suốt vòng đời dự án. Theo PMBOK (Project Management Body of Knowledge), quản trị rủi ro là một trong những lĩnh vực quan trọng nhất của quản lý dự án nhằm giảm khả năng xảy ra rủi ro, giảm mức độ thiệt hại nếu rủi ro xảy ra, và tăng khả năng hoàn thành dự án đúng thời gian, đúng chi phí và đạt chất lượng mong muốn.
 
-**Rủi ro dự án (Project Risk)** là một sự kiện hoặc điều kiện không chắc chắn mà nếu xảy ra, sẽ có tác động tích cực hoặc tiêu cực đến ít nhất một mục tiêu của dự án (phạm vi, tiến độ, chi phí, chất lượng).
+Dự án phần mềm có đặc thù là tính vô hình của sản phẩm, tính biến động cao của yêu cầu công nghệ và sự phụ thuộc lớn vào yếu tố con người. Khác với xây dựng hay sản xuất, dự án phần mềm dễ gặp rủi ro hơn vì:
+*   **Yêu cầu thay đổi liên tục:** Khách hàng khó hình dung sản phẩm hoàn chỉnh cho đến khi thấy giao diện thực tế.
+*   **Công nghệ phát triển rất nhanh:** Framework, ngôn ngữ, và công cụ liên tục thay đổi.
+*   **Phụ thuộc nhiều vào con người:** Trí tuệ và năng lực cá nhân của lập trình viên là cốt lõi.
+*   **Khó ước lượng chính xác:** Việc ước lượng thời gian và chi phí thường thiếu dữ liệu lịch sử chuẩn hóa.
 
-**Quản trị rủi ro (Risk Management)** là quá trình hệ thống hóa việc nhận diện, phân tích và phản hồi các rủi ro trong suốt vòng đời dự án nhằm tối đa hóa xác suất và tác động của các sự kiện tích cực, đồng thời tối thiểu hóa xác suất và tác động của các sự kiện tiêu cực. Quy trình quản trị rủi ro theo chuẩn PMBOK gồm các bước:
-1. **Lập kế hoạch quản trị rủi ro (Plan Risk Management):** Xác định cách thức tiếp cận và thực hiện các hoạt động quản trị rủi ro.
-2. **Nhận diện rủi ro (Identify Risks):** Xác định những rủi ro nào có thể ảnh hưởng đến dự án và ghi nhận các đặc tính của chúng.
-3. **Phân tích định tính (Perform Qualitative Risk Analysis):** Đánh giá mức độ ưu tiên của rủi ro bằng cách kết hợp xác suất xảy ra (Probability) và tác động (Impact) của chúng.
-4. **Phân tích định lượng (Perform Quantitative Risk Analysis):** Ước lượng bằng số liệu toán học ảnh hưởng của rủi ro lên toàn bộ mục tiêu dự án (ví dụ: dùng cây quyết định, mô phỏng Monte Carlo).
-5. **Hoạch định ứng phó (Plan Risk Responses):** Xây dựng các phương án và hành động nhằm nâng cao cơ hội và giảm thiểu mối đe dọa.
-6. **Kiểm soát rủi ro (Control Risks):** Theo dõi các rủi ro đã nhận diện, giám sát rủi ro còn lại, nhận diện rủi ro mới và đánh giá hiệu quả của quy trình ứng phó.
+Theo Standish Group Chaos Report và các nghiên cứu của PMI, tỷ lệ dự án phần mềm trễ tiến độ, vượt ngân sách hoặc thất bại hoàn toàn vẫn ở mức cao (thường trên 50%). Do đó, quản trị rủi ro phải được thực hiện chủ động (proactive) ngay từ khi bắt đầu dự án, thay vì chỉ phản ứng thụ động (reactive) khi sự cố xảy ra.
 
 ---
 
 ## 2. Các nguồn rủi ro phổ biến trong dự án phần mềm
 
-Trong phát triển phần mềm, các rủi ro thường được phân loại theo bốn nhóm nguồn chính: Thị trường, Tài chính, Công nghệ và Con người.
+Trong phát triển phần mềm, các rủi ro được phân loại thành bốn nhóm nguồn chính: Thị trường, Tài chính, Công nghệ và Con người.
 
 ### 2.1. Rủi ro Thị trường (Market Risk)
-Rủi ro xuất phát từ những biến động bên ngoài hệ sinh thái trực tiếp của dự án nhưng ảnh hưởng trực tiếp đến giá trị thương mại của sản phẩm phần mềm.
-*   **Nguyên nhân:** Thay đổi nhu cầu người dùng, đối thủ cạnh tranh ra mắt trước, sản phẩm không phù hợp với thị trường.
-*   **Ví dụ:** Một công ty phát triển ứng dụng đặt xe công nghệ mất 2 năm để hoàn thiện hệ thống, nhưng khi ra mắt thì thị trường đã bị bão hòa bởi các đối thủ lớn và hành vi người tiêu dùng đã chuyển dịch sang tích hợp đa dịch vụ (Super App).
+Rủi ro xuất phát từ những biến động bên ngoài tổ chức phát triển nhưng ảnh hưởng trực tiếp đến mục tiêu hoặc hiệu quả của dự án phần mềm sau khi hoàn thành.
+*   **Thay đổi nhu cầu khách hàng:** Đây là rủi ro phổ biến nhất. Ban đầu khách hàng chỉ yêu cầu một ứng dụng web bán hàng cơ bản, nhưng sau đó liên tục yêu cầu thêm AI chatbot, thanh toán QR, livestream hoặc tích điểm. Hệ quả là làm kéo dài thời gian, tăng chi phí và buộc phải chỉnh sửa lại kiến trúc hệ thống cốt lõi.
+*   **Đối thủ cạnh tranh:** Đối thủ tung sản phẩm mới nhanh hơn và hấp dẫn hơn. Ví dụ, khi dự án ứng dụng giao đồ ăn của bạn đang phát triển, đối thủ bất ngờ ra mắt tính năng AI gợi ý món ăn và giao hàng trong 15 phút, khiến sản phẩm của bạn trở nên lỗi thời ngay khi chưa kịp ra mắt.
+*   **Sự lỗi thời công nghệ trên thị trường:** Sự dịch chuyển xu hướng công nghệ quá nhanh (ví dụ, React 18 nâng cấp lên React 20, hoặc các mô hình AI Agent xuất hiện thay thế các chatbot truyền thống) khiến sản phẩm của dự án có nguy cơ mất lợi thế cạnh tranh.
+*   **Ứng phó:** Áp dụng phương pháp Agile/Scrum, thiết kế Prototype sớm, họp lấy ý kiến người dùng định kỳ, phát triển phiên bản khả dụng tối thiểu (MVP) để thử nghiệm thị trường nhanh nhất và quản lý chặt chẽ các yêu cầu thay đổi (Change Request).
 
 ### 2.2. Rủi ro Tài chính (Financial Risk)
-Rủi ro liên quan đến dòng tiền, ngân sách phát triển và khả năng sinh lời của dự án.
-*   **Nguyên nhân:** Ước lượng chi phí ban đầu quá thấp, khách hàng trì hoãn thanh toán, biến động tỷ giá hối đoái hoặc lạm phát.
-*   **Ví dụ:** Dự án phần mềm quản lý kho ERP ban đầu dự kiến ngân sách $100,000, nhưng do phát sinh yêu cầu tùy biến sâu từ phía khách hàng, thời gian kéo dài gấp đôi khiến chi phí nhân sự vượt ngưỡng $180,000, dẫn đến dự án bị lỗ hoặc cạn kiệt dòng tiền duy trì.
+Rủi ro liên quan trực tiếp đến dòng tiền, ngân sách phát triển và khả năng hoàn thành dự án về mặt tài chính.
+*   **Thiếu hụt ngân sách:** Xuất phát từ việc nhà đầu tư cắt giảm dòng vốn, khách hàng chậm thanh toán, hoặc do dự án kéo dài làm cạn kiệt tài chính. Hệ quả buộc dự án phải cắt giảm nhân sự, giảm chất lượng hoặc dừng dự án giữa chừng.
+*   **Vượt chi phí (Cost Overrun):** Rất thường xuyên xảy ra do thay đổi yêu cầu liên tục, phát sinh chi phí mua thiết bị, làm lại (rework) nhiều lần do lỗi thiết kế hoặc chậm tiến độ. Ví dụ: Dự án dự toán ban đầu là 2 tỷ VND nhưng thực tế chi phí đội lên đến 3 tỷ VND (vượt 50%).
+*   **Biến động tỷ giá và lạm phát:** Rủi ro này đặc biệt nghiêm trọng đối với các dự án outsource quốc tế hoặc dự án phụ thuộc mạnh vào dịch vụ bên thứ ba. Ví dụ: Chi phí thuê máy chủ Cloud (AWS, Azure) hoặc OpenAI API phải thanh toán bằng USD; nếu tỷ giá USD tăng mạnh hoặc lạm phát đẩy lương lập trình viên lên cao, ngân sách dự án sẽ bị thâm hụt nghiêm trọng.
+*   **Ứng phó:** Lập ngân sách dự phòng rủi ro (Contingency Reserve) từ 10-15%, theo dõi chặt chẽ dòng tiền qua kỹ thuật quản lý giá trị thu được (Earned Value Management - EVM), ký hợp đồng cung cấp dịch vụ dài hạn cố định giá, và chia nhỏ thanh toán theo từng mốc bàn giao (Milestone).
 
 ### 2.3. Rủi ro Công nghệ (Technology Risk)
-Rủi ro liên quan đến công cụ kỹ thuật, kiến trúc hệ thống, phần cứng, phần mềm bên thứ ba và khả năng hiện thực hóa kỹ thuật.
-*   **Nguyên nhân:** Áp dụng các công nghệ quá mới, vấn đề tích hợp hệ thống phức tạp, lỗ hổng bảo mật hoặc lỗi hiệu năng.
-*   **Ví dụ:** Quyết định chọn kiến trúc Microservices phức tạp cho một hệ thống Web đơn giản dẫn đến việc đội ngũ phát triển tốn quá nhiều thời gian cấu hình hạ tầng mạng và giám sát dịch vụ thay vì tập trung phát triển tính năng cốt lõi.
+Rủi ro liên quan đến sự thất bại trong thiết kế kỹ thuật, hiệu năng, bảo mật và khả năng tương thích của các công cụ phát triển phần mềm.
+*   **Chọn sai công nghệ:** Quyết định ngôn ngữ, framework, cơ sở dữ liệu không phù hợp. Theo David Hillson (PMI.org), việc sử dụng công nghệ mới chưa được kiểm chứng (unproven technology) là nguyên nhân gốc rễ gây ra sự bất định rất cao. Tom Kendrick và cơ sở dữ liệu PERIL (Project Experience Risk Information Library) chỉ ra rằng: defect phần mềm và công nghệ mới chưa thử nghiệm hoạt động không như kỳ vọng (proved unsuitable) là nguyên nhân hàng đầu khiến dự án thất bại, buộc phải làm lại từ đầu, làm tăng vọt chi phí và trễ tiến độ nghiêm trọng.
+*   **Lỗi bảo mật (Security Flaws):** Theo báo cáo OWASP Top 10:2025 (tổng hợp từ 2,8 triệu ứng dụng thực tế), lỗi kiểm soát truy cập (Broken Access Control) chiếm tới 3.73% số ứng dụng và cấu hình sai bảo mật (Security Misconfiguration) chiếm 3.00%. Điểm mới đáng chú ý của OWASP 2025 là sự gia tăng lỗi ở chuỗi cung ứng phần mềm (Software Supply Chain Failures) do các thư viện dependency bên thứ ba và hệ thống CI/CD bị tấn công. Ứng phó đòi hỏi áp dụng nguyên tắc "shift-left security" - đưa threat modeling và quét mã độc bảo mật vào sớm ngay từ đầu vòng đời phát triển (SDLC).
+*   **Hệ thống không mở rộng được (Scalability Failure):** Theo IBM Well-Architected Framework (Performance pillar), khả năng mở rộng phải được thiết kế ngay từ đầu kiến trúc. Nếu để đến cuối dự án mới tối ưu hiệu năng, việc khắc phục sẽ cực kỳ tốn kém và tốn thời gian. Nguyên lý đúng là áp dụng các thành phần phi trạng thái (stateless), loose coupling (ví dụ Microservices), và ưu tiên mở rộng theo chiều ngang (scale out - thêm máy chủ) thay vì chiều dọc (scale up - nâng cấp phần cứng duy nhất).
+*   **Nợ kỹ thuật (Technical Debt):** Theo SEI (Software Engineering Institute - Carnegie Mellon), nợ kỹ thuật là việc thỏa hiệp thiết kế ngắn hạn để đạt tiến độ, khiến việc bảo trì sau này tốn kém hơn nhiều. Nếu không kiểm soát, nợ kỹ thuật cấp doanh nghiệp (enterprise technical debt) tích lũy sẽ làm tê liệt khả năng nâng cấp hệ thống. Biện pháp ứng phó là làm nợ kỹ thuật trở nên "nhìn thấy được" (visible), phân loại và đưa việc trả nợ vào kế hoạch Sprint định kỳ.
 
 ### 2.4. Rủi ro Con người (People Risk)
-Yếu tố quan trọng nhất nhưng cũng khó kiểm soát nhất trong quản trị dự án phần mềm.
-*   **Nguyên nhân:** Mất mát nhân sự chủ chốt, kỹ năng đội ngũ phát triển yếu, xung đột nội bộ, áp lực công việc dẫn đến tình trạng kiệt sức (Burnout).
-*   **Ví dụ:** Trong một dự án phát triển game di động, lập trình viên đồ họa duy nhất xin nghỉ việc ngay trước giai đoạn bàn giao phiên bản Alpha 1 tháng, khiến toàn bộ tiến độ mỹ thuật bị đóng băng do không tìm được người thay thế kịp thời.
+Yếu tố tác động trực tiếp nhất đến năng suất và sự thành bại của dự án phần mềm.
+*   **Thiếu hụt nhân lực:** Theo báo cáo Global Project Management Talent Gap của PMI (2025), thế giới thiếu hụt gần 30 triệu chuyên gia dự án đến năm 2035 (nhu cầu cần 65 triệu nhưng nguồn cung chỉ đạt 40 triệu). Việc khởi động dự án mà không kiểm tra tính khả dụng của nguồn lực sẵn có trong tổ chức là nguyên nhân gây thiếu nhân sự trầm trọng.
+*   **Thành viên nghỉ việc:** Cơ sở dữ liệu PERIL ghi nhận mất nhân sự chủ chốt (Key-person risk) khiến thời gian thực hiện công việc tăng gấp ba lần, gây chậm tiến độ nghiêm trọng do mất thời gian tuyển dụng và bàn giao công việc. PMI xếp rủi ro nhân sự là nhóm gây tác động nguy hiểm nhất trong các rủi ro nguồn lực.
+*   **Thiếu hụt kỹ năng (Skill Gaps):** Sự thiếu hụt lập trình viên có kỹ năng chuyên môn sâu hoặc thiếu kỹ năng mềm (tương tác nhóm, tự quản lý) dẫn đến chất lượng code kém, phát sinh lỗi và làm chậm tiến trình phát triển. Chiến lược ứng phó tối ưu là đào tạo nâng cao năng lực nội bộ (upskilling/reskilling) thay vì chỉ trông chờ vào việc tuyển mới.
+*   **Giao tiếp kém:** Theo báo cáo Pulse of the Profession của PMI, giao tiếp kém là nguyên nhân gây thất bại chính ở 1/3 số dự án. Cứ mỗi 1 tỷ USD đầu tư, có 135 triệu USD gặp rủi ro thì trong đó 75 triệu USD (56%) là do giao tiếp kém hiệu quả giữa các bên liên quan.
+*   **Ứng phó:** Lập kế hoạch nguồn lực gắn với dữ liệu thực tế, duy trì sự ủng hộ vững chắc của cấp quản lý (Sponsorship), xây dựng khung giao tiếp rõ ràng (chỉ rõ ai giao tiếp gì, khi nào, bằng cách nào), và áp dụng văn hóa làm việc chéo (cross-training, pair programming) để giảm thiểu phụ thuộc cá nhân.
+
+---
 
 ### 2.5. Nhận diện rủi ro bằng mô hình SWOT - Case Study Dự án HSU
 Để nhận diện rủi ro một cách toàn diện khi bắt đầu dự án, nhà quản trị dự án thường sử dụng mô hình **SWOT (Strengths - Weaknesses - Opportunities - Threats)**. Dưới đây là phân tích SWOT thực tế lấy từ Đề thi số 3 của HSU đối với dự án: **Xây dựng ứng dụng di động Đăng ký môn học tại Đại học Hoa Sen để thay thế hệ thống đăng ký cũ chạy trên laptop.**
@@ -109,6 +118,56 @@ Yếu tố quan trọng nhất nhưng cũng khó kiểm soát nhất trong quả
 *   **Rào cản tuân thủ pháp lý:** Phải tuân thủ nghiêm ngặt các quy định về an toàn thông tin cá nhân và các quy chế học vụ nội bộ của nhà trường.
 *   **Tỷ lệ chấp nhận thấp (Adoption Resistance):** Sinh viên e ngại lỗi hệ thống di động có thể tiếp tục sử dụng phương pháp đăng ký truyền thống, làm giảm hiệu quả đầu tư dự án.
 
+### 2.6. Đánh giá mức độ ảnh hưởng và Ví dụ thực tế
+
+#### 1. Bảng phân loại mức độ và tần suất rủi ro
+
+##### A. Rủi ro về Công nghệ (Technical Risks)
+| Loại rủi ro | Tần suất xảy ra | Mức độ ảnh hưởng | Đặc điểm kỹ thuật & Nghiên cứu liên quan |
+| :--- | :--- | :--- | :--- |
+| **Lỗi bảo mật** | Rất cao | Rất nghiêm trọng | OWASP Top 10:2025 chỉ ra Broken Access Control xuất hiện ở 3.73% ứng dụng; rủi ro chuỗi cung ứng phần mềm tăng mạnh. |
+| **Không mở rộng được** | Cao | Nghiêm trọng | Thường ẩn giấu dưới tải nhẹ, chỉ bộc phát thành thảm họa sập hệ thống (Crash) khi lượng truy cập thực tế tăng cao. |
+| **Nợ kỹ thuật** | Rất cao | Trung bình - Cao | Gần như mọi dự án đều tích lũy nợ kỹ thuật ở các mức độ khác nhau; cản trở nghiêm trọng năng lực bảo trì lâu dài. |
+
+##### B. Rủi ro về Con người (Human Risks)
+| Loại rủi ro | Tần suất xảy ra | Mức độ ảnh hưởng | Số liệu thực tế & Nghiên cứu liên quan |
+| :--- | :--- | :--- | :--- |
+| **Thiếu nhân lực** | Rất cao | Cao | Báo cáo PMI Talent Gap 2025 dự báo thiếu hụt 30 triệu chuyên gia dự án đến 2035 do thiếu quy hoạch lực lượng. |
+| **Thành viên nghỉ việc** | Cao | Rất nghiêm trọng | Cơ sở dữ liệu PERIL ghi nhận việc mất một nhân sự chủ chốt (key-person) có thể kéo dài thời gian hoàn thành task lên **3 lần**. |
+| **Thiếu kỹ năng** | Cao | Trung bình - Cao | Sự chênh lệch kỹ năng (Skill Gap) là vấn đề cơ cấu kéo dài, trực tiếp gây ra nợ kỹ thuật và lỗi sản phẩm. |
+| **Giao tiếp kém** | Rất cao | Nghiêm trọng | Pulse of the Profession của PMI chỉ ra giao tiếp kém gây thất bại ở **1/3 dự án**; 56% chi phí rủi ro do giao tiếp lỗi. |
+
+---
+
+#### 2. Các nghiên cứu điển hình thực tế (Case Studies)
+
+##### Case Study 1: Lỗi bảo mật công nghệ - Sự cố rò rỉ dữ liệu của Equifax (2017)
+*   **Bối cảnh:** Equifax là một trong ba cơ quan báo cáo tín dụng tiêu dùng lớn nhất Hoa Kỳ.
+*   **Nguyên nhân rủi ro:** Tin tặc đã khai thác một lỗ hổng bảo mật đã biết trong framework **Apache Struts (CVE-2017-5638)**. Lỗ hổng này đã được tổ chức Apache vá và công bố từ tháng 3/2017, nhưng đội ngũ kỹ thuật của Equifax đã chậm trễ và bỏ quên việc cập nhật bản vá bảo mật trên các hệ thống nội bộ của họ trong suốt nhiều tháng.
+*   **Hậu quả:** Dữ liệu cá nhân nhạy cảm (bao gồm số An sinh xã hội, ngày sinh, địa chỉ) của khoảng **147 triệu người tiêu dùng** bị rò rỉ. Cổ phiếu công ty sụt sụt giảm nghiêm trọng, CEO và Giám đốc thông tin (CIO) phải từ chức lập tức, công ty chịu mức phạt và chi phí dàn xếp pháp lý lên tới **hơn 1.38 tỷ USD**.
+*   **Bài học:** Áp dụng nguyên lý "Shift-left security", chủ động giám sát và cập nhật bản vá lỗ hổng phụ thuộc bên thứ ba (Software Supply Chain) ngay khi có thông báo.
+
+##### Case Study 2: Lỗi hiệu năng và Khả năng mở rộng - Healthcare.gov (2013)
+*   **Bối cảnh:** Trang web đăng ký bảo hiểm y tế quốc gia do Chính phủ Mỹ phát triển với ngân sách đầu tư hàng trăm triệu USD.
+*   **Nguyên nhân rủi ro:** Hệ thống sập hoàn toàn chỉ trong vòng **2 giờ đầu tiên** sau khi chính thức mở cổng kết nối. Lượng truy cập thực tế đạt 250,000 người dùng cùng lúc (gấp 5 lần dự báo tối đa). Hơn thế nữa, hệ thống đăng nhập tài khoản gặp lỗi thắt cổ chai kiến trúc (bottleneck), không thể xử lý tải của trang chính. Thiết kế kiến trúc ban đầu không tách biệt trạng thái (stateless) và không có khả năng tự động mở rộng theo chiều ngang (scale out).
+*   **Hậu quả:** Tỷ lệ đăng ký thành công trong tuần đầu tiên đạt mức thảm hại (dưới 1%). Dự án bị khủng hoảng truyền thông nặng nề, buộc chính phủ phải thuê một đội đặc nhiệm công nghệ bên ngoài vào sửa chữa khẩn cấp, làm chi phí dự án đội lên gấp nhiều lần.
+*   **Bài học:** Khả năng mở rộng phải được thiết kế ngay từ đầu trong kiến trúc (IBM Well-Architected). Cần tiến hành kiểm thử tải (Load Test) và kiểm thử hiệu năng (Performance Test) kỹ lưỡng trước khi phát hành.
+
+##### Case Study 3: Nợ kỹ thuật nghiêm trọng - Knight Capital Group (2012)
+*   **Bối cảnh:** Knight Capital là một trong những nhà tạo lập thị trường và giao dịch chứng khoán hàng đầu thế giới.
+*   **Nguyên nhân rủi ro:** Khi triển khai bản cập nhật phần mềm giao dịch mới lên hệ thống, đội ngũ vận hành đã để sót một máy chủ cũ không được cập nhật đồng bộ. Khi chạy phần mềm mới, một đoạn mã code cũ (tính năng "Power Peg" đã ngừng sử dụng từ 8 năm trước nhưng chưa bao giờ được xóa bỏ khỏi codebase - nợ kỹ thuật tồn đọng) đã bị kích hoạt nhầm trên máy chủ chưa cập nhật này.
+*   **Hậu quả:** Hệ thống giao dịch tự động liên tục mua và bán hàng triệu cổ phiếu bị lỗi định giá trong suốt **45 phút**. Knight Capital bị lỗ ròng **440 triệu USD** chỉ trong chưa đầy một giờ, khiến công ty mất sạch vốn điều lệ, suýt phá sản và buộc phải sáp nhập vào tập đoàn Getco ngay sau đó.
+*   **Bài học:** Nợ kỹ thuật tích lũy không được dọn dẹp (Refactoring) và quy trình quản lý cấu hình (Configuration Management) lỏng lẻo có thể phá hủy hoàn toàn một doanh nghiệp chỉ trong vài phút.
+
+##### Case Study 4: Thất bại nhân sự và Giao tiếp kém - FBI Virtual Case File (2000–2005)
+*   **Bối cảnh:** FBI triển khai dự án Trilogy nhằm hiện đại hóa hạ tầng IT, bao gồm ứng dụng quản lý hồ sơ vụ án Virtual Case File (VCF).
+*   **Nguyên nhân rủi ro:** Dự án trị giá **170 triệu USD** bị hủy bỏ hoàn toàn sau 5 năm phát triển mà không bàn giao được sản phẩm nào dùng được. Báo cáo điều tra của Bộ Tư pháp Mỹ chỉ ra nguyên nhân cốt lõi là rủi ro con người:
+    *   Yêu cầu thiết kế không rõ ràng và liên tục thay đổi vô tội vạ từ phía các lãnh đạo FBI (thiếu chuyên môn quản lý IT).
+    *   Sự thay đổi liên tục của các giám đốc quản lý dự án phía FBI (mất ổn định lãnh đạo).
+    *   Giao tiếp cực kỳ kém và thiếu minh bạch giữa ban dự án FBI và nhà thầu phát triển SAIC, dẫn đến việc nhà thầu viết code sai lệch hoàn toàn so với nhu cầu sử dụng thực tế của đặc vụ.
+*   **Hậu quả:** Toàn bộ 170 triệu USD tiền thuế bị mất trắng, FBI phải làm lại một dự án mới hoàn toàn từ đầu (Sentinel).
+*   **Bài học:** Thiết lập khung giao tiếp chặt chẽ, duy trì sự ủng hộ và định hướng ổn định của nhà tài trợ (Sponsor), đồng thời đào tạo chuyên môn kỹ thuật tối thiểu cho đội ngũ quản trị dự án phía khách hàng.
+
 ---
 
 ## 3. Lý thuyết hữu dụng của rủi ro (Risk Utility Theory)
@@ -122,9 +181,17 @@ Yếu tố quan trọng nhất nhưng cũng khó kiểm soát nhất trong quả
 ### 3.2. Hàm hữu dụng và 3 nhóm thái độ đối với rủi ro
 Thái độ đối với rủi ro của một tổ chức hoặc cá nhân được biểu diễn thông qua độ dốc và hình dạng của đường cong **Hàm hữu dụng $U(x)$** (với $x$ là giá trị tiền tệ hoặc kết quả đạt được):
 
-*   **Né tránh rủi ro (Risk-Averse):** Đường cong hữu dụng có dạng lồi (**Concave** - độ dốc giảm dần). Họ thà chọn một kết quả chắc chắn có giá trị trung bình thấp hơn là mạo hiểm với một kết quả có giá trị kỳ vọng cao nhưng đi kèm rủi ro lớn.
-*   **Thích rủi ro (Risk-Seeking):** Đường cong hữu dụng có dạng lõm (**Convex** - độ dốc tăng dần). Họ sẵn sàng chấp nhận rủi ro rất lớn để đổi lấy cơ hội đạt được phần thưởng cực cao, bất chấp xác suất thành công thấp.
-*   **Trung lập với rủi ro (Risk-Neutral):** Đường thẳng (**Linear** - độ dốc không đổi). Quyết định của họ hoàn toàn phụ thuộc vào việc tính toán Giá trị tiền tệ kỳ vọng (EMV).
+*   **Né tránh rủi ro (Risk-Averse):** Ưu tiên sự an toàn, ổn định hơn là lợi nhuận cao. Sẵn sàng đánh đổi một phần lợi nhuận kỳ vọng để giảm rủi ro. Đường cong hữu dụng có dạng lõm (**Concave** - độ hữu dụng cận biên giảm dần khi giá trị tăng).
+*   **Trung lập với rủi ro (Risk-Neutral):** Ra quyết định hoàn toàn dựa trên giá trị kỳ vọng (Expected Value), không quan tâm đến mức độ bất định. Đường cong hữu dụng gần như là đường thẳng (**Linear** - độ dốc không đổi).
+*   **Thích rủi ro (Risk-Seeking):** Sẵn sàng chấp nhận rủi ro rất lớn để đổi lấy cơ hội đạt được phần thưởng cực cao và tạo ra đột phá. Đường cong hữu dụng có dạng lồi (**Convex** - độ hữu dụng cận biên tăng dần khi giá trị tăng).
+
+#### Bảng so sánh nhanh 3 nhóm thái độ đối với rủi ro
+| Loại thái độ | Thái độ với rủi ro | Dạng đường cong Utility | Ví dụ điển hình |
+| :--- | :--- | :--- | :--- |
+| **Risk Averse** | Né tránh, ưu tiên an toàn | Lõm (Concave) | Ngân hàng, tổ chức tài chính, dự án y tế/an toàn |
+| **Risk Neutral** | Trung lập, dựa vào EMV | Đường thẳng (Linear) | Tập đoàn công nghệ lớn có tiềm lực tài chính |
+| **Risk Seeking** | Chấp nhận rủi ro cao để đổi cơ hội lớn | Lồi (Convex) | Startup công nghệ mới, dự án R&D đổi mới sáng tạo |
+
 
 ### 3.3. Ứng dụng toán học trong ra quyết định dự án (EMV so với Expected Utility)
 Giả sử một công ty phần mềm đang cân nhắc lựa chọn giữa hai dự án A và B:
@@ -220,6 +287,14 @@ Tất cả các rủi ro được theo dõi trong một tài liệu sống gọi
 *   Chiến lược ứng phó đề xuất (Response Strategy)
 *   Người chịu trách nhiệm theo dõi (Risk Owner)
 *   Ngân sách dự phòng (Contingency budget)
+
+##### Bảng ví dụ đăng ký và ứng phó rủi ro (Risk Response Register)
+| Mô tả rủi ro (Risk) | Xác suất (Probability) | Ảnh hưởng (Impact) | Chiến lược (Strategy) | Hành động cụ thể (Action Plan) |
+| :--- | :---: | :---: | :---: | :--- |
+| **Thiếu nhân sự** | Cao | Cao | **Mitigate** (Giảm thiểu) | Thực hiện tuyển dụng bổ sung sớm, cross-training kỹ năng chéo giữa các thành viên. |
+| **Server hỏng** | Thấp | Cao | **Transfer** (Chuyển giao) | Thuê hạ tầng Cloud (AWS/Azure) cam kết SLA 99.99%, mua dịch vụ tự động sao lưu dữ liệu. |
+| **Khách đổi yêu cầu** | Cao | Trung bình | **Accept / Mitigate** | Chấp nhận thay đổi nhỏ trong phạm vi quy định, áp dụng quy trình Change Request nghiêm ngặt cho thay đổi lớn. |
+
 
 ### 4.4. Tích hợp Quản trị rủi ro vào Kế hoạch Phát triển Phần mềm (SDP HSU)
 Theo mẫu tài liệu chuẩn của Đại học Hoa Sen `Project Plan.docx`, phần **Risk Management Plan (Kế hoạch quản trị rủi ro)** là một chương bắt buộc nằm trong Kế hoạch Phát triển Phần mềm (Software Development Plan - SDP). Để tích hợp quản trị rủi ro hiệu quả vào SDP, nhóm dự án phải mô tả rõ ràng 3 phần chính sau:

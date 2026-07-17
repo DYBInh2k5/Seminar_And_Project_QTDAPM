@@ -1586,7 +1586,7 @@ body {
 /* Responsive & Zooming Adjustments */
 @media (max-width: 1024px) {
     .main-title { font-size: 2.8rem; }
-    .two-col-grid, .tab-grid, .simulator-layout, .jwd-grid, .npv-calculator-layout {
+    .two-col-grid, .tab-grid, .simulator-layout, .jwd-grid, .npv-calculator-layout, .tech-grid-2x2, .people-grid-2x2, .cases-grid-4x1 {
         grid-template-columns: 1fr;
         overflow-y: auto;
     }
@@ -1674,7 +1674,7 @@ body {
     .slide {
         padding: 12px 25px;
     }
-    .two-col-grid, .tab-grid, .simulator-layout, .jwd-grid, .npv-calculator-layout {
+    .two-col-grid, .tab-grid, .simulator-layout, .jwd-grid, .npv-calculator-layout, .tech-grid-2x2, .people-grid-2x2, .cases-grid-4x1 {
         grid-template-columns: 1fr;
         gap: 15px;
         overflow-y: auto;
@@ -1744,4 +1744,185 @@ body {
 [data-theme="light"] .calculator-col-left {
     background: rgba(0, 0, 0, 0.015);
 }
+
+/* Layouts for new slides (Slide 5, 6, 7) */
+
+/* Slide 5: Tech Risk Grid */
+.tech-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: calc(100% - 70px);
+}
+
+.tech-card {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary);
+}
+
+.tech-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tech-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.tech-card-source {
+    margin-top: auto;
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Slide 6: Human Risk Grid */
+.people-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: calc(100% - 70px);
+}
+
+.people-card {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.people-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-color: #ffeb3b;
+}
+
+.people-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.people-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.people-card-stat {
+    margin-top: auto;
+    font-size: 0.75rem;
+    color: #ffeb3b;
+    font-weight: 600;
+}
+
+/* Slide 7: Case Studies Grid */
+.cases-grid-4x1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    height: calc(100% - 90px);
+}
+
+.case-mini-card {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.case-mini-card:hover {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.case-mini-card h3 {
+    font-size: 1rem;
+    font-family: var(--font-heading);
+    margin-bottom: 8px;
+    color: var(--accent);
+}
+
+.case-mini-card .case-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.case-mini-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.case-mini-card .outcome-text {
+    margin-top: auto;
+    padding-top: 10px;
+    font-size: 0.75rem;
+    border-top: 1px dashed var(--border-color);
+    color: #f43f5e;
+    font-weight: 600;
+}
+
+/* Light Mode Contrast Overrides for new classes */
+[data-theme="light"] .tech-card,
+[data-theme="light"] .people-card,
+[data-theme="light"] .case-mini-card {
+    background: rgba(0, 0, 0, 0.015);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .tech-card:hover,
+[data-theme="light"] .people-card:hover,
+[data-theme="light"] .case-mini-card:hover {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .people-card h3 {
+    color: #b58900;
+}
+[data-theme="light"] .people-card-stat {
+    color: #b58900;
+}
+[data-theme="light"] .case-mini-card h3 {
+    color: var(--accent);
+}
+[data-theme="light"] .case-mini-card .outcome-text {
+    color: #c2185b;
+}
+
 
