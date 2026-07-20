@@ -374,16 +374,51 @@ Trong quá trình triển khai thực tế, nhiều rủi ro trong danh sách tr
 *   **Giải pháp ứng phó:** Erica chủ động thiết lập cơ chế đo lường lợi ích (Benefit Measurement Plan) ngay trong giai đoạn kiểm thử. Cô phát hiện trang Intranet giúp đội PMO tự động hóa quy trình, cho phép giảm 1 định biên nhân sự PMO (chuyển sang nhóm tư vấn thương mại), tạo ra khoản tiết kiệm chi phí trực tiếp $40,000/năm.
 *   **Kết quả:** Khẳng định dự án đạt ROI 112% và hoàn vốn đúng cam kết.
 
-### 5.4. Hệ thống tài liệu PMBOK mà JWD Consulting áp dụng qua 5 nhóm quy trình
-Dự án của JWD Consulting là một ví dụ điển hình về việc áp dụng chuẩn mực PMBOK (5th Edition) thông qua 12 tài liệu sản phẩm chính:
+### 5.4. Cấu trúc WBS (Figure 3-3) & Phân định Phạm vi giữa Seminar và Project
+
+Dựa trên tài liệu chuẩn **Figure 3-3 JWD Consulting Intranet Project Work Breakdown Structure (WBS)** trong `jwd_case_study.pdf` (trang 107), toàn bộ vòng đời phát triển dự án được chia thành 5 nhóm quy trình công việc chính:
+
+```text
+1.0 Initiating (Khởi tạo dự án)
+   ├── 1.1 Identify key stakeholders (Xác định các bên liên quan)
+   ├── 1.2 Prepare project charter (Lập điều lệ dự án & Bài toán tài chính)
+   └── 1.3 Hold project kick-off meeting (Họp khởi động dự án)
+2.0 Planning (Lập kế hoạch)
+   ├── 2.1 Hold team planning meeting
+   ├── 2.2 Prepare team contract
+   ├── 2.3 Prepare scope statement
+   ├── 2.4 Prepare WBS
+   ├── 2.5 Prepare schedule and cost baseline (Tasks, Resources, Gantt chart)
+   └── 2.6 Identify, discuss, and prioritize risks (Nhận diện & Ưu tiên rủi ro)
+3.0 Executing (Thực hiện dự án & Thi công phần mềm)
+   ├── 3.1 Survey & 3.2 User inputs
+   ├── 3.3 Intranet content (Templates, Articles, Links, Ask the Expert)
+   ├── 3.4 Design & 3.5 Construction & 3.6 Testing
+   └── 3.7 Promotion, 3.8 Roll-out & 3.9 Benefits measurement
+4.0 Monitoring and Controlling (Giám sát & Kiểm soát)
+   └── 4.1 Progress reports (Báo cáo tiến độ hàng tuần)
+5.0 Closing (Kết thúc dự án)
+   ├── 5.1 Prepare final project report
+   ├── 5.2 Prepare final project presentation
+   └── 5.3 Lessons learned (Báo cáo bài học kinh nghiệm)
+```
+
+#### Phân định vai trò và phạm vi theo chỉ đạo của Giảng viên:
+*   **Phạm vi Bài báo cáo Seminar (Phần 1 - 1.0 Initiating & Khung Quản trị Rủi ro):**
+    *   Tập trung nghiên cứu cơ sở lý thuyết **Quản trị Rủi ro phần mềm (Risk Management Framework)** và **Lý thuyết hữu dụng của rủi ro (Risk Utility Theory)**.
+    *   Thực hiện các nội dung thuộc **Phần 1.0 Initiating**: Nhận diện Stakeholders và phân tích thái độ đối với rủi ro ($1.1$), nghiên cứu Bài toán kinh tế NPV/ROI và Điều lệ dự án ($1.2$), cùng với việc lập Danh mục rủi ro ưu tiên ($2.6$) và các Case Study ứng phó thực tế.
+*   **Phạm vi Đồ án môn học / Project (Phần 2.0 đến 5.0 - Xây dựng Hệ thống Đăng ký Học phần Trực tuyến):**
+    *   Toàn bộ quy trình triển khai chi tiết từ **Phần 2.0 (Planning)**, **3.0 (Executing - Lập trình HTML/CSS/JS, Cơ sở dữ liệu, Kiểm thử)**, **4.0 (Controlling - Giám sát tiến độ)** đến **5.0 (Closing - Báo cáo tổng kết đồ án)** sẽ được triển khai thực tiễn trong dự án phần mềm **"Hệ thống đăng ký học phần trực tuyến"** tại thư mục `Project/`.
+
+#### Bảng tổng hợp 12 tài liệu chuẩn PMBOK áp dụng tại JWD Consulting:
 
 | Nhóm quy trình (Process Group) | Tài liệu sản phẩm PMBOK áp dụng tại JWD |
 | :--- | :--- |
-| **1. Khởi tạo (Initiating)** | • Business Case (Tài liệu bài toán kinh tế)<br>• Stakeholder Register & Management Strategy (Sổ theo dõi bên liên quan)<br>• Project Charter (Điều lệ dự án)<br>• Kick-off Meeting Agenda & Minutes (Biên bản họp khởi động) |
-| **2. Lập kế hoạch (Planning)** | • Team Contract (Hợp đồng nguyên tắc làm việc nhóm)<br>• Project Scope Statement (Tài liệu phạm vi dự án)<br>• Work Breakdown Structure - WBS (Cấu trúc phân chia công việc)<br>• Baseline Gantt Chart (Tiến độ cơ sở trên MS Project)<br>• Prioritized Risk List (Danh mục rủi ro ưu tiên) |
-| **3. Thực hiện (Executing)** | • Milestone Reports (Báo cáo mốc bàn giao)<br>• Survey & User Inputs (Kết quả khảo sát người dùng) |
-| **4. Giám sát & Kiểm soát (Controlling)** | • Weekly Progress Reports (Báo cáo tiến độ hàng tuần của từng thành viên)<br>• Earned Value Management - EVM (Đo lường giá trị thu được) |
-| **5. Kết thúc (Closing)** | • Final Project Report & Presentation (Báo cáo tổng kết & Trình bày dự án)<br>• Lessons-Learned Report (Báo cáo bài học kinh nghiệm)<br>• Client Acceptance Form (Biên bản nghiệm thu dự án) |
+| **1. Khởi tạo (Initiating - Trọng tâm Seminar)** | • Business Case (Tài liệu bài toán kinh tế)<br>• Stakeholder Register & Management Strategy (Sổ theo dõi bên liên quan)<br>• Project Charter (Điều lệ dự án)<br>• Kick-off Meeting Agenda & Minutes (Biên bản họp khởi động) |
+| **2. Lập kế hoạch (Planning - Áp dụng ở Project)** | • Team Contract (Hợp đồng nguyên tắc làm việc nhóm)<br>• Project Scope Statement (Tài liệu phạm vi dự án)<br>• Work Breakdown Structure - WBS (Cấu trúc phân chia công việc)<br>• Baseline Gantt Chart (Tiến độ cơ sở trên MS Project)<br>• Prioritized Risk List (Danh mục rủi ro ưu tiên) |
+| **3. Thực hiện (Executing - Áp dụng ở Project)** | • Milestone Reports (Báo cáo mốc bàn giao)<br>• Survey & User Inputs (Kết quả khảo sát người dùng) |
+| **4. Giám sát & Kiểm soát (Controlling - Áp dụng ở Project)** | • Weekly Progress Reports (Báo cáo tiến độ hàng tuần của từng thành viên)<br>• Earned Value Management - EVM (Đo lường giá trị thu được) |
+| **5. Kết thúc (Closing - Áp dụng ở Project)** | • Final Project Report & Presentation (Báo cáo tổng kết & Trình bày dự án)<br>• Lessons-Learned Report (Báo cáo bài học kinh nghiệm)<br>• Client Acceptance Form (Biên bản nghiệm thu dự án) |
 
 ---
 
