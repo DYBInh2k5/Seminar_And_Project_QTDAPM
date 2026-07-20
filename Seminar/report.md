@@ -314,47 +314,76 @@ Theo mẫu tài liệu chuẩn của Đại học Hoa Sen `Project Plan.docx`, p
 
 ## 5. Phân tích thực tế: Case Study JWD Consulting
 
-Để hiểu cách thức áp dụng quản trị rủi ro trên thực tế, chúng ta cùng phân tích Case Study dự án **"Project Management Intranet Site"** của công ty **JWD Consulting** dưới góc độ quản lý rủi ro.
+Để hiểu cách thức áp dụng quản trị rủi ro trên thực tế, chúng ta cùng phân tích chi tiết Case Study dự án **"Project Management Intranet Site"** của công ty **JWD Consulting** (thuộc Chương 3 tài liệu PMBOK 5th Edition) dưới góc độ quản lý rủi ro và các chỉ số tài chính thực tế.
 
-### 5.1. Bối cảnh dự án
+### 5.1. Bối cảnh dự án & Bài toán tài chính (Table 3-2 & Table 3-17)
 Dự án được khởi xướng bởi CEO Joe Fleming nhằm thiết kế và xây dựng một trang Intranet chia sẻ kiến thức quản trị dự án, cung cấp các biểu mẫu và tính năng hữu ích cho cả chuyên viên tư vấn nội bộ và khách hàng bên ngoài.
-*   **Ngân sách ban đầu:** $140,000
-*   **Thời gian thực hiện:** 6 tháng (từ 2/5 đến 4/11)
-*   **Quản lý dự án:** Erica Bell (Giám đốc PMO)
+*   **Nhà tài trợ dự án (Sponsor):** Joe Fleming (CEO JWD Consulting).
+*   **Quản lý dự án (Project Manager):** Erica Bell (Giám đốc PMO).
+*   **Đội ngũ thực hiện:** Michael Chen (Senior Consultant), Jessie Faue (Consultant PMO), Kevin Dodge & Cindy Dawson (Bộ phận IT), Kim Phuong & Page Miller (Đại diện khách hàng).
+*   **Thời gian thực hiện:** 6 tháng (từ 2/5 đến 4/11).
+*   **Bài toán tài chính ban đầu (Business Case - Table 3-2):**
+    *   **Dự toán chi phí ban đầu (Baseline Budget):** $140,000 ($25,000 lương PM, $105,000 lương nhân sự nội bộ, $10,000 chi phí mua dịch vụ/phần mềm ngoài).
+    *   **Chi phí vận hành & bảo trì hàng năm:** $40,000/năm (dự kiến trong vòng 3 năm vòng đời hệ thống).
+    *   **Lợi ích dự kiến hàng năm:** $200,000/năm (gồm $160,000 nhờ 400 tư vấn viên tiết kiệm 40h/năm @ $10/h lợi nhuận + $40,000 từ 1% tăng trưởng doanh thu mới).
+    *   **Tỷ suất chiết khấu (Discount Rate):** **8%**.
+    *   **Các chỉ số hiệu quả:** $NPV = \$272,336$, $ROI = 112\%$, Thời gian hoàn vốn (Payback) = **Dưới 1 năm** (trong năm đầu tiên).
+*   **Chi phí thực tế khi hoàn thành:** **$150,000** (vượt ngân sách dự toán $10,000 do phát sinh chi phí mua và tùy chỉnh phần mềm bên ngoài cho module "Ask the Expert" và "User Requests", được CEO phê duyệt bổ sung).
 
-### 5.2. Danh sách rủi ro ưu tiên của JWD Consulting
-Trong giai đoạn lập kế hoạch, Erica Bell đã tổ chức họp brainstorm với đội ngũ dự án, đánh giá rủi ro thông qua Ma trận Xác suất - Tác động (Probability/Impact Matrix) và đưa ra danh sách 10 rủi ro ưu tiên hàng đầu (theo Table 3-10 của tài liệu case study):
+### 5.2. Danh sách 10 rủi ro ưu tiên của JWD Consulting (Table 3-10)
+Trong giai đoạn lập kế hoạch, Erica Bell đã tổ chức họp brainstorm với toàn đội ngũ, đánh giá rủi ro thông qua Ma trận Xác suất - Tác động (Probability/Impact Matrix) và lập Danh mục rủi ro ưu tiên (Prioritized Risk Register):
 
-| Thứ hạng | Mô tả rủi ro (Potential Risk) | Nguồn rủi ro |
+| Thứ hạng | Mô tả rủi ro (Potential Risk) | Phân loại rủi ro |
 | :---: | :--- | :--- |
-| **1** | Thiếu sự đóng góp tài liệu từ các tư vấn viên nội bộ (Lack of inputs from internal consultants) | Con người / Thị trường |
-| **2** | Thiếu sự đóng góp ý kiến từ các đại diện khách hàng (Lack of inputs from client representatives) | Con người / Thị trường |
-| **3** | Vấn đề bảo mật thông tin của hệ thống mới (Security of new system) | Công nghệ |
-| **4** | Rủi ro trong việc thuê ngoài/mua phần mềm cho tính năng tra cứu bài báo và "Hỏi chuyên gia" | Công nghệ / Tài chính |
-| **5** | Rủi ro trong việc thuê ngoài/mua phần mềm xử lý giao dịch thanh toán trực tuyến | Công nghệ / Tài chính |
-| **6** | Tổ chức, sắp xếp các biểu mẫu và ví dụ mẫu sao cho khoa học và dễ sử dụng | Công nghệ |
-| **7** | Cung cấp một tính năng tìm kiếm hiệu quả và chính xác | Công nghệ |
-| **8** | Không nhận được phản hồi chất lượng từ Michael Chen và các tư vấn viên cấp cao khác | Con người |
-| **9** | Việc quảng bá hệ thống mới không đạt hiệu quả | Thị trường |
-| **10** | Không hiện thực hóa được các lợi ích tài chính của hệ thống trong vòng một năm | Tài chính |
+| **1** | Thiếu sự đóng góp tài liệu từ các tư vấn viên nội bộ (Lack of inputs from internal consultants) | Con người / Quản lý |
+| **2** | Thiếu sự đóng góp ý kiến từ các đại diện khách hàng (Lack of inputs from client representatives) | Con người / Khách hàng |
+| **3** | Vấn đề an toàn & bảo mật thông tin của hệ thống mới (Security of new system) | Công nghệ |
+| **4** | Rủi ro khi mua phần mềm ngoài cho tính năng tra cứu bài báo và "Ask the Expert" | Công nghệ / Tài chính |
+| **5** | Rủi ro khi mua phần mềm ngoài xử lý giao dịch thanh toán trực tuyến | Công nghệ / Tài chính |
+| **6** | Tổ chức, sắp xếp các biểu mẫu và ví dụ mẫu sao cho khoa học và dễ sử dụng | Công nghệ / UX |
+| **7** | Cung cấp tính năng tìm kiếm hiệu quả, chính xác và nhanh chóng | Công nghệ |
+| **8** | Không nhận được phản hồi chất lượng từ Michael Chen và các tư vấn viên cấp cao khác | Con người / Thái độ |
+| **9** | Việc quảng bá hệ thống mới (Promotion) không thu hút được người dùng | Thị trường / Tiếp thị |
+| **10** | Không hiện thực hóa được các lợi ích tài chính dự báo của hệ thống trong vòng 1 năm | Tài chính / Chiến lược |
 
 ### 5.3. Phân tích cách ứng phó thực tế của Erica Bell
-Trong quá trình triển khai dự án, nhiều rủi ro trong danh sách trên đã thực sự xảy ra. Erica Bell đã có những phản hồi rất xuất sắc thể hiện kỹ năng quản trị dự án thực chiến:
+Trong quá trình triển khai thực tế, nhiều rủi ro trong danh sách trên đã bộc phát. Erica Bell đã có những phản hồi rất xuất sắc thể hiện kỹ năng quản trị dự án thực chiến:
 
-#### Case 1: Ứng phó với rủi ro thứ nhất (Thiếu sự đóng góp tài liệu từ tư vấn viên nội bộ)
-*   **Sự kiện:** Dự án nhận được tỷ lệ phản hồi khảo sát rất thấp từ các tư vấn viên trong công ty. Nếu không có dữ liệu đầu vào này, trang Intranet sẽ trống rỗng và không mang lại giá trị thực tế.
-*   **Giải pháp ứng phó:** Erica đã chuyển hướng lên cấp cao hơn nhờ sự can thiệp từ **Nhà tài trợ dự án (Sponsor - CEO Joe Fleming)**. Joe đã gửi một email chỉ thị trực tiếp đến toàn công ty nhấn mạnh tầm quan trọng của dự án, đồng thời áp dụng một **chiến lược tạo động lực tích cực**: Tặng thêm **5 ngày phép** cho người cung cấp các ví dụ biểu mẫu tốt nhất.
-*   **Kết quả:** Số lượng tư vấn viên nhiệt tình đóng góp tài liệu tăng vọt, giải quyết dứt điểm rủi ro cốt lõi này.
+#### Case 1: Ứng phó rủi ro 1 (Thiếu đóng góp tài liệu từ tư vấn viên nội bộ)
+*   **Sự kiện:** Khảo sát ban đầu nhận được tỷ lệ phản hồi rất thấp từ các tư vấn viên. Nếu thiếu mẫu tài liệu thực tế, trang Intranet sẽ không có nội dung giá trị.
+*   **Giải pháp ứng phó:** Erica đã can thiệp thông qua **Nhà tài trợ dự án (CEO Joe Fleming)**. CEO đã gửi email chỉ thị trực tiếp đến toàn công ty, đồng thời áp dụng **chính sách tạo động lực tích cực**: Tặng thêm **5 ngày phép** cho tư vấn viên nào đóng góp bộ biểu mẫu dự án xuất sắc nhất.
+*   **Kết quả:** Động lực nhân sự tăng cao, thu thập đủ 20 biểu mẫu chất lượng cao cho giai đoạn 1.
 
-#### Case 2: Ứng phó với rủi ro thứ 4 và 5 (Mua phần mềm bên ngoài & Vấn đề ngân sách phát sinh)
-*   **Sự kiện:** Khi thiết lập các tính năng "Hỏi chuyên gia" và thanh toán trực tuyến, lập trình viên Kevin Dodge muốn tự code toàn bộ hệ thống từ đầu (một dạng rủi ro công nghệ do thiên kiến cá nhân). Trong khi đó, chuyên viên Cindy Dawson nhận định rằng việc thuê ngoài/mua giải pháp có sẵn sẽ an sau hơn nhưng chi phí thực tế phát sinh lên đến $20,000 (gấp đôi dự kiến ban đầu là $10,000).
-*   **Giải pháp ứng phó:** Erica Bell đã thuyết phục Kevin chấp nhận phương án mua giải pháp ngoài để giảm thiểu rủi ro trễ tiến độ. Đồng thời, cô trình bày rõ ràng bài toán kinh tế với CEO Joe Fleming để xin phê duyệt thêm khoản ngân sách $10,000 vượt trội, cam kết đảm bảo mục tiêu thu hồi vốn.
-*   **Kết quả:** Dự án được cấp thêm $10,000 (nâng tổng ngân sách thực tế lên $150,000) nhưng hoàn thành đúng tiến độ nhờ tích hợp các module thanh toán và diễn đàn chuyên gia có sẵn, đảm bảo hệ thống bảo mật và vận hành trơn tru.
+#### Case 2: Ứng phó rủi ro 2 (Thiếu đóng góp từ đại diện khách hàng)
+*   **Sự kiện:** Hai đại diện khách hàng (Kim Phuong & Page Miller) lo ngại rò rỉ dữ liệu nhạy cảm của doanh nghiệp mình và thiếu thời gian tham gia các buổi họp dự án.
+*   **Giải pháp ứng phó:** CEO Joe Fleming đã chủ động gọi điện trực tiếp cho CEO của 2 công ty đối tác lớn này để làm rõ lợi ích đôi bên. Đồng thời ký thỏa thuận bảo mật NDA và miễn phí hoàn toàn chi phí tư vấn cho đại diện khách hàng.
+*   **Kết quả:** Đại diện khách hàng tích cực tham gia với vai trò cố vấn (Advisors) mà JWD không phải trả chi phí nhân công.
 
-#### Case 3: Ứng phó với rủi ro thứ 8 (Rủi ro về thái độ của Michael Chen)
-*   **Sự kiện:** Michael Chen là một tư vấn viên cấp cao rất bận rộn. Trong các cuộc họp dự án, anh tỏ ra nhàm chán và liên tục ra ngoài nghe điện thoại xử lý công việc riêng với khách hàng, đe dọa đến tinh thần làm việc chung của đội ngũ và làm giảm chất lượng đóng góp ý kiến.
-*   **Giải pháp ứng phó:** Erica Bell thay vì chỉ trích gay gắt, đã áp dụng chiến thuật quản trị con người linh hoạt. Cô hiểu rằng thời gian của Michael là tiền bạc đối với công ty và anh là người có xu hướng ưu tiên khách hàng thực tế hơn công việc nội bộ. Cô đã **giảm thiểu số lượng cuộc họp** Michael bắt buộc phải tham gia, thay vào đó giao trực tiếp quyền làm chủ (Owner) tính năng "Hỏi chuyên gia" cho anh và cho phép anh đóng góp ý kiến gián tiếp thông qua trợ lý Jill Anderson.
-*   **Kết quả:** Michael Chen cảm thấy thoải mái hơn, hoàn thành xuất sắc vai trò dẫn dắt tính năng diễn đàn chuyên gia, đảm bảo dự án vẫn tận dụng được kiến thức chuyên môn của anh mà không gây xung đột nội bộ.
+#### Case 3: Ứng phó rủi ro 4 & 5 (Tự code vs Mua giải pháp ngoài & Phát sinh ngân sách $10,000)
+*   **Sự kiện:** Lập trình viên Kevin Dodge muốn tự viết mã (in-house development) cho toàn bộ tính năng "Ask the Expert" và "Payment Process", gây rủi ro trễ hạn bàn giao. Trong khi đó, chuyên viên Cindy Dawson tìm được nhà cung cấp uy tín nhưng chi phí thực tế là $20,000 (gấp đôi dự toán $10,000).
+*   **Giải pháp ứng phó:** Erica thuyết phục Kevin chấp nhận mua phần mềm thương mại có sẵn để giảm rủi ro công nghệ. Đồng thời trình bày bài toán kinh tế NPV với CEO Joe Fleming để xin cấp bổ sung $10,000, cam kết giữ thời gian hoàn vốn trong 1 năm.
+*   **Kết quả:** Ngân sách thực tế tăng lên $150,000 nhưng dự án bàn giao đúng hạn (4/11) và vận hành an toàn.
+
+#### Case 4: Ứng phó rủi ro 8 (Thái độ làm việc của tư vấn viên cấp cao Michael Chen)
+*   **Sự kiện:** Michael Chen bận rộn với các dự án khách hàng thương mại, tỏ ra chán nản và liên tục ra ngoài nghe điện thoại trong các cuộc họp chung, làm ảnh hưởng đến tinh thần nhóm.
+*   **Giải pháp ứng phó:** Erica không áp đặt kỷ luật cứng nhắc mà thay đổi phong cách giao tiếp linh hoạt: **Cắt giảm tối đa số cuộc họp bắt buộc** đối với Michael, giao trực tiếp quyền sở hữu (Owner) tính năng "Ask the Expert" cho anh, và cho phép làm việc gián tiếp qua trợ lý Jill Anderson.
+*   **Kết quả:** Michael Chen thoải mái hợp tác, dẫn dắt thành công tính năng diễn đàn chuyên gia mà không gây xung đột nội bộ.
+
+#### Case 5: Ứng phó rủi ro 10 (Đo lường & Hiện thực hóa lợi ích tài chính trong 1 năm)
+*   **Sự kiện:** Nguy cơ không chứng minh được hiệu quả tài chính sau khi chi $150,000 đầu tư.
+*   **Giải pháp ứng phó:** Erica chủ động thiết lập cơ chế đo lường lợi ích (Benefit Measurement Plan) ngay trong giai đoạn kiểm thử. Cô phát hiện trang Intranet giúp đội PMO tự động hóa quy trình, cho phép giảm 1 định biên nhân sự PMO (chuyển sang nhóm tư vấn thương mại), tạo ra khoản tiết kiệm chi phí trực tiếp $40,000/năm.
+*   **Kết quả:** Khẳng định dự án đạt ROI 112% và hoàn vốn đúng cam kết.
+
+### 5.4. Hệ thống tài liệu PMBOK mà JWD Consulting áp dụng qua 5 nhóm quy trình
+Dự án của JWD Consulting là một ví dụ điển hình về việc áp dụng chuẩn mực PMBOK (5th Edition) thông qua 12 tài liệu sản phẩm chính:
+
+| Nhóm quy trình (Process Group) | Tài liệu sản phẩm PMBOK áp dụng tại JWD |
+| :--- | :--- |
+| **1. Khởi tạo (Initiating)** | • Business Case (Tài liệu bài toán kinh tế)<br>• Stakeholder Register & Management Strategy (Sổ theo dõi bên liên quan)<br>• Project Charter (Điều lệ dự án)<br>• Kick-off Meeting Agenda & Minutes (Biên bản họp khởi động) |
+| **2. Lập kế hoạch (Planning)** | • Team Contract (Hợp đồng nguyên tắc làm việc nhóm)<br>• Project Scope Statement (Tài liệu phạm vi dự án)<br>• Work Breakdown Structure - WBS (Cấu trúc phân chia công việc)<br>• Baseline Gantt Chart (Tiến độ cơ sở trên MS Project)<br>• Prioritized Risk List (Danh mục rủi ro ưu tiên) |
+| **3. Thực hiện (Executing)** | • Milestone Reports (Báo cáo mốc bàn giao)<br>• Survey & User Inputs (Kết quả khảo sát người dùng) |
+| **4. Giám sát & Kiểm soát (Controlling)** | • Weekly Progress Reports (Báo cáo tiến độ hàng tuần của từng thành viên)<br>• Earned Value Management - EVM (Đo lường giá trị thu được) |
+| **5. Kết thúc (Closing)** | • Final Project Report & Presentation (Báo cáo tổng kết & Trình bày dự án)<br>• Lessons-Learned Report (Báo cáo bài học kinh nghiệm)<br>• Client Acceptance Form (Biên bản nghiệm thu dự án) |
 
 ---
 
@@ -362,7 +391,9 @@ Trong quá trình triển khai dự án, nhiều rủi ro trong danh sách trên
 
 Quản trị rủi ro không phải là hoạt động diễn ra một lần duy nhất lúc khởi đầu dự án, mà là một quy trình liên tục trong suốt vòng đời phát triển phần mềm. Việc áp dụng thành công **Lý thuyết hữu dụng của rủi ro (Risk Utility Theory)** giúp nhà quản trị dự án hiểu rõ giới hạn chịu đựng rủi ro của tổ chức để phân bổ nguồn lực ứng phó hiệu quả nhất.
 
-**Bài học cốt lõi từ Case Study JWD Consulting:**
-1.  **Sự đồng hành của Ban lãnh đạo (Top Management Support):** Sự hỗ trợ kịp thời từ CEO Joe Fleming là chìa khóa tháo gỡ các nút thắt về ngân sách và sự hợp tác của nhân sự.
-2.  **Sử dụng linh hoạt các chiến lược ứng phó:** Không cố chấp tự làm tất cả (tự code), biết khi nào cần chuyển giao (mua giải pháp ngoài) để đảm bảo mục tiêu tối thượng là thời gian hoàn thành dự án (Time-to-market).
-3.  **Tầm quan trọng của giao tiếp và thấu hiểu nhân sự:** Thay đổi phong cách giao tiếp với từng Stakeholder dựa trên mức độ quan tâm và ảnh hưởng của họ (như trường hợp của Michael Chen) là nhân tố quyết định sự thành bại về mặt quản lý con người trong dự án.
+**5 Bài học kinh nghiệm cốt lõi từ Lessons-Learned Report của JWD Consulting (Table 3-16):**
+1.  **Sự đồng hành trực tiếp từ Ban lãnh đạo (Top Management Support):** Sự hỗ trợ quyết liệt của Sponsor (CEO Joe Fleming) là chìa khóa tháo gỡ các nút thắt ngân sách, chính sách nghỉ phép thưởng và thúc đẩy sự hợp tác của toàn công ty.
+2.  **Xây dựng văn hóa làm việc nhóm (Team Contract & Kick-off):** Tổ chức họp Kick-off phá băng hiệu quả và thiết lập Hợp đồng nguyên tắc nhóm (Team Contract) tạo sự cam kết và minh bạch ngay từ ngày đầu.
+3.  **Sử dụng linh hoạt các chiến lược ứng phó:** Không cố chấp tự code tất cả (in-house), biết khi nào cần chuyển giao (mua giải pháp thương mại ngoài) để đảm bảo tiến độ bàn giao (Time-to-market).
+4.  **Điều hòa nhân sự & Thấu hiểu thái độ rủi ro:** Thay đổi phong cách giao tiếp linh hoạt dựa trên mức độ quan tâm và ảnh hưởng của từng Stakeholder (như trường hợp điều chỉnh lịch làm việc phù hợp với tư vấn viên cấp cao Michael Chen).
+5.  **Kế hoạch lập bài bản tạo nên sự thực thi hiệu quả:** Việc dành thời gian đầu tư cho Project Charter, WBS, Baseline Schedule và Risk Register giúp đội ngũ kiểm soát tốt biến động chi phí ($140k -> $150k) mà vẫn đạt 100% mục tiêu chất lượng và thời gian.

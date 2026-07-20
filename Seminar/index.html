@@ -717,7 +717,7 @@
                                     <input type="range" id="r-slider" min="0" max="20" value="5" class="modern-slider">
                                 </div>
                             </div>
- 
+
                             <!-- Cashflow Table -->
                             <table class="cashflow-input-table">
                                 <thead>
@@ -748,7 +748,7 @@
                             </table>
                             <p class="table-note">*Tính toán tự động chiết khấu dòng tiền bắt đầu từ Năm 1 ($DF_t = 1 / (1+r)^t$).</p>
                         </div>
- 
+
                         <!-- Outputs Right -->
                         <div class="npv-outputs glass-card">
                             <h3>Kết Quả Tính Toán & Đánh Giá</h3>
@@ -770,7 +770,7 @@
                                     <strong id="out-roi">39.65%</strong>
                                 </div>
                             </div>
- 
+
                             <!-- Bar Chart Visualizing PV_B, PV_C and NPV -->
                             <div class="chart-visualizer-box">
                                 <h4>So sánh giá trị tài chính dự án</h4>
@@ -799,7 +799,6 @@
                     </div>
                 </div>
             </section>
- 
             <!-- SLIDE 12: Case Study JWD Consulting & Conclusion -->
             <section class="slide" id="slide-12">
                 <div class="slide-content standard-layout">
@@ -810,38 +809,49 @@
                     
                     <div class="jwd-grid">
                         <div class="jwd-sidebar glass-card">
-                            <h3>Bối cảnh JWD</h3>
-                            <ul>
-                                <li><strong>Dự án:</strong> Intranet chia sẻ biểu mẫu quản trị dự án.</li>
-                                <li><strong>Quản lý:</strong> Erica Bell</li>
-                                <li><strong>Sponsor:</strong> Joe Fleming (CEO)</li>
-                                <li><strong>Ngân sách:</strong> $150,000 thực tế</li>
+                            <h3>Bối cảnh & Chỉ số JWD</h3>
+                            <ul style="font-size: 0.75rem; line-height: 1.4;">
+                                <li><strong>Sponsor / PM:</strong> Joe Fleming (CEO) / Erica Bell (PMO)</li>
+                                <li><strong>Ngân sách:</strong> Dự toán $140k → Thực tế <strong>$150k</strong></li>
+                                <li><strong>Bảo trì & Lợi ích:</strong> $40k/năm & <strong>$200k/năm</strong></li>
+                                <li><strong>Chiết khấu / Payback:</strong> <strong>8%</strong> / Dưới 1 năm</li>
+                                <li><strong>NPV / ROI:</strong> <strong>$272,336</strong> / <strong>112%</strong></li>
                             </ul>
-                            <div class="jwd-source-link">
+                            <div class="jwd-source-link" style="margin-top: 8px;">
                                 Tài liệu tham khảo môn học:<br>
-                                <a href="file:///d:/HSU/2534Semester 4(2025-2026)/QT_DA_PM/Seminar/jwd_case_study.txt" class="doc-link">jwd_case_study.txt</a>
+                                <a href="file:///d:/HSU/2534Semester 4(2025-2026)/QT_DA_PM/Seminar/jwd_case_study.txt" class="doc-link">jwd_case_study.txt (Chương 3)</a>
                             </div>
                         </div>
- 
+
                         <div class="jwd-main">
-                            <div class="hsu-case-boxes">
+                            <div class="hsu-case-boxes" style="grid-template-columns: repeat(2, 1fr); gap: 10px;">
                                 <div class="mini-case-box">
                                     <h5>Thiếu ý kiến nội bộ (Rủi ro 1)</h5>
-                                    <p>Erica nhờ CEO gửi email chỉ thị trực tiếp, mở đợt thi đua tặng **5 ngày phép** cho chuyên viên đóng góp biểu mẫu tốt nhất.</p>
+                                    <p>CEO gửi email toàn công ty & thưởng **5 ngày phép** cho tư vấn viên cung cấp bộ biểu mẫu tốt nhất.</p>
                                 </div>
                                 <div class="mini-case-box">
-                                    <h5>Vượt ngân sách outsource (Rủi ro 4, 5)</h5>
-                                    <p>Thuyết phục dev mua module thanh toán và hỏi đáp thay vì tự code. Xin CEO cấp thêm $10k để bảo mật hệ thống.</p>
+                                    <h5>Đại diện khách hàng (Rủi ro 2)</h5>
+                                    <p>CEO trực tiếp gặp lãnh đạo đối tác, ký NDA mời Kim Phuong & Page Miller cố vấn $0 chi phí.</p>
+                                </div>
+                                <div class="mini-case-box">
+                                    <h5>Mua phần mềm ngoài (Rủi ro 4, 5)</h5>
+                                    <p>Thuyết phục dev mua module ngoài thay vì tự code. Xin CEO phê duyệt cấp thêm **$10,000** vượt budget.</p>
                                 </div>
                                 <div class="mini-case-box">
                                     <h5>Thái độ Michael Chen (Rủi ro 8)</h5>
-                                    <p>PM giảm tối đa họp với Michael, để anh tự chủ module chuyên gia và làm việc gián tiếp qua trợ lý Jill Anderson.</p>
+                                    <p>Giảm họp bắt buộc, giao quyền làm chủ "Ask the Expert" và trao đổi gián tiếp qua trợ lý Jill Anderson.</p>
                                 </div>
                             </div>
                             
-                            <div class="conclusion-box-bottom glass-card">
-                                <h4>Bài học kinh nghiệm cốt lõi & Q&A</h4>
-                                <p>1. Quản trị rủi ro diễn ra liên tục. 2. Cần sự ủng hộ vững chắc của Sponsor. 3. Sử dụng linh hoạt các chiến lược (mua ngoài thay vì tự code). 4. Điều hòa nhân sự khéo léo. Cảm ơn các bạn đã lắng nghe, chào mừng đến với phần Q&A!</p>
+                            <div class="conclusion-box-bottom glass-card" style="margin-top: 10px; padding: 10px;">
+                                <h4 style="font-size: 0.85rem; margin-bottom: 4px;">5 Bài học kinh nghiệm cốt lõi (Table 3-16) & Q&A</h4>
+                                <p style="font-size: 0.72rem; line-height: 1.35;">
+                                    1. Sự hỗ trợ quyết liệt từ Sponsor (CEO Joe Fleming). 
+                                    2. Thiết lập Team Contract & Kick-off rõ ràng. 
+                                    3. Ứng phó linh hoạt (mua ngoài thay vì tự code). 
+                                    4. Quản lý nhân sự linh hoạt theo thái độ rủi ro. 
+                                    5. Đầu tư kế hoạch PMBOK bài bản kiểm soát tốt biến động ($140k → $150k). Cảm ơn các bạn đã lắng nghe, chào mừng đến phần Q&A!
+                                </p>
                             </div>
                         </div>
                     </div>
