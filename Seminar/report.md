@@ -1,7 +1,7 @@
 
-# BÁO CÁO SEMINAR: QUẢN TRỊ RỦI RO TRONG CÁC DỰ ÁN PHẦN MỀM
+# BÁO CÁO SEMINAR (PHẦN 1): RISK AND SCHEDULE MANAGEMENT IN THE ONLINE COURSE REGISTRATION SYSTEM CONSTRUCTION PROJECT
 
-## Đề tài: Nghiên cứu các nguồn rủi ro phổ biến, lập kế hoạch ứng phó và ứng dụng Lý thuyết hữu dụng của rủi ro (Risk Utility Theory)
+## Đề tài tổng thể: Risk and Schedule Management in the Online Course Registration System Construction Project (Seminar Phần 1: Khởi tạo dự án Initiating & Quản trị Rủi ro)
 
 * **Môn học:** Quản trị dự án phần mềm (Mã môn: `SW403DE01` - Đại học Hoa Sen)
 * **Nhóm thực hiện:** Nhóm 3
