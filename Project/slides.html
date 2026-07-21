@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Đồ Án Project | Risk & Schedule Management - HSU</title>
+    <meta name="description" content="Slide Thuyết trình Đồ án (Lần 2): Risk and Schedule Management in the Online Course Registration System Construction Project (Phần 2 - 5: Planning to Closing).">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Reusing Slide Design System -->
+    <link rel="stylesheet" href="../Seminar/styles.css">
+
+    <style>
+        .project-badge {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .arch-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .arch-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+        }
+    </style>
+</head>
+<body data-theme="dark">
+
+    <!-- Background glow animations -->
+    <div class="glow-bg-container">
+        <div class="glow-sphere glow-sphere-1"></div>
+        <div class="glow-sphere glow-sphere-2"></div>
+        <div class="glow-sphere glow-sphere-3"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="presentation-container">
+        <!-- Header bar -->
+        <header class="pres-header">
+            <div class="header-logo">
+                <span class="logo-accent">HSU</span> ProjectPortal
+            </div>
+            <div class="header-topic">Thuyết minh Đồ án (Lần 2): Risk and Schedule Management in the Online Course Registration System</div>
+            <div class="header-controls">
+                <button id="theme-toggle-btn" class="icon-btn" title="Chuyển chế độ sáng/tối">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <button id="fullscreen-btn" class="icon-btn" title="Toàn màn hình">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Slides Area -->
+        <main class="slides-wrapper">
+
+            <!-- SLIDE 1: Title -->
+            <section class="slide active" id="slide-1">
+                <div class="slide-content title-slide-layout">
+                    <div class="title-glow-badge project-badge">THUYẾT MINH ĐỒ ÁN THỰC HÀNH (LẦN 2)</div>
+                    <h1 class="main-title" style="font-size: 2.1rem; line-height: 1.25;">RISK AND SCHEDULE MANAGEMENT<br><span class="gradient-text">IN THE ONLINE COURSE REGISTRATION SYSTEM CONSTRUCTION PROJECT</span></h1>
+                    <p class="subtitle">Báo cáo Đồ án Thực hành (Phần 2 - 5): Planning, Executing, Monitoring/Controlling & Closing | Hệ thống Đăng ký Học phần Trực tuyến HSU</p>
+                    
+                    <img src="../Seminar/assets/slide_risk_hero.png" alt="Project Architecture Hero" class="hero-3d-graphic">
+
+                    <div class="metadata-grid" style="margin-top: 15px;">
+                        <div class="meta-item">
+                            <span class="meta-label">Môn học / Mã lớp:</span>
+                            <span class="meta-val">Quản trị Dự án Phần mềm (SW403DE01)</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Nhóm thực hiện:</span>
+                            <span class="meta-val">Nhóm 3</span>
+                        </div>
+                        <div class="meta-item" style="grid-column: span 2;">
+                            <span class="meta-label">Thành viên nhóm:</span>
+                            <span class="meta-val" style="font-weight: 500;">
+                                <strong>Võ Duy Bình (22301500 - Nhóm trưởng)</strong>, 
+                                Hồng Bảo Khang (22101347), 
+                                Trần Bá Lợi (22300236), 
+                                Nguyễn Thanh Quang (22110739)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="start-hint">Nhấp chuột hoặc dùng phím <span class="key-badge">→</span> / <span class="key-badge">Space</span> để bắt đầu</div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: Background & Problem Statement -->
+            <section class="slide" id="slide-2">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">02/10</span>
+                        <h2>Bối Cảnh & Bài Toán Đặt Ra (Bình)</h2>
+                    </div>
+                    <p class="section-desc">Thực trạng quy trình đăng ký học phần tại các trường đại học và mục tiêu dự án HSU:</p>
+                    
+                    <div class="two-col-grid">
+                        <div class="col-left glass-card">
+                            <h3>Hạn chế của Hệ thống Cũ</h3>
+                            <div class="process-steps-list" style="gap: 12px;">
+                                <div class="step-card" style="border-left: 3px solid #f43f5e; padding: 10px;">
+                                    <h4>1. Tốc độ xử lý chậm & Nghẽn mạng</h4>
+                                    <p style="font-size: 0.8rem;">Thường xuyên sập server hoặc treo ứng dụng khi hàng vạn sinh viên truy cập đồng thời vào giờ mở cổng.</p>
+                                </div>
+                                <div class="step-card" style="border-left: 3px solid #ffeb3b; padding: 10px;">
+                                    <h4>2. Khó theo dõi số lượng chỗ trống</h4>
+                                    <p style="font-size: 0.8rem;">Dữ liệu không cập nhật real-time khiến sinh viên đăng ký trùng lớp hoặc hết chỗ mà không biết.</p>
+                                </div>
+                                <div class="step-card" style="border-left: 3px solid #a855f7; padding: 10px;">
+                                    <h4>3. Quản lý dữ liệu thủ công</h4>
+                                    <p style="font-size: 0.8rem;">Phòng Đào tạo khó điều chỉnh danh sách môn học, phòng học và xử lý đơn xin mở thêm lớp.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-right glass-card">
+                            <h3>Giải Pháp Hệ Thống Mới</h3>
+                            <ul class="bullet-list-custom">
+                                <li><strong>Kiến trúc Tải cao:</strong> Tối ưu API Real-time xử lý hàng ngàn request/giây với độ trễ &lt;100ms.</li>
+                                <li><strong>Tự động kiểm tra điều kiện:</strong> Kiểm tra trùng thời khóa biểu, môn tiên quyết và giới hạn tín chỉ ngay khi nhấp nút.</li>
+                                <li><strong>Phân quyền đa cổng:</strong> Cổng Sinh viên, Cổng Phòng Đào tạo & Dashboard Quản trị Tiến độ PM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: WBS Scope (Phần 2 - 5) -->
+            <section class="slide" id="slide-3">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">03/10</span>
+                        <h2>Cấu Trúc WBS & Scope Dự Án (Phần 2 - 5) (Khang)</h2>
+                    </div>
+                    <p class="section-desc">Phân định phạm vi thực hiện Đồ án từ Phần 2 (Lập kế hoạch) đến Phần 5 (Đóng dự án):</p>
+                    
+                    <img src="../Seminar/assets/slide_risk_process.png" alt="WBS Process Diagram" class="slide-banner-img">
+
+                    <div class="tech-grid-2x2">
+                        <div class="tech-card">
+                            <h3>2.0 Planning (Lập Kế Hoạch)</h3>
+                            <p>Tổ chức họp nhóm, xây dựng Team Contract, Scope Statement, thiết lập WBS 2.0-5.0, ước tính thời lượng & lập biểu đồ Gantt tiến độ 12 tuần.</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>3.0 Executing (Triển Khai Phần Mềm)</h3>
+                            <p>Khảo sát yêu cầu người dùng, thiết kế giao diện UI/UX, lập trình Backend/Frontend Cổng Sinh viên & Phòng Đào tạo HSU.</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>4.0 Monitoring & Controlling (Giám Sát)</h3>
+                            <p>Theo dõi tiến độ theo đường găng (Critical Path), đánh giá báo cáo tiến độ tuần & điều chỉnh dự phòng rủi ro.</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>5.0 Closing (Hoàn Thành & Đóng Dự Án)</h3>
+                            <p>Nghiệm thu phần mềm, lập Báo cáo tổng kết dự án, thuyết minh kết quả & đúc kết bài học kinh nghiệm (Lessons Learned).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: System Architecture -->
+            <section class="slide" id="slide-4">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">04/10</span>
+                        <h2>Kiến Trúc & Giải Pháp Công Nghệ (Quang)</h2>
+                    </div>
+                    
+                    <div class="architecture-grid">
+                        <div class="arch-card">
+                            <div class="arch-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            </div>
+                            <h3>Frontend Dynamic UI</h3>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 8px;">HTML5, Vanilla CSS Design System, JavaScript ES6+ xử lý giao diện cực mượt, responsive 100%.</p>
+                        </div>
+                        <div class="arch-card">
+                            <div class="arch-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                            </div>
+                            <h3>Real-time Engine</h3>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 8px;">Cập nhật sĩ số sinh viên real-time, tự động khóa nút khi môn học hết chỗ (0 slots).</p>
+                        </div>
+                        <div class="arch-card">
+                            <div class="arch-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            </div>
+                            <h3>Security & Validation</h3>
+                            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 8px;">Áp dụng Shift-Left Security, xác thực MSSV, phòng chống xung đột lịch học & vượt tín chỉ.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card" style="margin-top: 25px;">
+                        <h3>Mô Hình Hoạt Động Xử Lý Đăng Ký Real-time</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 5px;">Sinh viên gửi yêu cầu đăng ký ➔ Kiểm tra điều kiện môn học ➔ Trừ sĩ số khả dụng trong bộ nhớ ➔ Xử lý xung đột thời khóa biểu ➔ Xác nhận kết quả trong 50ms.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: Student Portal Features -->
+            <section class="slide" id="slide-5">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">05/10</span>
+                        <h2>Chức Năng Cổng Sinh Viên (Student Portal) (Bình)</h2>
+                    </div>
+                    
+                    <div class="two-col-grid">
+                        <div class="col-left glass-card">
+                            <h3>Đăng Ký Học Phần Tốc Độ Cao</h3>
+                            <ul class="bullet-list-custom">
+                                <li><strong>Tìm kiếm & Lọc thông minh:</strong> Lọc theo Khoa/Viện, Mã môn, Thứ trong tuần và Số tín chỉ.</li>
+                                <li><strong>Đăng ký 1-Click:</strong> Nhấp nút Đăng ký, hệ thống lập tức kiểm tra trùng lịch học và xác nhận môn.</li>
+                                <li><strong>Hủy môn linh hoạt:</strong> Cho phép rút môn học trong thời gian mở đăng ký.</li>
+                            </ul>
+                        </div>
+                        <div class="col-right glass-card">
+                            <h3>Thời Khóa Biểu & Chương Trình Đào Tạo</h3>
+                            <ul class="bullet-list-custom">
+                                <li><strong>Thời khóa biểu trực quan:</strong> Hiển thị lịch học dạng lưới theo tuần (Thứ 2 ➔ Chủ Nhật).</li>
+                                <li><strong>Kiểm tra tín chỉ:</strong> Theo dõi tổng số tín chỉ đã đăng ký (Giới hạn tối đa 24 tín chỉ/học kỳ).</li>
+                                <li><strong>Lịch sử giao dịch:</strong> Lưu trữ chi tiết nhật ký đăng ký/hủy môn có dấu thời gian.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: Admin Portal Features -->
+            <section class="slide" id="slide-6">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">06/10</span>
+                        <h2>Chức Năng Cổng Phòng Đào Tạo (Admin Portal) (Lợi)</h2>
+                    </div>
+                    
+                    <div class="tech-grid-2x2">
+                        <div class="tech-card">
+                            <h3>1. Quản lý Danh mục Môn học</h3>
+                            <p>Thêm mới, chỉnh sửa thông tin học phần, chỉ định số tín chỉ và giảng viên phụ trách.</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>2. Điều chỉnh Sĩ số & Phòng học</h3>
+                            <p>Tăng/giảm chỉ tiêu số lượng sinh viên tối đa cho từng lớp học phần theo thực tế nhu cầu.</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>3. Bật / Tắt Đợt Đăng ký</h3>
+                            <p>Đóng hoặc mở các đợt đăng ký học phần chính thức / bổ sung dành cho từng khóa sinh viên.</p>
+                        </div>
+                        <div class="tech-card">
+                            <h3>4. Thống kê & Xuất Báo cáo</h3>
+                            <p>Xuất danh sách sinh viên đăng ký từng lớp, thống kê các môn học bị hủy do thiếu sĩ số tối thiểu.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: Project Management & Gantt Chart -->
+            <section class="slide" id="slide-7">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">07/10</span>
+                        <h2>Dashboard Quản Trị Tiến Độ Dự Án (PM Portal) (Lợi)</h2>
+                    </div>
+                    <p class="section-desc">Công cụ quản lý tiến độ 12 tuần dành cho Trưởng dự án (Project Manager):</p>
+                    
+                    <img src="../Seminar/assets/slide_risk_mitigation_plan.png" alt="Gantt & Schedule Management" class="slide-banner-img">
+
+                    <div class="two-col-grid">
+                        <div class="col-left glass-card">
+                            <h3>Biểu Đồ Gantt Tiến Độ 12 Tuần</h3>
+                            <p style="font-size: 0.85rem; line-height: 1.5;">Trực quan hóa tất cả 7 mốc công việc từ Thu thập yêu cầu, Lập trình Backend/Frontend, Thiết kế Database, Tích hợp, Kiểm thử đến Deploy bàn giao.</p>
+                        </div>
+                        <div class="col-right glass-card">
+                            <h3>Theo Dõi Tỷ Lệ Hoàn Thành</h3>
+                            <p style="font-size: 0.85rem; line-height: 1.5;">Hiển thị chỉ số hoàn thành tổng thể (85%), cảnh báo công việc chậm tiến độ và kiểm soát ngày bàn giao dự kiến (Tuần 12).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: Critical Path & Delay Simulator -->
+            <section class="slide" id="slide-8">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">08/10</span>
+                        <h2>Trình Giả Lập Đường Găng (Critical Path Simulator) (Bình)</h2>
+                    </div>
+                    
+                    <div class="two-col-grid">
+                        <div class="col-left glass-card">
+                            <h3>Nguyên Lý Đường Găng (Critical Path)</h3>
+                            <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 10px;">Đường găng là chuỗi các công việc kéo dài nhất quyết định ngày hoàn thành dự án. Công việc thuộc đường găng có <strong>Float time = 0 tuần</strong>.</p>
+                            <div class="sub-card" style="background: rgba(244, 63, 94, 0.1); border-color: rgba(244, 63, 94, 0.3);">
+                                <h4>🔴 Công việc Đường găng</h4>
+                                <p style="font-size: 0.8rem;">1. Thu thập yêu cầu ➔ 2. Lập trình Backend ➔ 3. Tích hợp ➔ 4. Deploy bàn giao.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-right glass-card">
+                            <h3>Giả Lập Trễ Tiến Độ Real-time</h3>
+                            <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 10px;">Thử nghiệm kéo thanh slider trễ tiến độ trong ứng dụng Web Project:</p>
+                            <ul class="bullet-list-custom">
+                                <li><strong>Trễ công việc Đường găng:</strong> Ngày bàn giao dự án lập tức bị lùi từ Tuần 12 sang Tuần 13 - 16.</li>
+                                <li><strong>Trễ công việc Ngoài đường găng:</strong> Không làm lùi ngày bàn giao dự án nếu trễ trong phạm vi thời gian đệm (Float time).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: Schedule Risk Management -->
+            <section class="slide" id="slide-9">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">09/10</span>
+                        <h2>Quản Lý Rủi Ro Tiến Độ & Bảng Đăng Ký Rủi Ro (Khang)</h2>
+                    </div>
+                    
+                    <div class="cases-grid-4x1">
+                        <div class="case-mini-card">
+                            <span class="case-tag">Rủi ro 1</span>
+                            <h3>Nghẽn tải máy chủ</h3>
+                            <p>Sập web khi mở đăng ký học phần.</p>
+                            <p class="outcome-text">Tránh: Dùng Cloud Auto-scaling</p>
+                        </div>
+                        <div class="case-mini-card">
+                            <span class="case-tag">Rủi ro 2</span>
+                            <h3>Trễ Backend</h3>
+                            <p>Backend trễ làm trễ ngày bàn giao 2 tuần.</p>
+                            <p class="outcome-text">Giảm thiểu: Thêm Dev & tăng ca</p>
+                        </div>
+                        <div class="case-mini-card">
+                            <span class="case-tag">Rủi ro 3</span>
+                            <h3>Thay đổi yêu cầu</h3>
+                            <p>Phòng đào tạo bổ sung quy chế mới.</p>
+                            <p class="outcome-text">Giảm thiểu: Quản lý Scope chặt</p>
+                        </div>
+                        <div class="case-mini-card">
+                            <span class="case-tag">Rủi ro 4</span>
+                            <h3>Nhân sự nghỉ việc</h3>
+                            <p>Dev chính nghỉ giữa chừng dự án.</p>
+                            <p class="outcome-text">Chuyển giao: Cross-training code</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 10: Conclusion & Deliverables -->
+            <section class="slide" id="slide-10">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">10/10</span>
+                        <h2>Tổng Kết Đồ Án & Bài Học Kinh Nghiệm (Cả Nhóm)</h2>
+                    </div>
+                    
+                    <div class="two-col-grid">
+                        <div class="col-left glass-card">
+                            <h3>Kết Quả Đạt Được</h3>
+                            <ul class="bullet-list-custom">
+                                <li><strong>Hoàn thiện Web App:</strong> Đăng ký học phần Real-time mượt mà, đầy đủ 3 cổng quản lý.</li>
+                                <li><strong>Đúng Tiến Độ:</strong> Hoàn thành đúng mốc Tuần 12 nhờ kiểm soát chặt chẽ đường găng.</li>
+                                <li><strong>Quản trị Rủi ro Hiệu quả:</strong> Kiểm soát rủi ro kỹ thuật & tài chính theo đúng nguyên lý PMBOK.</li>
+                            </ul>
+                        </div>
+                        <div class="col-right glass-card">
+                            <h3>Bài Học Kinh Nghiệm</h3>
+                            <ul class="bullet-list-custom">
+                                <li>1. Luôn xác định và giám sát chặt chẽ Đường găng (Critical Path) từ tuần đầu tiên.</li>
+                                <li>2. Tích hợp kiểm thử tự động (Unit Test) giúp phát hiện lỗi sớm, giảm chi phí sửa lỗi.</li>
+                                <li>3. Giao tiếp nhóm rõ ràng là chìa khóa giúp giữ đúng tiến độ dự án.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer bar -->
+        <footer class="pres-footer">
+            <div class="footer-left">
+                <button id="prev-btn" class="nav-btn" disabled>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    Trước
+                </button>
+                <div class="slide-indicator">
+                    <span id="dots-container" class="dots-wrapper"></span>
+                </div>
+                <button id="next-btn" class="nav-btn">
+                    Tiếp
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+            <div class="footer-center">
+                <div class="progress-bar-container">
+                    <div id="progress-bar" class="progress-bar-fill"></div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <span class="copyright-txt">© 2026 Nhóm 3 - SW403DE01 (HSU)</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Slide Controller Script -->
+    <script src="../Seminar/script.js"></script>
+</body>
+</html>
