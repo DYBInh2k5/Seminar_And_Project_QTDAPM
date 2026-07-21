@@ -394,9 +394,25 @@ Trong giai đoạn lập kế hoạch, Erica Bell đã tổ chức họp brainst
 | **9** | Việc quảng bá hệ thống mới (Promotion) không thu hút được người dùng                             | Thị trường / Tiếp thị  |
 | **10** | Không hiện thực hóa được các lợi ích tài chính dự báo của hệ thống trong vòng 1 năm         | Tài chính / Chiến lược |
 
-### 5.3. Phân tích cách ứng phó thực tế của Erica Bell
+### 5.2. Mẫu Điều Lệ Dự Án (Project Charter - Table 3-6 JWD)
 
-Trong quá trình triển khai thực tế, nhiều rủi ro trong danh sách trên đã bộc phát. Erica Bell đã có những phản hồi rất xuất sắc thể hiện kỹ năng quản trị dự án thực chiến:
+Trong nhóm quy trình **1.0 Initiating (Khởi tạo dự án)**, tài liệu trung tâm chính là **Project Charter (Điều lệ dự án - Table 3-6)** được ký duyệt bởi CEO Joe Fleming (Sponsor) và Giám đốc dự án Erica Bell. Mẫu Điều lệ dự án JWD tuân thủ chuẩn PMBOK gồm 7 thành phần cấu trúc cốt lõi:
+
+| Thành phần mẫu (Charter Element) | Nội dung áp dụng thực tế tại JWD Consulting |
+| :--- | :--- |
+| **1. Tên dự án & Ngày lập (Project Title & Date)** | JWD Consulting Intranet Project | Ngày lập: 10/05 |
+| **2. Thời gian thực hiện (Project Dates)** | Ngày bắt đầu: 10/05 | Ngày hoàn thành dự kiến: 04/11 (Thời lượng: 6 tháng) |
+| **3. Thông tin Ngân sách (Budget Info)** | Ngân sách dự toán ban đầu: **$140,000** (Chi phí nhân công & phần mềm) |
+| **4. Giám đốc dự án (Project Manager)** | Erica Bell (Email: `erica_bell@jwdconsulting.com`) - Quyền hạn quản lý trực tiếp nguồn lực |
+| **5. Mục tiêu dự án (Project Objectives)** | Xây dựng trang Intranet chia sẻ biểu mẫu (templates) & công cụ quản lý dự án chuẩn hóa, nhằm nâng cao năng suất tổ chức và tăng 10% lợi nhuận năm. |
+| **6. Phương pháp tiếp cận (Approach)** | Khảo sát nhu cầu người dùng nội bộ/khách hàng ➔ Thu thập 20 biểu mẫu xuất sắc ➔ Thuê giải pháp phần mềm ngoài ➔ Thi công & Đo lường lợi ích tài chính. |
+| **7. Vai trò & Chữ ký (Roles & Signatures)** | CEO Joe Fleming (Sponsor), Erica Bell (PM), Kevin Dodge, Cindy Dawson, Michael Chen, Kim Phuong, Page Miller. |
+
+---
+
+### 5.3. Các Bài Học Ứng Phó Rủi Ro Thực Tế (Prioritized Risk List - Table 3-10)
+
+Dưới đây là phân tích chi tiết 5 tình huống rủi ro ưu tiên hàng đầu và cách ứng phó thực tế đầy sáng tạo của Giám đốc dự án Erica Bell:
 
 #### Case 1: Ứng phó rủi ro 1 (Thiếu đóng góp tài liệu từ tư vấn viên nội bộ)
 
