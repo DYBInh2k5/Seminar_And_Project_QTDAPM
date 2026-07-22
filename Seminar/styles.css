@@ -55,6 +55,10 @@
 }
 
 /* Base Styles */
+html {
+    font-size: calc(18px * var(--slide-font-scale)); /* Scale all rem values globally */
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -65,7 +69,6 @@ body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-body);
-    font-size: calc(16px * var(--slide-font-scale));
     line-height: 1.6;
     overflow: hidden; /* Desktop app feel */
     height: 100vh;
