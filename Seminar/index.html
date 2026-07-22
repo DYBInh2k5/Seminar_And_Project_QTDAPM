@@ -39,12 +39,12 @@
         <main class="slides-wrapper">
             <!-- SLIDE 1: Title -->
             <section class="slide active" id="slide-1">
-                <div class="slide-content title-slide-layout">
-                    <div class="title-glow-badge">SEMINAR CHUYÊN ĐỀ HSU (PHẦN 1)</div>
-                    <h1 class="main-title" style="font-size: 2.2rem; line-height: 1.25;">RISK AND SCHEDULE MANAGEMENT<br><span class="gradient-text">IN THE ONLINE COURSE REGISTRATION SYSTEM CONSTRUCTION PROJECT</span></h1>
-                    <p class="subtitle">Seminar (Phần 1): Khởi Tạo Dự Án (PMBOK Initiating), Quản Trị Rủi Ro & Risk Utility Theory | Đồ Án HSU</p>
+                <div class="slide-content title-slide-layout" style="padding: 40px 20px;">
+                    <div class="title-glow-badge" style="margin-bottom: 30px;">SEMINAR CHUYÊN ĐỀ HSU (PHẦN 1)</div>
+                    <h1 class="main-title" style="font-size: 2.7rem; line-height: 1.3; margin-bottom: 30px; letter-spacing: -1px;">RISK AND SCHEDULE MANAGEMENT<br><span class="gradient-text">IN THE ONLINE COURSE REGISTRATION SYSTEM CONSTRUCTION PROJECT</span></h1>
+                    <p class="subtitle" style="font-size: 1.15rem; max-width: 900px; margin-bottom: 30px;">Seminar (Phần 1): Khởi Tạo Dự Án (PMBOK Initiating), Quản Trị Rủi Ro & Risk Utility Theory | Đồ Án HSU</p>
                     
-                    <img src="./assets/slide_risk_hero.png" alt="Software Risk Management Graphic" class="hero-3d-graphic">
+                    <img src="./assets/slide_risk_hero.png" alt="Software Risk Management Graphic" class="hero-3d-graphic" style="max-height: 200px; margin-bottom: 30px;">
 
                     <div class="metadata-grid" style="margin-top: 15px;">
                         <div class="meta-item">
@@ -84,9 +84,38 @@
                             <h3>Định nghĩa & Đặc thù phần mềm</h3>
                             <p class="emphasized-text"><strong>Rủi ro dự án:</strong> Là một sự kiện hoặc điều kiện chưa chắc chắn, nếu xảy ra sẽ tác động tiêu cực (đe dọa) hoặc tích cực (cơ hội) đến mục tiêu của dự án.</p>
                             <p>Khác với xây dựng hay sản xuất, dự án phần mềm có yêu cầu thay đổi liên tục, công nghệ phát triển quá nhanh, phụ thuộc mạnh vào năng lực con người và khó ước lượng chính xác thời gian/chi phí.</p>
-                            <div class="quote-box">
+                            <div class="quote-box" style="margin-bottom: 12px;">
                                 <p>"Quản trị rủi ro phần mềm là một quá trình chủ động (proactive), được thực hiện liên tục trong suốt vòng đời dự án."</p>
                                 <cite>— PMBOK Guide</cite>
+                            </div>
+                            
+                            <div style="margin-top: 10px; overflow-x: auto;">
+                                <table class="sim-results-table" style="font-size: 0.72rem; width: 100%; margin-top: 5px;">
+                                    <thead>
+                                        <tr>
+                                            <th>Đặc trưng</th>
+                                            <th>Dự án Xây dựng (Construction)</th>
+                                            <th>Dự án Phần mềm (Software)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Tính hữu hình</strong></td>
+                                            <td>Vật lý, trực quan, dễ đo đạc</td>
+                                            <td style="color: var(--primary); font-weight: bold;">Vô hình, trừu tượng, khó kiểm chứng</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Thay đổi thiết kế</strong></td>
+                                            <td>Cực kỳ tốn kém, khó thực hiện</td>
+                                            <td style="color: var(--accent); font-weight: bold;">Thay đổi liên tục (Scope Creep)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tác nhân rủi ro</strong></td>
+                                            <td>Thời tiết, vật tư, địa hình</td>
+                                            <td style="color: var(--accent-seeking); font-weight: bold;">Năng lực con người, biến động công nghệ</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         
@@ -202,6 +231,14 @@
                                         <p>Rủi ro liên quan trực tiếp đến dòng ngân sách đầu tư, các chi phí phát sinh bất ngờ và khả năng sinh lời (ROI) của dự án phần mềm.</p>
                                         <div class="metric-warning-box">
                                             <strong>Dấu hiệu cảnh báo:</strong> Chi phí nhân sự tăng nhanh qua từng Sprint, nhà đầu tư chậm giải ngân ngân sách do tiến độ trễ.
+                                        </div>
+                                        
+                                        <div style="margin-top: 12px; padding: 10px; background: rgba(0,0,0,0.015); border-left: 3px solid var(--accent); border-radius: 4px; font-size: 0.72rem; line-height: 1.4;">
+                                            <strong>📌 Phân bổ Quỹ Dự Phòng Tài Chính (PMBOK Guide):</strong>
+                                            <ul style="margin-left: 15px; margin-top: 5px; display: flex; flex-direction: column; gap: 3px;">
+                                                <li><strong>Contingency Reserve (10% - 15%):</strong> Quản lý bởi PM để ứng phó rủi ro đã nhận diện (Known-unknowns).</li>
+                                                <li><strong>Management Reserve (5%):</strong> Quản lý bởi Sponsor/CEO để ứng phó rủi ro chưa nhận diện (Unknown-unknowns).</li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div class="tab-col-right">
@@ -404,31 +441,35 @@
 
                     <div class="cases-grid-4x1">
                         <div class="case-mini-card">
-                            <span class="case-tag">Bảo mật</span>
+                            <span class="case-tag">Bảo mật / Hệ thống</span>
                             <h3>Equifax (2017)</h3>
-                            <p>Tin tặc khai thác lỗ hổng Apache Struts đã biết nhưng không được vá kịp thời.</p>
+                            <p style="margin-bottom: 8px;">Tin tặc khai thác lỗ hổng Apache Struts đã có bản vá nhưng không được cập nhật kịp thời. Đội ngũ trì hoãn ròng rã suốt 2 tháng.</p>
+                            <p style="font-size: 0.72rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Thiếu tự động hóa quét lỗ hổng và kiểm soát cấu hình hệ thống (Shift-left security).</p>
                             <p class="outcome-text">Lộ 147 triệu người | Phạt 1.38 tỷ USD</p>
                         </div>
  
                         <div class="case-mini-card">
-                            <span class="case-tag">Hiệu năng</span>
+                            <span class="case-tag">Hiệu năng / Tải cao</span>
                             <h3>Healthcare.gov (2013)</h3>
-                            <p>Sập sau 2 giờ mở cổng do 250k user truy cập đồng thời (gấp 5 lần tải dự kiến).</p>
-                            <p class="outcome-text">Tỷ lệ thành công &lt;1% | Làm lại kiến trúc</p>
+                            <p style="margin-bottom: 8px;">Sập sau 2 giờ mở cổng do 250k user truy cập đồng thời (gấp 5 lần tải dự kiến). Thiếu kiểm thử tải và tích hợp hệ thống.</p>
+                            <p style="font-size: 0.72rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Cần Load/Stress Test trước khi chạy. Kiến trúc phải tách biệt độc lập (loose coupling).</p>
+                            <p class="outcome-text">Thành công &lt;1% | Đập đi xây lại</p>
                         </div>
  
                         <div class="case-mini-card">
-                            <span class="case-tag">Nợ kỹ thuật</span>
+                            <span class="case-tag">Nợ kỹ thuật / Deploy</span>
                             <h3>Knight Capital (2012)</h3>
-                            <p>Mã code cũ Power Peg (nợ kỹ thuật 8 năm) bị kích hoạt nhầm trên server lỗi cấu hình.</p>
-                            <p class="outcome-text">Lỗ 440 triệu USD/45 phút | Phá sản</p>
+                            <p style="margin-bottom: 8px;">Mã cũ Power Peg (nợ kỹ thuật 8 năm) bị kích hoạt lại do deploy thủ công thiếu file cấu hình ở 1 trong 8 máy chủ.</p>
+                            <p style="font-size: 0.72rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Phải tự động hóa deploy (CI/CD) và định kỳ dọn dẹp các đoạn mã nguồn cũ (nợ kỹ thuật).</p>
+                            <p class="outcome-text">Lỗ 440tr USD/45 phút | Phá sản</p>
                         </div>
  
                         <div class="case-mini-card">
-                            <span class="case-tag">Con người</span>
+                            <span class="case-tag">Con người / Quản lý</span>
                             <h3>FBI Trilogy (2005)</h3>
-                            <p>Dự án Virtual Case File bị hủy hoàn toàn do yêu cầu thay đổi liên tục và giao tiếp SAIC.</p>
-                            <p class="outcome-text">Mất trắng 170 triệu USD | Làm lại từ đầu</p>
+                            <p style="margin-bottom: 8px;">Dự án Virtual Case File bị hủy bỏ hoàn toàn sau 4 năm phát triển do yêu cầu thay đổi liên tục (Scope creep) và giao tiếp kém giữa FBI với SAIC.</p>
+                            <p style="font-size: 0.72rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Thiếu quy trình kiểm soát thay đổi (Change Control Board - CCB) và quản lý phạm vi chặt.</p>
+                            <p class="outcome-text">Mất trắng 170 triệu USD | Hủy bỏ</p>
                         </div>
                     </div>
                 </div>

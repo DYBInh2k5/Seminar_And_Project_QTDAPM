@@ -284,10 +284,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    border: var(--slide-border-width) solid var(--border-color);
     padding: 10px 20px;
-    border-radius: 12px;
+    border-radius: var(--slide-border-radius);
 }
 
 .meta-label {
@@ -649,21 +649,22 @@ body {
 
 .swot-card h3 {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
-    font-weight: 600;
+    font-size: 1.35rem;
+    font-weight: 700;
 }
 
 .swot-card ul {
     list-style-type: none;
     padding-left: 0;
+    margin-top: 5px;
 }
 
 .swot-card li {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     position: relative;
-    padding-left: 14px;
-    margin-bottom: 5px;
-    line-height: 1.4;
+    padding-left: 16px;
+    margin-bottom: 8px;
+    line-height: 1.5;
     color: var(--text-secondary);
 }
 
@@ -1744,7 +1745,7 @@ body {
 
 .tech-card h3 {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -1752,15 +1753,15 @@ body {
 }
 
 .tech-card p {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    line-height: 1.4;
-    margin-bottom: 10px;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 .tech-card-source {
     margin-top: auto;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: var(--primary);
     font-weight: 600;
     display: flex;
@@ -1794,7 +1795,7 @@ body {
 
 .people-card h3 {
     font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -1802,15 +1803,15 @@ body {
 }
 
 .people-card p {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    line-height: 1.4;
-    margin-bottom: 10px;
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 .people-card-stat {
     margin-top: auto;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: #ffeb3b;
     font-weight: 600;
 }
@@ -1823,11 +1824,12 @@ body {
     height: calc(100% - 90px);
 }
 
+/* Case Mini Card Customizer */
 .case-mini-card {
     background: var(--card-bg);
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
-    padding: 15px;
+    border: var(--slide-border-width) solid var(--border-color);
+    border-radius: var(--slide-border-radius);
+    padding: 20px;
     display: flex;
     flex-direction: column;
     box-shadow: none;
@@ -1840,14 +1842,14 @@ body {
 }
 
 .case-mini-card h3 {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-family: var(--font-heading);
     margin-bottom: 8px;
     color: var(--accent);
 }
 
 .case-mini-card .case-tag {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: 700;
     color: var(--text-secondary);
@@ -1856,7 +1858,7 @@ body {
 }
 
 .case-mini-card p {
-    font-size: 0.8rem;
+    font-size: 0.92rem;
     color: var(--text-secondary);
     line-height: 1.4;
 }
@@ -1864,7 +1866,7 @@ body {
 .case-mini-card .outcome-text {
     margin-top: auto;
     padding-top: 10px;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     border-top: 1px dashed var(--border-color);
     color: #f43f5e;
     font-weight: 600;
