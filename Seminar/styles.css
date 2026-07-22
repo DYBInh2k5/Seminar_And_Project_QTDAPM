@@ -1975,4 +1975,124 @@ body {
     border-color: var(--primary);
 }
 
+/* --- PRINT STYLES FOR PDF DOWNLOAD --- */
+@media print {
+    /* Hide all layout decoration and navigation elements */
+    .pres-header,
+    .pres-footer,
+    .glow-bg-container,
+    .layout-customizer-panel,
+    .icon-btn,
+    .nav-btn,
+    .slide-dots,
+    .progress-bar-container {
+        display: none !important;
+    }
+
+    /* Reset html, body for printing */
+    html, body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        font-size: 16px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Container adjustments */
+    .presentation-container {
+        border: none !important;
+        box-shadow: none !important;
+        background: #ffffff !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    .slides-wrapper {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    /* Force all slides to display sequentially in print */
+    .slide {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: relative !important;
+        width: 100% !important;
+        height: 100vh !important; /* One slide per viewport height */
+        page-break-after: always !important;
+        break-after: page !important;
+        overflow: hidden !important;
+        padding: 40px !important;
+        box-sizing: border-box !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        border: none !important;
+        box-shadow: none !important;
+        transform: none !important;
+        margin: 0 !important;
+    }
+
+    /* Adjust glass-cards and other elements to print friendly black & white */
+    .glass-card, .step-card, .tech-card, .people-card, .case-mini-card, .swot-card {
+        background: #ffffff !important;
+        border: 1px solid #cccccc !important;
+        box-shadow: none !important;
+        color: #000000 !important;
+    }
+
+    /* Text contrast updates */
+    h1, h2, h3, h4, h5, h6, p, li, td, th, span {
+        color: #000000 !important;
+    }
+
+    .gradient-text {
+        background: none !important;
+        -webkit-text-fill-color: initial !important;
+        color: #000000 !important;
+        font-weight: 700 !important;
+    }
+
+    /* SVG text elements must be black */
+    svg text {
+        fill: #000000 !important;
+    }
+
+    /* Ensure chart guides and lines print nicely */
+    svg line, svg path {
+        stroke: #333333 !important;
+    }
+    
+    #path-averse {
+        stroke: #db2777 !important;
+    }
+    #path-neutral {
+        stroke: #2563eb !important;
+    }
+    #path-seeking {
+        stroke: #7c3aed !important;
+    }
+
+    /* Ensure all tabs and conditional elements are visible or print correctly */
+    .tab-pane {
+        display: block !important;
+        opacity: 1 !important;
+    }
+
+    /* Hide background images if they interfere, or keep them scaled */
+    .slide-banner-img, .hero-3d-graphic {
+        max-height: 180px !important;
+        opacity: 0.8 !important;
+    }
+}
+
 

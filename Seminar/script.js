@@ -135,15 +135,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- FULLSCREEN CONTROLLER ---
     const fullscreenBtn = document.getElementById('fullscreen-btn');
-    fullscreenBtn.addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen().catch(err => {
-                console.error(`Error enabling fullscreen: ${err.message}`);
-            });
-        } else {
-            document.exitFullscreen();
-        }
-    });
+    if (fullscreenBtn) {
+        fullscreenBtn.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.error(`Error enabling fullscreen: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        });
+    }
+
+    // --- DOWNLOAD PDF CONTROLLER ---
+    const downloadPdfBtn = document.getElementById('download-pdf-btn');
+    if (downloadPdfBtn) {
+        downloadPdfBtn.addEventListener('click', () => {
+            window.print();
+        });
+    }
 
 
     // --- INTERACTIVE UTILITY SIMULATOR (SLIDE 6) ---
