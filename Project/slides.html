@@ -152,6 +152,46 @@
                             </ul>
                         </div>
                     </div>
+
+                    <div class="glass-card" style="margin-top: 20px; padding: 15px; overflow-x: auto;">
+                        <h3 style="font-size: 0.95rem; margin-bottom: 5px; color: var(--primary);">Bảng So Sánh Chỉ Số Hiệu Năng Hệ Thống (Old vs New HSU Enrollment System)</h3>
+                        <table class="sim-results-table" style="font-size: 0.72rem; width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Chỉ số đánh giá</th>
+                                    <th>Hệ thống cũ (Web portal)</th>
+                                    <th>Hệ thống mới (Real-time Mobile App & Web API)</th>
+                                    <th>Hiệu quả cải tiến</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Tải tối đa (Max Concurrent Users)</strong></td>
+                                    <td style="color: #f43f5e;">~1,500 kết nối đồng thời (Sập/Treo server)</td>
+                                    <td style="color: #059669; font-weight: bold;">&gt;15,000 kết nối đồng thời</td>
+                                    <td>Tăng gấp 10 lần khả năng chịu tải</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Độ trễ phản hồi (Response Latency)</strong></td>
+                                    <td style="color: #d97706;">2,500ms - 5,000ms khi nghẽn mạng</td>
+                                    <td style="color: #059669; font-weight: bold;">&lt; 100ms (Real-time)</td>
+                                    <td>Xử lý phản hồi tức thì</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cập nhật sĩ số lớp học</strong></td>
+                                    <td>Chậm (Độ trễ 5 - 10 phút, dễ bị đăng ký vượt chỉ tiêu)</td>
+                                    <td style="color: #059669; font-weight: bold;">Real-time (Tức thì bằng Event-driven)</td>
+                                    <td>Tránh 100% việc đăng ký vượt chỉ tiêu lớp học</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Độ tương thích thiết bị</strong></td>
+                                    <td>Chỉ hỗ trợ tốt trên Desktop/Laptop</td>
+                                    <td style="color: #059669; font-weight: bold;">Đa nền tảng (Responsive Web & Mobile App)</td>
+                                    <td>Sinh viên đăng ký mọi lúc, mọi nơi</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
 
@@ -252,6 +292,28 @@
                             </ul>
                         </div>
                     </div>
+
+                    <div class="glass-card" style="margin-top: 20px; padding: 15px;">
+                        <h3 style="font-size: 0.95rem; margin-bottom: 5px; color: var(--accent);">Hệ Thống Quy Tắc & Ràng Buộc Đăng Ký (Enrollment Business Rules)</h3>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 10px;">
+                            <div style="padding: 10px; background: rgba(0,0,0,0.015); border-left: 3px solid var(--primary); border-radius: 4px;">
+                                <strong style="font-size: 0.8rem; display: block; color: var(--primary);">Giới hạn Tín chỉ</strong>
+                                <p style="font-size: 0.75rem; margin-top: 3px;">Tối thiểu: 12 tín chỉ.<br>Tối đa: 24 tín chỉ (đối với học kỳ chính).</p>
+                            </div>
+                            <div style="padding: 10px; background: rgba(0,0,0,0.015); border-left: 3px solid var(--accent-seeking); border-radius: 4px;">
+                                <strong style="font-size: 0.8rem; display: block; color: var(--accent-seeking);">Môn học tiên quyết</strong>
+                                <p style="font-size: 0.75rem; margin-top: 3px;">Bắt buộc hoàn thành môn trước (Ví dụ: Math 1 phải đỗ mới được học Math 2).</p>
+                            </div>
+                            <div style="padding: 10px; background: rgba(0,0,0,0.015); border-left: 3px solid var(--accent); border-radius: 4px;">
+                                <strong style="font-size: 0.8rem; display: block; color: var(--accent);">Xung đột Lịch học</strong>
+                                <p style="font-size: 0.75rem; margin-top: 3px;">Hệ thống tự động chặn đăng ký các môn trùng lịch (Thứ, Tiết).</p>
+                            </div>
+                            <div style="padding: 10px; background: rgba(0,0,0,0.015); border-left: 3px solid var(--text-secondary); border-radius: 4px;">
+                                <strong style="font-size: 0.8rem; display: block; color: var(--text-secondary);">Hết Sĩ số (Full slots)</strong>
+                                <p style="font-size: 0.75rem; margin-top: 3px;">Tự động khóa nút Đăng ký khi sĩ số khả dụng đạt 0.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -304,6 +366,58 @@
                             <h3>Theo Dõi Tỷ Lệ Hoàn Thành</h3>
                             <p style="font-size: 0.85rem; line-height: 1.5;">Hiển thị chỉ số hoàn thành tổng thể (85%), cảnh báo công việc chậm tiến độ và kiểm soát ngày bàn giao dự kiến (Tuần 12).</p>
                         </div>
+                    </div>
+
+                    <div class="glass-card" style="margin-top: 15px; padding: 15px; overflow-x: auto;">
+                        <h3 style="font-size: 0.95rem; margin-bottom: 5px; color: var(--accent-seeking);">Báo Cáo Tiến Độ Công Việc Lập Trình (WBS Task Execution Report)</h3>
+                        <table class="sim-results-table" style="font-size: 0.72rem; width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Mã WBS</th>
+                                    <th>Nội dung công việc chính</th>
+                                    <th>Thời lượng dự kiến</th>
+                                    <th>Tiến độ hoàn thành</th>
+                                    <th>Trạng thái</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1.0</strong></td>
+                                    <td>Khởi tạo & Lập Kế hoạch (Project Charter, Kế hoạch quản lý rủi ro)</td>
+                                    <td>Tuần 1 - 2</td>
+                                    <td style="color: #059669; font-weight: bold;">100%</td>
+                                    <td><span style="padding: 2px 6px; background: rgba(5, 150, 105, 0.15); color: #059669; border-radius: 4px; font-weight: bold;">Hoàn thành</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2.0</strong></td>
+                                    <td>Phân tích yêu cầu & Thiết kế Database (ERD, Relational Schema)</td>
+                                    <td>Tuần 3 - 4</td>
+                                    <td style="color: #059669; font-weight: bold;">100%</td>
+                                    <td><span style="padding: 2px 6px; background: rgba(5, 150, 105, 0.15); color: #059669; border-radius: 4px; font-weight: bold;">Hoàn thành</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3.1</strong></td>
+                                    <td>Lập trình API Backend (Node.js/Express, Real-time engine)</td>
+                                    <td>Tuần 5 - 8</td>
+                                    <td style="color: #059669; font-weight: bold;">95%</td>
+                                    <td><span style="padding: 2px 6px; background: rgba(37, 99, 235, 0.15); color: #2563eb; border-radius: 4px; font-weight: bold;">Đang chạy</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3.2</strong></td>
+                                    <td>Lập trình giao diện Frontend (Responsive Student & Admin Portals)</td>
+                                    <td>Tuần 6 - 9</td>
+                                    <td style="color: #059669; font-weight: bold;">80%</td>
+                                    <td><span style="padding: 2px 6px; background: rgba(37, 99, 235, 0.15); color: #2563eb; border-radius: 4px; font-weight: bold;">Đang chạy</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4.0</strong></td>
+                                    <td>Tích hợp hệ thống, Kiểm thử & Đóng dự án (UAT, Lessons Learned)</td>
+                                    <td>Tuần 10 - 12</td>
+                                    <td style="color: #d97706; font-weight: bold;">10%</td>
+                                    <td><span style="padding: 2px 6px; background: rgba(217, 119, 6, 0.15); color: #d97706; border-radius: 4px; font-weight: bold;">Chưa bắt đầu</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>
@@ -371,6 +485,56 @@
                             <p>Dev chính nghỉ giữa chừng dự án.</p>
                             <p class="outcome-text">Chuyển giao: Cross-training code</p>
                         </div>
+                    </div>
+
+                    <div class="glass-card" style="margin-top: 15px; padding: 15px; overflow-x: auto;">
+                        <h3 style="font-size: 0.95rem; margin-bottom: 5px; color: var(--primary);">Bảng Đăng Ký Theo Dõi & Ứng Phó Rủi Ro Chi Tiết (Project Risk Register)</h3>
+                        <table class="sim-results-table" style="font-size: 0.72rem; width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Mã</th>
+                                    <th>Phân loại</th>
+                                    <th>Mô tả Rủi ro</th>
+                                    <th>Xác suất (P)</th>
+                                    <th>Tác động (I)</th>
+                                    <th>Hành động Ứng phó cụ thể</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>R1</strong></td>
+                                    <td>Hạ tầng</td>
+                                    <td>Nghẽn tải máy chủ khi mở cổng đăng ký môn học</td>
+                                    <td style="color: #059669; font-weight: bold;">Trung bình</td>
+                                    <td style="color: #f43f5e; font-weight: bold;">Rất cao</td>
+                                    <td>Thiết kế cơ chế Auto-scaling, cache Redis thông tin sĩ số lớp học.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>R2</strong></td>
+                                    <td>Tiến độ</td>
+                                    <td>Lập trình API Backend trễ tiến độ 2 tuần</td>
+                                    <td style="color: #d97706; font-weight: bold;">Cao</td>
+                                    <td style="color: #f43f5e; font-weight: bold;">Cao</td>
+                                    <td>Điều chuyển 1 nhân sự từ Frontend hỗ trợ, tăng ca (crashing).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>R3</strong></td>
+                                    <td>Phạm vi</td>
+                                    <td>Phòng Đào tạo thay đổi/bổ sung quy chế môn tiên quyết</td>
+                                    <td style="color: #059669; font-weight: bold;">Thấp</td>
+                                    <td style="color: #d97706; font-weight: bold;">Trung bình</td>
+                                    <td>Áp dụng Change Control Board (CCB), họp xét duyệt tác động chi phí.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>R4</strong></td>
+                                    <td>Nhân lực</td>
+                                    <td>Lập trình viên chính nghỉ việc đột ngột giữa chừng</td>
+                                    <td style="color: #059669; font-weight: bold;">Thấp</td>
+                                    <td style="color: #f43f5e; font-weight: bold;">Rất cao</td>
+                                    <td>Cross-training nhân sự chéo, cập nhật tài liệu kỹ thuật lên Git mỗi ngày.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>
