@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Force Light Mode theme natively
+    document.body.setAttribute('data-theme', 'light');
+
     // --- SLIDE NAVIGATION CONTROL ---
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
@@ -377,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Render comments
         const commentBox = document.getElementById('calc-decision-comment');
-        const isLightTheme = document.body.getAttribute('data-theme') === 'light';
+        const isLightTheme = true;
         if (npv < 0) {
             commentBox.innerHTML = `<strong>Đánh giá rủi ro đầu tư:</strong> Dự án không khả thi về tài chính (NPV âm). Rủi ro thua lỗ cực kỳ cao, không nên đầu tư.`;
             commentBox.style.background = isLightTheme ? 'rgba(244, 63, 94, 0.08)' : 'rgba(244, 63, 94, 0.05)';

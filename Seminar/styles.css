@@ -1,18 +1,18 @@
 /* --- CSS Design System --- */
 :root {
-    --bg-color: #0f172a; /* Slate Dark Canvas */
-    --card-bg: #1e293b; /* Solid Dark Slate Card - Zero Transparency for Flat look */
-    --border-color: #334155; /* Solid Crisp Slate Border */
-    --text-primary: #f8fafc; /* Crisp White Text */
-    --text-secondary: #94a3b8; /* Slate Muted Text */
+    --bg-color: #f1f5f9; /* Slate Light Canvas */
+    --card-bg: #ffffff; /* Crisp Solid White Card */
+    --border-color: #0f172a; /* Bold Slate Dark Border */
+    --text-primary: #0f172a; /* High Contrast Dark Text */
+    --text-secondary: #475569;
     
-    --primary: #3b82f6; /* Flat Digital Blue */
-    --primary-glow: rgba(59, 130, 246, 0.1);
-    --accent: #f59e0b; /* Amber Gold Accent */
-    --accent-seeking: #10b981; /* Emerald Green Accent */
+    --primary: #2563eb; /* Bold Action Blue */
+    --primary-glow: rgba(37, 99, 235, 0.05);
+    --accent: #d97706; /* Dark Amber Gold */
+    --accent-seeking: #059669;
     
-    --shadow-color: transparent; /* Flat Design: No Box Shadows */
-    --glass-blur: 0px; /* Flat Design: No Blur */
+    --shadow-color: transparent;
+    --glass-blur: 0px;
     
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Outfit', sans-serif;
@@ -44,22 +44,6 @@
     border-radius: 8px;
     border: 2px solid var(--border-color);
     margin-bottom: 15px;
-}
-
-/* Light Mode values - Confident Flat Print Look */
-[data-theme="light"] {
-    --bg-color: #f1f5f9; /* Slate Light Canvas */
-    --card-bg: #ffffff; /* Crisp Solid White Card */
-    --border-color: #0f172a; /* Bold Slate Dark Border */
-    --text-primary: #0f172a; /* High Contrast Dark Text */
-    --text-secondary: #475569;
-    
-    --primary: #2563eb; /* Bold Action Blue */
-    --primary-glow: rgba(37, 99, 235, 0.05);
-    --accent: #d97706; /* Dark Amber Gold */
-    --accent-seeking: #059669;
-    
-    --shadow-color: transparent;
 }
 
 /* Base Styles */
@@ -94,15 +78,9 @@ body {
     z-index: 1;
     pointer-events: none;
     background-image: 
-        linear-gradient(rgba(148, 163, 184, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(148, 163, 184, 0.02) 1px, transparent 1px);
-    background-size: 50px 50px;
-}
-
-[data-theme="light"] .glow-bg-container {
-    background-image: 
         linear-gradient(rgba(15, 23, 42, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
 }
 
 /* Main Layout Framework */
@@ -1681,51 +1659,51 @@ body {
 }
 
 /* Light Mode Contrast Overrides */
-[data-theme="light"] .dot-indicator {
+ .dot-indicator {
     background: rgba(0, 0, 0, 0.18);
 }
-[data-theme="light"] .dot-indicator.active {
+ .dot-indicator.active {
     background: var(--primary);
 }
-[data-theme="light"] .icon-btn,
-[data-theme="light"] .nav-btn {
+ .icon-btn,
+ .nav-btn {
     background: rgba(0, 0, 0, 0.04);
     color: var(--text-primary);
 }
-[data-theme="light"] .icon-btn:hover,
-[data-theme="light"] .nav-btn:hover:not(:disabled) {
+ .icon-btn:hover,
+ .nav-btn:hover:not(:disabled) {
     background: rgba(0, 0, 0, 0.08);
 }
-[data-theme="light"] .nav-btn:disabled {
+ .nav-btn:disabled {
     opacity: 0.35;
     background: rgba(0, 0, 0, 0.02);
 }
-[data-theme="light"] .key-badge {
+ .key-badge {
     background: rgba(0, 0, 0, 0.05);
 }
-[data-theme="light"] .step-card {
+ .step-card {
     background: rgba(0, 0, 0, 0.015);
 }
-[data-theme="light"] .step-card:hover {
+ .step-card:hover {
     background: rgba(0, 0, 0, 0.03);
 }
-[data-theme="light"] .glass-card {
-    background: rgba(255, 255, 255, 0.9);
+ .glass-card {
+    background: var(--card-bg);
 }
-[data-theme="light"] .meta-item {
+ .meta-item {
     background: rgba(0, 0, 0, 0.015);
 }
-[data-theme="light"] .tab-btn {
+ .tab-btn {
     background: rgba(0, 0, 0, 0.02);
 }
-[data-theme="light"] .tab-btn:hover {
+ .tab-btn:hover {
     background: rgba(0, 0, 0, 0.05);
 }
-[data-theme="light"] .tab-btn.active {
+ .tab-btn.active {
     background: var(--primary-glow);
     color: var(--primary);
 }
-[data-theme="light"] .calculator-col-left {
+ .calculator-col-left {
     background: rgba(0, 0, 0, 0.015);
 }
 
@@ -1883,31 +1861,9 @@ body {
     font-weight: 600;
 }
 
-/* Light Mode Contrast Overrides for new classes */
-[data-theme="light"] .tech-card,
-[data-theme="light"] .people-card,
-[data-theme="light"] .case-mini-card {
-    background: rgba(0, 0, 0, 0.015);
-    border-color: rgba(0, 0, 0, 0.08);
-}
-
-[data-theme="light"] .tech-card:hover,
-[data-theme="light"] .people-card:hover,
-[data-theme="light"] .case-mini-card:hover {
-    background: rgba(0, 0, 0, 0.03);
-}
-
-[data-theme="light"] .people-card h3 {
-    color: #b58900;
-}
-[data-theme="light"] .people-card-stat {
-    color: #b58900;
-}
-[data-theme="light"] .case-mini-card h3 {
-    color: var(--accent);
-}
-[data-theme="light"] .case-mini-card .outcome-text {
-    color: #c2185b;
+/* Hide Theme Toggle button since it is exclusively Light Mode */
+#theme-toggle-btn {
+    display: none !important;
 }
 
 
