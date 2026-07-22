@@ -412,4 +412,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Run first init NPV
     loadPreset('project-b'); // default project B from exam
+
+    // --- LAYOUT CUSTOMIZER CONTROLLER ---
+    const customizerPanel = document.getElementById('customizer-panel');
+    const layoutToggleBtn = document.getElementById('layout-toggle-btn');
+    const closeCustomizerBtn = document.getElementById('close-customizer-btn');
+
+    if (layoutToggleBtn && customizerPanel) {
+        layoutToggleBtn.addEventListener('click', () => {
+            customizerPanel.classList.toggle('active');
+        });
+    }
+
+    if (closeCustomizerBtn && customizerPanel) {
+        closeCustomizerBtn.addEventListener('click', () => {
+            customizerPanel.classList.remove('active');
+        });
+    }
+
+    // Handle selection changes
+    const customizerChoices = document.querySelectorAll('.customizer-choice');
+    customizerChoices.forEach(choice => {
+        choice.addEventListener('click', (e) => {
+            const prop = e.target.getAttribute('data-prop');
+            const val = e.target.getAttribute('data-val');
+
+            // Set CSS custom property on document element
+            document.documentElement.style.setProperty(prop, val);
+
+            // Update active styling inside parent group
+            const parent = e.target.closest('.radio-group');
+            parent.querySelectorAll('.customizer-choice').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            e.target.classList.add('active');
+        });
+    });
 });

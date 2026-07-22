@@ -18,6 +18,14 @@
     --font-body: 'Outfit', sans-serif;
     
     --transition-speed: 0.2s; /* Snappy, immediate feedback */
+
+    /* Layout Customizer Variables */
+    --slide-padding: 35px 50px;
+    --title-align: flex-start;
+    --slide-border-width: 2px;
+    --slide-border-radius: 8px;
+    --slide-font-scale: 1;
+    --two-col-ratio: 1fr 1.2fr;
 }
 
 /* Custom Generated Asset Graphics Styles */
@@ -57,7 +65,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-primary);
     font-family: var(--font-body);
-    font-size: 16px;
+    font-size: calc(16px * var(--slide-font-scale));
     line-height: 1.6;
     overflow: hidden; /* Desktop app feel */
     height: 100vh;
@@ -174,7 +182,7 @@ body {
     transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
                 visibility 0.5s cubic-bezier(0.4, 0, 0.2, 1),
                 transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 35px 50px;
+    padding: var(--slide-padding);
     overflow-y: auto;
 }
 
@@ -198,6 +206,7 @@ body {
 .slide-header {
     display: flex;
     align-items: center;
+    justify-content: var(--title-align);
     gap: 15px;
     margin-bottom: 25px;
     border-bottom: 1px dashed var(--border-color);
@@ -318,8 +327,8 @@ body {
 /* Card aesthetics */
 .glass-card {
     background: var(--card-bg);
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
+    border: var(--slide-border-width) solid var(--border-color);
+    border-radius: var(--slide-border-radius);
     padding: 24px;
     box-shadow: none; /* Flat design: shadow-none */
     transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
@@ -333,7 +342,7 @@ body {
 
 .two-col-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: var(--two-col-ratio);
     gap: 30px;
     height: calc(100% - 70px);
 }
@@ -1864,6 +1873,99 @@ body {
 /* Hide Theme Toggle button since it is exclusively Light Mode */
 #theme-toggle-btn {
     display: none !important;
+}
+
+/* --- LAYOUT CUSTOMIZER PANEL --- */
+.layout-customizer-panel {
+    position: fixed;
+    top: 80px;
+    right: -420px; /* Hidden by default */
+    width: 380px;
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.layout-customizer-panel.active {
+    right: 30px;
+}
+
+.customizer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.customizer-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.customizer-header .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.customizer-header .close-btn:hover {
+    color: var(--text-primary);
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+.control-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.customizer-choice {
+    background: var(--bg-color);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s ease;
+    flex: 1 1 80px;
+}
+
+.customizer-choice:hover {
+    background: var(--primary-glow);
+    border-color: var(--primary);
+}
+
+.customizer-choice.active {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
 }
 
 

@@ -71,8 +71,8 @@
             </div>
             <div class="header-topic">Thuyết minh Đồ án (Lần 2): Risk and Schedule Management in the Online Course Registration System</div>
             <div class="header-controls">
-                <button id="theme-toggle-btn" class="icon-btn" title="Chuyển chế độ sáng/tối">
-                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <button id="layout-toggle-btn" class="icon-btn" title="Cấu hình bố cục slide">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
                 </button>
                 <button id="fullscreen-btn" class="icon-btn" title="Toàn màn hình">
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
@@ -430,6 +430,64 @@
                 <span class="copyright-txt">© 2026 Nhóm 3 - SW403DE01 (HSU)</span>
             </div>
         </footer>
+    </div>
+
+    <!-- Layout Customizer Panel -->
+    <div class="layout-customizer-panel" id="customizer-panel">
+        <div class="customizer-header">
+            <h3>Cấu hình Bố cục Slide</h3>
+            <button id="close-customizer-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="customizer-body">
+            <div class="control-group">
+                <label>Căn lề tiêu đề slide:</label>
+                <div class="radio-group">
+                    <button class="customizer-choice active" data-prop="--title-align" data-val="flex-start">Trái</button>
+                    <button class="customizer-choice" data-prop="--title-align" data-val="center">Giữa</button>
+                    <button class="customizer-choice" data-prop="--title-align" data-val="flex-end">Phải</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <label>Độ bo góc thẻ (Border Radius):</label>
+                <div class="radio-group">
+                    <button class="customizer-choice" data-prop="--slide-border-radius" data-val="0px">Sắc cạnh</button>
+                    <button class="customizer-choice active" data-prop="--slide-border-radius" data-val="8px">Bo nhẹ</button>
+                    <button class="customizer-choice" data-prop="--slide-border-radius" data-val="16px">Tròn trịa</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <label>Độ dày viền thẻ (Border Width):</label>
+                <div class="radio-group">
+                    <button class="customizer-choice" data-prop="--slide-border-width" data-val="1px">Mảnh (1px)</button>
+                    <button class="customizer-choice active" data-prop="--slide-border-width" data-val="2px">Vừa (2px)</button>
+                    <button class="customizer-choice" data-prop="--slide-border-width" data-val="3px">Dày (3px)</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <label>Kích cỡ chữ (Font Size Scale):</label>
+                <div class="radio-group">
+                    <button class="customizer-choice" data-prop="--slide-font-scale" data-val="0.9">Nhỏ</button>
+                    <button class="customizer-choice active" data-prop="--slide-font-scale" data-val="1">Vừa</button>
+                    <button class="customizer-choice" data-prop="--slide-font-scale" data-val="1.1">Lớn</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <label>Tỷ lệ chia 2 cột:</label>
+                <div class="radio-group">
+                    <button class="customizer-choice active" data-prop="--two-col-ratio" data-val="1fr 1.2fr">Mặc định</button>
+                    <button class="customizer-choice" data-prop="--two-col-ratio" data-val="1fr 1fr">Đều nhau</button>
+                    <button class="customizer-choice" data-prop="--two-col-ratio" data-val="1.2fr 1fr">Trái rộng</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <label>Khoảng đệm Slide (Padding):</label>
+                <div class="radio-group">
+                    <button class="customizer-choice" data-prop="--slide-padding" data-val="20px 30px">Gọn</button>
+                    <button class="customizer-choice active" data-prop="--slide-padding" data-val="35px 50px">Vừa</button>
+                    <button class="customizer-choice" data-prop="--slide-padding" data-val="50px 70px">Rộng</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Slide Controller Script -->
