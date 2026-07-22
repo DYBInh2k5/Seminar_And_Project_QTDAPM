@@ -717,9 +717,9 @@
                             <div class="chart-wrapper-interactive">
                                 <svg viewBox="0 0 500 400" id="interactive-svg-chart">
                                     <!-- Grid lines background -->
-                                    <g stroke="#222" stroke-width="1">
-                                        <line x1="50" y1="50" x2="50" y2="350"></line>
-                                        <line x1="50" y1="350" x2="450" y2="350"></line>
+                                    <g stroke="#cbd5e1" stroke-width="1">
+                                        <line x1="50" y1="50" x2="50" y2="350" stroke="#0f172a" stroke-width="2"></line> <!-- Y Axis -->
+                                        <line x1="50" y1="350" x2="450" y2="350" stroke="#0f172a" stroke-width="2"></line> <!-- X Axis -->
                                         <line x1="150" y1="50" x2="150" y2="350" stroke-dasharray="3"></line>
                                         <line x1="250" y1="50" x2="250" y2="350" stroke-dasharray="3"></line>
                                         <line x1="350" y1="50" x2="350" y2="350" stroke-dasharray="3"></line>
@@ -729,26 +729,26 @@
                                     </g>
                                     
                                     <!-- Axes arrows -->
-                                    <path d="M 450 350 L 440 345 M 450 350 L 440 355" stroke="#888" stroke-width="2"></path>
-                                    <path d="M 50 50 L 45 60 M 50 50 L 55 60" stroke="#888" stroke-width="2"></path>
+                                    <path d="M 450 350 L 440 345 M 450 350 L 440 355" stroke="#0f172a" stroke-width="2"></path>
+                                    <path d="M 50 50 L 45 60 M 50 50 L 55 60" stroke="#0f172a" stroke-width="2"></path>
                                     
                                     <!-- Labels -->
-                                    <text x="450" y="380" fill="#888" font-size="12" text-anchor="end">Giá trị payoff (x)</text>
-                                    <text x="25" y="60" fill="#888" font-size="12" transform="rotate(-90 25 60)" text-anchor="end">Độ thỏa mãn / Hữu dụng (U)</text>
+                                    <text x="450" y="380" fill="#0f172a" font-size="12" font-weight="600" text-anchor="end">Giá trị payoff (x)</text>
+                                    <text x="20" y="60" fill="#0f172a" font-size="12" font-weight="600" transform="rotate(-90 20 60)" text-anchor="end">Độ thỏa mãn / Hữu dụng (U)</text>
                                     
                                     <!-- Plotting Curves -->
-                                    <path id="path-averse" d="" fill="none" stroke="#f06292" stroke-width="4" stroke-linecap="round"></path>
-                                    <path id="path-neutral" d="" fill="none" stroke="#4fc3f7" stroke-width="3" stroke-dasharray="5"></path>
-                                    <path id="path-seeking" d="" fill="none" stroke="#a78bfa" stroke-width="4" stroke-linecap="round"></path>
+                                    <path id="path-averse" d="" fill="none" stroke="#db2777" stroke-width="4" stroke-linecap="round"></path>
+                                    <path id="path-neutral" d="" fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="5"></path>
+                                    <path id="path-seeking" d="" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linecap="round"></path>
                                     
                                     <!-- Interactive indicator lines and dots -->
-                                    <line id="guide-x" x1="50" y1="350" x2="50" y2="350" stroke="#ffeb3b" stroke-width="1.5" stroke-dasharray="2"></line>
+                                    <line id="guide-x" x1="50" y1="350" x2="50" y2="350" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="3"></line>
                                     
-                                    <circle id="dot-averse" cx="50" cy="350" r="7" fill="#f06292" stroke="#fff" stroke-width="2"></circle>
-                                    <circle id="dot-neutral" cx="50" cy="350" r="7" fill="#4fc3f7" stroke="#fff" stroke-width="2"></circle>
-                                    <circle id="dot-seeking" cx="50" cy="350" r="7" fill="#a78bfa" stroke="#fff" stroke-width="2"></circle>
+                                    <circle id="dot-averse" cx="50" cy="350" r="7" fill="#db2777" stroke="#0f172a" stroke-width="2"></circle>
+                                    <circle id="dot-neutral" cx="50" cy="350" r="7" fill="#2563eb" stroke="#0f172a" stroke-width="2"></circle>
+                                    <circle id="dot-seeking" cx="50" cy="350" r="7" fill="#7c3aed" stroke="#0f172a" stroke-width="2"></circle>
                                     
-                                    <text id="chart-marker-txt" x="50" y="350" fill="#ffeb3b" font-size="11" text-anchor="middle" dy="-12">x</text>
+                                    <text id="chart-marker-txt" x="50" y="350" fill="#0f172a" font-size="11" font-weight="bold" text-anchor="middle" dy="-12">x</text>
                                 </svg>
                             </div>
                         </div>
