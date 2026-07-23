@@ -1,10 +1,35 @@
 # KẾ HOẠCH PHÁT TRIỂN PHẦN MỀM (SDP)
-## DỰ ÁN: HỆ THỐNG ĐĂNG KÝ HỌC PHẦN TRỰC TUYẾN
+## HỆ THỐNG ĐĂNG KÝ HỌC PHẦN TRỰC TUYẾN
+
+| Thông tin tài liệu | Chi tiết (Theo mẫu Project Plan.docx / HSU SDP) |
+| :--- | :--- |
+| **Dự án** | Cổng Đăng ký Học phần Trực tuyến HSU |
+| **Tài liệu** | Kế hoạch Phát triển Phần mềm (Software Development Plan - SDP) |
+| **Phiên bản** | v1.0 |
+| **Ngày lập** | 23/07/2026 |
+| **Trạng thái** | Baseline |
+| **Tác giả** | Nhóm 3 (Lớp SW403DE01) |
+| **Người duyệt** | Giảng viên Lê Thanh Tùng / Nguyễn Ngọc Tú |
+
+---
+
+### LỊCH SỬ THAY ĐỔI TÀI LIỆU (REVISION HISTORY)
+
+| Ngày | Phiên bản | Mô tả chi tiết thay đổi | Tác giả |
+| :--- | :--- | :--- | :--- |
+| 12/07/2026 | v0.1 | Khởi tạo cấu trúc SDP, mục tiêu và phạm vi | Võ Duy Bình |
+| 16/07/2026 | v0.5 | Xây dựng WBS, Gantt Chart tiến độ và tài liệu thiết kế hệ thống | Trần Bá Lợi, Nguyễn Thanh Quang |
+| 20/07/2026 | v0.8 | Tích hợp thuật toán CPM đường găng, kế hoạch rủi ro và QA | Hồng Bảo Khang |
+| 23/07/2026 | v1.0 | Đồng bộ hóa code thực tế, giao diện dashboard và hoàn tất Baseline | Nhóm 3 |
+
+---
+
+### THÔNG TIN NHÓM THỰC HIỆN
 
 * **Môn học:** Quản trị dự án phần mềm (SW403DE01)
 * **Trường:** Đại học Hoa Sen (HSU)
 * **Nhóm thực hiện:** Nhóm 3
-* **Sinh viên thực hiện:**
+* **Thành viên:**
   * Võ Duy Bình - MSSV: 22301500 (Nhóm trưởng)
   * Hồng Bảo Khang - MSSV: 22101347
   * Trần Bá Lợi - MSSV: 22300236

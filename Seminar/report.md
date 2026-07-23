@@ -1,11 +1,35 @@
 
-# BÁO CÁO SEMINAR (PHẦN 1): RISK AND SCHEDULE MANAGEMENT IN THE ONLINE COURSE REGISTRATION SYSTEM CONSTRUCTION PROJECT
+# BÁO CÁO CHUYÊN ĐỀ SEMINAR (PHẦN 1)
+## RISK AND SCHEDULE MANAGEMENT IN THE ONLINE COURSE REGISTRATION SYSTEM CONSTRUCTION PROJECT
 
-## Đề tài tổng thể: Risk and Schedule Management in the Online Course Registration System Construction Project (Seminar Phần 1: Khởi tạo dự án Initiating & Quản trị Rủi ro)
+| Thông tin tài liệu | Chi tiết (Theo mẫu Project Plan.docx) |
+| :--- | :--- |
+| **Dự án** | Cổng Đăng ký Học phần Trực tuyến HSU |
+| **Tài liệu** | Báo cáo Seminar Chuyên đề (Phần 1: Khởi tạo & Quản trị Rủi ro) |
+| **Phiên bản** | v1.0 |
+| **Ngày lập** | 23/07/2026 |
+| **Trạng thái** | Baseline |
+| **Tác giả** | Nhóm 3 (Lớp SW403DE01) |
+| **Người duyệt** | Giảng viên Lê Thanh Tùng / Nguyễn Ngọc Tú |
+
+---
+
+### LỊCH SỬ THAY ĐỔI TÀI LIỆU (REVISION HISTORY)
+
+| Ngày | Phiên bản | Mô tả chi tiết thay đổi | Tác giả |
+| :--- | :--- | :--- | :--- |
+| 10/07/2026 | v0.1 | Khởi tạo dự thảo nội dung, phác thảo đề mục chính | Võ Duy Bình |
+| 15/07/2026 | v0.5 | Cập nhật lý thuyết Risk Utility và tính toán NPV/ROI | Trần Bá Lợi, Hồng Bảo Khang |
+| 18/07/2026 | v0.8 | Bổ sung phân tích 4 loại rủi ro và Case studies | Nguyễn Thanh Quang |
+| 23/07/2026 | v1.0 | Đồng bộ hóa kịch bản, slide và xuất bản tài liệu Baseline | Nhóm 3 |
+
+---
+
+### THÔNG TIN NHÓM THỰC HIỆN
 
 * **Môn học:** Quản trị dự án phần mềm (Mã môn: `SW403DE01` - Đại học Hoa Sen)
 * **Nhóm thực hiện:** Nhóm 3
-* **Sinh viên thực hiện:**
+* **Thành viên:**
   * Võ Duy Bình - MSSV: 22301500 (Nhóm trưởng)
   * Hồng Bảo Khang - MSSV: 22101347
   * Trần Bá Lợi - MSSV: 22300236
