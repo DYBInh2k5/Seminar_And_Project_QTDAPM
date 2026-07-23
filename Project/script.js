@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 endPeriod: 3,
                 maxCap: 45,
                 registered: 42,
-                instructor: 'Lê Thanh Tùng'
+                instructor: 'Nguyễn Văn Sơn'
             },
             {
                 code: 'CSE302-1',
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 endPeriod: 6,
                 maxCap: 40,
                 registered: 35,
-                instructor: 'Nguyễn Ngọc Tú'
+                instructor: 'Nguyễn Văn Sơn'
             },
             {
                 code: 'CSE401-1',
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 endPeriod: 3,
                 maxCap: 45,
                 registered: 28,
-                instructor: 'Lê Thanh Tùng'
+                instructor: 'Nguyễn Văn Sơn'
             },
             {
                 code: 'CSE402-1',
@@ -214,9 +214,9 @@ document.addEventListener('DOMContentLoaded', () => {
             profileBadge.querySelector('.user-name').innerText = 'Võ Duy Bình';
         } else if (portalId === 'admin-portal') {
             profileBadge.style.display = 'flex';
-            profileBadge.querySelector('.user-avatar').innerText = 'LT';
+            profileBadge.querySelector('.user-avatar').innerText = 'VS';
             profileBadge.querySelector('.user-avatar').style.background = 'var(--primary)';
-            profileBadge.querySelector('.user-name').innerText = 'Cán bộ Lê Thanh Tùng';
+            profileBadge.querySelector('.user-name').innerText = 'Cán bộ Nguyễn Văn Sơn';
         } else {
             profileBadge.style.display = 'flex';
             profileBadge.querySelector('.user-avatar').innerText = 'PM';

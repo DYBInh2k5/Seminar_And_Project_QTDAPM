@@ -13,7 +13,7 @@ Chào mừng bạn đến với kho lưu trữ mã nguồn và tài liệu học
 | **3** | Trần Bá Lợi | 22300236 | Lập trình viên Frontend, Chuyên gia QA |
 | **4** | Nguyễn Thanh Quang | 22110739 | Phân tích viên, UI/UX Designer, Chuyên gia Rủi ro |
 
-* **Giảng viên hướng dẫn:** Thầy Lê Thanh Tùng / Thầy Nguyễn Ngọc Tú
+* **Giảng viên hướng dẫn:** Thầy Nguyễn Văn Sơn
 * **Lớp học phần:** SW403DE01 - HK23.1A HSU
 
 ---

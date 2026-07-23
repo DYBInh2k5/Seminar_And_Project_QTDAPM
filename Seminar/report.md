@@ -10,7 +10,7 @@
 | **Ngày lập** | 23/07/2026 |
 | **Trạng thái** | Baseline |
 | **Tác giả** | Nhóm 3 (Lớp SW403DE01) |
-| **Người duyệt** | Giảng viên Lê Thanh Tùng / Nguyễn Ngọc Tú |
+| **Người duyệt** | Thầy Nguyễn Văn Sơn |
 
 ---
 

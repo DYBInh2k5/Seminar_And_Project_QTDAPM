@@ -9,7 +9,7 @@
 | **Ngày lập** | 23/07/2026 |
 | **Trạng thái** | Baseline |
 | **Tác giả** | Nhóm 3 (Lớp SW403DE01) |
-| **Người duyệt** | Giảng viên Lê Thanh Tùng / Nguyễn Ngọc Tú |
+| **Người duyệt** | Thầy Nguyễn Văn Sơn |
 
 ---
 
@@ -34,7 +34,7 @@
   * Hồng Bảo Khang - MSSV: 22101347
   * Trần Bá Lợi - MSSV: 22300236
   * Nguyễn Thanh Quang - MSSV: 22110739
-* **Giảng viên hướng dẫn:** Lê Thanh Tùng / Nguyễn Ngọc Tú
+* **Giảng viên hướng dẫn:** Thầy Nguyễn Văn Sơn
 
 ---
 
