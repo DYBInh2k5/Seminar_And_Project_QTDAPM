@@ -359,13 +359,14 @@ Tất cả các rủi ro được theo dõi trong một tài liệu sống gọi
 * Người chịu trách nhiệm theo dõi (Risk Owner)
 * Ngân sách dự phòng (Contingency budget)
 
-##### Bảng ví dụ đăng ký và ứng phó rủi ro (Risk Response Register)
+##### Bảng ví dụ đăng ký và ứng phó rủi ro (Risk Response Register) - Dự án HSU Nhóm 3
 
-| Mô tả rủi ro (Risk)           | Xác suất (Probability) | Ảnh hưởng (Impact) |     Chiến lược (Strategy)     | Hành động cụ thể (Action Plan)                                                                                           |
-| :------------------------------- | :----------------------: | :-------------------: | :-------------------------------: | :---------------------------------------------------------------------------------------------------------------------------- |
-| **Thiếu nhân sự**       |           Cao           |          Cao          | **Mitigate** (Giảm thiểu) | Thực hiện tuyển dụng bổ sung sớm, cross-training kỹ năng chéo giữa các thành viên.                               |
-| **Server hỏng**           |          Thấp          |          Cao          | **Transfer** (Chuyển giao) | Thuê hạ tầng Cloud (AWS/Azure) cam kết SLA 99.99%, mua dịch vụ tự động sao lưu dữ liệu.                           |
-| **Khách đổi yêu cầu** |           Cao           |      Trung bình      |    **Accept / Mitigate**    | Chấp nhận thay đổi nhỏ trong phạm vi quy định, áp dụng quy trình Change Request nghiêm ngặt cho thay đổi lớn. |
+| Mô tả rủi ro (Risk) | Phân loại | Xác suất (P) | Ảnh hưởng (I) | Chiến lược (Strategy) | Hành động cụ thể (Action Plan) & Người chịu trách nhiệm (Owner) |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Hệ thống sập tải (High Traffic)** | Công nghệ | Cao | Rất cao | **Mitigate** (Giảm thiểu) | Sử dụng cơ chế Redis Caching để giảm truy vấn cơ sở dữ liệu trực tiếp, thiết lập máy chủ Load Balancer. <br>**Owner: Hồng Bảo Khang** |
+| **Lỗi nghiệp vụ đăng ký (UI/UX Bugs)** | Công nghệ | Trung bình | Cao | **Mitigate** (Giảm thiểu) | Viết Unit Test tự động cho các ràng buộc (môn tiên quyết, trùng lịch), kiểm thử chéo trên nhiều kích cỡ màn hình di động. <br>**Owner: Trần Bá Lợi** |
+| **Rò rỉ dữ liệu học vụ (Broken Access)** | Bảo mật | Thấp | Rất cao | **Transfer** (Chuyển giao) | Tích hợp xác thực phân quyền Token JWT ở Backend, thực hiện rà quét bảo mật Shift-left security định kỳ. <br>**Owner: Nguyễn Thanh Quang** |
+| **Thành viên nghỉ việc / Quá tải** | Con người | Trung bình | Cao | **Mitigate** (Giảm thiểu) | Áp dụng chia sẻ tài liệu đặc tả WBS/SDP rõ ràng, lập trình viên hỗ trợ chéo nhau (Bình hỗ trợ backend/frontend khi cần). <br>**Owner: Võ Duy Bình** |
 
 ### 4.4. Tích hợp Quản trị rủi ro vào Kế hoạch Phát triển Phần mềm (SDP HSU)
 
@@ -421,63 +422,68 @@ Trong giai đoạn lập kế hoạch, Erica Bell đã tổ chức họp brainst
 | **9** | Việc quảng bá hệ thống mới (Promotion) không thu hút được người dùng                             | Thị trường / Tiếp thị  |
 | **10** | Không hiện thực hóa được các lợi ích tài chính dự báo của hệ thống trong vòng 1 năm         | Tài chính / Chiến lược |
 
-### 5.2. Mẫu Điều Lệ Dự Án (Project Charter - Table 3-6 JWD)
+### 5.2. Mẫu Điều Lệ Dự Án HSU (Project Charter - Áp dụng mẫu Table 3-6 JWD)
 
-Trong nhóm quy trình **1.0 Initiating (Khởi tạo dự án)**, tài liệu trung tâm chính là **Project Charter (Điều lệ dự án - Table 3-6)** được ký duyệt bởi CEO Joe Fleming (Sponsor) và Giám đốc dự án Erica Bell. Mẫu Điều lệ dự án JWD tuân thủ chuẩn PMBOK gồm 7 thành phần cấu trúc cốt lõi:
+Trong nhóm quy trình **1.0 Initiating (Khởi tạo dự án)**, tài liệu trung tâm chính là **Project Charter (Điều lệ dự án)** được ký duyệt bởi đại diện Nhà trường/GVHD và Trưởng nhóm Võ Duy Bình. Mẫu Điều lệ dự án áp dụng cho hệ thống HSU gồm 7 thành phần cấu trúc cốt lõi:
 
-| Thành phần mẫu (Charter Element) | Nội dung áp dụng thực tế tại JWD Consulting |
+| Thành phần mẫu (Charter Element) | Nội dung áp dụng thực tế tại Dự án HSU (Nhóm 3) |
 | :--- | :--- |
-| **1. Tên dự án & Ngày lập (Project Title & Date)** | JWD Consulting Intranet Project | Ngày lập: 10/05 |
-| **2. Thời gian thực hiện (Project Dates)** | Ngày bắt đầu: 10/05 | Ngày hoàn thành dự kiến: 04/11 (Thời lượng: 6 tháng) |
-| **3. Thông tin Ngân sách (Budget Info)** | Ngân sách dự toán ban đầu: **$140,000** (Chi phí nhân công & phần mềm) |
-| **4. Giám đốc dự án (Project Manager)** | Erica Bell (Email: `erica_bell@jwdconsulting.com`) - Quyền hạn quản lý trực tiếp nguồn lực |
-| **5. Mục tiêu dự án (Project Objectives)** | Xây dựng trang Intranet chia sẻ biểu mẫu (templates) & công cụ quản lý dự án chuẩn hóa, nhằm nâng cao năng suất tổ chức và tăng 10% lợi nhuận năm. |
-| **6. Phương pháp tiếp cận (Approach)** | Khảo sát nhu cầu người dùng nội bộ/khách hàng ➔ Thu thập 20 biểu mẫu xuất sắc ➔ Thuê giải pháp phần mềm ngoài ➔ Thi công & Đo lường lợi ích tài chính. |
-| **7. Vai trò & Chữ ký (Roles & Signatures)** | CEO Joe Fleming (Sponsor), Erica Bell (PM), Kevin Dodge, Cindy Dawson, Michael Chen, Kim Phuong, Page Miller. |
+| **1. Tên dự án & Ngày lập (Project Title & Date)** | HSU Online Course Registration System Project | Ngày lập: 12/07/2026 |
+| **2. Thời gian thực hiện (Project Dates)** | Ngày bắt đầu: 12/07/2026 | Ngày hoàn thành dự kiến: 15/08/2026 (Thời lượng: ~1 tháng) |
+| **3. Thông tin Ngân sách (Budget Info)** | Ngân sách nghiên cứu & phát triển học thuật: **$0** (Nhóm tự phát triển không dùng ngân sách ngoài) |
+| **4. Giám đốc dự án (Project Manager)** | Võ Duy Bình (Email: `binh.vdb2230@sinhvien.hoasen.edu.vn`) - PM & BA chịu trách nhiệm điều phối chung |
+| **5. Mục tiêu dự án (Project Objectives)** | Xây dựng ứng dụng Web Đăng ký học phần chuẩn hóa HSU, tích hợp Dashboard trực quan hiển thị đường găng tiến độ CPM và sơ đồ Gantt phục vụ giảng dạy môn học. |
+| **6. Phương pháp tiếp cận (Approach)** | Thu thập quy chế học vụ HSU ➔ Thiết kế giao diện di động (SWOT) & Cấu trúc cơ sở dữ liệu môn học ➔ Viết thuật toán kiểm tra ràng buộc bằng Javascript ➔ Chạy kiểm thử tự động. |
+| **7. Vai trò & Chữ ký (Roles & Signatures)** | Thầy Nguyễn Văn Sơn (GVHD / Sponsor), Võ Duy Bình (PM), Hồng Bảo Khang (Backend), Trần Bá Lợi (Frontend), Nguyễn Thanh Quang (UI/UX). |
 
-### 5.3. Sổ Theo Dõi Bên Liên Quan & Chiến Lược Quản Lý (Table 3-4 & Table 3-5 JWD)
+### 5.3. Sổ Theo Dõi Bên Liên Quan & Chiến Lược Quản Lý - Áp Dụng Cho Dự Án HSU (Nhóm 3)
 
-Để thực hiện công việc thuộc bước **1.1 Identify key stakeholders (Nhận diện các bên liên quan)**, Erica Bell đã lập hai biểu mẫu quan trọng để theo dõi và quản lý quan hệ với các bên liên quan:
+Để thực hiện công việc thuộc bước **1.1 Identify key stakeholders (Nhận diện các bên liên quan)** cho dự án Hệ thống Đăng ký Học phần HSU, nhóm đã lập hai biểu mẫu kế thừa từ mẫu chuẩn JWD Consulting:
 
-#### A. Sổ theo dõi bên liên quan (Stakeholder Register - Table 3-4)
-Tài liệu này được công khai rộng rãi cho toàn đội ngũ dự án, do đó chỉ chứa các thông tin liên hệ và vai trò cơ bản để tránh rò rỉ dữ liệu nhạy cảm:
+#### A. Sổ theo dõi bên liên quan (Stakeholder Register - Áp dụng mẫu Table 3-4)
+Tài liệu này ghi nhận đầy đủ vai trò của nhà trường (Sponsor, Phòng Đào tạo), giảng viên và các thành viên nhóm phát triển dự án:
 
 | Họ và Tên (Name) | Vị trí công tác (Position) | Phân loại (Internal/External) | Vai trò dự án (Project Role) | Thông tin liên hệ (Contact Information) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Joe Fleming** | CEO | Internal | Sponsor | `joe_fleming@jwdconsulting.com` |
-| **Erica Bell** | PMO Director | Internal | Project Manager | `erica_bell@jwdconsulting.com` |
-| **Michael Chen** | Senior Consultant | Internal | Team Member | `michael_chen@jwdconsulting.com` |
-| **Kim Phuong** | Business Analyst | External | Client Advisor | `kim_phuong@client1.com` |
-| **Louise Mills** | PR Director | Internal | Advisor | `louise_mills@jwdconsulting.com` |
+| **Thầy Nguyễn Văn Sơn** | Giảng viên hướng dẫn / HSU | External | Advisor / Reviewer | `son.nguyenvan@hoasen.edu.vn` |
+| **Đại diện Phòng Đào tạo** | Cán bộ quản lý học vụ | External | Product Owner / Client | `pdt@hoasen.edu.vn` |
+| **Võ Duy Bình** | Trưởng nhóm / Sinh viên | Internal | Project Manager / BA | `binh.vdb2230@sinhvien.hoasen.edu.vn` |
+| **Hồng Bảo Khang** | Thành viên / Sinh viên | Internal | Backend Developer / Finance | `khang.hb2210@sinhvien.hoasen.edu.vn` |
+| **Trần Bá Lợi** | Thành viên / Sinh viên | Internal | Frontend Developer / Tester | `loi.tb2230@sinhvien.hoasen.edu.vn` |
+| **Nguyễn Thanh Quang** | Thành viên / Sinh viên | Internal | UI/UX Designer / Risk Analyst | `quang.nt2211@sinhvien.hoasen.edu.vn` |
+| **Sinh viên HSU** | Người dùng cuối | External | End User | `sinhvien@hoasen.edu.vn` |
 
-#### B. Chiến lược quản lý bên liên quan (Stakeholder Management Strategy - Table 3-5)
-Đây là tài liệu mật (confidential), chỉ dành riêng cho Project Manager để phân tích "khẩu vị", tầm ảnh hưởng và đề xuất chiến lược tiếp cận phù hợp nhằm lôi kéo sự ủng hộ từ các stakeholder chủ chốt:
+#### B. Chiến lược quản lý bên liên quan (Stakeholder Management Strategy - Áp dụng mẫu Table 3-5)
+Bản chiến lược mật nhằm tối ưu hóa sự hỗ trợ và quản lý kỳ vọng từ các bên liên quan đối với dự án của Nhóm 3:
 
 | Họ và Tên | Mức độ quan tâm (Interest) | Tầm ảnh hưởng (Influence) | Chiến lược quản lý đề xuất (Potential Management Strategies) |
 | :--- | :---: | :---: | :--- |
-| **Joe Fleming** | Cao (High) | Cao (High) | Thường xuyên báo cáo trực tiếp ngắn gọn (face-to-face). Tập trung chứng minh các lợi ích tài chính ($NPV$, $ROI$) và tiết kiệm chi phí mà hệ thống mang lại để duy trì sự ủng hộ. |
-| **Michael Chen** | Thấp (Low) | Cao (High) | Là chuyên gia tư vấn cấp cao bận rộn, dễ phản kháng với việc ghi nhận báo cáo thủ công. Chiến lược: Giảm tối đa các cuộc họp không cần thiết, giao quyền sở hữu trực tiếp cho module chuyên gia, hỗ trợ làm việc qua trợ lý. |
-| **Louise Mills** | Thấp (Low) | Cao (High) | Đang bận rộn nhiều đầu việc khác và không quá mặn mà với dự án. Chiến lược: Gặp gỡ trực tiếp để giải thích hệ thống mới giúp quảng bá năng lực PR của cô ấy và công ty như thế nào để khơi gợi hứng thú. |
+| **Thầy Nguyễn Văn Sơn** | Cao (High) | Cao (High) | Thường xuyên báo cáo tiến độ qua email và trong giờ học. Thực hiện đúng các yêu cầu học thuật chuẩn chỉnh của báo cáo SDP, đảm bảo tính chân thực của số liệu tài chính ($NPV$, $ROI$) và giải thuật tiến độ đường găng CPM. |
+| **Đại diện Phòng Đào tạo** | Cao (High) | Cao (High) | Họp khảo sát yêu cầu (BA) để nắm rõ quy chế học vụ (20 tín chỉ, môn tiên quyết, sĩ số lớp). Demo sớm bản prototype để nhận phản hồi hiệu chỉnh nghiệp vụ trước khi tiến hành code sâu. |
+| **Nguyễn Thanh Quang** | Cao (High) | Trung bình (Medium) | PM hỗ trợ điều phối công việc thiết kế UI/UX trên Figma sớm để tạo giao diện bắt mắt làm cơ sở cho frontend dev lập trình, phân công nghiên cứu các case study và OWASP bảo mật. |
+| **Sinh viên HSU** | Cao (High) | Thấp (Low) | Tập trung tối ưu hóa UI/UX trên thiết bị di động (SWOT), đẩy mạnh tải nhanh và tránh sập sập hệ thống (Stress Test) để tăng độ hài lòng khi đăng ký học phần thực tế. |
 
 ---
 
-### 5.4. Chương Trình Họp Khởi Động Dự Án (Kick-off Meeting Agenda - Figure 3-2)
+### 5.4. Chương Trình Họp Khởi Động Dự Án HSU (Kick-off Meeting Agenda - Áp dụng mẫu Figure 3-2)
 
-Hoạt động **1.3 Hold project kick-off meeting (Họp khởi động dự án)** đánh dấu mốc quan trọng để toàn đội ngũ chính thức bắt tay vào việc. Erica Bell đã sử dụng mẫu Chương trình họp khởi động (Kick-off Agenda) chuyên nghiệp để dẫn dắt cuộc họp:
+Hoạt động **1.3 Hold project kick-off meeting (Họp khởi động dự án)** của Nhóm 3 được tổ chức chuyên nghiệp dưới sự chủ trì của Project Manager Võ Duy Bình:
 
-*   **Tên dự án:** Project Management Intranet Site Project
-*   **Ngày họp:** 18/05
-*   **Mục tiêu cuộc họp (Meeting Objective):** Giới thiệu các thành viên, thống nhất mục tiêu dự án, phương pháp tiếp cận, phân chia vai trò và xác định các bước tiếp theo.
+*   **Tên dự án:** Online Course Registration System Construction Project
+*   **Ngày họp:** 12/07/2026
+*   **Mục tiêu cuộc họp (Meeting Objective):** Khởi động dự án nhóm, thống nhất mục tiêu đề tài, phân chia nhiệm vụ các thành viên, thảo luận quy chế học vụ HSU và thiết lập tiến độ cơ sở (Baseline).
 *   **Nội dung chi tiết chương trình (Agenda):**
-    1.  **Giới thiệu thành viên:** Từng người tự giới thiệu bản thân và vai trò dự kiến trong dự án.
-    2.  **Tổng quan dự án:** PM Erica Bell trình bày bối cảnh, lý do, mục tiêu kinh tế ($NPV$, $ROI$) và phạm vi (In-Scope/Out-of-Scope).
-    3.  **Thảo luận về Kế hoạch triển khai:** Đề xuất quy trình WBS, mốc thời gian cơ sở (Milestone baseline) và thảo luận về công nghệ.
-    4.  **Quản trị Rủi ro sơ bộ:** Thảo luận về 10 rủi ro ưu tiên hàng đầu và ghi nhận ý kiến phản hồi của các thành viên.
-    5.  **Nguyên tắc làm việc nhóm (Team Charter):** Thống nhất cách thức họp hành, báo cáo tiến độ và kênh liên lạc chung.
+    1.  **Giới thiệu thành viên:** PM Võ Duy Bình mở đầu cuộc họp, giới thiệu các thành viên Nhóm 3 và vai trò đảm nhận.
+    2.  **Mục tiêu & Phạm vi dự án:** Thống nhất xây dựng ứng dụng Web Đăng ký học phần tích hợp Dashboard Gantt/CPM và viết Báo cáo SDP chuẩn chỉnh.
+    3.  **Khảo sát nghiệp vụ HSU:** Thảo luận các quy chế học vụ bắt buộc (môn tiên quyết, trùng lịch học, giới hạn 20 tín chỉ).
+    4.  **Nhận diện rủi ro tiến độ:** Bàn bạc về các rủi ro sập tải hệ thống khi đăng ký cùng lúc và phân công Quang phân tích rủi ro.
+    5.  **Nguyên tắc làm việc nhóm (Team Charter):** Thống nhất họp qua Google Meet tối thứ 4 hàng tuần, lưu trữ code trên GitHub và dùng Trello quản lý task.
 *   **Phân bổ hành động kế tiếp (Action Items):**
-    *   *Kevin Dodge & Cindy Dawson:* Nghiên cứu giải pháp phần mềm ngoài cho module "Ask the Expert" (Hạn chót: 24/05).
-    *   *Erica Bell:* Lập Hợp đồng làm việc nhóm (Team Contract) gửi cả đội ký duyệt (Hạn chót: 22/05).
-*   **Lịch họp tiếp theo:** Ngày 26/05 lúc 10:00 sáng tại Phòng họp PMO.
+    *   *Nguyễn Thanh Quang:* Thiết kế UI/UX bản nháp các portal trên Figma (Hạn chót: 16/07).
+    *   *Hồng Bảo Khang:* Thiết lập cấu trúc cơ sở dữ liệu mẫu và viết API kiểm tra ràng buộc (Hạn chót: 18/07/2026).
+    *   *Trần Bá Lợi:* Xây dựng layout HTML/CSS cơ sở cho Student Portal (Hạn chót: 18/07/2026).
+    *   *Võ Duy Bình:* Hoàn tất soạn thảo Team Contract gửi nhóm ký (Hạn chót: 14/07).
+*   **Lịch họp tiếp theo:** Ngày 19/07/2026 lúc 20:00 qua Google Meet.
 
 ---
 
