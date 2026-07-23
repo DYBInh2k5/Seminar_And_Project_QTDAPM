@@ -1975,6 +1975,11 @@ body {
     border-color: var(--primary);
 }
 
+@page {
+    size: landscape;
+    margin: 0;
+}
+
 /* --- PRINT STYLES FOR PDF DOWNLOAD --- */
 @media print {
     /* Hide all layout decoration and navigation elements */
@@ -2028,10 +2033,11 @@ body {
         visibility: visible !important;
         position: relative !important;
         width: 100% !important;
-        height: 100vh !important; /* One slide per viewport height */
+        height: auto !important;
+        min-height: 100vh !important;
         page-break-after: always !important;
         break-after: page !important;
-        overflow: hidden !important;
+        overflow: visible !important;
         padding: 40px !important;
         box-sizing: border-box !important;
         background: #ffffff !important;
