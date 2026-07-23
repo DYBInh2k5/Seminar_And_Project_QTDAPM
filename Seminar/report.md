@@ -62,9 +62,12 @@
    - [4.3. Bảng đăng ký rủi ro (Risk Register)](#43-bảng-đăng-ký-rủi-ro-risk-register)
    - [4.4. Tích hợp Quản trị rủi ro vào Kế hoạch Phát triển Phần mềm (SDP HSU)](#44-tích-hợp-quản-trị-rủi-ro-vào-kế-hoạch-phát-triển-phần-mềm-sdp-hsu)
 5. [Phân tích thực tế: Case Study JWD Consulting](#5-phân-tích-thực-tế-case-study-jwd-consulting)
-   - [5.1. Bối cảnh dự án](#51-bối-cảnh-dự-án)
-   - [5.2. Danh sách rủi ro ưu tiên của JWD Consulting](#52-danh-sách-rủi-ro-ưu-tiên-của-jwd-consulting)
-   - [5.3. Phân tích cách ứng phó thực tế của Erica Bell](#53-phân-tích-cách-ứng-phó-thực-tế-của-erica-bell)
+   - [5.1. Bối cảnh dự án & Bài toán tài chính](#51-bối-cảnh-dự-án--bài-toán-tài-chính-table-3-2--table-3-17)
+   - [5.2. Danh sách 10 rủi ro ưu tiên của JWD Consulting](#52-danh-sách-10-rủi-ro-ưu-tiên-của-jwd-consulting-table-3-10)
+   - [5.3. Sổ Theo Dõi Bên Liên Quan & Chiến Lược Quản Lý](#53-sổ-theo-dõi-bên-liên-quan--chiến-lược-quản-lý-table-3-4--table-3-5-jwd)
+   - [5.4. Chương Trình Họp Khởi Động Dự Án](#54-chương-trình-họp-khởi-động-dự-án-kick-off-meeting-agenda---figure-3-2)
+   - [5.5. Các Bài Học Ứng Phó Rủi Ro Thực Tế](#55-các-bài-học-ứng-phó-rủi-ro-thực-tế-prioritized-risk-list---table-3-10)
+   - [5.6. Cấu trúc WBS & Phân định Phạm vi giữa Seminar và Project](#56-cấu-trúc-wbs-figure-3-3--phân-định-phạm-vi-giữa-seminar-và-project)
 6. [Kết luận và Bài học kinh nghiệm](#6-kết-luận-và-bài-học-kinh-nghiệm)
 
 ---
@@ -432,9 +435,53 @@ Trong nhóm quy trình **1.0 Initiating (Khởi tạo dự án)**, tài liệu t
 | **6. Phương pháp tiếp cận (Approach)** | Khảo sát nhu cầu người dùng nội bộ/khách hàng ➔ Thu thập 20 biểu mẫu xuất sắc ➔ Thuê giải pháp phần mềm ngoài ➔ Thi công & Đo lường lợi ích tài chính. |
 | **7. Vai trò & Chữ ký (Roles & Signatures)** | CEO Joe Fleming (Sponsor), Erica Bell (PM), Kevin Dodge, Cindy Dawson, Michael Chen, Kim Phuong, Page Miller. |
 
+### 5.3. Sổ Theo Dõi Bên Liên Quan & Chiến Lược Quản Lý (Table 3-4 & Table 3-5 JWD)
+
+Để thực hiện công việc thuộc bước **1.1 Identify key stakeholders (Nhận diện các bên liên quan)**, Erica Bell đã lập hai biểu mẫu quan trọng để theo dõi và quản lý quan hệ với các bên liên quan:
+
+#### A. Sổ theo dõi bên liên quan (Stakeholder Register - Table 3-4)
+Tài liệu này được công khai rộng rãi cho toàn đội ngũ dự án, do đó chỉ chứa các thông tin liên hệ và vai trò cơ bản để tránh rò rỉ dữ liệu nhạy cảm:
+
+| Họ và Tên (Name) | Vị trí công tác (Position) | Phân loại (Internal/External) | Vai trò dự án (Project Role) | Thông tin liên hệ (Contact Information) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Joe Fleming** | CEO | Internal | Sponsor | `joe_fleming@jwdconsulting.com` |
+| **Erica Bell** | PMO Director | Internal | Project Manager | `erica_bell@jwdconsulting.com` |
+| **Michael Chen** | Senior Consultant | Internal | Team Member | `michael_chen@jwdconsulting.com` |
+| **Kim Phuong** | Business Analyst | External | Client Advisor | `kim_phuong@client1.com` |
+| **Louise Mills** | PR Director | Internal | Advisor | `louise_mills@jwdconsulting.com` |
+
+#### B. Chiến lược quản lý bên liên quan (Stakeholder Management Strategy - Table 3-5)
+Đây là tài liệu mật (confidential), chỉ dành riêng cho Project Manager để phân tích "khẩu vị", tầm ảnh hưởng và đề xuất chiến lược tiếp cận phù hợp nhằm lôi kéo sự ủng hộ từ các stakeholder chủ chốt:
+
+| Họ và Tên | Mức độ quan tâm (Interest) | Tầm ảnh hưởng (Influence) | Chiến lược quản lý đề xuất (Potential Management Strategies) |
+| :--- | :---: | :---: | :--- |
+| **Joe Fleming** | Cao (High) | Cao (High) | Thường xuyên báo cáo trực tiếp ngắn gọn (face-to-face). Tập trung chứng minh các lợi ích tài chính ($NPV$, $ROI$) và tiết kiệm chi phí mà hệ thống mang lại để duy trì sự ủng hộ. |
+| **Michael Chen** | Thấp (Low) | Cao (High) | Là chuyên gia tư vấn cấp cao bận rộn, dễ phản kháng với việc ghi nhận báo cáo thủ công. Chiến lược: Giảm tối đa các cuộc họp không cần thiết, giao quyền sở hữu trực tiếp cho module chuyên gia, hỗ trợ làm việc qua trợ lý. |
+| **Louise Mills** | Thấp (Low) | Cao (High) | Đang bận rộn nhiều đầu việc khác và không quá mặn mà với dự án. Chiến lược: Gặp gỡ trực tiếp để giải thích hệ thống mới giúp quảng bá năng lực PR của cô ấy và công ty như thế nào để khơi gợi hứng thú. |
+
 ---
 
-### 5.3. Các Bài Học Ứng Phó Rủi Ro Thực Tế (Prioritized Risk List - Table 3-10)
+### 5.4. Chương Trình Họp Khởi Động Dự Án (Kick-off Meeting Agenda - Figure 3-2)
+
+Hoạt động **1.3 Hold project kick-off meeting (Họp khởi động dự án)** đánh dấu mốc quan trọng để toàn đội ngũ chính thức bắt tay vào việc. Erica Bell đã sử dụng mẫu Chương trình họp khởi động (Kick-off Agenda) chuyên nghiệp để dẫn dắt cuộc họp:
+
+*   **Tên dự án:** Project Management Intranet Site Project
+*   **Ngày họp:** 18/05
+*   **Mục tiêu cuộc họp (Meeting Objective):** Giới thiệu các thành viên, thống nhất mục tiêu dự án, phương pháp tiếp cận, phân chia vai trò và xác định các bước tiếp theo.
+*   **Nội dung chi tiết chương trình (Agenda):**
+    1.  **Giới thiệu thành viên:** Từng người tự giới thiệu bản thân và vai trò dự kiến trong dự án.
+    2.  **Tổng quan dự án:** PM Erica Bell trình bày bối cảnh, lý do, mục tiêu kinh tế ($NPV$, $ROI$) và phạm vi (In-Scope/Out-of-Scope).
+    3.  **Thảo luận về Kế hoạch triển khai:** Đề xuất quy trình WBS, mốc thời gian cơ sở (Milestone baseline) và thảo luận về công nghệ.
+    4.  **Quản trị Rủi ro sơ bộ:** Thảo luận về 10 rủi ro ưu tiên hàng đầu và ghi nhận ý kiến phản hồi của các thành viên.
+    5.  **Nguyên tắc làm việc nhóm (Team Charter):** Thống nhất cách thức họp hành, báo cáo tiến độ và kênh liên lạc chung.
+*   **Phân bổ hành động kế tiếp (Action Items):**
+    *   *Kevin Dodge & Cindy Dawson:* Nghiên cứu giải pháp phần mềm ngoài cho module "Ask the Expert" (Hạn chót: 24/05).
+    *   *Erica Bell:* Lập Hợp đồng làm việc nhóm (Team Contract) gửi cả đội ký duyệt (Hạn chót: 22/05).
+*   **Lịch họp tiếp theo:** Ngày 26/05 lúc 10:00 sáng tại Phòng họp PMO.
+
+---
+
+### 5.5. Các Bài Học Ứng Phó Rủi Ro Thực Tế (Prioritized Risk List - Table 3-10)
 
 Dưới đây là phân tích chi tiết 5 tình huống rủi ro ưu tiên hàng đầu và cách ứng phó thực tế đầy sáng tạo của Giám đốc dự án Erica Bell:
 
@@ -468,7 +515,7 @@ Dưới đây là phân tích chi tiết 5 tình huống rủi ro ưu tiên hàn
 * **Giải pháp ứng phó:** Erica chủ động thiết lập cơ chế đo lường lợi ích (Benefit Measurement Plan) ngay trong giai đoạn kiểm thử. Cô phát hiện trang Intranet giúp đội PMO tự động hóa quy trình, cho phép giảm 1 định biên nhân sự PMO (chuyển sang nhóm tư vấn thương mại), tạo ra khoản tiết kiệm chi phí trực tiếp $40,000/năm.
 * **Kết quả:** Khẳng định dự án đạt ROI 112% và hoàn vốn đúng cam kết.
 
-### 5.4. Cấu trúc WBS (Figure 3-3) & Phân định Phạm vi giữa Seminar và Project
+### 5.6. Cấu trúc WBS (Figure 3-3) & Phân định Phạm vi giữa Seminar và Project
 
 Dựa trên tài liệu chuẩn **Figure 3-3 JWD Consulting Intranet Project Work Breakdown Structure (WBS)** trong `jwd_case_study.pdf` (trang 107), toàn bộ vòng đời phát triển dự án được chia thành 5 nhóm quy trình công việc chính:
 
