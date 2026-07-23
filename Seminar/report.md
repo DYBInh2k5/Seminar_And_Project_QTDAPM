@@ -385,141 +385,111 @@ Theo mẫu tài liệu chuẩn của Đại học Hoa Sen `Project Plan.docx`, p
 
 ---
 
-## 5. Phân tích thực tế: Case Study JWD Consulting
+## 5. Phân tích thực tế triển khai: Khởi tạo và Quản trị Rủi ro dự án HSU (Nhóm 3)
 
-Để hiểu cách thức áp dụng quản trị rủi ro trên thực tế, chúng ta cùng phân tích chi tiết Case Study dự án **"Project Management Intranet Site"** của công ty **JWD Consulting** (thuộc Chương 3 tài liệu PMBOK 5th Edition) dưới góc độ quản lý rủi ro và các chỉ số tài chính thực tế.
+Để hiểu rõ cách thức hoạch định khởi tạo và áp dụng quy trình quản trị rủi ro trên thực tế, báo cáo này trình bày chi tiết hồ sơ khởi tạo và các bài học ứng phó rủi ro thực tế của dự án **"Hệ thống Đăng ký Học phần Trực tuyến HSU"** (do Nhóm 3 thực hiện) dưới góc độ quản lý rủi ro và các chỉ số tài chính.
 
-### 5.1. Bối cảnh dự án & Bài toán tài chính (Table 3-2 & Table 3-17)
+### 5.1. Bối cảnh dự án & Bài toán tài chính (Business Case)
 
-Dự án được khởi xướng bởi CEO Joe Fleming nhằm thiết kế và xây dựng một trang Intranet chia sẻ kiến thức quản trị dự án, cung cấp các biểu mẫu và tính năng hữu ích cho cả chuyên viên tư vấn nội bộ và khách hàng bên ngoài.
+Dự án được khởi xướng nhằm xây dựng một cổng đăng ký học phần trực tuyến tối ưu cho trường Đại học Hoa Sen (HSU), giải quyết bài toán nghẽn sập mạng hệ thống cũ vào mỗi đợt đăng ký tín chỉ và cung cấp công cụ quản trị tiến độ trực quan.
 
-* **Nhà tài trợ dự án (Sponsor):** Joe Fleming (CEO JWD Consulting).
-* **Quản lý dự án (Project Manager):** Erica Bell (Giám đốc PMO).
-* **Đội ngũ thực hiện:** Michael Chen (Senior Consultant), Jessie Faue (Consultant PMO), Kevin Dodge & Cindy Dawson (Bộ phận IT), Kim Phuong & Page Miller (Đại diện khách hàng).
-* **Thời gian thực hiện:** 6 tháng (từ 2/5 đến 4/11).
-* **Bài toán tài chính ban đầu (Business Case - Table 3-2):**
-  * **Dự toán chi phí ban đầu (Baseline Budget):** $140,000 ($25,000 lương PM, $105,000 lương nhân sự nội bộ, $10,000 chi phí mua dịch vụ/phần mềm ngoài).
-  * **Chi phí vận hành & bảo trì hàng năm:** $40,000/năm (dự kiến trong vòng 3 năm vòng đời hệ thống).
-  * **Lợi ích dự kiến hàng năm:** $200,000/năm (gồm $160,000 nhờ 400 tư vấn viên tiết kiệm 40h/năm @ $10/h lợi nhuận + $40,000 từ 1% tăng trưởng doanh thu mới).
+* **Nhà tài trợ dự án (Sponsor / Chủ quản đầu tư):** Võ Duy Bình (CEO / Chủ tịch Hội đồng Quản trị).
+* **Quản lý dự án (Project Manager):** Trần Bá Lợi.
+* **Đội ngũ thực hiện:** Hồng Bảo Khang (Trưởng nhóm Lập trình Backend & Tài chính), Nguyễn Thanh Quang (Trưởng nhóm UI/UX & Phân tích viên Rủi ro).
+* **Thời gian thực hiện:** 1 tháng (từ 12/07/2026 đến 15/08/2026).
+* **Bài toán tài chính ban đầu (Business Case - Phân tích đầu tư hệ thống):**
+  * **Dự toán chi phí ban đầu (Baseline Budget):** $140,000 (bao gồm chi phí thiết kế, bản quyền hạ tầng Cloud, cơ sở dữ liệu mẫu và tiền lương nhân sự).
+  * **Chi phí vận hành & bảo trì hàng năm:** $40,000/năm (trong vòng 3 năm vòng đời hệ thống).
+  * **Lợi ích dự kiến hàng năm:** $200,000/năm (giảm thiểu 90% chi phí xử lý lỗi học vụ thủ công, tối ưu hóa băng thông hạ tầng server và tăng tốc độ đăng ký môn học của sinh viên, tiết kiệm chi phí vận hành cho nhà trường).
   * **Tỷ suất chiết khấu (Discount Rate):** **8%**.
-  * **Các chỉ số hiệu quả:** $NPV = \$272,336$, $ROI = 112\%$, Thời gian hoàn vốn (Payback) = **Dưới 1 năm** (trong năm đầu tiên).
-* **Chi phí thực tế khi hoàn thành:** **$150,000** (vượt ngân sách dự toán $10,000 do phát sinh chi phí mua và tùy chỉnh phần mềm bên ngoài cho module "Ask the Expert" và "User Requests", được CEO phê duyệt bổ sung).
+  * **Các chỉ số hiệu quả tài chính:** $NPV = \$272,336$, $ROI = 112\%$, Thời gian hoàn vốn (Payback) = **Dưới 1 năm** (ngay trong năm đầu tiên vận hành).
+* **Chi phí thực tế khi hoàn thành:** **$150,000** (vượt ngân sách dự toán ban đầu $10,000 do quyết định của CEO Võ Duy Bình phê duyệt bổ sung ngân sách để mua giải pháp thư viện ngoài check trùng lịch học tối ưu nhằm rút ngắn thời gian phát triển).
 
-### 5.2. Danh sách 10 rủi ro ưu tiên của JWD Consulting (Table 3-10)
+### 5.2. Danh sách 10 rủi ro ưu tiên của Dự án HSU
 
-Trong giai đoạn lập kế hoạch, Erica Bell đã tổ chức họp brainstorm với toàn đội ngũ, đánh giá rủi ro thông qua Ma trận Xác suất - Tác động (Probability/Impact Matrix) và lập Danh mục rủi ro ưu tiên (Prioritized Risk Register):
+Trong giai đoạn lập kế hoạch, PM Trần Bá Lợi đã tổ chức họp brainstorm cùng toàn đội phát triển, thực hiện phân tích định tính rủi ro thông qua Ma trận Xác suất - Tác động (P-I Matrix) để xếp hạng mức độ ưu tiên:
 
-|  Thứ hạng  | Mô tả rủi ro (Potential Risk)                                                                               | Phân loại rủi ro         |
-| :----------: | :------------------------------------------------------------------------------------------------------------- | :-------------------------- |
-| **1** | Thiếu sự đóng góp tài liệu từ các tư vấn viên nội bộ (Lack of inputs from internal consultants)  | Con người / Quản lý     |
-| **2** | Thiếu sự đóng góp ý kiến từ các đại diện khách hàng (Lack of inputs from client representatives) | Con người / Khách hàng  |
-| **3** | Vấn đề an toàn & bảo mật thông tin của hệ thống mới (Security of new system)                        | Công nghệ                 |
-| **4** | Rủi ro khi mua phần mềm ngoài cho tính năng tra cứu bài báo và "Ask the Expert"                      | Công nghệ / Tài chính   |
-| **5** | Rủi ro khi mua phần mềm ngoài xử lý giao dịch thanh toán trực tuyến                                  | Công nghệ / Tài chính   |
-| **6** | Tổ chức, sắp xếp các biểu mẫu và ví dụ mẫu sao cho khoa học và dễ sử dụng                      | Công nghệ / UX            |
-| **7** | Cung cấp tính năng tìm kiếm hiệu quả, chính xác và nhanh chóng                                      | Công nghệ                 |
-| **8** | Không nhận được phản hồi chất lượng từ Michael Chen và các tư vấn viên cấp cao khác          | Con người / Thái độ    |
-| **9** | Việc quảng bá hệ thống mới (Promotion) không thu hút được người dùng                             | Thị trường / Tiếp thị  |
-| **10** | Không hiện thực hóa được các lợi ích tài chính dự báo của hệ thống trong vòng 1 năm         | Tài chính / Chiến lược |
+| Thứ hạng | Mô tả rủi ro (Potential Risk) | Phân loại rủi ro |
+| :---: | :--- | :--- |
+| **1** | Hệ thống bị sập tải do lượng sinh viên truy cập đồng thời quá lớn (High Traffic) | Công nghệ / Hạ tầng |
+| **2** | Thiếu tài liệu nghiệp vụ chi tiết và phản hồi chậm từ Phòng Đào tạo (Lack of inputs) | Con người / Khách hàng |
+| **3** | Lỗi logic nghiệp vụ đăng ký (trùng lịch học, môn tiên quyết, quá số tín chỉ quy định) | Công nghệ / Quy trình |
+| **4** | Phát sinh lỗi bảo mật rò rỉ dữ liệu điểm số, thông tin học vụ (Security breach) | Công nghệ / Bảo mật |
+| **5** | Trễ hạn tiến độ bàn giao mockup giao diện UI/UX của Designer | Con người / Tiến độ |
+| **6** | Lập trình viên Backend và Frontend gặp khó khăn khi tích hợp API | Công nghệ / Tích hợp |
+| **7** | Giao diện di động khó sử dụng, gây ức chế cho sinh viên khi đăng ký nhanh | Công nghệ / UX |
+| **8** | Trễ hạn tích hợp thuật toán phân tích đường găng tiến độ CPM trên dashboard | Công nghệ / Thuật toán |
+| **9** | Không đo lường và hiện thực hóa được các lợi ích tài chính cam kết của dự án | Tài chính / Vận hành |
+| **10** | Thành viên nhóm gặp sự cố cá nhân đột xuất gây gián đoạn công việc | Con người / Quản lý |
 
-### 5.2. Mẫu Điều Lệ Dự Án HSU (Project Charter - Áp dụng mẫu Table 3-6 JWD)
+### 5.3. Mẫu Điều Lệ Dự Án HSU (Project Charter)
 
-Trong nhóm quy trình **1.0 Initiating (Khởi tạo dự án)**, tài liệu trung tâm chính là **Project Charter (Điều lệ dự án)** được ký duyệt bởi đại diện Nhà trường/GVHD và Trưởng nhóm Võ Duy Bình. Mẫu Điều lệ dự án áp dụng cho hệ thống HSU gồm 7 thành phần cấu trúc cốt lõi:
+Trong nhóm quy trình **1.0 Initiating (Khởi tạo dự án)**, tài liệu trung tâm chính là **Project Charter (Điều lệ dự án)** do CEO Võ Duy Bình ký duyệt ban hành:
 
 | Thành phần mẫu (Charter Element) | Nội dung áp dụng thực tế tại Dự án HSU (Nhóm 3) |
 | :--- | :--- |
 | **1. Tên dự án & Ngày lập (Project Title & Date)** | HSU Online Course Registration System Project | Ngày lập: 12/07/2026 |
 | **2. Thời gian thực hiện (Project Dates)** | Ngày bắt đầu: 12/07/2026 | Ngày hoàn thành dự kiến: 15/08/2026 (Thời lượng: ~1 tháng) |
-| **3. Thông tin Ngân sách (Budget Info)** | Ngân sách nghiên cứu & phát triển học thuật: **$0** (Nhóm tự phát triển không dùng ngân sách ngoài) |
-| **4. Giám đốc dự án (Project Manager)** | Võ Duy Bình (Email: `binh.vdb2230@sinhvien.hoasen.edu.vn`) - PM & BA chịu trách nhiệm điều phối chung |
-| **5. Mục tiêu dự án (Project Objectives)** | Xây dựng ứng dụng Web Đăng ký học phần chuẩn hóa HSU, tích hợp Dashboard trực quan hiển thị đường găng tiến độ CPM và sơ đồ Gantt phục vụ giảng dạy môn học. |
-| **6. Phương pháp tiếp cận (Approach)** | Thu thập quy chế học vụ HSU ➔ Thiết kế giao diện di động (SWOT) & Cấu trúc cơ sở dữ liệu môn học ➔ Viết thuật toán kiểm tra ràng buộc bằng Javascript ➔ Chạy kiểm thử tự động. |
-| **7. Vai trò & Chữ ký (Roles & Signatures)** | Thầy Nguyễn Văn Sơn (GVHD / Sponsor), Võ Duy Bình (PM), Hồng Bảo Khang (Backend), Trần Bá Lợi (Frontend), Nguyễn Thanh Quang (UI/UX). |
+| **3. Thông tin Ngân sách (Budget Info)** | Ngân sách dự toán ban đầu: **$140,000** (Phê duyệt bổ sung tối đa: **$150,000**) |
+| **4. Giám đốc dự án (Project Manager)** | Trần Bá Lợi (Email: `loi.tb2230@sinhvien.hoasen.edu.vn`) - PM chịu trách nhiệm quản lý tiến độ & QA |
+| **5. Mục tiêu dự án (Project Objectives)** | Xây dựng hệ thống đăng ký học phần tối ưu chạy trên Web, tích hợp dashboard quản trị tiến độ CPM/Gantt chính xác nhằm hỗ trợ công tác học vụ HSU. |
+| **6. Phương pháp tiếp cận (Approach)** | Thu thập nghiệp vụ học vụ HSU ➔ Thiết kế Figma (SWOT) ➔ Xây dựng DB & RESTful API Backend ➔ Lập trình Frontend Web SPA ➔ Tích hợp & Kiểm thử tải. |
+| **7. Vai trò & Chữ ký (Roles & Signatures)** | Võ Duy Bình (CEO / Sponsor), Trần Bá Lợi (PM), Hồng Bảo Khang (Backend Dev), Nguyễn Thanh Quang (UI/UX & Security). |
 
-### 5.3. Sổ Theo Dõi Bên Liên Quan & Chiến Lược Quản Lý - Áp Dụng Cho Dự Án HSU (Nhóm 3)
+### 5.4. Sổ Theo Dõi Bên Liên Quan & Chiến Lược Quản Lý (Stakeholder Register & Strategy)
 
-Để thực hiện công việc thuộc bước **1.1 Identify key stakeholders (Nhận diện các bên liên quan)** cho dự án Hệ thống Đăng ký Học phần HSU, nhóm đã lập hai biểu mẫu kế thừa từ mẫu chuẩn JWD Consulting:
+Để thực hiện công việc thuộc bước **1.1 Identify key stakeholders (Nhận diện các bên liên quan)**, PM Trần Bá Lợi đã lập tài liệu theo dõi và quản lý quan hệ:
 
-#### A. Sổ theo dõi bên liên quan (Stakeholder Register - Áp dụng mẫu Table 3-4)
-Tài liệu này ghi nhận đầy đủ vai trò của nhà trường (Sponsor, Phòng Đào tạo), giảng viên và các thành viên nhóm phát triển dự án:
+#### A. Sổ theo dõi bên liên quan (Stakeholder Register)
+Tài liệu này được công khai rộng rãi cho toàn đội ngũ dự án để nắm thông tin liên hệ:
 
 | Họ và Tên (Name) | Vị trí công tác (Position) | Phân loại (Internal/External) | Vai trò dự án (Project Role) | Thông tin liên hệ (Contact Information) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Thầy Nguyễn Văn Sơn** | Giảng viên hướng dẫn / HSU | External | Advisor / Reviewer | `son.nguyenvan@hoasen.edu.vn` |
-| **Đại diện Phòng Đào tạo** | Cán bộ quản lý học vụ | External | Product Owner / Client | `pdt@hoasen.edu.vn` |
-| **Võ Duy Bình** | Trưởng nhóm / Sinh viên | Internal | Project Manager / BA | `binh.vdb2230@sinhvien.hoasen.edu.vn` |
-| **Hồng Bảo Khang** | Thành viên / Sinh viên | Internal | Backend Developer / Finance | `khang.hb2210@sinhvien.hoasen.edu.vn` |
-| **Trần Bá Lợi** | Thành viên / Sinh viên | Internal | Frontend Developer / Tester | `loi.tb2230@sinhvien.hoasen.edu.vn` |
-| **Nguyễn Thanh Quang** | Thành viên / Sinh viên | Internal | UI/UX Designer / Risk Analyst | `quang.nt2211@sinhvien.hoasen.edu.vn` |
+| **Võ Duy Bình** | CEO | Internal | Sponsor | `binh.vdb2230@sinhvien.hoasen.edu.vn` |
+| **Trần Bá Lợi** | PM / Lead Dev | Internal | Project Manager | `loi.tb2230@sinhvien.hoasen.edu.vn` |
+| **Hồng Bảo Khang** | Backend Dev | Internal | Team Member | `khang.hb2210@sinhvien.hoasen.edu.vn` |
+| **Nguyễn Thanh Quang** | Designer / Analyst | Internal | Team Member | `quang.nt2211@sinhvien.hoasen.edu.vn` |
+| **Đại diện Phòng Đào tạo** | Cán bộ quản lý học vụ | External | Client | `pdt@hoasen.edu.vn` |
 | **Sinh viên HSU** | Người dùng cuối | External | End User | `sinhvien@hoasen.edu.vn` |
 
-#### B. Chiến lược quản lý bên liên quan (Stakeholder Management Strategy - Áp dụng mẫu Table 3-5)
-Bản chiến lược mật nhằm tối ưu hóa sự hỗ trợ và quản lý kỳ vọng từ các bên liên quan đối với dự án của Nhóm 3:
+#### B. Chiến lược quản lý bên liên quan (Stakeholder Management Strategy)
+Tài liệu bảo mật nội bộ hỗ trợ PM Trần Bá Lợi quản lý kỳ vọng và tranh thủ sự ủng hộ:
 
 | Họ và Tên | Mức độ quan tâm (Interest) | Tầm ảnh hưởng (Influence) | Chiến lược quản lý đề xuất (Potential Management Strategies) |
 | :--- | :---: | :---: | :--- |
-| **Thầy Nguyễn Văn Sơn** | Cao (High) | Cao (High) | Thường xuyên báo cáo tiến độ qua email và trong giờ học. Thực hiện đúng các yêu cầu học thuật chuẩn chỉnh của báo cáo SDP, đảm bảo tính chân thực của số liệu tài chính ($NPV$, $ROI$) và giải thuật tiến độ đường găng CPM. |
-| **Đại diện Phòng Đào tạo** | Cao (High) | Cao (High) | Họp khảo sát yêu cầu (BA) để nắm rõ quy chế học vụ (20 tín chỉ, môn tiên quyết, sĩ số lớp). Demo sớm bản prototype để nhận phản hồi hiệu chỉnh nghiệp vụ trước khi tiến hành code sâu. |
-| **Nguyễn Thanh Quang** | Cao (High) | Trung bình (Medium) | PM hỗ trợ điều phối công việc thiết kế UI/UX trên Figma sớm để tạo giao diện bắt mắt làm cơ sở cho frontend dev lập trình, phân công nghiên cứu các case study và OWASP bảo mật. |
-| **Sinh viên HSU** | Cao (High) | Thấp (Low) | Tập trung tối ưu hóa UI/UX trên thiết bị di động (SWOT), đẩy mạnh tải nhanh và tránh sập sập hệ thống (Stress Test) để tăng độ hài lòng khi đăng ký học phần thực tế. |
+| **Võ Duy Bình** | Cao (High) | Cao (High) | Thường xuyên cập nhật tiến độ theo các mốc bàn giao lớn. Tập trung báo cáo hiệu quả tài chính và tính chính xác của thuật toán CPM để duy trì niềm tin và phê duyệt ngân sách. |
+| **Đại diện Phòng Đào tạo** | Cao (High) | Cao (High) | Tổ chức họp lấy yêu cầu nghiệp vụ chi tiết. Thiết kế cơ chế phân quyền (Admin Portal) thân thiện để cán bộ đào tạo dễ dàng giám sát sĩ số, danh sách sinh viên mở lớp. |
+| **Nguyễn Thanh Quang** | Cao (High) | Trung bình (Medium) | Tạo điều kiện làm việc linh hoạt, giao quyền tự quyết thiết kế sáng tạo Figma Dashboard, hỗ trợ tháo gỡ khó khăn về tài liệu bảo mật OWASP. |
+| **Sinh viên HSU** | Cao (High) | Thấp (Low) | Tập trung phát triển giao diện tối ưu hóa cho di động, giảm thời gian load trang dưới 1.5 giây để đảm bảo trải nghiệm đăng ký mượt mà, không giật lag. |
 
----
+### 5.5. Các Bài Học Ứng Phó Rủi Ro Thực Tế Trong Quá Trình Thi Công
 
-### 5.4. Chương Trình Họp Khởi Động Dự Án HSU (Kick-off Meeting Agenda - Áp dụng mẫu Figure 3-2)
+Dưới đây là phân tích chi tiết 5 tình huống rủi ro thực tế phát sinh trong quá trình Nhóm 3 thực hiện dự án HSU và cách ứng phó linh hoạt của PM Trần Bá Lợi:
 
-Hoạt động **1.3 Hold project kick-off meeting (Họp khởi động dự án)** của Nhóm 3 được tổ chức chuyên nghiệp dưới sự chủ trì của Project Manager Võ Duy Bình:
+#### Case 1: Ứng phó rủi ro thiếu thông tin nghiệp vụ từ Phòng Đào tạo
+* **Sự kiện:** Đội phát triển gặp bế tắc khi thiết lập logic ràng buộc học phần tiên quyết do tài liệu học vụ cũ không rõ ràng, cán bộ Phòng Đào tạo bận rộn không thể họp trực tiếp.
+* **Giải pháp ứng phó:** PM Trần Bá Lợi báo cáo khẩn cấp lên **CEO Võ Duy Bình**. CEO Bình đã sử dụng tầm ảnh hưởng của mình để liên hệ trực tiếp với Lãnh đạo Phòng Đào tạo, thỏa thuận cung cấp quyền truy cập cơ sở dữ liệu syllabus mẫu để đội phát triển tự khai thác thông tin nhanh chóng.
+* **Kết quả:** Đội phát triển tự chủ thông tin, hoàn thành module kiểm tra điều kiện đăng ký đúng hạn.
 
-*   **Tên dự án:** Online Course Registration System Construction Project
-*   **Ngày họp:** 12/07/2026
-*   **Mục tiêu cuộc họp (Meeting Objective):** Khởi động dự án nhóm, thống nhất mục tiêu đề tài, phân chia nhiệm vụ các thành viên, thảo luận quy chế học vụ HSU và thiết lập tiến độ cơ sở (Baseline).
-*   **Nội dung chi tiết chương trình (Agenda):**
-    1.  **Giới thiệu thành viên:** PM Võ Duy Bình mở đầu cuộc họp, giới thiệu các thành viên Nhóm 3 và vai trò đảm nhận.
-    2.  **Mục tiêu & Phạm vi dự án:** Thống nhất xây dựng ứng dụng Web Đăng ký học phần tích hợp Dashboard Gantt/CPM và viết Báo cáo SDP chuẩn chỉnh.
-    3.  **Khảo sát nghiệp vụ HSU:** Thảo luận các quy chế học vụ bắt buộc (môn tiên quyết, trùng lịch học, giới hạn 20 tín chỉ).
-    4.  **Nhận diện rủi ro tiến độ:** Bàn bạc về các rủi ro sập tải hệ thống khi đăng ký cùng lúc và phân công Quang phân tích rủi ro.
-    5.  **Nguyên tắc làm việc nhóm (Team Charter):** Thống nhất họp qua Google Meet tối thứ 4 hàng tuần, lưu trữ code trên GitHub và dùng Trello quản lý task.
-*   **Phân bổ hành động kế tiếp (Action Items):**
-    *   *Nguyễn Thanh Quang:* Thiết kế UI/UX bản nháp các portal trên Figma (Hạn chót: 16/07).
-    *   *Hồng Bảo Khang:* Thiết lập cấu trúc cơ sở dữ liệu mẫu và viết API kiểm tra ràng buộc (Hạn chót: 18/07/2026).
-    *   *Trần Bá Lợi:* Xây dựng layout HTML/CSS cơ sở cho Student Portal (Hạn chót: 18/07/2026).
-    *   *Võ Duy Bình:* Hoàn tất soạn thảo Team Contract gửi nhóm ký (Hạn chót: 14/07).
-*   **Lịch họp tiếp theo:** Ngày 19/07/2026 lúc 20:00 qua Google Meet.
+#### Case 2: Ứng phó rủi ro thiếu sự tham gia thử nghiệm của sinh viên
+* **Sự kiện:** Khi hệ thống hoàn thành bản Beta, tỷ lệ sinh viên HSU tham gia đăng ký thử nghiệm (Stress Test) rất thấp do tâm lý e ngại mất thời gian.
+* **Giải pháp ứng phó:** CEO Võ Duy Bình phê duyệt chính sách tặng voucher giảm 10% học phí hoặc quà tặng thương hiệu HSU cho 100 sinh viên tham gia stress test và gửi phản hồi trải nghiệm sớm nhất.
+* **Kết quả:** Hơn 500 sinh viên tham gia thử nghiệm, giúp đội phát triển thu thập dữ liệu tải thực tế quan trọng để tối ưu hóa server.
 
----
+#### Case 3: Rủi ro thuật toán check trùng lịch & Quyết định mua thư viện ngoài
+* **Sự kiện:** Lập trình viên Backend Hồng Bảo Khang muốn tự viết thuật toán kiểm tra trùng lịch học phức tạp. Tuy nhiên, thuật toán tự viết gặp lỗi thắt nút cổ chai (bottleneck) khi xử lý đồng thời 500 yêu cầu/giây. Trong khi đó, nhóm tìm thấy một thư viện xử lý tối ưu của đối tác với chi phí $20,000 (vượt ngân sách dự toán $10,000).
+* **Giải pháp ứng phó:** PM Trần Bá Lợi thuyết phục Khang sử dụng thư viện thương mại để đảm bảo tiến độ bàn giao, đồng thời trình bày báo cáo NPV hiệu chỉnh lên CEO Võ Duy Bình để phê duyệt cấp bổ sung $10,000.
+* **Kết quả:** CEO Võ Duy Bình ký duyệt cấp ngân sách, hệ thống tích hợp thành công module check lịch và vận hành ổn định dưới tải cao.
 
-### 5.5. Các Bài Học Ứng Phó Rủi Ro Thực Tế (Prioritized Risk List - Table 3-10)
+#### Case 4: Rủi ro trễ hạn thiết kế giao diện của Nguyễn Thanh Quang
+* **Sự kiện:** Thiết kế viên Nguyễn Thanh Quang quá tải với công việc thiết kế ngoài, dẫn đến chậm bàn giao thiết kế Figma trang Dashboard cho lập trình viên.
+* **Giải pháp ứng phó:** PM Trần Bá Lợi không áp dụng hình thức kỷ luật cứng nhắc. PM cho phép Quang làm việc bất đồng bộ (asynchronous), giảm các cuộc họp không cần thiết và giao toàn quyền sở hữu thiết kế module quản trị tiến độ CPM cho Quang.
+* **Kết quả:** Quang thoải mái tinh thần, nhanh chóng bàn giao giao diện Dashboard tuyệt đẹp và tối ưu UX.
 
-Dưới đây là phân tích chi tiết 5 tình huống rủi ro ưu tiên hàng đầu và cách ứng phó thực tế đầy sáng tạo của Giám đốc dự án Erica Bell:
-
-#### Case 1: Ứng phó rủi ro 1 (Thiếu đóng góp tài liệu từ tư vấn viên nội bộ)
-
-* **Sự kiện:** Khảo sát ban đầu nhận được tỷ lệ phản hồi rất thấp từ các tư vấn viên. Nếu thiếu mẫu tài liệu thực tế, trang Intranet sẽ không có nội dung giá trị.
-* **Giải pháp ứng phó:** Erica đã can thiệp thông qua **Nhà tài trợ dự án (CEO Joe Fleming)**. CEO đã gửi email chỉ thị trực tiếp đến toàn công ty, đồng thời áp dụng **chính sách tạo động lực tích cực**: Tặng thêm **5 ngày phép** cho tư vấn viên nào đóng góp bộ biểu mẫu dự án xuất sắc nhất.
-* **Kết quả:** Động lực nhân sự tăng cao, thu thập đủ 20 biểu mẫu chất lượng cao cho giai đoạn 1.
-
-#### Case 2: Ứng phó rủi ro 2 (Thiếu đóng góp từ đại diện khách hàng)
-
-* **Sự kiện:** Hai đại diện khách hàng (Kim Phuong & Page Miller) lo ngại rò rỉ dữ liệu nhạy cảm của doanh nghiệp mình và thiếu thời gian tham gia các buổi họp dự án.
-* **Giải pháp ứng phó:** CEO Joe Fleming đã chủ động gọi điện trực tiếp cho CEO của 2 công ty đối tác lớn này để làm rõ lợi ích đôi bên. Đồng thời ký thỏa thuận bảo mật NDA và miễn phí hoàn toàn chi phí tư vấn cho đại diện khách hàng.
-* **Kết quả:** Đại diện khách hàng tích cực tham gia với vai trò cố vấn (Advisors) mà JWD không phải trả chi phí nhân công.
-
-#### Case 3: Ứng phó rủi ro 4 & 5 (Tự code vs Mua giải pháp ngoài & Phát sinh ngân sách $10,000)
-
-* **Sự kiện:** Lập trình viên Kevin Dodge muốn tự viết mã (in-house development) cho toàn bộ tính năng "Ask the Expert" và "Payment Process", gây rủi ro trễ hạn bàn giao. Trong khi đó, chuyên viên Cindy Dawson tìm được nhà cung cấp uy tín nhưng chi phí thực tế là $20,000 (gấp đôi dự toán $10,000).
-* **Giải pháp ứng phó:** Erica thuyết phục Kevin chấp nhận mua phần mềm thương mại có sẵn để giảm rủi ro công nghệ. Đồng thời trình bày bài toán kinh tế NPV với CEO Joe Fleming để xin cấp bổ sung $10,000, cam kết giữ thời gian hoàn vốn trong 1 năm.
-* **Kết quả:** Ngân sách thực tế tăng lên $150,000 nhưng dự án bàn giao đúng hạn (4/11) và vận hành an toàn.
-
-#### Case 4: Ứng phó rủi ro 8 (Thái độ làm việc của tư vấn viên cấp cao Michael Chen)
-
-* **Sự kiện:** Michael Chen bận rộn với các dự án khách hàng thương mại, tỏ ra chán nản và liên tục ra ngoài nghe điện thoại trong các cuộc họp chung, làm ảnh hưởng đến tinh thần nhóm.
-* **Giải pháp ứng phó:** Erica không áp đặt kỷ luật cứng nhắc mà thay đổi phong cách giao tiếp linh hoạt: **Cắt giảm tối đa số cuộc họp bắt buộc** đối với Michael, giao trực tiếp quyền sở hữu (Owner) tính năng "Ask the Expert" cho anh, và cho phép làm việc gián tiếp qua trợ lý Jill Anderson.
-* **Kết quả:** Michael Chen thoải mái hợp tác, dẫn dắt thành công tính năng diễn đàn chuyên gia mà không gây xung đột nội bộ.
-
-#### Case 5: Ứng phó rủi ro 10 (Đo lường & Hiện thực hóa lợi ích tài chính trong 1 năm)
-
-* **Sự kiện:** Nguy cơ không chứng minh được hiệu quả tài chính sau khi chi $150,000 đầu tư.
-* **Giải pháp ứng phó:** Erica chủ động thiết lập cơ chế đo lường lợi ích (Benefit Measurement Plan) ngay trong giai đoạn kiểm thử. Cô phát hiện trang Intranet giúp đội PMO tự động hóa quy trình, cho phép giảm 1 định biên nhân sự PMO (chuyển sang nhóm tư vấn thương mại), tạo ra khoản tiết kiệm chi phí trực tiếp $40,000/năm.
-* **Kết quả:** Khẳng định dự án đạt ROI 112% và hoàn vốn đúng cam kết.
+#### Case 5: Đo lường & Hiện thực hóa lợi ích kinh tế thực tế
+* **Sự kiện:** Ban quản trị lo ngại dự án không mang lại hiệu quả thực tế sau khi chi tiêu $150,000.
+* **Giải pháp ứng phó:** PM Trần Bá Lợi xây dựng bộ chỉ số đo lường hiệu năng (Benefit Realization Dashboard). Ghi nhận thực tế cho thấy thời gian đăng ký học phần trung bình của mỗi sinh viên giảm từ 15 phút xuống còn 1.5 phút; tự động hóa 98% công tác kiểm tra ràng buộc giúp Phòng Đào tạo tiết kiệm tương đương $40,000 chi phí nhân công vận hành mỗi năm.
+* **Kết quả:** Dự án chứng minh được ROI 112% và hoàn vốn đúng cam kết trong năm đầu tiên.
 
 ### 5.6. Cấu trúc WBS (Figure 3-3) & Phân định Phạm vi giữa Seminar và Project
 
