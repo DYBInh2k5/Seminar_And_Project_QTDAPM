@@ -132,8 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { id: 1, name: 'Khởi động & Yêu cầu', baseStart: 1, duration: 2, critical: true, slack: 0, deps: [] },
                 { id: 2, name: 'Phân tích thiết kế', baseStart: 3, duration: 2, critical: true, slack: 0, deps: [1] },
                 { id: 3, name: 'Lập trình Backend', baseStart: 5, duration: 3, critical: true, slack: 0, deps: [2] },
-                { id: 4, name: 'Lập trình Frontend', baseStart: 5, duration: 3, critical: false, slack: 1, deps: [2] },
-                { id: 5, name: 'Thiết kế Database', baseStart: 5, duration: 2, critical: false, slack: 2, deps: [2] },
+                { id: 4, name: 'Lập trình Frontend', baseStart: 5, duration: 2, critical: false, slack: 1, deps: [2] },
+                { id: 5, name: 'Thiết kế Database', baseStart: 5, duration: 1, critical: false, slack: 2, deps: [2] },
                 { id: 6, name: 'Tích hợp hệ thống', baseStart: 8, duration: 1, critical: true, slack: 0, deps: [3, 4, 5] },
                 { id: 7, name: 'Kiểm thử hệ thống', baseStart: 9, duration: 1, critical: true, slack: 0, deps: [6] },
                 { id: 8, name: 'Sửa lỗi & UAT', baseStart: 10, duration: 1, critical: true, slack: 0, deps: [7] },
@@ -769,6 +769,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Run forward pass loop
         tasks.forEach(t => {
             let start = t.baseStart;
+            let duration = t.duration;
 
             // If task has dependencies, start after the max End time of all dependencies
             if (t.deps.length > 0) {
@@ -781,23 +782,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Apply delay specifically configured for simulation
-            // Slider 1 -> Task 1 (Khởi động)
-            // Slider 2 -> Task 3 (Backend)
-            // Slider 3 -> Task 4 (Frontend)
-            // Slider 4 -> Task 5 (Database)
             let sliderDelay = 0;
             if (t.id === 1) sliderDelay = delays[1]; // Request phase
             if (t.id === 3) sliderDelay = delays[2]; // Backend
             if (t.id === 4) sliderDelay = delays[3]; // Frontend
             if (t.id === 5) sliderDelay = delays[4]; // Database
 
-            start += sliderDelay;
-            const end = start + t.duration - 1;
+            if (t.id === 1) {
+                // Task 1 delay increases duration, start remains at 1
+                duration += sliderDelay;
+            } else {
+                // Other tasks delay shift the start
+                start += sliderDelay;
+            }
+            const end = start + duration - 1;
 
             computed[t.id] = {
                 start: start,
                 end: end,
-                duration: t.duration,
+                duration: duration,
                 delay: sliderDelay
             };
         });
@@ -808,7 +811,66 @@ document.addEventListener('DOMContentLoaded', () => {
             t.computedEnd = computed[t.id].end;
         });
 
-        // 3. Determine Project Completion date (end of Task 10)
+        // 3. Compute dynamic slack and criticality for parallel tasks (3, 4, 5)
+        // Successor is Task 6 (Tích hợp hệ thống)
+        tasks.forEach(t => {
+            if (t.id === 3 || t.id === 4 || t.id === 5) {
+                t.computedSlack = computed[6].start - 1 - computed[t.id].end;
+                t.computedCritical = (t.computedSlack === 0);
+            } else {
+                t.computedSlack = 0;
+                t.computedCritical = true;
+            }
+        });
+
+        // Update HTML slider card headers dynamically (titles and badges)
+        const pmTitleTask3 = document.getElementById('pm-title-task3');
+        const pmFloatTask3 = document.getElementById('pm-float-task3');
+        const pmCard3 = document.getElementById('pm-card-task3');
+        
+        const task3 = tasks.find(t => t.id === 4); // Frontend is task index 4 in state
+        if (pmTitleTask3 && pmFloatTask3) {
+            if (task3.computedCritical) {
+                pmTitleTask3.innerText = '🔴 3. Lập trình Frontend';
+                pmFloatTask3.innerText = 'Đệm (Float): 0 tuần (CRITICAL!)';
+                pmFloatTask3.className = 'float-badge success-bg';
+                pmFloatTask3.style.background = 'rgba(239, 68, 68, 0.15)';
+                pmFloatTask3.style.color = 'var(--danger)';
+                if (pmCard3) pmCard3.style.borderLeft = '4px solid var(--danger)';
+            } else {
+                pmTitleTask3.innerText = '🟢 3. Lập trình Frontend';
+                pmFloatTask3.innerText = `Đệm (Float): ${task3.computedSlack} tuần`;
+                pmFloatTask3.className = 'float-badge success-bg';
+                pmFloatTask3.style.background = '';
+                pmFloatTask3.style.color = '';
+                if (pmCard3) pmCard3.style.borderLeft = '';
+            }
+        }
+
+        const pmTitleTask4 = document.getElementById('pm-title-task4');
+        const pmFloatTask4 = document.getElementById('pm-float-task4');
+        const pmCard4 = document.getElementById('pm-card-task4');
+        
+        const task4 = tasks.find(t => t.id === 5); // Database is task index 5 in state
+        if (pmTitleTask4 && pmFloatTask4) {
+            if (task4.computedCritical) {
+                pmTitleTask4.innerText = '🔴 4. Thiết kế Database';
+                pmFloatTask4.innerText = 'Đệm (Float): 0 tuần (CRITICAL!)';
+                pmFloatTask4.className = 'float-badge success-bg';
+                pmFloatTask4.style.background = 'rgba(239, 68, 68, 0.15)';
+                pmFloatTask4.style.color = 'var(--danger)';
+                if (pmCard4) pmCard4.style.borderLeft = '4px solid var(--danger)';
+            } else {
+                pmTitleTask4.innerText = '🟢 4. Thiết kế Database';
+                pmFloatTask4.innerText = `Đệm (Float): ${task4.computedSlack} tuần`;
+                pmFloatTask4.className = 'float-badge success-bg';
+                pmFloatTask4.style.background = '';
+                pmFloatTask4.style.color = '';
+                if (pmCard4) pmCard4.style.borderLeft = '';
+            }
+        }
+
+        // 4. Determine Project Completion date (end of Task 10)
         const finalTask = tasks.find(t => t.id === 10);
         const projectEndWeek = finalTask.computedEnd;
         
@@ -825,7 +887,7 @@ document.addEventListener('DOMContentLoaded', () => {
             deliveryStatus.style.background = 'transparent';
         }
 
-        // 4. Render Gantt Chart UI
+        // 5. Render Gantt Chart UI
         renderGanttChart(tasks, projectEndWeek);
     }
 
@@ -833,16 +895,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const wrapper = document.getElementById('gantt-bars-wrapper');
         wrapper.innerHTML = '';
 
-        // Show/hide extended weeks columns depending on final duration
-        const extendedCols = document.querySelectorAll('.extended-week');
-        extendedCols.forEach(col => {
-            col.style.display = 'none';
-        });
-
-        // If project end is > 12, make those columns visible
-        for (let w = 13; w <= projectEndWeek; w++) {
-            const col = document.querySelector(`.gantt-grid-header .week-${w}`);
-            if (col) col.style.display = 'block';
+        const colCount = Math.max(12, projectEndWeek);
+        const weeksHeader = document.querySelector('.gantt-weeks-header');
+        if (weeksHeader) {
+            weeksHeader.style.gridTemplateColumns = `repeat(${colCount}, 1fr)`;
+            const weekSpans = weeksHeader.querySelectorAll('span');
+            weekSpans.forEach((span, idx) => {
+                if (idx < colCount) {
+                    span.style.display = 'block';
+                } else {
+                    span.style.display = 'none';
+                }
+            });
         }
 
         // Render each row
@@ -853,31 +917,24 @@ document.addEventListener('DOMContentLoaded', () => {
             // Left Task Name
             const nameDiv = document.createElement('div');
             nameDiv.className = 'gantt-task-name';
-            nameDiv.innerText = `${t.critical ? '🔴' : '🟢'} ${t.name}`;
+            const isCritical = t.computedCritical;
+            nameDiv.innerText = `${isCritical ? '🔴' : '🟢'} ${t.name}`;
             row.appendChild(nameDiv);
 
             // Right Cell Tracks
             const cellsDiv = document.createElement('div');
             cellsDiv.className = 'gantt-bar-cells';
+            cellsDiv.style.gridTemplateColumns = `repeat(${colCount}, 1fr)`;
 
-            // Base 12 weeks
-            for (let w = 1; w <= 12; w++) {
+            // Render exact number of cells
+            for (let w = 1; w <= colCount; w++) {
                 const cell = document.createElement('div');
                 cell.className = 'gantt-cell';
                 cellsDiv.appendChild(cell);
             }
 
-            // Extended weeks (up to max projectEndWeek)
-            for (let w = 13; w <= Math.max(12, projectEndWeek); w++) {
-                const cell = document.createElement('div');
-                cell.className = 'gantt-cell extended';
-                if (w <= projectEndWeek) cell.style.display = 'block';
-                cellsDiv.appendChild(cell);
-            }
-
             // Compute coordinates inside grid cells
             // Start is 1-indexed, so 1 = left boundary
-            const colCount = Math.max(12, projectEndWeek);
             const leftPct = ((t.computedStart - 1) / colCount) * 100;
             const widthPct = (t.duration / colCount) * 100;
 
@@ -890,11 +947,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (t.id === 5 && state.pm.delays[4] > 0) isDelayed = true;
             
             // Subsequent tasks on critical path shift automatically (meaning they inherit delay)
-            if (t.critical && (state.pm.delays[1] > 0 || state.pm.delays[2] > 0) && t.id > 1) {
+            if (isCritical && (state.pm.delays[1] > 0 || state.pm.delays[2] > 0) && t.id > 1) {
                 isDelayed = true;
             }
 
-            bar.className = `gantt-bar ${t.critical ? 'critical-path-task' : 'normal-task'} ${isDelayed ? 'delayed-gantt-bar' : ''}`;
+            bar.className = `gantt-bar ${isCritical ? 'critical-path-task' : 'normal-task'} ${isDelayed ? 'delayed-gantt-bar' : ''}`;
             bar.style.left = `${leftPct}%`;
             bar.style.width = `${widthPct}%`;
             bar.innerText = `W${t.computedStart}-${t.computedEnd}`;
