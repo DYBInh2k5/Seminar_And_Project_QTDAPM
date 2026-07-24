@@ -69,6 +69,9 @@
    - [5.5. Hợp Đồng Làm Việc Nhóm HSU (Team Contract)](#55-hợp-đồng-làm-việc-nhóm-hsu-team-contract---áp-dụng-mẫu-table-3-8-jwd)
    - [5.6. Các Bài Học Ứng Phó Rủi Ro Thực Tế Trong Quá Trình Thi Công](#56-các-bài-học-ứng-phó-rủi-ro-thực-tế-trong-quá-trình-thi-công)
    - [5.7. Cấu trúc WBS & Phân định Phạm vi giữa Seminar và Project](#57-cấu-trúc-wbs-figure-3-3--phân-định-phạm-vi-giữa-seminar-và-project)
+   - [5.8. Tuyên bố Phạm vi Dự án HSU (Project Scope Statement)](#58-tuyên-bố-phạm-vi-dự-án-hsu-project-scope-statement---áp-dụng-mẫu-table-3-9-jwd)
+   - [5.9. Đường cơ sở Tiến độ & Chi phí HSU (Schedule & Cost Baseline)](#59-đường-cơ-sở-tiến-độ--chi-phí-hsu-schedule--cost-baseline)
+   - [5.10. Kế hoạch Quản lý Giao tiếp HSU (Communication Management Plan)](#510-kế-hoạch-quản-lý-giao-tiếp-hsu-communication-management-plan)
 6. [Kết luận và Bài học kinh nghiệm](#6-kết-luận-và-bài-học-kinh-nghiệm)
    - [6.1. Báo cáo Bài học Kinh nghiệm HSU (Lessons-Learned Report)](#61-báo-cáo-bài-học-kinh-nghiệm-hsu-lessons-learned-report---áp-dụng-mẫu-table-3-16-jwd)
    - [6.2. Kết luận tổng quan](#62-kết-luận-tổng-quan)
@@ -555,6 +558,57 @@ Dựa trên tài liệu chuẩn **Figure 3-3 JWD Consulting Intranet Project Wor
   * Thực hiện các nội dung thuộc **Phần 1.0 Initiating**: Nhận diện Stakeholders và phân tích thái độ đối với rủi ro ($1.1$), nghiên cứu Bài toán kinh tế NPV/ROI và Điều lệ dự án ($1.2$), cùng với việc lập Danh mục rủi ro ưu tiên ($2.6$) và các Case Study ứng phó thực tế.
 * **Phạm vi Đồ án môn học / Project (Phần 2.0 đến 5.0 - Xây dựng Hệ thống Đăng ký Học phần Trực tuyến):**
   * Toàn bộ quy trình triển khai chi tiết từ **Phần 2.0 (Planning)**, **3.0 (Executing - Lập trình HTML/CSS/JS, Cơ sở dữ liệu, Kiểm thử)**, **4.0 (Controlling - Giám sát tiến độ)** đến **5.0 (Closing - Báo cáo tổng kết đồ án)** sẽ được triển khai thực tiễn trong dự án phần mềm **"Hệ thống đăng ký học phần trực tuyến"** tại thư mục `Project/`.
+
+### 5.8. Tuyên bố Phạm vi Dự án HSU (Project Scope Statement - Áp dụng mẫu Table 3-9 JWD)
+
+Tài liệu này xác định các đặc tính sản phẩm, yêu cầu hệ thống và tiêu chí nghiệm thu phạm vi dự án HSU của Nhóm 3:
+
+*   **Tên dự án:** HSU Online Course Registration System Project
+*   **Ngày lập:** 14/07/2026 | **Người soạn thảo:** PM Trần Bá Lợi | **Phê duyệt:** CEO Võ Duy Bình
+*   **Đặc tính sản phẩm & Yêu cầu chức năng:**
+    1.  *Phân hệ Sinh viên (Student Portal):* Cho phép tra cứu thời khóa biểu cá nhân trực quan, hiển thị danh sách lớp mở, kiểm tra môn tiên quyết và thực hiện đăng ký/hủy môn học tức thì.
+    2.  *Phân hệ Phòng Đào tạo (Admin Portal):* Hỗ trợ mở/đóng lớp học phần, điều chỉnh sĩ số tối đa, xem báo cáo thống kê tỷ lệ đăng ký lớp học phần trực tuyến.
+    3.  *Thuật toán kiểm soát (Core Engine Validation):* Hệ thống tự động chặn đăng ký nếu sinh viên chưa hoàn thành môn tiên quyết, bị trùng lịch học (thứ/tiết), hoặc vượt quá 20 tín chỉ quy định trong học kỳ.
+    4.  *Bảo mật hệ thống:* Phân quyền chặt chẽ giữa sinh viên và cán bộ Phòng Đào tạo bằng token xác thực (JWT).
+*   **Phạm vi loại trừ (Out-of-Scope):** Dự án không bao gồm phân hệ thu học phí trực tuyến bằng ngân hàng liên kết (sẽ được chuyển giao phát triển ở giai đoạn sau).
+*   **Tiêu chí thành công của dự án (Project Success Criteria):**
+    *   Hoàn thành và nghiệm thu trong vòng 1 tháng, tổng chi phí dưới $140,000 (không tính dự phòng phát sinh).
+    *   Hệ thống vượt qua stress test đạt tải đồng thời 500 sinh viên truy cập mà không xảy ra hiện tượng sập kết nối hoặc mất mát dữ liệu học vụ.
+
+---
+
+### 5.9. Đường cơ sở Tiến độ & Chi phí HSU (Schedule & Cost Baseline)
+
+Tiến độ cơ sở của dự án được xây dựng dựa trên cấu trúc WBS và phương pháp phân bổ tài nguyên hợp lý nhằm tối ưu hóa chi phí:
+
+*   **Danh sách tài nguyên & Phân bổ công việc (Task Resources):**
+    *   *Trần Bá Lợi (PM/Frontend Dev):* Quản lý tiến độ chung (15 ngày) + Xây dựng giao diện Web SPA và tích hợp các cổng chức năng (12 ngày).
+    *   *Hồng Bảo Khang (Backend Dev):* Thiết kế Database + Viết các API kiểm tra ràng buộc nghiệp vụ học vụ (15 ngày).
+    *   *Nguyễn Thanh Quang (UI/UX & Analyst):* Phác thảo mockup Figma (6 ngày) + Thiết lập kế hoạch quản trị rủi ro & giải thuật CPM đường găng (10 ngày).
+*   **Thời lượng & Mối liên hệ phụ thuộc (Task Durations & Dependencies):**
+    *   *Task 1 (Khảo sát nghiệp vụ HSU):* 3 ngày. Bắt đầu ngay sau cuộc họp Kick-off.
+    *   *Task 2 (Thiết kế UI/UX & DB Schema):* 5 ngày. Phụ thuộc vào Task 1 hoàn thành (FS - Finish to Start).
+    *   *Task 3 (Lập trình API Backend & giao diện Frontend):* 12 ngày. Chạy song song sau khi thống nhất thiết kế UI/DB (FS).
+    *   *Task 4 (Tích hợp & Kiểm thử tải/Bảo mật):* 6 ngày. Phụ thuộc vào Task 3 (FS).
+    *   *Task 5 (Triển khai & Tổng kết bài học kinh nghiệm):* 4 ngày. Phụ thuộc vào Task 4 (FS).
+*   **Biểu đồ Gantt & Mô tả Tiến độ:** Tiến độ dự án được vẽ trực quan trên thanh tiến độ ngang với Đường găng dự án (Critical Path) đi qua các tác vụ: `Khảo sát nghiệp vụ` ➔ `Thiết kế UI/DB` ➔ `Lập trình Backend/Frontend` ➔ `Tích hợp & Kiểm thử` ➔ `Bàn giao hệ thống`.
+
+---
+
+### 5.10. Kế hoạch Quản lý Giao tiếp HSU (Communication Management Plan)
+
+Nhóm đã thiết lập kế hoạch truyền thông nội bộ và ngoại giao để đảm bảo luồng thông tin xuyên suốt và xử lý nhanh chóng các rủi ro phát sinh:
+
+| Loại giao tiếp (Communication Type) | Người gửi (Sender) | Người nhận (Receiver) | Tần suất (Frequency) | Hình thức / Kênh thực hiện (Method) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Họp tiến độ nội bộ nhóm** | PM Trần Bá Lợi | Toàn thành viên nhóm 3 | Hàng tuần (Tối thứ 4) | Google Meet (Thảo luận nóng, giải quyết bottleneck kỹ thuật). |
+| **Báo cáo tiến độ cá nhân** | Khang, Quang, Lợi | PM Trần Bá Lợi | Hàng tuần (Thứ 6 trước 18:00) | Cập nhật trên Trello board và gửi báo cáo text ngắn qua Zalo. |
+| **Báo cáo mốc bàn giao** | PM Trần Bá Lợi | CEO Võ Duy Bình | Theo mốc kiểm soát (Milestones) | Báo cáo trực tiếp (Slide và demo sản phẩm). |
+| **Cập nhật mã nguồn dự án** | Lập trình viên | Toàn đội | Liên tục khi hoàn thành tính năng | Git Commit & Pull Request trên GitHub (ghi chú rõ tính năng thay đổi). |
+| **Báo cáo học vụ & hướng dẫn** | PM Trần Bá Lợi | GVHD Thầy Nguyễn Văn Sơn | Theo lịch học & email | Trao đổi trực tiếp trên lớp và gửi file báo cáo qua email học đường HSU. |
+
+---
+
 
 #### Bảng tổng hợp 12 tài liệu chuẩn PMBOK áp dụng tại JWD Consulting:
 
