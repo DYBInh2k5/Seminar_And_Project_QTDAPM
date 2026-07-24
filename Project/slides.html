@@ -437,23 +437,123 @@
                         <h2>Trình Giả Lập Đường Găng (Critical Path Simulator) (Bình)</h2>
                     </div>
                     
-                    <div class="two-col-grid">
-                        <div class="col-left glass-card">
-                            <h3>Nguyên Lý Đường Găng (Critical Path)</h3>
-                            <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 10px;">Đường găng là chuỗi các công việc kéo dài nhất quyết định ngày hoàn thành dự án. Công việc thuộc đường găng có <strong>Float time = 0 tuần</strong>.</p>
-                            <div class="sub-card" style="background: rgba(244, 63, 94, 0.1); border-color: rgba(244, 63, 94, 0.3);">
-                                <h4>🔴 Công việc Đường găng</h4>
-                                <p style="font-size: 0.8rem;">1. Thu thập yêu cầu ➔ 2. Lập trình Backend ➔ 3. Tích hợp ➔ 4. Deploy bàn giao.</p>
+                    <div class="two-col-grid" style="grid-template-columns: 1fr 1.25fr; gap: 20px;">
+                        <!-- Left Panel: Sliders -->
+                        <div class="col-left glass-card" style="padding: 15px; display: flex; flex-direction: column; gap: 10px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                                <h3 style="font-size: 1.05rem; margin: 0;">Điều chỉnh Trễ tiến độ (Tuần)</h3>
+                                <button id="reset-slide8-btn" style="background:none; border:none; color:var(--primary); font-size:0.75rem; cursor:pointer; font-weight:600;">Khôi phục</button>
+                            </div>
+                            
+                            <!-- Slider 1: Req Gathering (Critical) -->
+                            <div style="padding: 6px 10px; background: rgba(244, 63, 94, 0.05); border-left: 4px solid #f43f5e; border-radius: 6px;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.78rem; font-weight: 600; margin-bottom: 2px;">
+                                    <span>🔴 1. Khảo sát & Yêu cầu</span>
+                                    <span id="slide8-delay-val-1" style="color: #f43f5e;">Trễ: 0 tuần</span>
+                                </div>
+                                <input type="range" class="slide8-slider" data-task-id="1" min="0" max="4" value="0" style="width: 100%; cursor: pointer;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: var(--text-secondary); margin-top: 2px;">
+                                    <span>Độ dài gốc: 2 tuần</span>
+                                    <span>Đệm (Float): 0 tuần</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Slider 2: Backend Dev (Critical) -->
+                            <div style="padding: 6px 10px; background: rgba(244, 63, 94, 0.05); border-left: 4px solid #f43f5e; border-radius: 6px;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.78rem; font-weight: 600; margin-bottom: 2px;">
+                                    <span>🔴 2. Lập trình Backend</span>
+                                    <span id="slide8-delay-val-2" style="color: #f43f5e;">Trễ: 0 tuần</span>
+                                </div>
+                                <input type="range" class="slide8-slider" data-task-id="2" min="0" max="4" value="0" style="width: 100%; cursor: pointer;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: var(--text-secondary); margin-top: 2px;">
+                                    <span>Độ dài gốc: 4 tuần</span>
+                                    <span>Đệm (Float): 0 tuần</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Slider 3: Frontend Dev (Non-Critical, float = 1) -->
+                            <div style="padding: 6px 10px; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; border-radius: 6px;" id="slide8-card-task3">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.78rem; font-weight: 600; margin-bottom: 2px;">
+                                    <span id="slide8-title-task3">🟢 3. Lập trình Frontend</span>
+                                    <span id="slide8-delay-val-3" style="color: #10b981;">Trễ: 0 tuần</span>
+                                </div>
+                                <input type="range" class="slide8-slider" data-task-id="3" min="0" max="4" value="0" style="width: 100%; cursor: pointer;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: var(--text-secondary); margin-top: 2px;">
+                                    <span>Độ dài gốc: 3 tuần</span>
+                                    <span id="slide8-float-task3">Đệm (Float): 1 tuần</span>
+                                </div>
+                            </div>
+
+                            <!-- Slider 4: DB Design (Non-Critical, float = 2) -->
+                            <div style="padding: 6px 10px; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; border-radius: 6px;" id="slide8-card-task4">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.78rem; font-weight: 600; margin-bottom: 2px;">
+                                    <span id="slide8-title-task4">🟢 4. Thiết kế Database</span>
+                                    <span id="slide8-delay-val-4" style="color: #10b981;">Trễ: 0 tuần</span>
+                                </div>
+                                <input type="range" class="slide8-slider" data-task-id="4" min="0" max="4" value="0" style="width: 100%; cursor: pointer;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: var(--text-secondary); margin-top: 2px;">
+                                    <span>Độ dài gốc: 2 tuần</span>
+                                    <span id="slide8-float-task4">Đệm (Float): 2 tuần</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="col-right glass-card">
-                            <h3>Giả Lập Trễ Tiến Độ Real-time</h3>
-                            <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 10px;">Thử nghiệm kéo thanh slider trễ tiến độ trong ứng dụng Web Project:</p>
-                            <ul class="bullet-list-custom">
-                                <li><strong>Trễ công việc Đường găng:</strong> Ngày bàn giao dự án lập tức bị lùi từ Tuần 12 sang Tuần 13 - 16.</li>
-                                <li><strong>Trễ công việc Ngoài đường găng:</strong> Không làm lùi ngày bàn giao dự án nếu trễ trong phạm vi thời gian đệm (Float time).</li>
-                            </ul>
+                        <!-- Right Panel: Gantt Chart Visualization -->
+                        <div class="col-right glass-card" style="padding: 15px; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h3 style="font-size: 1.05rem; margin-bottom: 10px; margin-top: 0;">Biểu đồ Gantt trực quan hóa trễ tiến độ</h3>
+                                <div class="gantt-chart-mini" style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-color); border-radius: 6px; padding: 10px; font-family: var(--font-body);">
+                                    <!-- Gantt Header weeks -->
+                                    <div style="display: grid; grid-template-columns: 80px 1fr; border-bottom: 1px solid var(--border-color); padding-bottom: 6px; margin-bottom: 10px; font-size: 0.65rem; font-weight: 700; text-align: center;">
+                                        <div>Tác vụ</div>
+                                        <div style="display: grid; grid-template-columns: repeat(16, 1fr); color: var(--text-secondary);">
+                                            <span>T1</span><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>T8</span><span>T9</span><span>T10</span><span>T11</span><span>T12</span><span>T13</span><span>T14</span><span>T15</span><span>T16</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Task 1 Row -->
+                                    <div style="display: grid; grid-template-columns: 80px 1fr; align-items: center; height: 26px; margin-bottom: 6px; font-size: 0.72rem;">
+                                        <div style="font-weight: 600;">1. Yêu cầu</div>
+                                        <div style="display: grid; grid-template-columns: repeat(16, 1fr); height: 12px; position: relative;">
+                                            <div id="slide8-bar-1" style="grid-column: 2 / 4; background: #f43f5e; border-radius: 3px; transition: all 0.2s;"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Task 2 Row -->
+                                    <div style="display: grid; grid-template-columns: 80px 1fr; align-items: center; height: 26px; margin-bottom: 6px; font-size: 0.72rem;">
+                                        <div style="font-weight: 600;">2. Backend</div>
+                                        <div style="display: grid; grid-template-columns: repeat(16, 1fr); height: 12px; position: relative;">
+                                            <div id="slide8-bar-2" style="grid-column: 4 / 8; background: #f43f5e; border-radius: 3px; transition: all 0.2s;"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Task 3 Row -->
+                                    <div style="display: grid; grid-template-columns: 80px 1fr; align-items: center; height: 26px; margin-bottom: 6px; font-size: 0.72rem;">
+                                        <div style="font-weight: 600;">3. Frontend</div>
+                                        <div style="display: grid; grid-template-columns: repeat(16, 1fr); height: 12px; position: relative;">
+                                            <div id="slide8-bar-3" style="grid-column: 4 / 7; background: #10b981; border-radius: 3px; transition: all 0.2s;"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Task 4 Row -->
+                                    <div style="display: grid; grid-template-columns: 80px 1fr; align-items: center; height: 26px; margin-bottom: 4px; font-size: 0.72rem;">
+                                        <div style="font-weight: 600;">4. Database</div>
+                                        <div style="display: grid; grid-template-columns: repeat(16, 1fr); height: 12px; position: relative;">
+                                            <div id="slide8-bar-4" style="grid-column: 4 / 6; background: #10b981; border-radius: 3px; transition: all 0.2s;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="slide8-summary-box" style="padding: 10px 12px; background: rgba(16, 185, 129, 0.08); border-left: 4px solid #10b981; border-radius: 6px; margin-top: 5px; transition: all 0.3s;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; font-weight: 700; color: #065f46;" id="slide8-summary-title">
+                                    <span>🎉 Tiến độ dự án HSU:</span>
+                                    <span id="slide8-project-finish">Bàn giao ở Tuần 12 (Đúng hạn)</span>
+                                </div>
+                                <p style="font-size: 0.7rem; margin-top: 4px; line-height: 1.45; color: var(--text-secondary); margin-bottom: 0;" id="slide8-summary-comment">
+                                    Dự án đang diễn ra đúng tiến độ cơ sở (Baseline). Hãy thử điều chỉnh thanh trượt ở cột trái để thấy sự thay đổi.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -662,6 +762,6 @@
     </div>
 
     <!-- Slide Controller Script -->
-    <script src="../Seminar/script.js"></script>
+    <script src="slides_script.js"></script>
 </body>
 </html>
