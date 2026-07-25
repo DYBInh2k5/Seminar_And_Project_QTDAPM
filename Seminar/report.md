@@ -434,7 +434,7 @@ Trong nhóm quy trình **1.0 Initiating (Khởi tạo dự án)**, tài liệu t
 
 | Thành phần mẫu (Charter Element) | Nội dung áp dụng thực tế tại Dự án HSU (Nhóm 3) |
 | :--- | :--- |
-| **1. Tên dự án & Ngày lập (Project Title & Date)** | HSU Online Course Registration System Project | Ngày lập: 12/07/2026 |
+| **1. Tên dự án & Ngày lập (Project Title & Date)** | Risk and Schedule Management in the Online Course Registration System Construction Project | Ngày lập: 12/07/2026 |
 | **2. Thời gian thực hiện (Project Dates)** | Ngày bắt đầu: 12/07/2026 | Ngày hoàn thành dự kiến: 15/08/2026 (Thời lượng: ~1 tháng) |
 | **3. Thông tin Ngân sách (Budget Info)** | Ngân sách dự toán ban đầu: **$140,000** (Phê duyệt bổ sung tối đa: **$150,000**) |
 | **4. Giám đốc dự án (Project Manager)** | Trần Bá Lợi (Email: `loi.tb2230@sinhvien.hoasen.edu.vn`) - PM chịu trách nhiệm quản lý tiến độ & QA |
@@ -563,7 +563,7 @@ Dựa trên tài liệu chuẩn **Figure 3-3 JWD Consulting Intranet Project Wor
 
 Tài liệu này xác định các đặc tính sản phẩm, yêu cầu hệ thống và tiêu chí nghiệm thu phạm vi dự án HSU của Nhóm 3:
 
-*   **Tên dự án:** HSU Online Course Registration System Project
+*   **Tên dự án:** Risk and Schedule Management in the Online Course Registration System Construction Project
 *   **Ngày lập:** 14/07/2026 | **Người soạn thảo:** PM Trần Bá Lợi | **Phê duyệt:** CEO Võ Duy Bình
 *   **Đặc tính sản phẩm & Yêu cầu chức năng:**
     1.  *Phân hệ Sinh viên (Student Portal):* Cho phép tra cứu thời khóa biểu cá nhân trực quan, hiển thị danh sách lớp mở, kiểm tra môn tiên quyết và thực hiện đăng ký/hủy môn học tức thì.
