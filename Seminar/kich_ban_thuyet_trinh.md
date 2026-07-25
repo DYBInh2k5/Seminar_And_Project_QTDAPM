@@ -150,20 +150,21 @@
 
 ### 🖥️ Slide 11: Tính Toán Tài Chính Dự Án (NPV/ROI) & Quản Trị Rủi Ro Đầu Tư
 🎙️ **Người trình bày: TRẦN BÁ LỢI**
-*   **Nội dung trên slide:** Trình giả lập tính toán NPV, ROI, thời gian hoàn vốn dựa trên bảng dòng tiền (Cashflow) đầu tư 4 năm của dự án HSU.
+*   **Nội dung trên slide:** Trình giả lập tính toán NPV, ROI, thời gian hoàn vốn dựa trên các dự án mẫu (Dự án A, B, C từ bài tập thực hành môn học).
 *   **Lời thoại nói:**
-    > "Em xin quay lại để trình bày khía cạnh phân tích hiệu quả tài chính và rủi ro đầu tư trước khi duyệt dự án. 
+    > "Em xin quay lại để trình bày khía cạnh phân tích tài chính dự án và cách chúng ta lượng hóa rủi ro tài chính trước khi đưa ra quyết định đầu tư. 
     > 
-    > Mời thầy và các bạn nhìn vào bảng tính toán tài chính trên slide. Chúng em đã xây dựng mô hình dòng tiền dự kiến cho dự án Cổng đăng ký môn học trong 4 năm:
-    > *   **Năm 0 (Đầu tư ban đầu):** Chi phí phát triển phần mềm và hạ tầng là $150,000 (tương đương với thực tế JWD).
-    > *   **Năm 1 đến năm 3:** Lợi ích thu hồi ước tính đạt $100,000/năm nhờ giảm thiểu chi phí quản lý vận hành thủ công và tối ưu hóa tài nguyên lớp học. Chi phí bảo trì duy trì ở mức $20,000/năm.
+    > Mời thầy và các bạn nhìn vào bảng tính toán tài chính tương tác trên slide. Đây là mô hình dòng tiền của **Dự án B (Dự án được khuyên dùng trong bài tập đánh giá)** với thời gian phân tích là 4 năm:
+    > *   **Năm 1:** Chi phí đầu tư ban đầu được phân bổ là **$3,000**, chưa thu về lợi ích.
+    > *   **Năm 2 đến năm 4:** Lợi ích thu về tăng dần từ **$1,000**, **$3,000** đến **$5,000**; trong khi chi phí vận hành bảo trì cố định ở mức **$1,000/năm**.
     > 
-    > Với tỷ lệ chiết khấu tiêu chuẩn là 8%, chúng em tính toán được:
-    > *   **Giá trị hiện tại ròng (NPV):** Đạt giá trị dương rất lớn, khoảng **$56,448**. Theo quy tắc tài chính, NPV > 0 nghĩa là dự án hoàn toàn khả thi và có lợi nhuận kinh tế cao.
-    > *   **Tỷ suất sinh lời (ROI):** Đạt **37.6%**, phản ánh hiệu quả sử dụng vốn đầu tư cực kỳ tốt.
-    > *   **Thời gian hoàn vốn (Payback Period):** Nằm trong khoảng **1.87 năm** (chưa đầy 2 năm học), giúp trường nhanh chóng thu hồi vốn ban đầu.
+    > Với tỷ suất chiết khấu tiêu chuẩn được đặt là **5%** (các bạn có thể tự do kéo thanh trượt r trên màn hình để kiểm chứng các kịch bản lãi suất khác nhau), hệ thống tự động tính toán ra kết quả:
+    > *   **Tổng giá trị hiện tại của Lợi ích (PV_B):** Đạt **$7,612.05**.
+    > *   **Tổng giá trị hiện tại của Chi phí (PV_C):** Đạt **$5,450.71**.
+    > *   **Giá trị hiện tại ròng (NPV):** Đạt giá trị dương **$2,161.34**. (NPV > 0 chứng minh dự án có lợi nhuận kinh tế sau khi đã chiết khấu).
+    > *   **Tỷ suất sinh lời (ROI):** Đạt **39.65%**, phản ánh hiệu quả sử dụng vốn rất tốt.
     > 
-    > Kết luận tài chính: Dự án có hiệu quả tài chính tối ưu, rủi ro đầu tư thấp, rất xứng đáng để Ban Giám hiệu phê duyệt ngân sách. 
+    > Khi chúng em bấm chọn các dự án khác trên menu: Dự án A chỉ đạt NPV là **$1,102.27**, còn Dự án C bị âm **-$1,343.47** (thể hiện bằng cột màu đỏ báo động rủi ro thua lỗ). Do đó, việc lựa chọn Dự án B là quyết định đầu tư thông minh và ít rủi ro nhất.
     > 
     > Cuối cùng, bạn Hồng Bảo Khang sẽ đúc kết case study JWD và kết luận."
 
