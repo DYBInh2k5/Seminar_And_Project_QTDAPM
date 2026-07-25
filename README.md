@@ -102,6 +102,18 @@ Seminar tập trung vào nghiên cứu lý thuyết chuyên sâu về quản lý
 
 ---
 
+## 📝 4. BÀI TẬP VÀ ĐÁNH GIÁ (TESTS & ASSESSMENTS)
+
+Tổng hợp các bài tập tự luận và trắc nghiệm thực hành củng cố kiến thức trong học kỳ:
+*   **[Bài tập thực hành 1 (Kiến thức cốt lõi PMBOK)](file:///d:/HSU/2534Semester%204(2025-2026)/QT_DA_PM/Test/test1.txt):** Định nghĩa dự án, các tiêu chí thành công, 10 lĩnh vực kiến thức quản trị dự án (Knowledge Areas) và phân tích các bên liên quan (Stakeholders).
+*   **[Bài tập thực hành 3 (NPV, ROI & CPM Đường găng)](file:///d:/HSU/2534Semester%204(2025-2026)/QT_DA_PM/Test/test3.txt):** 
+    *   Trắc nghiệm Động lực & Quản trị Nhân sự (Herzberg, Maslow, các loại quyền lực PM).
+    *   Bài toán so sánh tài chính dự án sử dụng NPV và ROI ở mức chiết khấu 5%.
+    *   Tìm đường găng (CPM) và phân tích ảnh hưởng tiến độ khi thay đổi thời lượng công việc trên mạng sự nút (đi kèm biểu đồ mạng sự nút [test3_image_1.png](file:///d:/HSU/2534Semester%204(2025-2026)/QT_DA_PM/Test/test3_image_1.png)).
+    *   Phân tích SWOT cho dự án triển khai ứng dụng đăng ký môn học di động HSU.
+
+---
+
 ## 🚀 HƯỚNG DẪN CHẠY THỬ NGHIỆM TRÊN TRÌNH DUYỆT (HOW TO RUN)
 
 Tất cả các sản phẩm web của nhóm được thiết kế chạy trực tiếp dưới dạng **Single Page Application (SPA)** mà không cần cấu hình cài đặt server phức tạp:
