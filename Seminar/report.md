@@ -310,7 +310,30 @@ To quantify financial risk and compare investment alternatives, project managers
 2.  **Highest Return:** The discounted ROI of Project B (39.65%) exceeds that of Project A (39.51%).
 3.  **Risk Profile:** Although Project B requires a higher initial cost in Year 1 ($3,000 vs. $2,000 for Project A), its subsequent maintenance costs are stable at $1,000/year and it delivers a large benefit in Year 4 ($5,000). Project C is highly risky because its high upfront cost ($5,000 in Year 1) is not justified by its benefits.
 
+#### Class Assignment Financial Analysis (From Ebooks/NPV - Students.xlsx):
+To reinforce the financial analysis framework, we calculate the NPV and ROI for the two projects from the class exercise [NPV - Students.xlsx](file:///d:/HSU/2534Semester%204(2025-2026)/QT_DA_PM/Ebooks/NPV%20-%20Students.xlsx) under a **10% discount rate** ($r = 10\%$) over a 5-year lifecycle.
+
+##### Project 1:
+*   Benefits: [Y1: 0, Y2: 2000, Y3: 3000, Y4: 4000, Y5: 5000]
+*   Costs: [Y1: 5000, Y2: 1000, Y3: 1000, Y4: 1000, Y5: 1000]
+*   $PV_B = \frac{0}{1.1^1} + \frac{2000}{1.1^2} + \frac{3000}{1.1^3} + \frac{4000}{1.1^4} + \frac{5000}{1.1^5} = 0 + 1652.89 + 2253.94 + 2732.05 + 3104.61 = 9743.49$
+*   $PV_C = \frac{5000}{1.1^1} + \frac{1000}{1.1^2} + \frac{1000}{1.1^3} + \frac{1000}{1.1^4} + \frac{1000}{1.1^5} = 4545.45 + 826.45 + 751.31 + 683.01 + 620.92 = 7427.14$
+*   $NPV_1 = 9743.49 - 7427.14 = 2316.35$
+*   $ROI_1 = \frac{2316.35}{7427.14} \times 100\% = 31.19\%$
+
+##### Project 2:
+*   Benefits: [Y1: 1000, Y2: 2000, Y3: 4000, Y4: 4000, Y5: 4000]
+*   Costs: [Y1: 2000, Y2: 2000, Y3: 2000, Y4: 2000, Y5: 2000]
+*   $PV_B = \frac{1000}{1.1^1} + \frac{2000}{1.1^2} + \frac{4000}{1.1^3} + \frac{4000}{1.1^4} + \frac{4000}{1.1^5} = 909.09 + 1652.89 + 3005.26 + 2732.05 + 2483.69 = 10782.98$
+*   $PV_C = \frac{2000}{1.1^1} + \frac{2000}{1.1^2} + \frac{2000}{1.1^3} + \frac{2000}{1.1^4} + \frac{2000}{1.1^5} = 1818.18 + 1652.89 + 1502.63 + 1366.03 + 1241.84 = 7581.57$
+*   $NPV_2 = 10782.98 - 7581.57 = 3201.41$
+*   $ROI_2 = \frac{3201.41}{7581.57} \times 100\% = 42.23\%$
+
+##### Recommendation:
+**Project 2** is the superior financial decision as it achieves both a higher Net Present Value ($3,201.41 vs $2,316.35) and a stronger return rate (42.23% vs 31.19%) at a 10% cost of capital.
+
 ---
+
 
 ## 4. Risk Response Planning
 
