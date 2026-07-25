@@ -1,5 +1,5 @@
 # KẾ HOẠCH PHÁT TRIỂN PHẦN MỀM (SDP)
-## HỆ THỐNG ĐĂNG KÝ HỌC PHẦN TRỰC TUYẾN
+## RISK AND SCHEDULE MANAGEMENT IN THE ONLINE COURSE REGISTRATION SYSTEM CONSTRUCTION PROJECT
 
 | Thông tin tài liệu | Chi tiết (Theo mẫu Project Plan.docx / HSU SDP) |
 | :--- | :--- |

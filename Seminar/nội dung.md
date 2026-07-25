@@ -1,5 +1,5 @@
 # NỘI DUNG CHI TIẾT CHUYÊN ĐỀ SEMINAR (PHẦN 1)
-**Đề tài:** Risk and Schedule Management & Risk Utility Theory
+**Đề tài:** Risk and Schedule Management in the Online Course Registration System Construction Project
 **Môn học:** Quản trị Dự án Phần mềm (SW403DE01) - HK23.1A
 **Nhóm thực hiện:** Nhóm 3 (Đại học Hoa Sen - HSU)
 
