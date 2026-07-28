@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../Seminar"
+		},
+		{
+			"path": "../Ebooks"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../Slides"
+		},
+		{
+			"path": "../Test"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Project"
+	}
+}

@@ -26,6 +26,11 @@
             </div>
             <div class="header-topic">Seminar (Phần 1): Risk and Schedule Management in the Online Course Registration System Construction Project</div>
             <div class="header-controls">
+                <!-- Language Selector -->
+                <div class="lang-selector-group" style="display: flex; border: 2px solid var(--border-color); border-radius: 20px; overflow: hidden; padding: 2px; background: rgba(0,0,0,0.03);">
+                    <button class="lang-btn active" data-lang="vi" style="border: none; background: transparent; padding: 4px 10px; font-size: 0.78rem; font-weight: 700; border-radius: 15px; cursor: pointer; color: var(--text-primary); transition: all 0.2s ease;">VI</button>
+                    <button class="lang-btn" data-lang="en" style="border: none; background: transparent; padding: 4px 10px; font-size: 0.78rem; font-weight: 700; border-radius: 15px; cursor: pointer; color: var(--text-primary); transition: all 0.2s ease;">EN</button>
+                </div>
                 <button id="layout-toggle-btn" class="icon-btn" title="Cấu hình bố cục slide">
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
                 </button>
@@ -97,7 +102,7 @@
                             </div>
                             
                             <div style="margin-top: 10px; overflow-x: auto;">
-                                <table class="sim-results-table" style="font-size: 0.72rem; width: 100%; margin-top: 5px;">
+                                <table class="sim-results-table" style="font-size: 0.88rem; width: 100%; margin-top: 5px;">
                                     <thead>
                                         <tr>
                                             <th>Đặc trưng</th>
@@ -240,7 +245,7 @@
                                             <strong>Dấu hiệu cảnh báo:</strong> Chi phí nhân sự tăng nhanh qua từng Sprint, nhà đầu tư chậm giải ngân ngân sách do tiến độ trễ.
                                         </div>
                                         
-                                        <div style="margin-top: 12px; padding: 10px; background: rgba(0,0,0,0.015); border-left: 3px solid var(--accent); border-radius: 4px; font-size: 0.72rem; line-height: 1.4;">
+                                        <div style="margin-top: 12px; padding: 10px; background: rgba(0,0,0,0.015); border-left: 3px solid var(--accent); border-radius: 4px; font-size: 0.88rem; line-height: 1.4;">
                                             <strong>📌 Phân bổ Quỹ Dự Phòng Tài Chính (PMBOK Guide):</strong>
                                             <ul style="margin-left: 15px; margin-top: 5px; display: flex; flex-direction: column; gap: 3px;">
                                                 <li><strong>Contingency Reserve (10% - 15%):</strong> Quản lý bởi PM để ứng phó rủi ro đã nhận diện (Known-unknowns).</li>
@@ -450,32 +455,32 @@
                         <div class="case-mini-card">
                             <span class="case-tag">Bảo mật / Hệ thống</span>
                             <h3>Equifax (2017)</h3>
-                            <p style="margin-bottom: 8px;">Tin tặc khai thác lỗ hổng Apache Struts đã có bản vá nhưng không được cập nhật kịp thời. Đội ngũ trì hoãn ròng rã suốt 2 tháng.</p>
-                            <p style="font-size: 0.72rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Thiếu tự động hóa quét lỗ hổng và kiểm soát cấu hình hệ thống (Shift-left security).</p>
+                            <p style="margin-bottom: 8px; font-size: 0.95rem;">Tin tặc khai thác lỗ hổng Apache Struts đã có bản vá nhưng không được cập nhật kịp thời. Đội ngũ trì hoãn ròng rã suốt 2 tháng.</p>
+                            <p style="font-size: 0.88rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Thiếu tự động hóa quét lỗ hổng và kiểm soát cấu hình hệ thống (Shift-left security).</p>
                             <p class="outcome-text">Lộ 147 triệu người | Phạt 1.38 tỷ USD</p>
                         </div>
  
                         <div class="case-mini-card">
                             <span class="case-tag">Hiệu năng / Tải cao</span>
                             <h3>Healthcare.gov (2013)</h3>
-                            <p style="margin-bottom: 8px;">Sập sau 2 giờ mở cổng do 250k user truy cập đồng thời (gấp 5 lần tải dự kiến). Thiếu kiểm thử tải và tích hợp hệ thống.</p>
-                            <p style="font-size: 0.72rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Cần Load/Stress Test trước khi chạy. Kiến trúc phải tách biệt độc lập (loose coupling).</p>
+                            <p style="margin-bottom: 8px; font-size: 0.95rem;">Sập sau 2 giờ mở cổng do 250k user truy cập đồng thời (gấp 5 lần tải dự kiến). Thiếu kiểm thử tải và tích hợp hệ thống.</p>
+                            <p style="font-size: 0.88rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Cần Load/Stress Test trước khi chạy. Kiến trúc phải tách biệt độc lập (loose coupling).</p>
                             <p class="outcome-text">Thành công &lt;1% | Đập đi xây lại</p>
                         </div>
  
                         <div class="case-mini-card">
                             <span class="case-tag">Nợ kỹ thuật / Deploy</span>
                             <h3>Knight Capital (2012)</h3>
-                            <p style="margin-bottom: 8px;">Mã cũ Power Peg (nợ kỹ thuật 8 năm) bị kích hoạt lại do deploy thủ công thiếu file cấu hình ở 1 trong 8 máy chủ.</p>
-                            <p style="font-size: 0.72rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Phải tự động hóa deploy (CI/CD) và định kỳ dọn dẹp các đoạn mã nguồn cũ (nợ kỹ thuật).</p>
+                            <p style="margin-bottom: 8px; font-size: 0.95rem;">Mã cũ Power Peg (nợ kỹ thuật 8 năm) bị kích hoạt lại do deploy thủ công thiếu file cấu hình ở 1 trong 8 máy chủ.</p>
+                            <p style="font-size: 0.88rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Phải tự động hóa deploy (CI/CD) và định kỳ dọn dẹp các đoạn mã nguồn cũ (nợ kỹ thuật).</p>
                             <p class="outcome-text">Lỗ 440tr USD/45 phút | Phá sản</p>
                         </div>
  
                         <div class="case-mini-card">
                             <span class="case-tag">Con người / Quản lý</span>
                             <h3>FBI Trilogy (2005)</h3>
-                            <p style="margin-bottom: 8px;">Dự án Virtual Case File bị hủy bỏ hoàn toàn sau 4 năm phát triển do yêu cầu thay đổi liên tục (Scope creep) và giao tiếp kém giữa FBI với SAIC.</p>
-                            <p style="font-size: 0.72rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Thiếu quy trình kiểm soát thay đổi (Change Control Board - CCB) và quản lý phạm vi chặt.</p>
+                            <p style="margin-bottom: 8px; font-size: 0.95rem;">Dự án Virtual Case File bị hủy bỏ hoàn toàn sau 4 năm phát triển do yêu cầu thay đổi liên tục (Scope creep) và giao tiếp kém giữa FBI với SAIC.</p>
+                            <p style="font-size: 0.88rem; color: var(--accent-seeking); margin-bottom: 8px;"><strong>Bài học:</strong> Thiếu quy trình kiểm soát thay đổi (Change Control Board - CCB) và quản lý phạm vi chặt.</p>
                             <p class="outcome-text">Mất trắng 170 triệu USD | Hủy bỏ</p>
                         </div>
                     </div>
@@ -500,25 +505,25 @@
                                 <div class="step-card" style="border-left: 3px solid #f43f5e; padding: 10px;">
                                     <div class="step-info">
                                         <h4 style="color: #f43f5e; font-size: 0.9rem; margin-bottom: 2px;">Tránh rủi ro (Avoidance)</h4>
-                                        <p style="font-size: 0.75rem; line-height: 1.3;">Thay đổi kế hoạch/kiến trúc để triệt tiêu nguyên nhân. Ví dụ: loại bỏ tính năng thanh toán quá phức tạp khỏi đợt 1.</p>
+                                        <p style="font-size: 0.88rem; line-height: 1.45;">Thay đổi kế hoạch/kiến trúc để triệt tiêu nguyên nhân. Ví dụ: loại bỏ tính năng thanh toán quá phức tạp khỏi đợt 1.</p>
                                     </div>
                                 </div>
                                 <div class="step-card" style="border-left: 3px solid #10b981; padding: 10px;">
                                     <div class="step-info">
                                         <h4 style="color: #10b981; font-size: 0.9rem; margin-bottom: 2px;">Giảm thiểu (Mitigation)</h4>
-                                        <p style="font-size: 0.75rem; line-height: 1.3;">Giảm xác suất/tác động sớm. Ví dụ: viết Unit Test tự động, đào tạo lập trình viên công nghệ mới.</p>
+                                        <p style="font-size: 0.88rem; line-height: 1.45;">Giảm xác suất/tác động sớm. Ví dụ: viết Unit Test tự động, đào tạo lập trình viên công nghệ mới.</p>
                                     </div>
                                 </div>
                                 <div class="step-card" style="border-left: 3px solid #3b82f6; padding: 10px;">
                                     <div class="step-info">
                                         <h4 style="color: #3b82f6; font-size: 0.9rem; margin-bottom: 2px;">Chuyển giao (Transfer)</h4>
-                                        <p style="font-size: 0.75rem; line-height: 1.3;">Chuyển trách nhiệm/hậu quả sang bên thứ ba. Ví dụ: thuê ngoài cổng thanh toán trực tuyến của đơn vị uy tín.</p>
+                                        <p style="font-size: 0.88rem; line-height: 1.45;">Chuyển trách nhiệm/hậu quả sang bên thứ ba. Ví dụ: thuê ngoài cổng thanh toán trực tuyến của đơn vị uy tín.</p>
                                     </div>
                                 </div>
                                 <div class="step-card" style="border-left: 3px solid #f59e0b; padding: 10px;">
                                     <div class="step-info">
                                         <h4 style="color: #f59e0b; font-size: 0.9rem; margin-bottom: 2px;">Chấp nhận (Acceptance)</h4>
-                                        <p style="font-size: 0.75rem; line-height: 1.3;">Sống chung với rủi ro, thành lập ngân sách dự phòng tài chính và thời gian đệm bàn giao.</p>
+                                        <p style="font-size: 0.88rem; line-height: 1.45;">Sống chung với rủi ro, thành lập ngân sách dự phòng tài chính và thời gian đệm bàn giao.</p>
                                     </div>
                                 </div>
                             </div>
@@ -528,14 +533,14 @@
                         <div class="col-right flex-column" style="display: flex; flex-direction: column; gap: 15px;">
                             <div class="glass-card" style="padding: 15px;">
                                 <h3>Tích hợp SDP (Software Development Plan)</h3>
-                                <p style="font-size: 0.8rem; line-height: 1.4; color: var(--text-secondary);">
+                                <p style="font-size: 0.92rem; line-height: 1.5; color: var(--text-secondary);">
                                     Theo mẫu chuẩn HSU, Kế hoạch rủi ro bắt buộc tích hợp trong tài liệu SDP, quy định quy trình nhận diện (Tasks), phân công người chịu trách nhiệm (RACI Matrix) và công cụ lưu trữ (Risk Item List).
                                 </p>
                             </div>
                             
                             <div class="glass-card" style="padding: 15px; overflow-x: auto;">
                                 <h3>Bản đăng ký rủi ro (Risk Response Register)</h3>
-                                <table class="sim-results-table" style="font-size: 0.75rem; margin-top: 5px; width: 100%;">
+                                <table class="sim-results-table" style="font-size: 0.88rem; margin-top: 5px; width: 100%;">
                                     <thead>
                                         <tr>
                                             <th>Mô tả rủi ro</th>
@@ -922,14 +927,14 @@
                             </div>
                             
                             <div class="conclusion-box-bottom glass-card" style="margin-top: 5px; padding: 15px; border-left: 4px solid var(--primary);">
-                                <h4 style="font-size: 1.1rem; margin-bottom: 6px; color: var(--primary);">5 Bài học kinh nghiệm cốt lõi (Table 3-16) & Q&A</h4>
-                                <p style="font-size: 0.88rem; line-height: 1.5; color: var(--text-secondary);">
-                                    1. Sự hỗ trợ quyết liệt từ Sponsor (CEO Joe Fleming). 
-                                    2. Thiết lập Team Contract & Kick-off rõ ràng. 
-                                    3. Ứng phó linh hoạt (mua ngoài thay vì tự code). 
-                                    4. Quản lý nhân sự linh hoạt theo thái độ rủi ro. 
-                                    5. Đầu tư kế hoạch PMBOK bài bản kiểm soát tốt biến động ($140k → $150k).
-                                </p>
+                                <h4 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--primary);">5 Bài học kinh nghiệm cốt lõi (Table 3-16) & Q&A</h4>
+                                <ul style="font-size: 0.92rem; line-height: 1.6; color: var(--text-secondary); list-style-type: none; padding-left: 0; display: flex; flex-direction: column; gap: 4px; margin: 0;">
+                                    <li><strong>1.</strong> Sự hỗ trợ quyết liệt từ Sponsor (CEO Joe Fleming).</li>
+                                    <li><strong>2.</strong> Thiết lập Team Contract &amp; Kick-off rõ ràng.</li>
+                                    <li><strong>3.</strong> Ứng phó linh hoạt (mua ngoài thay vì tự code).</li>
+                                    <li><strong>4.</strong> Quản lý nhân sự linh hoạt theo thái độ rủi ro.</li>
+                                    <li><strong>5.</strong> Đầu tư kế hoạch PMBOK bài bản kiểm soát tốt biến động ($140k → $150k).</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -1014,6 +1019,13 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Lightbox Modal for Zooming Images -->
+    <div id="lightbox-modal" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged view">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
 
     <script src="script.js"></script>
