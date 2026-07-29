@@ -536,6 +536,11 @@
                                 <p style="font-size: 0.92rem; line-height: 1.5; color: var(--text-secondary);">
                                     Theo mẫu chuẩn HSU, Kế hoạch rủi ro bắt buộc tích hợp trong tài liệu SDP, quy định quy trình nhận diện (Tasks), phân công người chịu trách nhiệm (RACI Matrix) và công cụ lưu trữ (Risk Item List).
                                 </p>
+                                <!-- Trigger Button for Charter & Stakeholders -->
+                                <button id="view-charter-btn" class="modern-btn" style="margin-top: 10px; width: 100%; padding: 8px 12px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.3s; font-size: 0.85rem;" data-vi="Xem Project Charter & Stakeholders" data-en="View Project Charter & Stakeholders">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                    Xem Project Charter & Stakeholders
+                                </button>
                             </div>
                             
                             <div class="glass-card" style="padding: 15px; overflow-x: auto;">
@@ -1022,6 +1027,110 @@
                     <button class="customizer-choice active" data-prop="--slide-padding" data-val="35px 50px">Vừa</button>
                     <button class="customizer-choice" data-prop="--slide-padding" data-val="50px 70px">Rộng</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charter & Stakeholder Modal -->
+    <div id="charter-modal" class="lightbox">
+        <span class="lightbox-close" id="charter-close-btn">&times;</span>
+        <div class="glass-card modal-content" style="max-width: 750px; width: 90%; padding: 25px; max-height: 80vh; overflow-y: auto; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); cursor: default;" onclick="event.stopPropagation()">
+            <!-- Tabs -->
+            <div style="display: flex; gap: 10px; margin-bottom: 15px; border-bottom: 2px solid var(--border-color); padding-bottom: 10px;">
+                <button id="charter-tab-btn" class="tab-btn active" style="flex: 1; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; border: none;" data-vi="Project Charter (Điều Lệ Dự Án)" data-en="Project Charter">Project Charter (Điều Lệ Dự Án)</button>
+                <button id="stakeholder-tab-btn" class="tab-btn" style="flex: 1; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; border: none; background: transparent; color: var(--text-secondary);" data-vi="Stakeholders (Bên Liên Quan)" data-en="Stakeholder Register">Stakeholders (Bên Liên Quan)</button>
+            </div>
+            
+            <!-- Tab Content 1: Project Charter -->
+            <div id="charter-tab-content" style="display: block;">
+                <table class="sim-results-table" style="font-size: 0.85rem; width: 100%;">
+                    <tbody>
+                        <tr>
+                            <td style="width: 30%;"><strong>Dự án / Project Title</strong></td>
+                            <td data-vi="Hệ thống đăng ký môn học trực tuyến HSU" data-en="HSU Online Course Registration System Project">Hệ thống đăng ký môn học trực tuyến HSU</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ngày ban hành / Date</strong></td>
+                            <td>12/07/2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Thời gian / Project Dates</strong></td>
+                            <td data-vi="Bắt đầu: 12/07/2026 | Kết thúc (dự kiến): 15/08/2026 (~1 tháng)" data-en="Start: July 12, 2026 | Finish: August 15, 2026 (~1 month)">Bắt đầu: 12/07/2026 | Kết thúc (dự kiến): 15/08/2026 (~1 tháng)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ngân sách / Budget</strong></td>
+                            <td data-vi="Chi phí cơ sở: $140,000 | Hạn mức ngân sách tối đa: $150,000" data-en="Baseline: $140,000 | Max Approved Budget: $150,000">Chi phí cơ sở: $140,000 | Hạn mức ngân sách tối đa: $150,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Người quản trị / PM</strong></td>
+                            <td data-vi="Trần Bá Lợi (PM chịu trách nhiệm chính về tiến độ & chất lượng)" data-en="Tran Ba Loi (PM responsible for schedule & QA)">Trần Bá Lợi (PM chịu trách nhiệm chính về tiến độ & chất lượng)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mục tiêu / Objectives</strong></td>
+                            <td data-vi="Xây dựng cổng đăng ký học phần tối ưu cho HSU, tích hợp thuật toán phân tích đường găng CPM/Gantt Chart nhằm tự động kiểm soát điều kiện tiên quyết và giảm tải sập mạng." data-en="Build a high-performance course registration system, integrating a real-time CPM/Gantt dashboard to support academic scheduling at HSU.">Xây dựng cổng đăng ký học phần tối ưu cho HSU, tích hợp thuật toán phân tích đường găng CPM/Gantt Chart nhằm tự động kiểm soát điều kiện tiên quyết và giảm tải sập mạng.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phương pháp / Approach</strong></td>
+                            <td data-vi="Khảo sát nghiệp vụ HSU ➔ Thiết kế Figma (SWOT) ➔ Xây dựng Database ERD & API Backend ➔ Lập trình Frontend SPA ➔ Kiểm thử tải & Bảo mật." data-en="Survey HSU requirements ➔ Figma design (SWOT) ➔ Database & RESTful Backend API ➔ Frontend SPA Web ➔ Load & Security Testing.">Khảo sát nghiệp vụ HSU ➔ Thiết kế Figma (SWOT) ➔ Xây dựng Database ERD & API Backend ➔ Lập trình Frontend SPA ➔ Kiểm thử tải & Bảo mật.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vai trò nhóm / Roles</strong></td>
+                            <td data-vi="Võ Duy Bình (CEO/Sponsor), Trần Bá Lợi (PM), Hồng Bảo Khang (Backend Dev), Nguyễn Thanh Quang (UI/UX)." data-en="Vo Duy Binh (CEO/Sponsor), Tran Ba Loi (PM), Hong Bao Khang (Backend Dev), Nguyen Thanh Quang (UI/UX).">Võ Duy Bình (CEO/Sponsor), Trần Bá Lợi (PM), Hồng Bảo Khang (Backend Dev), Nguyễn Thanh Quang (UI/UX).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Tab Content 2: Stakeholder Register -->
+            <div id="stakeholder-tab-content" style="display: none;">
+                <table class="sim-results-table" style="font-size: 0.8rem; width: 100%;">
+                    <thead>
+                        <tr>
+                            <th data-vi="Tên" data-en="Name">Tên</th>
+                            <th data-vi="Vai trò" data-en="Role">Vai trò</th>
+                            <th data-vi="Phân loại" data-en="Type">Phân loại</th>
+                            <th data-vi="Chiến lược quản lý" data-en="Management Strategy">Chiến lược quản lý</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Võ Duy Bình</strong></td>
+                            <td data-vi="CEO / Sponsor" data-en="CEO / Sponsor">CEO / Sponsor</td>
+                            <td data-vi="Nội bộ (Internal)" data-en="Internal">Nội bộ (Internal)</td>
+                            <td data-vi="Báo cáo tiến độ qua milestone, làm rõ các số liệu hiệu quả tài chính NPV/ROI." data-en="Report progress via milestones. Highlight financial metrics (NPV) to maintain sponsorship.">Báo cáo tiến độ qua milestone, làm rõ các số liệu hiệu quả tài chính NPV/ROI.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trần Bá Lợi</strong></td>
+                            <td data-vi="Project Manager" data-en="Project Manager">Project Manager</td>
+                            <td data-vi="Nội bộ (Internal)" data-en="Internal">Nội bộ (Internal)</td>
+                            <td data-vi="Chịu trách nhiệm lập kế hoạch, kiểm soát đường găng Gantt và tích hợp hệ thống." data-en="Responsible for planning, controlling Gantt critical path, and system integration.">Chịu trách nhiệm lập kế hoạch, kiểm soát đường găng Gantt và tích hợp hệ thống.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hồng Bảo Khang</strong></td>
+                            <td data-vi="Backend Dev" data-en="Backend Dev">Backend Dev</td>
+                            <td data-vi="Nội bộ (Internal)" data-en="Internal">Nội bộ (Internal)</td>
+                            <td data-vi="Lập trình Database, viết thuật toán lọc điều kiện tiên quyết và xây dựng API." data-en="Develop database schema, prerequisite validation logic, and RESTful APIs.">Lập trình Database, viết thuật toán lọc điều kiện tiên quyết và xây dựng API.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nguyễn Thanh Quang</strong></td>
+                            <td data-vi="UI/UX & Security" data-en="UI/UX & Security">UI/UX & Security</td>
+                            <td data-vi="Nội bộ (Internal)" data-en="Internal">Nội bộ (Internal)</td>
+                            <td data-vi="Thiết kế giao diện di động tối ưu, rà soát lỗ hổng bảo mật OWASP 2025." data-en="Design optimized mobile layout, assess OWASP 2025 security compliance.">Thiết kế giao diện di động tối ưu, rà soát lỗ hổng bảo mật OWASP 2025.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phòng Đào Tạo HSU</strong></td>
+                            <td data-vi="Khách hàng (Client)" data-en="Client">Khách hàng (Client)</td>
+                            <td data-vi="Bên ngoài (External)" data-en="External">Bên ngoài (External)</td>
+                            <td data-vi="Khảo sát kỹ quy chế học vụ, đảm bảo hệ thống Admin Portal phân quyền quản lý lớp học dễ dàng." data-en="Gather requirements closely. Ensure Admin Portal allows easy course management.">Khảo sát kỹ quy chế học vụ, đảm bảo hệ thống Admin Portal phân quyền quản lý lớp học dễ dàng.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sinh viên HSU</strong></td>
+                            <td data-vi="Người dùng cuối" data-en="End User">Người dùng cuối</td>
+                            <td data-vi="Bên ngoài (External)" data-en="External">Bên ngoài (External)</td>
+                            <td data-vi="Thiết kế giao diện di động tiện lợi, phản hồi nhanh dưới 1.5 giây để tránh nghẽn." data-en="Deliver responsive UI/UX with load time < 1.5s to prevent registration stress.">Thiết kế giao diện di động tiện lợi, phản hồi nhanh dưới 1.5 giây để tránh nghẽn.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

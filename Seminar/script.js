@@ -461,6 +461,71 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- CHARTER & STAKEHOLDER MODAL CONTROLLER ---
+    const charterModal = document.getElementById('charter-modal');
+    const viewCharterBtn = document.getElementById('view-charter-btn');
+    const charterCloseBtn = document.getElementById('charter-close-btn');
+    const charterTabBtn = document.getElementById('charter-tab-btn');
+    const stakeholderTabBtn = document.getElementById('stakeholder-tab-btn');
+    const charterTabContent = document.getElementById('charter-tab-content');
+    const stakeholderTabContent = document.getElementById('stakeholder-tab-content');
+
+    if (charterModal && viewCharterBtn) {
+        viewCharterBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            charterModal.style.display = 'flex';
+        });
+
+        if (charterCloseBtn) {
+            charterCloseBtn.addEventListener('click', () => {
+                charterModal.style.display = 'none';
+            });
+        }
+
+        // Close on background click
+        charterModal.addEventListener('click', (e) => {
+            if (e.target === charterModal || e.target === charterCloseBtn) {
+                charterModal.style.display = 'none';
+            }
+        });
+
+        // Tab Switching Logic
+        if (charterTabBtn && stakeholderTabBtn) {
+            charterTabBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                charterTabBtn.classList.add('active');
+                charterTabBtn.style.background = 'var(--primary)';
+                charterTabBtn.style.color = 'white';
+                stakeholderTabBtn.classList.remove('active');
+                stakeholderTabBtn.style.background = 'transparent';
+                stakeholderTabBtn.style.color = 'var(--text-secondary)';
+                
+                charterTabContent.style.display = 'block';
+                stakeholderTabContent.style.display = 'none';
+            });
+
+            stakeholderTabBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                stakeholderTabBtn.classList.add('active');
+                stakeholderTabBtn.style.background = 'var(--primary)';
+                stakeholderTabBtn.style.color = 'white';
+                charterTabBtn.classList.remove('active');
+                charterTabBtn.style.background = 'transparent';
+                charterTabBtn.style.color = 'var(--text-secondary)';
+                
+                stakeholderTabContent.style.display = 'block';
+                charterTabContent.style.display = 'none';
+            });
+        }
+        
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && charterModal.style.display === 'flex') {
+                charterModal.style.display = 'none';
+            }
+        });
+    }
+
     // --- KICK-OFF MODAL CONTROLLER ---
     const kickoffModal = document.getElementById('kickoff-modal');
     const viewKickoffBtn = document.getElementById('view-kickoff-btn');
@@ -983,7 +1048,39 @@ document.addEventListener('DOMContentLoaded', () => {
         "Hồng Bảo Khang": "Hong Bao Khang",
         "Trần Bá Lợi": "Tran Ba Loi",
         "Tên dự án / Project Name:": "Project Name:",
-        "Thời gian họp tiếp theo: 20:00 ngày 20/07/2026 (Online qua Google Meet)": "Next Meeting: July 20, 2026, at 20:00 via Google Meet"
+        "Thời gian họp tiếp theo: 20:00 ngày 20/07/2026 (Online qua Google Meet)": "Next Meeting: July 20, 2026, at 20:00 via Google Meet",
+        "Xem Project Charter & Stakeholders": "View Project Charter & Stakeholders",
+        "Project Charter (Điều Lệ Dự Án)": "Project Charter (HSU Project)",
+        "Stakeholders (Bên Liên Quan)": "Stakeholder Register (HSU Project)",
+        "Dự án / Project Title": "Project Title",
+        "Ngày ban hành / Date": "Release Date",
+        "Thời gian / Project Dates": "Project Dates",
+        "Bắt đầu: 12/07/2026 | Kết thúc (dự kiến): 15/08/2026 (~1 tháng)": "Start Date: July 12, 2026 | Planned Finish Date: August 15, 2026 (~1 month)",
+        "Ngân sách / Budget": "Project Budget",
+        "Chi phí cơ sở: $140,000 | Hạn mức ngân sách tối đa: $150,000": "Baseline Budget: $140,000 | Max Approved Budget: $150,000",
+        "Người quản trị / PM": "Project Manager",
+        "Trần Bá Lợi (PM chịu trách nhiệm chính về tiến độ & chất lượng)": "Tran Ba Loi (PM responsible for schedule baseline & QA)",
+        "Mục tiêu / Objectives": "Project Objectives",
+        "Xây dựng cổng đăng ký học phần tối ưu cho HSU, tích hợp thuật toán phân tích đường găng CPM/Gantt Chart nhằm tự động kiểm soát điều kiện tiên quyết và giảm tải sập mạng.": "Build a high-performance course registration system, integrating a real-time CPM/Gantt dashboard to support academic scheduling at HSU.",
+        "Phương pháp / Approach": "Project Approach",
+        "Khảo sát nghiệp vụ HSU ➔ Thiết kế Figma (SWOT) ➔ Xây dựng Database ERD & API Backend ➔ Lập trình Frontend SPA ➔ Kiểm thử tải & Bảo mật.": "Survey HSU requirements ➔ Figma design (SWOT) ➔ Database & RESTful Backend API ➔ Frontend SPA Web ➔ Load & Security Testing.",
+        "Vai trò nhóm / Roles": "Team Roles & Signatures",
+        "Võ Duy Bình (CEO/Sponsor), Trần Bá Lợi (PM), Hồng Bảo Khang (Backend Dev), Nguyễn Thanh Quang (UI/UX).": "Vo Duy Binh (CEO/Sponsor), Tran Ba Loi (PM), Hong Box Khang (Backend Dev), Nguyen Thanh Quang (UI/UX).",
+        "Tên": "Name",
+        "Vai trò": "Project Role",
+        "Chiến lược quản lý": "Management Strategy",
+        "Nội bộ (Internal)": "Internal",
+        "Báo cáo tiến độ qua milestone, làm rõ các số liệu hiệu quả tài chính NPV/ROI.": "Report progress via milestones. Highlight financial metrics (NPV) to maintain sponsorship.",
+        "Chịu trách nhiệm lập kế hoạch, kiểm soát đường găng Gantt và tích hợp hệ thống.": "Responsible for planning, controlling Gantt critical path, and system integration.",
+        "Lập trình Database, viết thuật toán lọc điều kiện tiên quyết và xây dựng API.": "Develop database schema, prerequisite validation logic, and RESTful APIs.",
+        "Thiết kế giao diện di động tối ưu, rà soát lỗ hổng bảo mật OWASP 2025.": "Design optimized mobile layout, assess OWASP 2025 security compliance.",
+        "Phòng Đào Tạo HSU": "HSU Academic Affairs Office",
+        "Khách hàng (Client)": "Client",
+        "Bên ngoài (External)": "External",
+        "Khảo sát kỹ quy chế học vụ, đảm bảo hệ thống Admin Portal phân quyền quản lý lớp học dễ dàng.": "Gather requirements closely. Ensure Admin Portal allows easy course management.",
+        "Sinh viên HSU": "HSU Students",
+        "Người dùng cuối": "End User",
+        "Thiết kế giao diện di động tiện lợi, phản hồi nhanh dưới 1.5 giây để tránh nghẽn.": "Deliver responsive UI/UX with load time < 1.5s to prevent registration stress."
     };
 
     let currentLang = 'vi';

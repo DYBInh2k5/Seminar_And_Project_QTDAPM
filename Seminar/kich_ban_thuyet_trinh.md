@@ -152,6 +152,8 @@
 *   **Lời thoại nói / Presentation Speech:**
     > **[VI]** "Sau khi đã nhận diện các rủi ro kỹ thuật và nhân sự ở trên, em xin trình bày các phương án lập kế hoạch ứng phó cụ thể.
     > 
+    > Các bạn có thể nhấp chọn nút 'Xem Project Charter & Stakeholders' ở góc bên phải slide này để kiểm tra văn bản Điều lệ dự án và Danh sách các bên liên quan chi tiết của HSU.
+    > 
     > Theo PMBOK, chúng ta có 4 chiến lược phản hồi rủi ro chính:
     > 
     > 1.  **Né tránh (Avoidance):** Thay đổi hẳn thiết kế để loại bỏ rủi ro. Ví dụ: chúng em dời phân hệ thanh toán học phí sang cổng liên kết ngân hàng ngoài thay vì tự xây dựng để tránh rủi ro bảo mật giao dịch.
@@ -162,6 +164,8 @@
     > Tiếp theo, phần trình bày sẽ chuyển sang về phần Lý thuyết Hữu dụng rủi ro."
     > 
     > **[EN]** "Having identified the technical and human risks, I will outline our specific response plans.
+    > 
+    > You can click on the 'View Project Charter & Stakeholders' button on the right side of this slide to inspect our detailed HSU Project Charter and Stakeholder Register documents.
     > 
     > According to PMBOK, we have four primary risk response strategies:
     > 
