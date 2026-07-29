@@ -204,10 +204,12 @@
 *   **Lời thoại nói / Presentation Speech:**
     > **[VI]** "Mời thầy và các bạn theo dõi phần biểu diễn mô phỏng đồ thị tương tác thời gian thực trên màn hình.
     > 
-    > Khi em thay đổi giá trị tài sản $x$ trên thanh trượt từ $0 lên $100,000, các bạn có thể thấy tọa độ các điểm hữu dụng tương ứng di chuyển trên 3 đường cong:
-    > *   Đường màu hồng (Né tránh) tăng rất nhanh ở giai đoạn đầu nhưng đi ngang dốc ở giai đoạn sau.
-    > *   Đường màu xanh (Trung lập) đi thẳng góc 45 độ, phản ánh mỗi đồng tiền tăng thêm mang lại mức thỏa mãn như nhau.
-    > *   Đường màu tím (Ưa rủi ro) tăng vọt dốc đứng ở giai đoạn sau, cho thấy mức độ thỏa mãn tăng cực kỳ nhanh khi giá trị phần thưởng đạt ngưỡng lớn.
+    > **[Hành động: Click kéo thanh trượt tài sản (Asset x) từ 0% lên mức khoảng $75,000 - $80,000 trên slide]**
+    > 
+    > Như thầy và các bạn đang thấy, khi em thay đổi giá trị tài sản trên thanh trượt, các điểm tròn trên đồ thị sẽ di chuyển đồng bộ theo 3 đường cong:
+    > *   **Đường màu hồng (Risk-Averse - Né tránh rủi ro):** Tăng rất nhanh ở giai đoạn đầu (từ $0 lên $40,000) nhưng khi kéo lên $80,000, đường cong gần như đi ngang và bão hòa. Điều này phản ánh tâm lý an toàn: khi đã có một lượng tài sản đủ lớn, việc kiếm thêm tiền không mang lại nhiều giá trị thỏa dụng tăng thêm.
+    > *   **Đường màu xanh (Risk-Neutral - Trung lập):** Di chuyển thẳng đều theo góc 45 độ, phản ánh mỗi đồng tiền tăng thêm mang lại mức thỏa mãn hoàn toàn tuyến tính.
+    > *   **Đường màu tím (Risk-Seeking - Ưa rủi ro):** Ban đầu tăng rất chậm, nhưng khi em kéo vượt ngưỡng $60,000, đường cong bắt đầu dốc đứng lên cực kỳ mạnh. Điều này cho thấy nhóm ưa rủi ro cực kỳ phấn khích khi cơ hội trúng thưởng lớn xuất hiện.
     > 
     > Ứng dụng lý thuyết này giúp Project Manager hiểu rõ 'khẩu vị rủi ro' của khách hàng trước khi chọn chiến lược ứng phó. Ví dụ, đối với một khách hàng mang thái độ né tránh rủi ro (Risk-averse) như Phòng Đào tạo HSU, PM không nên đề xuất các công nghệ quá mới mẻ, chưa được kiểm chứng, mà phải ưu tiên giải pháp an toàn, ổn định.
     > 
@@ -215,10 +217,12 @@
     > 
     > **[EN]** "I invite you to observe the real-time interactive simulation on the screen.
     > 
-    > As I move the asset slider from $0 to $100,000, you can watch the utility coordinates travel along the three curves:
-    > *   The pink curve (Risk-Averse) rises rapidly at first but flattens out.
-    > *   The blue line (Risk-Neutral) moves at a straight 45-degree angle, indicating each dollar brings equal marginal utility.
-    > *   The purple curve (Risk-Seeking) curves sharply upwards at higher values, showing that satisfaction spikes when rewards are large.
+    > **[Action: Click and drag the Asset x slider from 0 to around $75,000 - $80,000 on the slide]**
+    > 
+    > As you can see, when I adjust the asset slider, the coordinate dots move dynamically along three distinct curves:
+    > *   **The pink curve (Risk-Averse):** It rises sharply in the early stage (from $0 to $40,000) but flattens out as I drag it near $80,000. This indicates that once a safety net is established, additional gains yield diminishing marginal utility.
+    > *   **The blue line (Risk-Neutral):** It moves linearly at a straight 45-degree angle, showing that utility rises in direct proportion to monetary gains.
+    > *   **The purple curve (Risk-Seeking):** It starts flat, but as I drag it past $60,000, it curves sharply upwards. This shows that risk-seekers gain massive subjective utility when facing high-reward opportunities.
     > 
     > Applying this theory helps project managers understand a client's risk appetite before recommending a technology. For example, with a risk-averse client like the HSU Academic Affairs department, the PM should avoid untested frameworks and prioritize safe, stable technologies.
     > 
@@ -226,38 +230,46 @@
 
 ---
 
-### 🖥️ Slide 11: Tính Toán Tài Chính Dự Án (NPV/ROI) & Quản Trị Rủi Ro Đầu Tư
+### 🖥️ Slide 11: Tính Toán Tài Chỉnh Dự Án (NPV/ROI) & Quản Trị Rủi Ro Đầu Tư
 *   **Nội dung trên slide / Slide Content:** Trình giả lập tính toán NPV, ROI, thời gian hoàn vốn dựa trên các dự án mẫu (Dự án A, B, C từ bài tập thực hành môn học).
 *   **Lời thoại nói / Presentation Speech:**
     > **[VI]** "Em xin quay lại để trình bày khía cạnh phân tích tài chính dự án và cách chúng ta lượng hóa rủi ro tài chính trước khi đưa ra quyết định đầu tư.
     > 
-    > Mời thầy và các bạn nhìn vào bảng tính toán tài chính tương tác trên slide. Đây là mô hình dòng tiền của **Dự án B (Dự án được khuyên dùng trong bài tập đánh giá)** với thời gian phân tích là 4 năm:
-    > *   **Năm 1:** Chi phí đầu tư ban đầu được phân bổ là **$3,000**, chưa thu về lợi ích.
-    > *   **Năm 2 đến năm 4:** Lợi ích thu về tăng dần từ **$1,000**, **$3,000** đến **$5,000**; trong khi chi phí vận hành bảo trì cố định ở mức **$1,000/năm**.
+    > Mời thầy và các bạn nhìn vào bảng tính toán tài chính tương tác trên slide. Đây là mô hình dòng tiền của **Dự án B (Dự án khuyên chọn)** với vốn đầu tư năm đầu là **$3,000**, chi phí vận hành **$1,000/năm** và lợi ích tăng dần.
     > 
-    > Với tỷ suất chiết khấu tiêu chuẩn được đặt là **5%** (các bạn có thể tự do kéo thanh trượt r trên màn hình để kiểm chứng các kịch bản lãi suất khác nhau), hệ thống tự động tính toán ra kết quả:
-    > *   **Tổng giá trị hiện tại của Lợi ích (PV_B):** Đạt **$7,612.05**.
-    > *   **Tổng giá trị hiện tại của Chi phí (PV_C):** Đạt **$5,450.71**.
-    > *   **Giá trị hiện tại ròng (NPV):** Đạt giá trị dương **$2,161.34**. (NPV > 0 chứng minh dự án có lợi nhuận kinh tế sau khi đã chiết khấu).
-    > *   **Tỷ suất sinh lời (ROI):** Đạt **39.65%**, phản ánh hiệu quả sử dụng vốn rất tốt.
+    > Ở mức tỷ suất chiết khấu tiêu chuẩn là **5%**, hệ thống tính toán ra NPV của Dự án B đạt giá trị dương **$2,161.34**, ROI rất tốt đạt **39.65%**.
     > 
-    > Khi chúng em bấm chọn các dự án khác trên menu: Dự án A chỉ đạt NPV là **$1,102.27**, còn Dự án C bị âm **-$1,343.47** (thể hiện bằng cột màu đỏ báo động rủi ro thua lỗ). Do đó, việc lựa chọn Dự án B là quyết định đầu tư thông minh và ít rủi ro nhất.
+    > **[Hành động: Kéo thanh trượt Discount Rate r từ 5% lên mức 12% trên slide]**
+    > 
+    > Để minh họa cho **rủi ro biến động lãi suất thị trường (hoặc lạm phát tăng cao)**, em xin thử kéo tỷ suất chiết khấu lên mức **12%**. Các bạn hãy quan sát các con số thay đổi tức thì trên màn hình:
+    > *   **NPV của Dự án B** lập tức bị giảm mạnh từ **$2,161.34** xuống chỉ còn **$1,139.72**.
+    > *   **ROI** cũng bị co hẹp lại từ **39.65%** xuống chỉ còn **20.91%**.
+    > 
+    > Điều này phản ánh rõ ràng tác động của rủi ro tài chính: Lãi suất chiết khấu càng cao thì giá trị quy về hiện tại của dòng tiền tương lai càng thấp, làm giảm hiệu quả đầu tư dự án.
+    > 
+    > **[Hành động: Click chọn tab Dự án C (Project C) trên slide]**
+    > 
+    > Khi em nhấp chọn **Dự án C**, các bạn sẽ thấy một chỉ báo màu đỏ cảnh báo rủi ro thua lỗ: **NPV bị âm -$1,343.47** và **ROI âm -24.65%** (ở mức chiết khấu 5%). Điều này giúp nhóm đưa ra quyết định loại bỏ Dự án C ngay lập tức để tránh tổn thất.
     > 
     > Cuối cùng, phần trình bày sẽ đúc kết case study JWD và kết luận."
     > 
     > **[EN]** "I am back to discuss project financial analysis and how we quantify financial risks before making investment decisions.
     > 
-    > Please look at the interactive financial sheet on the slide. This shows the cash flow model of **Project B (the recommended project from our exam)** analyzed over 4 years:
-    > *   **Year 1:** Initial investment cost of **$3,000**, with no benefits.
-    > *   **Years 2 to 4:** Benefits grow from **$1,000** to **$3,000** and then **$5,000**; while operating costs remain flat at **$1,000/year**.
+    > Please look at the interactive financial sheet on the slide. This shows the cash flow model of **Project B (the recommended project)**, with an initial investment of **$3,000**, operating costs of **$1,000/year**, and growing benefits.
     > 
-    > With the standard discount rate set at **5%** (you can adjust slider r on the screen to test other rates), the system calculates:
-    > *   **Present Value of Benefits (PV_B):** $7,612.05.
-    > *   **Present Value of Costs (PV_C):** $5,450.71.
-    > *   **Net Present Value (NPV):** A positive **$2,161.34** (NPV > 0 proves economic profitability).
-    > *   **Return on Investment (ROI):** A solid **39.65%**.
+    > At the standard discount rate of **5%**, Project B's NPV is positive at **$2,161.34**, and the ROI is solid at **39.65%**.
     > 
-    > If we select other options from the menu, Project A only yields an NPV of **$1,102.27**, while Project C is in the red at **-$1,343.47** (highlighted in alert red). Therefore, choosing Project B is the most sound and least risky decision.
+    > **[Action: Adjust the Discount Rate slider r from 5% up to 12% on the slide]**
+    > 
+    > To simulate **market interest rate fluctuations or inflation risks**, I will increase the discount rate to **12%**. Please observe the real-time changes on the screen:
+    > *   **Project B's NPV** immediately drops from **$2,161.34** down to **$1,139.72**.
+    > *   **ROI** also shrinks from **39.65%** down to **20.91%**.
+    > 
+    > This clearly demonstrates the impact of financial risk: a higher discount rate reduces the present value of future cash flows, thereby lowering the project's overall return.
+    > 
+    > **[Action: Click on the Project C tab on the slide]**
+    > 
+    > When I select **Project C**, the interface shows an alert red indicator warning of loss risk: **an NPV of -$1,343.47** and **an ROI of -24.65%** (at a 5% discount rate). This allows us to reject Project C immediately to prevent financial damage.
     > 
     > Finally, the presentation will conclude with the JWD case study."
 
