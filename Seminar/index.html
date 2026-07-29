@@ -904,6 +904,11 @@
                                 • <strong>1.0 Initiating:</strong> Phạm vi Seminar (Khung Rủi ro, Charter, NPV).<br>
                                 • <strong>2.0 - 5.0:</strong> Triển khai Đồ án Project (Đăng ký học phần).
                             </div>
+                            <!-- Kick-off Agenda Trigger Button -->
+                            <button id="view-kickoff-btn" class="modern-btn" style="margin-top: 12px; width: 100%; padding: 8px 12px; background: var(--primary); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.3s; font-size: 0.85rem;" data-vi="Xem Chương trình họp Kick-off (Fig 3-2)" data-en="View Kick-off Meeting Agenda (Fig 3-2)">
+                                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                Xem Chương trình họp Kick-off (Fig 3-2)
+                            </button>
                         </div>
 
                         <div class="jwd-main" style="gap: 15px;">
@@ -1016,6 +1021,65 @@
                     <button class="customizer-choice" data-prop="--slide-padding" data-val="20px 30px">Gọn</button>
                     <button class="customizer-choice active" data-prop="--slide-padding" data-val="35px 50px">Vừa</button>
                     <button class="customizer-choice" data-prop="--slide-padding" data-val="50px 70px">Rộng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kick-off Agenda Modal -->
+    <div id="kickoff-modal" class="lightbox">
+        <span class="lightbox-close" id="kickoff-close-btn">&times;</span>
+        <div class="glass-card modal-content" style="max-width: 650px; width: 90%; padding: 25px; max-height: 80vh; overflow-y: auto; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); cursor: default;" onclick="event.stopPropagation()">
+            <h2 style="font-size: 1.5rem; margin-bottom: 5px; color: var(--primary); text-align: center;" data-vi="Chương trình Họp Khởi động Dự án HSU" data-en="HSU Project Kick-off Meeting Agenda">Chương trình Họp Khởi động Dự án HSU</h2>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: center; margin-bottom: 15px;" data-vi="Phỏng theo Biểu mẫu Figure 3-2 chuẩn JWD Consulting" data-en="Adapted from Figure 3-2 JWD Consulting Standard">Phỏng theo Biểu mẫu Figure 3-2 chuẩn JWD Consulting</p>
+            
+            <div style="font-size: 0.9rem; line-height: 1.5; color: var(--text-primary); display: flex; flex-direction: column; gap: 10px;">
+                <div><strong>Tên dự án / Project:</strong> <span data-vi="Hệ thống đăng ký môn học trực tuyến HSU" data-en="HSU Online Course Registration System Project">Hệ thống đăng ký môn học trực tuyến HSU</span></div>
+                <div><strong>Mục tiêu họp / Objective:</strong> <span data-vi="Khởi động dự án hiệu quả, giới thiệu các bên liên quan, làm rõ mục tiêu phạm vi, thời gian, ngân sách và thảo luận kế hoạch truyền thông nhóm." data-en="Get the project off to an effective start by introducing key stakeholders, reviewing project goals, and discussing future plans.">Khởi động dự án hiệu quả, giới thiệu các bên liên quan, làm rõ mục tiêu phạm vi, thời gian, ngân sách và thảo luận kế hoạch truyền thông nhóm.</span></div>
+                
+                <h4 style="margin-top: 10px; color: var(--accent-seeking);" data-vi="Nội dung thảo luận (Agenda):" data-en="Agenda Items:">Nội dung thảo luận (Agenda):</h4>
+                <ul style="padding-left: 20px; display: flex; flex-direction: column; gap: 5px; margin: 0;">
+                    <li data-vi="1. Giới thiệu thành viên nhóm và đại diện đối tác." data-en="1. Introductions of attendees (team members & HSU reps).">1. Giới thiệu thành viên nhóm và đại diện đối tác.</li>
+                    <li data-vi="2. Đọc hiểu bối cảnh và Project Charter đã soạn thảo." data-en="2. Review of project background, Business Case, and Project Charter.">2. Đọc hiểu bối cảnh và Project Charter đã soạn thảo.</li>
+                    <li data-vi="3. Thống nhất cơ cấu trách nhiệm trong nhóm." data-en="3. Discussion of project organizational structure and roles.">3. Thống nhất cơ cấu trách nhiệm trong nhóm.</li>
+                    <li data-vi="4. Thống nhất mục tiêu: 12 tuần phát triển và ngân sách hạn mức $150k." data-en="4. Discussion of project scope, timeline (12 weeks), and budget ($150k).">4. Thống nhất mục tiêu: 12 tuần phát triển và ngân sách hạn mức $150k.</li>
+                    <li data-vi="5. Nhận diện các rủi ro ban đầu (Lập Risk Item List)." data-en="5. Initial brainstorming of project technical and resource risks.">5. Nhận diện các rủi ro ban đầu (Lập Risk Item List).</li>
+                </ul>
+                
+                <h4 style="margin-top: 10px; color: var(--accent-seeking); margin-bottom: 5px;" data-vi="Bảng phân công hành động (Action Items Table):" data-en="Action Items Table:">Bảng phân công hành động (Action Items Table):</h4>
+                <table class="sim-results-table" style="font-size: 0.8rem; width: 100%;">
+                    <thead>
+                        <tr>
+                            <th data-vi="Hành động" data-en="Action Item">Hành động</th>
+                            <th data-vi="Người thực hiện" data-en="Assigned To">Người thực hiện</th>
+                            <th data-vi="Hạn chót" data-en="Due Date">Hạn chót</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-vi="Phân rã cấu hình WBS chi tiết" data-en="Draft initial WBS Structure">Phân rã cấu hình WBS chi tiết</td>
+                            <td data-vi="Võ Duy Bình" data-en="Vo Duy Binh">Võ Duy Bình</td>
+                            <td>15/05/2026</td>
+                        </tr>
+                        <tr>
+                            <td data-vi="Khảo sát nhu cầu sử dụng của sinh viên" data-en="Conduct registration requirements survey">Khảo sát nhu cầu sử dụng của sinh viên</td>
+                            <td data-vi="Nguyễn Thanh Quang" data-en="Nguyen Thanh Quang">Nguyễn Thanh Quang</td>
+                            <td>18/05/2026</td>
+                        </tr>
+                        <tr>
+                            <td data-vi="Thiết kế sơ đồ ERD/Database mẫu" data-en="Draft database schema ERD">Thiết kế sơ đồ ERD/Database mẫu</td>
+                            <td data-vi="Hồng Bảo Khang" data-en="Hong Bao Khang">Hồng Bảo Khang</td>
+                            <td>20/05/2026</td>
+                        </tr>
+                        <tr>
+                            <td data-vi="Soạn thảo và chốt nội dung Team Contract" data-en="Finalize Project Team Contract">Soạn thảo và chốt nội dung Team Contract</td>
+                            <td data-vi="Trần Bá Lợi" data-en="Tran Ba Loi">Trần Bá Lợi</td>
+                            <td>14/05/2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 10px; font-size: 0.85rem; text-align: right; font-style: italic;">
+                    <span data-vi="Thời gian họp tiếp theo: 20:00 ngày 20/05/2026 (Online qua Google Meet)" data-en="Next Meeting: May 20, 2026, at 20:00 via Google Meet">Thời gian họp tiếp theo: 20:00 ngày 20/05/2026 (Online qua Google Meet)</span>
                 </div>
             </div>
         </div>

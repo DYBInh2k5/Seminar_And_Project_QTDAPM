@@ -266,6 +266,8 @@
     > *   Dự án có ngân sách dự toán $140,000, thực chi thực tế là $150,000 (vượt $10,000 nằm trong ngân sách dự phòng).
     > *   Thu về lợi ích to lớn $200,000/năm và đạt tỷ suất ROI ấn tượng 112%, hoàn vốn dưới 1 năm.
     > 
+    > Các bạn có thể nhấp chọn nút 'Xem Chương trình họp Kick-off (Fig 3-2)' ở góc dưới cùng bên trái màn hình slide này để xem biên bản chương trình họp khởi động chi tiết của dự án HSU mà nhóm đã Việt hóa chuẩn hóa.
+    > 
     > 5 bài học cốt lõi nhóm rút ra từ chuyên đề Seminar này là:
     > 1.  Sự hỗ trợ quyết liệt của Sponsor (Ban giám hiệu/CEO) là chìa khóa.
     > 2.  Thiết lập quy chế làm việc nhóm (Team Contract) rõ ràng ngay từ đầu.

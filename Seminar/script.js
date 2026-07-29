@@ -461,6 +461,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- KICK-OFF MODAL CONTROLLER ---
+    const kickoffModal = document.getElementById('kickoff-modal');
+    const viewKickoffBtn = document.getElementById('view-kickoff-btn');
+    const kickoffCloseBtn = document.getElementById('kickoff-close-btn');
+
+    if (kickoffModal && viewKickoffBtn) {
+        viewKickoffBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            kickoffModal.style.display = 'flex';
+        });
+
+        if (kickoffCloseBtn) {
+            kickoffCloseBtn.addEventListener('click', () => {
+                kickoffModal.style.display = 'none';
+            });
+        }
+
+        // Close on background click
+        kickoffModal.addEventListener('click', (e) => {
+            if (e.target === kickoffModal || e.target === kickoffCloseBtn) {
+                kickoffModal.style.display = 'none';
+            }
+        });
+        
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && kickoffModal.style.display === 'flex') {
+                kickoffModal.style.display = 'none';
+            }
+        });
+    }
+
     // --- IMAGE LIGHTBOX CONTROLLER ---
     const lightboxModal = document.getElementById('lightbox-modal');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -923,7 +955,33 @@ document.addEventListener('DOMContentLoaded', () => {
         "Rủi Ro Con Người": "Human & People Risks",
         "1. Thiếu hụt nhân sự toàn cầu (Talent Gap)": "1. Global Resource Scarcity (Talent Gap)",
         "$40k/năm &": "$40k/year &",
-        "$200k/năm": "$200k/year"
+        "$200k/năm": "$200k/year",
+        "Xem Chương trình họp Kick-off (Fig 3-2)": "View Kick-off Meeting Agenda (Fig 3-2)",
+        "Chương trình Họp Khởi động Dự án HSU": "HSU Project Kick-off Meeting Agenda",
+        "Phỏng theo Biểu mẫu Figure 3-2 chuẩn JWD Consulting": "Adapted from Figure 3-2 JWD Consulting Standard",
+        "Hành động": "Action Item",
+        "Người thực hiện": "Assigned To",
+        "Hạn chót": "Due Date",
+        "Phân rã cấu hình WBS chi tiết": "Draft initial WBS Structure",
+        "Khảo sát nhu cầu sử dụng của sinh viên": "Conduct registration requirements survey",
+        "Thiết kế sơ đồ ERD/Database mẫu": "Draft database schema ERD",
+        "Soạn thảo và chốt nội dung Team Contract": "Finalize Project Team Contract",
+        "Thời gian họp tiếp theo: 20:00 ngày 20/05/2026 (Online qua Google Meet)": "Next Meeting: May 20, 2026, at 20:00 via Google Meet",
+        "Tên dự án / Project:": "Project Name:",
+        "Hệ thống đăng ký môn học trực tuyến HSU": "HSU Online Course Registration System Project",
+        "Mục tiêu họp / Objective:": "Meeting Objective:",
+        "Khởi động dự án hiệu quả, giới thiệu các bên liên quan, làm rõ mục tiêu phạm vi, thời gian, ngân sách và thảo luận kế hoạch truyền thông nhóm.": "Get the project off to an effective start by introducing key stakeholders, reviewing project goals, and discussing future plans.",
+        "Nội dung thảo luận (Agenda):": "Agenda Items:",
+        "1. Giới thiệu thành viên nhóm và đại diện đối tác.": "1. Introductions of attendees (team members & HSU reps).",
+        "2. Đọc hiểu bối cảnh và Project Charter đã soạn thảo.": "2. Review of project background, Business Case, and Project Charter.",
+        "3. Thống nhất cơ cấu trách nhiệm trong nhóm.": "3. Discussion of project organizational structure and roles.",
+        "4. Thống nhất mục tiêu: 12 tuần phát triển và ngân sách hạn mức $150k.": "4. Discussion of project scope, timeline (12 weeks), and budget ($150k).",
+        "5. Nhận diện các rủi ro ban đầu (Lập Risk Item List).": "5. Initial brainstorming of project technical and resource risks.",
+        "Bảng phân công hành động (Action Items Table):": "Action Items Table:",
+        "Võ Duy Bình": "Vo Duy Binh",
+        "Nguyễn Thanh Quang": "Nguyen Thanh Quang",
+        "Hồng Bảo Khang": "Hong Bao Khang",
+        "Trần Bá Lợi": "Tran Ba Loi"
     };
 
     let currentLang = 'vi';
