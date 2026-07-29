@@ -266,7 +266,7 @@
     > *   Dự án có ngân sách dự toán $140,000, thực chi thực tế là $150,000 (vượt $10,000 nằm trong ngân sách dự phòng).
     > *   Thu về lợi ích to lớn $200,000/năm và đạt tỷ suất ROI ấn tượng 112%, hoàn vốn dưới 1 năm.
     > 
-    > Các bạn có thể nhấp chọn nút 'Xem Chương trình họp Kick-off (Fig 3-2)' ở góc dưới cùng bên trái màn hình slide này để xem biên bản chương trình họp khởi động chi tiết của dự án JWD Consulting với các dấu mốc thời gian hoàn thành cụ thể từ sách giáo trình.
+    > Các bạn có thể nhấp chọn nút 'Xem Chương trình họp Kick-off (Fig 3-2)' ở góc dưới cùng bên trái màn hình slide này để xem biên bản chương trình họp khởi động chi tiết của dự án HSU mà nhóm đã Việt hóa chuẩn hóa.
     > 
     > 5 bài học cốt lõi nhóm rút ra từ chuyên đề Seminar này là:
     > 1.  Sự hỗ trợ quyết liệt của Sponsor (Ban giám hiệu/CEO) là chìa khóa.
@@ -281,7 +281,7 @@
     > *   The project had a budget of $140,000 and actual spending of $150,000 (a $10,000 variance covered by the reserve).
     > *   It returned huge benefits of $200,000/year, achieving a 112% ROI and payback in under 1 year.
     > 
-    > You can click on the 'View Kick-off Meeting Agenda (Fig 3-2)' button at the bottom left of this slide to see the detailed JWD Consulting Project Kick-off agenda and its milestones matching the textbook."
+    > You can click on the 'View Kick-off Meeting Agenda (Fig 3-2)' button at the bottom left of this slide to see the detailed HSU Project Kick-off agenda and initial action items."
     > 
     > The 5 core lessons we learned are:
     > 1.  Strong Sponsor support (like CEO Joe Fleming) is key.

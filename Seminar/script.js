@@ -982,22 +982,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Nguyễn Thanh Quang": "Nguyen Thanh Quang",
         "Hồng Bảo Khang": "Hong Bao Khang",
         "Trần Bá Lợi": "Tran Ba Loi",
-        "Chương trình Họp Khởi động Dự án JWD Consulting": "JWD Consulting Project Kick-off Meeting Agenda",
         "Tên dự án / Project Name:": "Project Name:",
-        "Khởi động dự án hiệu quả, giới thiệu các bên liên quan cốt lõi, làm rõ mục tiêu dự án và thảo luận các kế hoạch tương lai.": "Get the project off to an effective start by introducing key stakeholders, reviewing project goals, and discussing future plans.",
-        "1. Giới thiệu các thành viên tham dự.": "1. Introductions of attendees.",
-        "2. Đọc hiểu bối cảnh và lý do thực hiện dự án.": "2. Review of the project background.",
-        "3. Xem xét tài liệu dự án (Business Case, Project Charter).": "3. Review of project-related documents (Business Case, Project Charter).",
-        "4. Thảo luận về cơ cấu tổ chức nhân sự của dự án.": "4. Discussion of project organizational structure.",
-        "5. Thống nhất mục tiêu phạm vi, tiến độ và chi phí dự án.": "5. Discussion of project scope, time, and cost goals.",
-        "6. Thảo luận về các chủ đề quan trọng khác và rủi ro ban đầu.": "6. Discussion of other important topics.",
-        "7. Lập danh sách các hành động cần thực hiện sau cuộc họp.": "7. List of action items from meeting.",
-        "Ký duyệt Bản thỏa thuận làm việc nhóm (Team Contract)": "Sign Project Team Contract",
-        "Hoàn thiện Bản tuyên bố phạm vi (Scope Statement)": "Complete Project Scope Statement",
-        "Xây dựng cấu trúc phân rã công việc WBS": "Develop WBS Structure",
-        "Hoàn tất Danh sách rủi ro ưu tiên (Risk Register)": "Finalize Prioritized Risk List",
-        "Hoàn tất Thiết lập Tiến độ & Chi phí cơ sở (Baseline)": "Establish Schedule & Cost Baseline",
-        "Thời gian họp tiếp theo: 10:00 ngày 20/05/2014": "Next Meeting: May 20, 2014, at 10:00 AM"
+        "Thời gian họp tiếp theo: 20:00 ngày 20/07/2026 (Online qua Google Meet)": "Next Meeting: July 20, 2026, at 20:00 via Google Meet"
     };
 
     let currentLang = 'vi';
