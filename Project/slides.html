@@ -108,7 +108,7 @@
         <main class="slides-wrapper">
 
             <!-- SLIDE 1: Title -->
-            <section class="slide active" id="slide-1">
+            <section class="slide active" id="slide-1">>
                 <div class="slide-content title-slide-layout">
                     <div class="title-glow-badge project-badge">THUYẾT MINH ĐỒ ÁN THỰC HÀNH (LẦN 2)</div>
                     <h1 class="main-title" style="font-size: 2.1rem; line-height: 1.25;">RISK AND SCHEDULE MANAGEMENT<br><span class="gradient-text">IN THE ONLINE COURSE REGISTRATION SYSTEM CONSTRUCTION PROJECT</span></h1>
@@ -140,11 +140,11 @@
             </section>
 
             <!-- SLIDE 2: Background & Problem Statement -->
-            <section class="slide" id="slide-2">
+            <section class="slide" id="slide-2">>
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">02/11</span>
-                        <h2>Bối Cảnh & Bài Toán Đặt Ra (Bình)</h2>
+                        <span class="slide-number">02/14</span>
+                        <h2>Bối Cảnh & Bài Toán Đặt Ra</h2>
                     </div>
                     <p class="section-desc">Thực trạng quy trình đăng ký học phần tại các trường đại học và mục tiêu dự án HSU:</p>
                     
@@ -220,11 +220,11 @@
             </section>
 
             <!-- SLIDE 3: WBS Scope (Phần 2 - 5) -->
-            <section class="slide" id="slide-3">
+            <section class="slide" id="slide-3">>
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">03/11</span>
-                        <h2>Cấu Trúc WBS & Scope Dự Án (Phần 2 - 5) (Khang)</h2>
+                        <span class="slide-number">03/14</span>
+                        <h2>Cấu Trúc WBS & Scope Dự Án (Phần 2 - 5)</h2>
                     </div>
                     <p class="section-desc">Phân định phạm vi thực hiện Đồ án từ Phần 2 (Lập kế hoạch) đến Phần 5 (Đóng dự án):</p>
                     
@@ -250,13 +250,46 @@
                     </div>
                 </div>
             </section>
-
-            <!-- SLIDE 4: System Architecture -->
-            <section class="slide" id="slide-4">
+            <!-- SLIDE 4: Requirements & SRS -->
+            <section class="slide" id="slide-4">>
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">04/11</span>
-                        <h2>Kiến Trúc & Giải Pháp Công Nghệ (Quang)</h2>
+                        <span class="slide-number">04/14</span>
+                        <h2>Khảo Sát Người Dùng & Đặc Tả Yêu Cầu (SRS)</h2>
+                    </div>
+                    
+                    <div class="two-col-grid" style="grid-template-columns: 1fr 1.2fr; gap: 20px; min-height: calc(100% - 70px);">
+                        <!-- Left Panel: Survey Results -->
+                        <div class="col-left glass-card" style="padding: 15px;">
+                            <h3>Kết Quả Khảo Sát (500 Sinh Viên HSU)</h3>
+                            <ul style="padding-left: 20px; font-size: 0.85rem; line-height: 1.5; margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+                                <li><strong>85% Sinh viên:</strong> Thường xuyên gặp lỗi sập mạng hoặc không thể truy cập vào giờ cao điểm của kỳ đăng ký cũ.</li>
+                                <li><strong>92% Sinh viên:</strong> Mong muốn có giao diện di động (Responsive) để đăng ký học phần mọi lúc mọi nơi.</li>
+                                <li><strong>78% Sinh viên:</strong> Yêu cầu tính năng hiển thị chỗ trống khả dụng theo thời gian thực (Real-time).</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Right Panel: Business Rules Validation -->
+                        <div class="col-right glass-card" style="padding: 15px;">
+                            <h3>Quy Tắc Học Vụ Tự Động (Core Validation Rules)</h3>
+                            <ul style="padding-left: 20px; font-size: 0.82rem; line-height: 1.5; display: flex; flex-direction: column; gap: 8px;">
+                                <li><strong>Môn học tiên quyết:</strong> Tự động chặn đăng ký nếu sinh viên chưa hoàn thành môn học nền trước đó.</li>
+                                <li><strong>Giới hạn số tín chỉ:</strong> Kiểm soát chặt chẽ ngưỡng tối thiểu (12 tín chỉ) và tối đa (24 tín chỉ).</li>
+                                <li><strong>Trùng lịch học:</strong> So khớp lịch học (Thứ, Tiết) để cảnh báo tức thời nếu sinh viên đăng ký môn học bị chồng chéo thời gian.</li>
+                                <li><strong>Sĩ số tối đa:</strong> Khóa đăng ký ngay khi số lượng chỗ trống về 0.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SLIDE 5: System Architecture -->
+            <section class="slide" id="slide-5">>
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">05/14</span>
+                        <h2>Kiến Trúc & Giải Pháp Công Nghệ</h2>
                     </div>
                     
                     <div class="architecture-grid">
@@ -290,12 +323,12 @@
                 </div>
             </section>
 
-            <!-- SLIDE 5: Student Portal Features -->
-            <section class="slide" id="slide-5">
+            <!-- SLIDE 6: Student Portal Features -->
+            <section class="slide" id="slide-6">>
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">05/11</span>
-                        <h2>Chức Năng Cổng Sinh Viên (Student Portal) (Bình)</h2>
+                        <span class="slide-number">06/14</span>
+                        <h2>Chức Năng Cổng Sinh Viên (Student Portal)</h2>
                     </div>
                     
                     <div class="two-col-grid">
@@ -341,12 +374,12 @@
                 </div>
             </section>
 
-            <!-- SLIDE 6: Admin Portal Features -->
-            <section class="slide" id="slide-6">
+            <!-- SLIDE 7: Admin Portal Features -->
+            <section class="slide" id="slide-7">>
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">06/11</span>
-                        <h2>Chức Năng Cổng Phòng Đào Tạo (Admin Portal) (Lợi)</h2>
+                        <span class="slide-number">07/14</span>
+                        <h2>Chức Năng Cổng Phòng Đào Tạo (Admin Portal)</h2>
                     </div>
                     
                     <div class="tech-grid-2x2">
@@ -370,12 +403,12 @@
                 </div>
             </section>
 
-            <!-- SLIDE 7: Project Management & Gantt Chart -->
-            <section class="slide" id="slide-7">
+            <!-- SLIDE 8: Project Management & Gantt Chart -->
+            <section class="slide" id="slide-8">>
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">07/11</span>
-                        <h2>Dashboard Quản Trị Tiến Độ Dự Án (PM Portal) (Lợi)</h2>
+                        <span class="slide-number">08/14</span>
+                        <h2>Dashboard Quản Trị Tiến Độ Dự Án (PM Portal)</h2>
                     </div>
                     <p class="section-desc">Công cụ quản lý tiến độ 12 tuần dành cho Trưởng dự án (Project Manager):</p>
                     
@@ -446,12 +479,12 @@
                 </div>
             </section>
 
-            <!-- SLIDE 8: EVM Status Report -->
-            <section class="slide" id="slide-8">
+            <!-- SLIDE 9: EVM Status Report -->
+            <section class="slide" id="slide-9">>
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">08/11</span>
-                        <h2>Báo Cáo Hiệu Suất EVM & Quản Lý Chi Phí (Lợi)</h2>
+                        <span class="slide-number">09/14</span>
+                        <h2>Báo Cáo Hiệu Suất EVM & Quản Lý Chi Phí</h2>
                     </div>
                     <p class="section-desc">Phân tích giá trị thu được (Earned Value Management) tại thời điểm báo cáo ngày 16/09/2026:</p>
                     
@@ -524,13 +557,45 @@
                     </div>
                 </div>
             </section>
-
-            <!-- SLIDE 9: Critical Path & Delay Simulator -->
-            <section class="slide" id="slide-11">
+            <!-- SLIDE 10: Quality & Procurement Management -->
+            <section class="slide" id="slide-10">>
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">09/11</span>
-                        <h2>Trình Giả Lập Đường Găng (Critical Path Simulator) (Bình)</h2>
+                        <span class="slide-number">10/14</span>
+                        <h2>Kế Hoạch Quản Lý Chất Lượng & Mua Sắm</h2>
+                    </div>
+                    
+                    <div class="two-col-grid" style="grid-template-columns: 1fr 1fr; gap: 20px; min-height: calc(100% - 70px);">
+                        <!-- Left Panel: Quality Management -->
+                        <div class="col-left glass-card" style="padding: 15px;">
+                            <h3>Quản Lý Chất Lượng (Quality DoD)</h3>
+                            <ul style="padding-left: 20px; font-size: 0.85rem; line-height: 1.5; margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+                                <li><strong>Unit Test:</strong> Độ bao phủ code (Coverage) đạt trên 80% đối với các API nghiệp vụ chính.</li>
+                                <li><strong>UAT Testing:</strong> Tổ chức chạy thử nghiệm diện rộng với đại diện sinh viên và kiểm thử bởi Phòng Đào tạo.</li>
+                                <li><strong>Độ trễ phản hồi:</strong> Giữ thời gian phản hồi API dưới 100ms trong điều kiện hoạt động bình thường.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Right Panel: Procurement Plan -->
+                        <div class="col-right glass-card" style="padding: 15px;">
+                            <h3>Kế Hoạch Mua Sắm (Procurement Plan)</h3>
+                            <ul style="padding-left: 20px; font-size: 0.85rem; line-height: 1.5; margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+                                <li><strong>Hạ tầng Máy chủ:</strong> Thuê máy chủ cơ sở dữ liệu trên Cloud với cam kết chất lượng dịch vụ SLA đạt 99.9%.</li>
+                                <li><strong>Bảo mật & Tên miền:</strong> Mua sắm và đăng ký chứng chỉ SSL quốc tế để mã hóa dữ liệu giao dịch sinh viên.</li>
+                                <li><strong>Nguồn lực phát triển:</strong> 100% sử dụng nhân sự tự có của nhóm 3, không thuê ngoài để tiết kiệm tối đa ngân sách BAC.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SLIDE 11: Critical Path & Delay Simulator -->
+            <section class="slide" id="slide-11">>
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">11/14</span>
+                        <h2>Trình Giả Lập Đường Găng (Critical Path Simulator)</h2>
                     </div>
                     
                     <div class="two-col-grid" style="grid-template-columns: 1fr 1.25fr; gap: 20px;">
@@ -654,13 +719,45 @@
                     </div>
                 </div>
             </section>
-
-            <!-- SLIDE 9: Schedule Risk Management -->
-            <section class="slide" id="slide-11">
+            <!-- SLIDE 12: Testing & Benefits Realization -->
+            <section class="slide" id="slide-12">>
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">10/11</span>
-                        <h2>Quản Lý Rủi Ro Tiến Độ & Bảng Đăng Ký Rủi Ro (Khang)</h2>
+                        <span class="slide-number">12/14</span>
+                        <h2>Kiểm Thử Hệ Thống & Đo Lường Lợi Ích</h2>
+                    </div>
+                    
+                    <div class="two-col-grid" style="grid-template-columns: 1.1fr 1fr; gap: 20px; min-height: calc(100% - 70px);">
+                        <!-- Left Panel: Testing Logs -->
+                        <div class="col-left glass-card" style="padding: 15px;">
+                            <h3>Kết Quả Kiểm Thử (Testing Summary)</h3>
+                            <ul style="padding-left: 20px; font-size: 0.82rem; line-height: 1.5; margin-top: 8px; display: flex; flex-direction: column; gap: 6px;">
+                                <li><strong>Kiểm thử chức năng:</strong> Hoàn thành 45/45 Test cases kiểm thử tự động, tỷ lệ vượt qua đạt 100%.</li>
+                                <li><strong>Kiểm thử tải cao (Load Test):</strong> Chạy giả lập 15,000 kết nối đồng thời trong 30 phút, tỷ lệ lỗi (Error Rate) chỉ đạt 0.04% (ngưỡng an toàn tối đa là 0.1%).</li>
+                                <li><strong>Kiểm thử bảo mật:</strong> Hệ thống vượt qua các bài kiểm thử chống SQL Injection và XSS, bảo vệ an toàn dữ liệu sinh viên.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Right Panel: Benefits Realization -->
+                        <div class="col-right glass-card" style="padding: 15px;">
+                            <h3>Đo Lường Hiệu Quả Đạt Được</h3>
+                            <ul style="padding-left: 20px; font-size: 0.85rem; line-height: 1.5; margin-top: 8px; display: flex; flex-direction: column; gap: 8px;">
+                                <li><strong>Tiết kiệm thời gian:</strong> Thời gian hoàn tất ĐKHP trung bình của một sinh viên giảm từ 15 phút xuống 1.5 phút.</li>
+                                <li><strong>Độ ổn định:</strong> 100% không sập server, không treo cổng trong suốt tuần lễ đăng ký chính thức của kỳ học mới.</li>
+                                <li><strong>Giảm tải học vụ:</strong> Loại bỏ hoàn toàn đơn xin hủy lịch học trùng và điều chỉnh lớp thủ công của Phòng Đào tạo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SLIDE 13: Schedule Risk Management -->
+            <section class="slide" id="slide-13">>
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">13/14</span>
+                        <h2>Quản Lý Rủi Ro Tiến Độ & Bảng Đăng Ký Rủi Ro</h2>
                     </div>
                     
                     <div class="cases-grid-4x1">
@@ -742,12 +839,12 @@
                 </div>
             </section>
 
-            <!-- SLIDE 10: Conclusion & Deliverables -->
-            <section class="slide" id="slide-10">
+            <!-- SLIDE 14: Conclusion & Deliverables -->
+            <section class="slide" id="slide-14">>
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">11/11</span>
-                        <h2>Tổng Kết Đồ Án & Bài Học Kinh Nghiệm (Cả Nhóm)</h2>
+                        <span class="slide-number">14/14</span>
+                        <h2>Tổng Kết Đồ Án & Bài Học Kinh Nghiệm</h2>
                     </div>
                     
                     <div class="two-col-grid">
