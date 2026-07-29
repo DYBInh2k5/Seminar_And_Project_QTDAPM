@@ -143,7 +143,7 @@
             <section class="slide" id="slide-2">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">02/10</span>
+                        <span class="slide-number">02/11</span>
                         <h2>Bối Cảnh & Bài Toán Đặt Ra (Bình)</h2>
                     </div>
                     <p class="section-desc">Thực trạng quy trình đăng ký học phần tại các trường đại học và mục tiêu dự án HSU:</p>
@@ -223,7 +223,7 @@
             <section class="slide" id="slide-3">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">03/10</span>
+                        <span class="slide-number">03/11</span>
                         <h2>Cấu Trúc WBS & Scope Dự Án (Phần 2 - 5) (Khang)</h2>
                     </div>
                     <p class="section-desc">Phân định phạm vi thực hiện Đồ án từ Phần 2 (Lập kế hoạch) đến Phần 5 (Đóng dự án):</p>
@@ -255,7 +255,7 @@
             <section class="slide" id="slide-4">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">04/10</span>
+                        <span class="slide-number">04/11</span>
                         <h2>Kiến Trúc & Giải Pháp Công Nghệ (Quang)</h2>
                     </div>
                     
@@ -294,7 +294,7 @@
             <section class="slide" id="slide-5">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">05/10</span>
+                        <span class="slide-number">05/11</span>
                         <h2>Chức Năng Cổng Sinh Viên (Student Portal) (Bình)</h2>
                     </div>
                     
@@ -345,7 +345,7 @@
             <section class="slide" id="slide-6">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">06/10</span>
+                        <span class="slide-number">06/11</span>
                         <h2>Chức Năng Cổng Phòng Đào Tạo (Admin Portal) (Lợi)</h2>
                     </div>
                     
@@ -374,7 +374,7 @@
             <section class="slide" id="slide-7">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">07/10</span>
+                        <span class="slide-number">07/11</span>
                         <h2>Dashboard Quản Trị Tiến Độ Dự Án (PM Portal) (Lợi)</h2>
                     </div>
                     <p class="section-desc">Công cụ quản lý tiến độ 12 tuần dành cho Trưởng dự án (Project Manager):</p>
@@ -446,11 +446,90 @@
                 </div>
             </section>
 
-            <!-- SLIDE 8: Critical Path & Delay Simulator -->
+            <!-- SLIDE 8: EVM Status Report -->
             <section class="slide" id="slide-8">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">08/10</span>
+                        <span class="slide-number">08/11</span>
+                        <h2>Báo Cáo Hiệu Suất EVM & Quản Lý Chi Phí (Lợi)</h2>
+                    </div>
+                    <p class="section-desc">Phân tích giá trị thu được (Earned Value Management) tại thời điểm báo cáo ngày 16/09/2026:</p>
+                    
+                    <div class="two-col-grid" style="grid-template-columns: 1.2fr 1fr; gap: 20px; min-height: calc(100% - 70px);">
+                        <div class="col-left glass-card" style="padding: 15px;">
+                            <h3>Các Chỉ Số Đo Lường Cơ Bản (EVM Metrics)</h3>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 10px;">
+                                <div class="evm-card" style="background: rgba(255, 255, 255, 0.02); border-left: 4px solid var(--primary); padding: 8px 12px; border-radius: 6px;">
+                                    <span style="font-size: 0.75rem; color: var(--text-secondary); display: block;">BAC (Ngân sách hoàn thành)</span>
+                                    <strong style="font-size: 1.1rem; color: var(--primary);">39.150.000 VND</strong>
+                                </div>
+                                <div class="evm-card" style="background: rgba(255, 255, 255, 0.02); border-left: 4px solid #3b82f6; padding: 8px 12px; border-radius: 6px;">
+                                    <span style="font-size: 0.75rem; color: var(--text-secondary); display: block;">PV (Giá trị kế hoạch)</span>
+                                    <strong style="font-size: 1.1rem; color: #3b82f6;">28.900.000 VND</strong>
+                                </div>
+                                <div class="evm-card" style="background: rgba(255, 255, 255, 0.02); border-left: 4px solid #10b981; padding: 8px 12px; border-radius: 6px;">
+                                    <span style="font-size: 0.75rem; color: var(--text-secondary); display: block;">EV (Giá trị thu được)</span>
+                                    <strong style="font-size: 1.1rem; color: #10b981;">28.000.000 VND</strong>
+                                </div>
+                                <div class="evm-card" style="background: rgba(255, 255, 255, 0.02); border-left: 4px solid #f59e0b; padding: 8px 12px; border-radius: 6px;">
+                                    <span style="font-size: 0.75rem; color: var(--text-secondary); display: block;">AC (Chi phí thực tế)</span>
+                                    <strong style="font-size: 1.1rem; color: #f59e0b;">28.328.500 VND</strong>
+                                </div>
+                            </div>
+                            <!-- Resource Breakdown Button -->
+                            <button id="view-resources-btn" class="modern-btn" style="margin-top: 15px; width: 100%; padding: 8px 12px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.3s; font-size: 0.82rem;">
+                                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                Xem Chi Tiết Phân Bổ Nhân Lực & Chi Phí
+                            </button>
+                            
+                            <h3 style="margin-top: 15px;">Đánh Giá Độ Lệch & Hiệu Suất</h3>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 5px; font-size: 0.8rem;">
+                                <div style="padding: 8px; background: rgba(244, 63, 94, 0.08); border-radius: 6px; border: 1px solid rgba(244, 63, 94, 0.15);">
+                                    <strong style="color: #f43f5e;">SV (Độ lệch tiến độ):</strong><br>
+                                    <span>-900.000 VND</span> <span style="font-size: 0.72rem; color: #f43f5e;">(Chậm tiến độ nhẹ)</span>
+                                </div>
+                                <div style="padding: 8px; background: rgba(217, 119, 6, 0.08); border-radius: 6px; border: 1px solid rgba(217, 119, 6, 0.15);">
+                                    <strong style="color: #d97706;">CV (Độ lệch chi phí):</strong><br>
+                                    <span>-328.500 VND</span> <span style="font-size: 0.72rem; color: #d97706;">(Vượt ngân sách nhẹ)</span>
+                                </div>
+                                <div style="padding: 8px; background: rgba(244, 63, 94, 0.08); border-radius: 6px; border: 1px solid rgba(244, 63, 94, 0.15);">
+                                    <strong style="color: #f43f5e;">SPI (Hiệu suất tiến độ):</strong><br>
+                                    <span>0,97</span> <span style="font-size: 0.72rem; color: #f43f5e;">(SPI &lt; 1 - Chậm)</span>
+                                </div>
+                                <div style="padding: 8px; background: rgba(217, 119, 6, 0.08); border-radius: 6px; border: 1px solid rgba(217, 119, 6, 0.15);">
+                                    <strong style="color: #d97706;">CPI (Hiệu suất chi phí):</strong><br>
+                                    <span>0,99</span> <span style="font-size: 0.72rem; color: #d97706;">(CPI &lt; 1 - Vượt AC)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-right glass-card" style="padding: 15px; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h3>Dự Báo Cuối Dự Án (EVM Forecasting)</h3>
+                                <ul style="padding-left: 20px; font-size: 0.85rem; line-height: 1.5; color: var(--text-primary); margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+                                    <li><strong>EAC (Ước tính khi hoàn thành):</strong> <span style="color: #f59e0b; font-weight: bold;">39.609.313 VND</span> (Dự kiến vượt mức chi phí cơ sở ban đầu khoảng 1.2%).</li>
+                                    <li><strong>VAC (Chênh lệch khi hoàn thành):</strong> <span style="color: #f43f5e; font-weight: bold;">-459.313 VND</span>.</li>
+                                    <li><strong>TCPI (Chỉ số hiệu suất cần đạt):</strong> <span>1.04</span> (Để hoàn thành dự án trong ngân sách BAC còn lại, nhóm phải nâng cao năng suất thêm 4% trong giai đoạn còn lại).</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="padding: 10px 12px; background: rgba(217, 119, 6, 0.08); border-left: 4px solid #f59e0b; border-radius: 6px; margin-top: 10px;">
+                                <strong style="font-size: 0.82rem; color: #b45309; display: block;">Biện pháp khắc phục (Corrective Actions):</strong>
+                                <p style="font-size: 0.72rem; line-height: 1.4; color: var(--text-secondary); margin-top: 3px; margin-bottom: 0;">
+                                    1. <strong>Crashing (Tăng ca/Bổ sung):</strong> Tuyển thêm lập trình viên Backend để hỗ trợ viết API lõi cho Module 4.6.<br>
+                                    2. <strong>Fast-tracking (Chồng chéo):</strong> Viết trước các Test case kiểm thử UAT song song với giai đoạn cuối coding.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: Critical Path & Delay Simulator -->
+            <section class="slide" id="slide-11">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">09/11</span>
                         <h2>Trình Giả Lập Đường Găng (Critical Path Simulator) (Bình)</h2>
                     </div>
                     
@@ -577,10 +656,10 @@
             </section>
 
             <!-- SLIDE 9: Schedule Risk Management -->
-            <section class="slide" id="slide-9">
+            <section class="slide" id="slide-11">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">09/10</span>
+                        <span class="slide-number">10/11</span>
                         <h2>Quản Lý Rủi Ro Tiến Độ & Bảng Đăng Ký Rủi Ro (Khang)</h2>
                     </div>
                     
@@ -667,7 +746,7 @@
             <section class="slide" id="slide-10">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">10/10</span>
+                        <span class="slide-number">11/11</span>
                         <h2>Tổng Kết Đồ Án & Bài Học Kinh Nghiệm (Cả Nhóm)</h2>
                     </div>
                     
@@ -713,6 +792,68 @@
                 <div class="progress-bar-fill" id="progress-bar"></div>
             </div>
         </footer>
+    </div>
+
+    <!-- Resource Allocation Modal -->
+    <div id="resources-modal" class="lightbox">
+        <span class="lightbox-close" id="resources-close-btn">&times;</span>
+        <div class="glass-card modal-content" style="max-width: 600px; width: 90%; padding: 25px; max-height: 80vh; overflow-y: auto; background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); cursor: default;" onclick="event.stopPropagation()">
+            <h2 style="font-size: 1.35rem; margin-bottom: 15px; color: var(--primary); text-align: center;">Chi Tiết Phân Bổ Nhân Lực & Chi Phí (BAC = 39.150.000 VND)</h2>
+            <table class="sim-results-table" style="font-size: 0.85rem; width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Vai trò Nhân sự (Resource Role)</th>
+                        <th style="text-align: center;">Số ngày công (Effort)</th>
+                        <th style="text-align: right;">Đơn giá ngày công</th>
+                        <th style="text-align: right;">Thành tiền (Cost)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Project Manager (PM)</strong></td>
+                        <td style="text-align: center;">8 ngày công</td>
+                        <td style="text-align: right;">600.000 VND/ngày</td>
+                        <td style="text-align: right; color: var(--primary); font-weight: bold;">4.800.000 VND</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Business Analyst (BA)</strong></td>
+                        <td style="text-align: center;">13 ngày công</td>
+                        <td style="text-align: right;">500.000 VND/ngày</td>
+                        <td style="text-align: right; color: var(--primary); font-weight: bold;">6.500.000 VND</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Developer Backend</strong></td>
+                        <td style="text-align: center;">27 ngày công</td>
+                        <td style="text-align: right;">550.000 VND/ngày</td>
+                        <td style="text-align: right; color: var(--primary); font-weight: bold;">14.850.000 VND</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Developer Frontend</strong></td>
+                        <td style="text-align: center;">13 ngày công</td>
+                        <td style="text-align: right;">550.000 VND/ngày</td>
+                        <td style="text-align: right; color: var(--primary); font-weight: bold;">7.150.000 VND</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Database Administrator (DBA)</strong></td>
+                        <td style="text-align: center;">3 ngày công</td>
+                        <td style="text-align: right;">500.000 VND/ngày</td>
+                        <td style="text-align: right; color: var(--primary); font-weight: bold;">1.500.000 VND</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kiểm thử viên (Tester)</strong></td>
+                        <td style="text-align: center;">11 ngày công</td>
+                        <td style="text-align: right;">450.000 VND/ngày</td>
+                        <td style="text-align: right; color: var(--primary); font-weight: bold;">4.950.000 VND</td>
+                    </tr>
+                    <tr style="border-top: 2px solid var(--border-color); background: rgba(0,0,0,0.02); font-weight: bold;">
+                        <td>TỔNG CỘNG (BAC)</td>
+                        <td style="text-align: center; color: var(--accent-seeking);">74 ngày công</td>
+                        <td style="text-align: right;">-</td>
+                        <td style="text-align: right; color: var(--accent); font-size: 1rem;">39.150.000 VND</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- Layout Customizer Panel -->

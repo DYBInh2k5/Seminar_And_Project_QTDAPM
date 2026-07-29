@@ -164,6 +164,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- RESOURCE ALLOCATION MODAL CONTROLLER ---
+    const resourcesModal = document.getElementById('resources-modal');
+    const viewResourcesBtn = document.getElementById('view-resources-btn');
+    const resourcesCloseBtn = document.getElementById('resources-close-btn');
+
+    if (resourcesModal && viewResourcesBtn) {
+        viewResourcesBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            resourcesModal.style.display = 'flex';
+        });
+
+        if (resourcesCloseBtn) {
+            resourcesCloseBtn.addEventListener('click', () => {
+                resourcesModal.style.display = 'none';
+            });
+        }
+
+        // Close on background click
+        resourcesModal.addEventListener('click', (e) => {
+            if (e.target === resourcesModal || e.target === resourcesCloseBtn) {
+                resourcesModal.style.display = 'none';
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && resourcesModal.style.display === 'flex') {
+                resourcesModal.style.display = 'none';
+            }
+        });
+    }
+
     // --- SLIDE 8 INTERACTIVE SIMULATOR (CPM / GANTT) ---
     const slide8Sliders = document.querySelectorAll('.slide8-slider');
     const slide8ResetBtn = document.getElementById('reset-slide8-btn');
