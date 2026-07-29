@@ -334,7 +334,6 @@ To reinforce the financial analysis framework, we calculate the NPV and ROI for 
 
 ---
 
-
 ## 4. Risk Response Planning
 
 After identifying and prioritizing risks, the project team must formulate specific response plans.
@@ -547,6 +546,35 @@ Based on **Figure 3-3: JWD Consulting Intranet Project Work Breakdown Structure 
 
 ---
 
+### 5.11. Project Kick-off Meeting Agenda - HSU Project (Applying JWD Figure 3-2)
+A formal Kick-off meeting was held on July 13, 2026, to align all stakeholders and clarify expectations. Below is the meeting agenda and action items established for the HSU Course Registration System Project:
+
+**Project Name:** Online Course Registration System Construction Project  
+**Date of Meeting:** July 13, 2026  
+**Meeting Objective:** Get the project off to an effective start by introducing key stakeholders, reviewing project goals, and discussing future plans.
+
+#### Agenda Items:
+1. **Introductions of Attendees:** Introductions of the project team members and HSU Academic Affairs representatives.
+2. **Review of the Project Background:** Discussing the limitations of the legacy web portal and why a mobile application is needed.
+3. **Review of Project-Related Documents:** Going through the drafted Business Case and Project Charter.
+4. **Discussion of Project Organizational Structure:** Setting responsibilities (PM, Backend Dev, Frontend Dev, UI/UX).
+5. **Discussion of Project Scope, Time, and Cost Goals:** Aligning on the 12-week schedule baseline and $150,000 budget constraint.
+6. **Discussion of Potential Risks:** Initial brainstorming of technical, human, and schedule risks.
+7. **Action Items Registration:**
+
+| Action Item | Assigned To | Due Date |
+| :--- | :--- | :--- |
+| Draft initial WBS Structure | Võ Duy Bình | July 15, 2026 |
+| Conduct student registration requirements survey | Nguyễn Thanh Quang | July 18, 2026 |
+| Prepare database schema ERD | Hồng Bảo Khang | July 20, 2026 |
+| Finalize Project Team Contract | Trần Bá Lợi | July 14, 2026 |
+
+**Date and Time of Next Meeting:** July 20, 2026, at 20:00 (via Google Meet).
+
+---
+
+
+
 #### Summary of 12 PMBOK Deliverables applied at JWD Consulting:
 
 | Process Group | PMBOK Deliverable |
@@ -570,34 +598,6 @@ Based on **Figure 3-3: JWD Consulting Intranet Project Work Breakdown Structure 
 | **3. Did the project meet success criteria?** | Yes, successfully verified during load and integration tests. Student survey showed a 95% satisfaction rate. |
 | **4. What are the key lessons learned?** | • **Asynchronous collaboration:** Granting designer Quang autonomy minimized bottlenecks.<br>• **Proactive risk management:** Spotting load issues early enabled us to configure Redis caching in Week 2.<br>• **Commercial libraries:** Reusing verified external libraries saved weeks of coding. |
 | **5. What went right and what went wrong?** | • **Right:** Real-time CPM schedule calculation on the dashboard worked flawlessly.<br>• **Wrong:** Delayed API definition alignment caused a 2-day delay in integration due to JSON mismatch. |
-
-
-### 5.11. Project Kick-off Meeting Agenda - HSU Project (Applying JWD Figure 3-2)
-A formal Kick-off meeting was held on May 13, 2026, to align all stakeholders and clarify expectations. Below is the meeting agenda and action items established for the HSU Course Registration System Project:
-
-**Project Name:** Online Course Registration System Construction Project  
-**Date of Meeting:** May 13, 2026  
-**Meeting Objective:** Get the project off to an effective start by introducing key stakeholders, reviewing project goals, and discussing future plans.
-
-#### Agenda Items:
-1. **Introductions of Attendees:** Introductions of the project team members and HSU Academic Affairs representatives.
-2. **Review of the Project Background:** Discussing the limitations of the legacy web portal and why a mobile application is needed.
-3. **Review of Project-Related Documents:** Going through the drafted Business Case and Project Charter.
-4. **Discussion of Project Organizational Structure:** Setting responsibilities (PM, Backend Dev, Frontend Dev, UI/UX).
-5. **Discussion of Project Scope, Time, and Cost Goals:** Aligning on the 12-week schedule baseline and $150,000 budget constraint.
-6. **Discussion of Potential Risks:** Initial brainstorming of technical, human, and schedule risks.
-7. **Action Items Registration:**
-
-| Action Item | Assigned To | Due Date |
-| :--- | :--- | :--- |
-| Draft initial WBS Structure | Võ Duy Bình | May 15, 2026 |
-| Conduct student registration requirements survey | Nguyễn Thanh Quang | May 18, 2026 |
-| Prepare database schema ERD | Hồng Bảo Khang | May 20, 2026 |
-| Finalize Project Team Contract | Trần Bá Lợi | May 14, 2026 |
-
-**Date and Time of Next Meeting:** May 20, 2026, at 20:00 (via Google Meet).
-
----
 
 ### 6.2. General Conclusions
 Tying together initiating tools (Project Charter, Stakeholder Strategy, Kick-off) and team alignment frameworks (Team Contract) is essential. Proactive risk management, combined with a deep understanding of Risk Utility Theory, empowers project managers to balance scope, cost, and schedule baseline constraints, ensuring project success.
