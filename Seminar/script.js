@@ -467,6 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const charterCloseBtn = document.getElementById('charter-close-btn');
     const charterTabBtn = document.getElementById('charter-tab-btn');
     const stakeholderTabBtn = document.getElementById('stakeholder-tab-btn');
+    const modalTabBtns = [charterTabBtn, stakeholderTabBtn];
     const charterTabContent = document.getElementById('charter-tab-content');
     const stakeholderTabContent = document.getElementById('stakeholder-tab-content');
 
@@ -493,10 +494,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (charterTabBtn && stakeholderTabBtn) {
             charterTabBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
+                modalTabBtns.forEach(btn => btn.classList.remove('active'));
                 charterTabBtn.classList.add('active');
                 charterTabBtn.style.background = 'var(--primary)';
                 charterTabBtn.style.color = 'white';
-                stakeholderTabBtn.classList.remove('active');
                 stakeholderTabBtn.style.background = 'transparent';
                 stakeholderTabBtn.style.color = 'var(--text-secondary)';
                 
@@ -506,10 +507,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             stakeholderTabBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
+                modalTabBtns.forEach(btn => btn.classList.remove('active'));
                 stakeholderTabBtn.classList.add('active');
                 stakeholderTabBtn.style.background = 'var(--primary)';
                 stakeholderTabBtn.style.color = 'white';
-                charterTabBtn.classList.remove('active');
                 charterTabBtn.style.background = 'transparent';
                 charterTabBtn.style.color = 'var(--text-secondary)';
                 
@@ -1065,7 +1066,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Phương pháp / Approach": "Project Approach",
         "Khảo sát nghiệp vụ HSU ➔ Thiết kế Figma (SWOT) ➔ Xây dựng Database ERD & API Backend ➔ Lập trình Frontend SPA ➔ Kiểm thử tải & Bảo mật.": "Survey HSU requirements ➔ Figma design (SWOT) ➔ Database & RESTful Backend API ➔ Frontend SPA Web ➔ Load & Security Testing.",
         "Vai trò nhóm / Roles": "Team Roles & Signatures",
-        "Võ Duy Bình (CEO/Sponsor), Trần Bá Lợi (PM), Hồng Bảo Khang (Backend Dev), Nguyễn Thanh Quang (UI/UX).": "Vo Duy Binh (CEO/Sponsor), Tran Ba Loi (PM), Hong Box Khang (Backend Dev), Nguyen Thanh Quang (UI/UX).",
+        "Võ Duy Bình (CEO/Sponsor), Trần Bá Lợi (PM), Hồng Bảo Khang (Backend Dev), Nguyễn Thanh Quang (UI/UX).": "Vo Duy Binh (CEO/Sponsor), Tran Ba Loi (PM), Hong Bao Khang (Backend Dev), Nguyen Thanh Quang (UI/UX).",
         "Tên": "Name",
         "Vai trò": "Project Role",
         "Chiến lược quản lý": "Management Strategy",
@@ -1080,7 +1081,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "Khảo sát kỹ quy chế học vụ, đảm bảo hệ thống Admin Portal phân quyền quản lý lớp học dễ dàng.": "Gather requirements closely. Ensure Admin Portal allows easy course management.",
         "Sinh viên HSU": "HSU Students",
         "Người dùng cuối": "End User",
-        "Thiết kế giao diện di động tiện lợi, phản hồi nhanh dưới 1.5 giây để tránh nghẽn.": "Deliver responsive UI/UX with load time < 1.5s to prevent registration stress."
+        "Thiết kế giao diện di động tiện lợi, phản hồi nhanh dưới 1.5 giây để tránh nghẽn.": "Deliver responsive UI/UX with load time < 1.5s to prevent registration stress.",
+        "Thiết lập Team Contract & Kick-off rõ ràng.": "Establish clear Team Contract & Kick-off alignment.",
+        "Cao / Cao": "High / High"
     };
 
     let currentLang = 'vi';
