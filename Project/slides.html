@@ -88,6 +88,11 @@
             </div>
             <div class="header-topic">Thuyết minh Đồ án (Lần 2): Risk and Schedule Management in the Online Course Registration System Construction Project</div>
             <div class="header-controls">
+                <!-- Language Selector -->
+                <div class="lang-selector-group" style="display: flex; border: 2px solid var(--border-color); border-radius: 20px; overflow: hidden; padding: 2px; background: rgba(0,0,0,0.03); margin-right: 8px;">
+                    <button class="lang-btn active" data-lang="vi" style="border: none; background: transparent; padding: 4px 10px; font-size: 0.78rem; font-weight: 700; border-radius: 15px; cursor: pointer; color: var(--text-primary); transition: all 0.2s ease;">VI</button>
+                    <button class="lang-btn" data-lang="en" style="border: none; background: transparent; padding: 4px 10px; font-size: 0.78rem; font-weight: 700; border-radius: 15px; cursor: pointer; color: var(--text-primary); transition: all 0.2s ease;">EN</button>
+                </div>
                 <button id="layout-toggle-btn" class="icon-btn" title="Cấu hình bố cục slide">
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
                 </button>
@@ -130,7 +135,7 @@
             <section class="slide" id="slide-2">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">02/14</span>
+                        <span class="slide-number">02/16</span>
                         <h2>Bối Cảnh & Bài Toán Đặt Ra</h2>
                     </div>
                     <p class="section-desc">Thực trạng quy trình đăng ký học phần tại các trường đại học và mục tiêu dự án HSU:</p>
@@ -210,7 +215,96 @@
             <section class="slide" id="slide-3">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">03/14</span>
+                        <span class="slide-number">03/16</span>
+                        <h2>Khởi Tạo Dự Án & Xác Định Stakeholders</h2>
+                    </div>
+                    <p class="section-desc">Điều lệ dự án (Project Charter) chính thức và chiến lược quản lý bên liên quan (Stakeholders):</p>
+                    
+                    <div class="two-col-grid" style="grid-template-columns: 1fr 1.2fr; gap: 20px; min-height: calc(100% - 70px);">
+                        <!-- Left Panel: Project Charter Details -->
+                        <div class="col-left glass-card" style="padding: 15px;">
+                            <h3 style="color: var(--primary); margin-bottom: 10px;">Điều Lệ Dự Án (Project Charter)</h3>
+                            <ul class="bullet-list-custom" style="font-size: 0.8rem; line-height: 1.5; gap: 10px;">
+                                <li><strong>Ngày ký duyệt:</strong> 12/07/2026 chính thức ban hành.</li>
+                                <li><strong>Nhà tài trợ (Sponsor):</strong> Võ Duy Bình (MSSV: 22301500) duyệt ngân sách.</li>
+                                <li><strong>Quản trị dự án (PM):</strong> Trần Bá Lợi (MSSV: 22300236) điều phối.</li>
+                                <li><strong>Ngân sách tối đa:</strong> 150,000 USD (Ngân sách cơ sở: 140,000 USD).</li>
+                                <li><strong>Mục tiêu cốt lõi:</strong> Tối ưu khả năng chịu tải trên 15,000 kết nối đồng thời với độ trễ phản hồi dưới 100ms.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Right Panel: Stakeholder Register & Strategies -->
+                        <div class="col-right glass-card" style="padding: 15px;">
+                            <h3 style="color: var(--primary); margin-bottom: 10px;">Danh Sách & Chiến Lược Quản Lý Stakeholders</h3>
+                            <div class="process-steps-list" style="gap: 8px;">
+                                <div class="step-card" style="border-left: 3px solid var(--primary); padding: 8px; font-size: 0.78rem;">
+                                    <strong>Võ Duy Bình (Sponsor / CEO):</strong> Báo cáo tiến độ theo mốc quan trọng, làm rõ chỉ số NPV/ROI dự án.
+                                </div>
+                                <div class="step-card" style="border-left: 3px solid var(--success); padding: 8px; font-size: 0.78rem;">
+                                    <strong>Trần Bá Lợi (Project Manager):</strong> Họp giao ban tiến độ hàng tuần, kiểm soát chặt chẽ WBS & đường găng CPM.
+                                </div>
+                                <div class="step-card" style="border-left: 3px solid var(--accent); padding: 8px; font-size: 0.78rem;">
+                                    <strong>Hồng Bảo Khang & Nguyễn Thanh Quang (Dev Team):</strong> Kiểm soát mã nguồn trên Git hàng ngày, bắt buộc đính kèm Unit Test.
+                                </div>
+                                <div class="step-card" style="border-left: 3px solid var(--warning); padding: 8px; font-size: 0.78rem;">
+                                    <strong>Phòng Đào tạo HSU & Sinh viên (Client / End User):</strong> Khảo sát nghiệp vụ chi tiết, tổ chức nghiệm thu thử nghiệm UAT sớm.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: Project Scope & Constraints -->
+            <section class="slide" id="slide-4">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">04/16</span>
+                        <h2>Phạm Vi Dự Án (Scope Statement) & Ràng Buộc</h2>
+                    </div>
+                    <p class="section-desc">Xác định rõ các hạng mục thuộc phạm vi (In-Scope), ngoài phạm vi (Out-of-Scope) và các ràng buộc cốt lõi:</p>
+                    
+                    <div class="two-col-grid" style="grid-template-columns: 1.1fr 1fr; gap: 20px; min-height: calc(100% - 70px);">
+                        <!-- Left Panel: In-Scope -->
+                        <div class="col-left glass-card" style="padding: 15px;">
+                            <h3 style="color: var(--success); margin-bottom: 10px;">Trong Phạm Vi (In-Scope)</h3>
+                            <ul class="bullet-list-custom" style="font-size: 0.78rem; line-height: 1.4; gap: 8px;">
+                                <li><strong>Đăng nhập & Xác thực:</strong> Đăng nhập hệ thống bằng tài khoản sinh viên HSU (MSSV).</li>
+                                <li><strong>Bộ lọc thông minh:</strong> Tìm kiếm học phần mở theo Khoa, Ngành và Số tín chỉ.</li>
+                                <li><strong>Đăng ký Real-time:</strong> Xử lý ghi danh & hủy môn học tức thời, sĩ số cập nhật trong 50ms.</li>
+                                <li><strong>Ràng buộc học vụ:</strong> Tự động chặn trùng lịch học, kiểm tra môn tiên quyết và giới hạn 12 - 24 tín chỉ.</li>
+                                <li><strong>Cổng Admin:</strong> Quản lý danh mục lớp, điều chỉnh sĩ số phòng và xuất danh sách Excel cho Phòng Đào tạo.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Right Panel: Out-of-Scope & Constraints -->
+                        <div class="col-right glass-card" style="padding: 15px; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h3 style="color: var(--danger); margin-bottom: 10px;">Ngoài Phạm Vi (Out-of-Scope)</h3>
+                                <ul class="bullet-list-custom" style="font-size: 0.78rem; line-height: 1.4; gap: 6px;">
+                                    <li>Cổng thanh toán học phí trực tuyến (chuyển hướng ngân hàng).</li>
+                                    <li>Quản lý điểm số học kỳ và bảng điểm sinh viên.</li>
+                                    <li>Tích hợp hệ thống quản lý học tập LMS Moodle.</li>
+                                    <li>Ứng dụng di động độc lập (Native Mobile App) - chỉ hỗ trợ Web di động responsive.</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="margin-top: 15px; border-top: 1px dashed var(--border-color); padding-top: 10px;">
+                                <h3 style="color: var(--warning); font-size: 0.85rem; margin-bottom: 5px;">Ràng Buộc Dự Án (Constraints)</h3>
+                                <p style="font-size: 0.72rem; line-height: 1.3; color: var(--text-secondary);">
+                                    Hoàn thành kiểm thử UAT trước ngày mở cổng chính thức; Nhân sự phát triển nhỏ (4 người); Tương thích hạ tầng máy chủ trường HSU.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: WBS Scope (Phần 2 - 5) -->
+            <section class="slide" id="slide-5">
+                <div class="slide-content standard-layout">
+                    <div class="slide-header">
+                        <span class="slide-number">05/16</span>
                         <h2>Cấu Trúc WBS & Scope Dự Án (Phần 2 - 5)</h2>
                     </div>
                     <p class="section-desc">Phân định phạm vi thực hiện Đồ án từ Phần 2 (Lập kế hoạch) đến Phần 5 (Đóng dự án):</p>
@@ -236,12 +330,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- SLIDE 4: Requirements & SRS -->
-            <section class="slide" id="slide-4">
+            </section><section class="slide" id="slide-6">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">04/14</span>
+                        <span class="slide-number">06/16</span>
                         <h2>Khảo Sát Người Dùng & Đặc Tả Yêu Cầu (SRS)</h2>
                     </div>
                     
@@ -318,10 +410,10 @@
 
 
             <!-- SLIDE 5: System Architecture -->
-            <section class="slide" id="slide-5">
+            <section class="slide" id="slide-7">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">05/14</span>
+                        <span class="slide-number">07/16</span>
                         <h2>Kiến Trúc & Giải Pháp Công Nghệ</h2>
                     </div>
                     
@@ -357,10 +449,10 @@
             </section>
 
             <!-- SLIDE 6: Student Portal Features -->
-            <section class="slide" id="slide-6">
+            <section class="slide" id="slide-8">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">06/14</span>
+                        <span class="slide-number">08/16</span>
                         <h2>Chức Năng Cổng Sinh Viên (Student Portal)</h2>
                     </div>
                     
@@ -408,10 +500,10 @@
             </section>
 
             <!-- SLIDE 7: Admin Portal Features -->
-            <section class="slide" id="slide-7">
+            <section class="slide" id="slide-9">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">07/14</span>
+                        <span class="slide-number">09/16</span>
                         <h2>Chức Năng Cổng Phòng Đào Tạo (Admin Portal)</h2>
                     </div>
                     
@@ -437,10 +529,10 @@
             </section>
 
             <!-- SLIDE 8: Project Management & Gantt Chart -->
-            <section class="slide" id="slide-8">
+            <section class="slide" id="slide-10">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">08/14</span>
+                        <span class="slide-number">10/16</span>
                         <h2>Dashboard Quản Trị Tiến Độ Dự Án (PM Portal)</h2>
                     </div>
                     <p class="section-desc">Công cụ quản lý tiến độ 12 tuần dành cho Trưởng dự án (Project Manager):</p>
@@ -513,10 +605,10 @@
             </section>
 
             <!-- SLIDE 9: EVM Status Report -->
-            <section class="slide" id="slide-9">
+            <section class="slide" id="slide-11">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">09/14</span>
+                        <span class="slide-number">11/16</span>
                         <h2>Báo Cáo Hiệu Suất EVM & Quản Lý Chi Phí</h2>
                     </div>
                     <p class="section-desc">Phân tích giá trị thu được (Earned Value Management) tại thời điểm báo cáo ngày 16/09/2026:</p>
@@ -591,10 +683,10 @@
                 </div>
             </section>
             <!-- SLIDE 10: Quality & Procurement Management -->
-            <section class="slide" id="slide-10">
+            <section class="slide" id="slide-12">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">10/14</span>
+                        <span class="slide-number">12/16</span>
                         <h2>Kế Hoạch Quản Lý Chất Lượng & Mua Sắm</h2>
                     </div>
                     
@@ -660,10 +752,10 @@
 
 
             <!-- SLIDE 11: Critical Path & Delay Simulator -->
-            <section class="slide" id="slide-11">
+            <section class="slide" id="slide-13">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">11/14</span>
+                        <span class="slide-number">13/16</span>
                         <h2>Trình Giả Lập Đường Găng (Critical Path Simulator)</h2>
                     </div>
                     
@@ -789,10 +881,10 @@
                 </div>
             </section>
             <!-- SLIDE 12: Testing & Benefits Realization -->
-            <section class="slide" id="slide-12">
+            <section class="slide" id="slide-14">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">12/14</span>
+                        <span class="slide-number">14/16</span>
                         <h2>Kiểm Thử Hệ Thống & Đo Lường Lợi Ích</h2>
                     </div>
                     
@@ -859,97 +951,172 @@
 
 
             <!-- SLIDE 13: Schedule Risk Management -->
-            <section class="slide" id="slide-13">
+            <section class="slide" id="slide-15">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">13/14</span>
+                        <span class="slide-number">15/16</span>
                         <h2>Quản Lý Rủi Ro Tiến Độ & Bảng Đăng Ký Rủi Ro</h2>
                     </div>
                     
-                    <div class="cases-grid-4x1">
-                        <div class="case-mini-card">
-                            <span class="case-tag">Rủi ro 1</span>
-                            <h3>Nghẽn tải máy chủ</h3>
-                            <p>Sập web khi mở đăng ký học phần.</p>
-                            <p class="outcome-text">Tránh: Dùng Cloud Auto-scaling</p>
+                    <div class="two-col-grid" style="grid-template-columns: 1fr 1.6fr; gap: 15px; min-height: calc(100% - 70px);">
+                        <!-- Left Panel: Risk Matrix Heatmap -->
+                        <div class="col-left glass-card" style="padding: 12px; display: flex; flex-direction: column; justify-content: space-between;">
+                            <h3 style="color: var(--primary); font-size: 0.9rem; margin-bottom: 5px;">Ma Trận Phân Tích Rủi Ro (Risk Matrix Heatmap)</h3>
+                            
+                            <!-- Heatmap Grid -->
+                            <div class="risk-matrix-container" style="display: grid; grid-template-columns: 50px 1fr; gap: 5px; margin-top: 5px;">
+                                <!-- Y Axis Labels -->
+                                <div style="display: flex; flex-direction: column; justify-content: space-around; font-size: 0.65rem; font-weight: bold; text-align: right; padding-right: 5px;">
+                                    <div>Cao</div>
+                                    <div>T.Bình</div>
+                                    <div>Thấp</div>
+                                </div>
+                                <!-- 3x4 Matrix -->
+                                <div style="display: grid; grid-template-rows: repeat(3, 1fr); gap: 4px; height: 160px;">
+                                    <!-- Row 1: High Prob -->
+                                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;">
+                                        <div style="background: rgba(254, 249, 195, 0.6); border: 1px solid #facc15; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; color: #854d0e;"></div>
+                                        <div style="background: rgba(255, 237, 213, 0.6); border: 1px solid #fb923c; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; color: #9a3412;"></div>
+                                        <div style="background: rgba(255, 237, 213, 0.9); border: 2px solid #ea580c; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; color: #9a3412; box-shadow: 0 0 5px rgba(234,88,12,0.3);">
+                                            <span style="background: #ea580c; color: white; padding: 1px 4px; border-radius: 3px; font-size: 0.6rem;">R2</span>
+                                        </div>
+                                        <div style="background: rgba(254, 226, 226, 0.6); border: 1px solid #f87171; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; color: #991b1b;"></div>
+                                    </div>
+                                    <!-- Row 2: Medium Prob -->
+                                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;">
+                                        <div style="background: rgba(209, 250, 229, 0.6); border: 1px solid #34d399; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; color: #065f46;"></div>
+                                        <div style="background: rgba(254, 249, 195, 0.6); border: 1px solid #facc15; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; color: #854d0e;"></div>
+                                        <div style="background: rgba(255, 237, 213, 0.9); border: 2px solid #ea580c; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; color: #9a3412; box-shadow: 0 0 5px rgba(234,88,12,0.3);">
+                                            <span style="background: #ea580c; color: white; padding: 1px 4px; border-radius: 3px; font-size: 0.6rem;">R6</span>
+                                        </div>
+                                        <div style="background: rgba(254, 226, 226, 0.95); border: 2px solid #dc2626; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; color: #991b1b; box-shadow: 0 0 8px rgba(220,38,38,0.4);">
+                                            <span style="background: #dc2626; color: white; padding: 1px 4px; border-radius: 3px; font-size: 0.6rem;">R1</span>
+                                        </div>
+                                    </div>
+                                    <!-- Row 3: Low Prob -->
+                                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;">
+                                        <div style="background: rgba(209, 250, 229, 0.9); border: 1.5px solid #059669; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: bold; color: #065f46; gap: 2px;">
+                                            <span style="background: #059669; color: white; padding: 0 2px; border-radius: 2px;">R7</span>
+                                            <span style="background: #059669; color: white; padding: 0 2px; border-radius: 2px;">R8</span>
+                                        </div>
+                                        <div style="background: rgba(254, 249, 195, 0.9); border: 1.5px solid #ca8a04; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: bold; color: #854d0e; gap: 2px;">
+                                            <span style="background: #ca8a04; color: white; padding: 0 2px; border-radius: 2px;">R3</span>
+                                            <span style="background: #ca8a04; color: white; padding: 0 2px; border-radius: 2px;">R5</span>
+                                        </div>
+                                        <div style="background: rgba(254, 249, 195, 0.6); border: 1px solid #facc15; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; color: #854d0e;"></div>
+                                        <div style="background: rgba(254, 249, 195, 0.9); border: 1.5px solid #ca8a04; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: bold; color: #854d0e;">
+                                            <span style="background: #ca8a04; color: white; padding: 0 2px; border-radius: 2px;">R4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- X Axis Labels -->
+                            <div style="display: grid; grid-template-columns: 50px 1fr 1fr 1fr 1fr; gap: 4px; text-align: center; font-size: 0.62rem; font-weight: bold; margin-top: 2px;">
+                                <div></div>
+                                <div>Thấp</div>
+                                <div>T.Bình</div>
+                                <div>Cao</div>
+                                <div>R.Cao</div>
+                            </div>
+                            
+                            <!-- Legend -->
+                            <div style="display: flex; justify-content: space-around; font-size: 0.58rem; margin-top: 5px; border-top: 1px dashed var(--border-color); padding-top: 5px;">
+                                <span style="color: #059669; font-weight: bold;">🟢 An toàn (1-2)</span>
+                                <span style="color: #ca8a04; font-weight: bold;">🟡 T.Bình (3-4)</span>
+                                <span style="color: #ea580c; font-weight: bold;">🟠 Cảnh báo (6)</span>
+                                <span style="color: #dc2626; font-weight: bold;">🔴 Nguy hiểm (9)</span>
+                            </div>
                         </div>
-                        <div class="case-mini-card">
-                            <span class="case-tag">Rủi ro 2</span>
-                            <h3>Trễ Backend</h3>
-                            <p>Backend trễ làm trễ ngày bàn giao 2 tuần.</p>
-                            <p class="outcome-text">Giảm thiểu: Thêm Dev & tăng ca</p>
+                        
+                        <!-- Right Panel: Detailed Risk Register Table -->
+                        <div class="col-right glass-card" style="padding: 12px; overflow-y: auto; max-height: 270px;">
+                            <h3 style="font-size: 0.85rem; margin-bottom: 5px; color: var(--primary);">Bảng Đăng Ký Theo Dõi & Ứng Phó Rủi Ro Chi Tiết (Project Risk Register)</h3>
+                            <table class="sim-results-table" style="font-size: 0.64rem; width: 100%; line-height: 1.2;">
+                                <thead>
+                                    <tr>
+                                        <th>Mã</th>
+                                        <th>Phân loại</th>
+                                        <th>Mô tả Rủi ro</th>
+                                        <th style="text-align: center;">P</th>
+                                        <th style="text-align: center;">I</th>
+                                        <th>Hành động Ứng phó</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>R1</strong></td>
+                                        <td>Hạ tầng</td>
+                                        <td>Nghẽn tải máy chủ khi mở cổng đăng ký môn học</td>
+                                        <td style="color: #ca8a04; font-weight: bold; text-align: center;">T.Bình</td>
+                                        <td style="color: #dc2626; font-weight: bold; text-align: center;">R.Cao</td>
+                                        <td>Thiết kế cơ chế Auto-scaling, cache Redis thông tin sĩ số lớp học.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>R2</strong></td>
+                                        <td>Tiến độ</td>
+                                        <td>Lập trình API Backend trễ tiến độ 2 tuần</td>
+                                        <td style="color: #dc2626; font-weight: bold; text-align: center;">Cao</td>
+                                        <td style="color: #ea580c; font-weight: bold; text-align: center;">Cao</td>
+                                        <td>Điều chuyển 1 nhân sự từ Frontend hỗ trợ, tăng ca (crashing).</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>R3</strong></td>
+                                        <td>Bảo mật</td>
+                                        <td>Rò rỉ dữ liệu thông tin cá nhân sinh viên</td>
+                                        <td style="color: #059669; font-weight: bold; text-align: center;">Thấp</td>
+                                        <td style="color: #ca8a04; font-weight: bold; text-align: center;">T.Bình</td>
+                                        <td>Mã hóa dữ liệu nhạy cảm, phân quyền truy cập nghiêm ngặt.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>R4</strong></td>
+                                        <td>Nhân lực</td>
+                                        <td>Lập trình viên chính nghỉ việc đột ngột giữa chừng</td>
+                                        <td style="color: #059669; font-weight: bold; text-align: center;">Thấp</td>
+                                        <td style="color: #dc2626; font-weight: bold; text-align: center;">R.Cao</td>
+                                        <td>Cross-training nhân sự chéo, cập nhật tài liệu kỹ thuật lên Git mỗi ngày.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>R5</strong></td>
+                                        <td>Phạm vi</td>
+                                        <td>Phòng Đào tạo thay đổi/bổ sung quy chế môn tiên quyết</td>
+                                        <td style="color: #059669; font-weight: bold; text-align: center;">Thấp</td>
+                                        <td style="color: #ca8a04; font-weight: bold; text-align: center;">T.Bình</td>
+                                        <td>Áp dụng Change Control Board (CCB), họp xét duyệt tác động chi phí.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>R6</strong></td>
+                                        <td>Tiến độ</td>
+                                        <td>Trễ tiến độ do ước lượng sai thời lượng WBS</td>
+                                        <td style="color: #ca8a04; font-weight: bold; text-align: center;">T.Bình</td>
+                                        <td style="color: #ea580c; font-weight: bold; text-align: center;">Cao</td>
+                                        <td>Thêm buffer thời gian dự phòng 3-5 ngày cuối, theo dõi sát sao Gantt Chart.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>R7</strong></td>
+                                        <td>Công nghệ</td>
+                                        <td>Thiếu kinh nghiệm lập trình Real-time Socket/Redis</td>
+                                        <td style="color: #059669; font-weight: bold; text-align: center;">Thấp</td>
+                                        <td style="color: #059669; font-weight: bold; text-align: center;">Thấp</td>
+                                        <td>Tổ chức training nội bộ, tham vấn ý kiến giảng viên hướng dẫn.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>R8</strong></td>
+                                        <td>Hạ tầng</td>
+                                        <td>Hạ tầng máy chủ trường không cho phép mở rộng linh hoạt</td>
+                                        <td style="color: #059669; font-weight: bold; text-align: center;">Thấp</td>
+                                        <td style="color: #059669; font-weight: bold; text-align: center;">Thấp</td>
+                                        <td>Chấp nhận hiện tại, lên kế hoạch nâng cấp phần cứng sau khi go-live.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="case-mini-card">
-                            <span class="case-tag">Rủi ro 3</span>
-                            <h3>Thay đổi yêu cầu</h3>
-                            <p>Phòng đào tạo bổ sung quy chế mới.</p>
-                            <p class="outcome-text">Giảm thiểu: Quản lý Scope chặt</p>
-                        </div>
-                        <div class="case-mini-card">
-                            <span class="case-tag">Rủi ro 4</span>
-                            <h3>Nhân sự nghỉ việc</h3>
-                            <p>Dev chính nghỉ giữa chừng dự án.</p>
-                            <p class="outcome-text">Chuyển giao: Cross-training code</p>
-                        </div>
-                    </div>
-
-                    <div class="glass-card" style="margin-top: 15px; padding: 15px; overflow-x: auto;">
-                        <h3 style="font-size: 0.95rem; margin-bottom: 5px; color: var(--primary);">Bảng Đăng Ký Theo Dõi & Ứng Phó Rủi Ro Chi Tiết (Project Risk Register)</h3>
-                        <table class="sim-results-table" style="font-size: 0.72rem; width: 100%;">
-                            <thead>
-                                <tr>
-                                    <th>Mã</th>
-                                    <th>Phân loại</th>
-                                    <th>Mô tả Rủi ro</th>
-                                    <th>Xác suất (P)</th>
-                                    <th>Tác động (I)</th>
-                                    <th>Hành động Ứng phó cụ thể</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>R1</strong></td>
-                                    <td>Hạ tầng</td>
-                                    <td>Nghẽn tải máy chủ khi mở cổng đăng ký môn học</td>
-                                    <td style="color: #059669; font-weight: bold;">Trung bình</td>
-                                    <td style="color: #f43f5e; font-weight: bold;">Rất cao</td>
-                                    <td>Thiết kế cơ chế Auto-scaling, cache Redis thông tin sĩ số lớp học.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>R2</strong></td>
-                                    <td>Tiến độ</td>
-                                    <td>Lập trình API Backend trễ tiến độ 2 tuần</td>
-                                    <td style="color: #d97706; font-weight: bold;">Cao</td>
-                                    <td style="color: #f43f5e; font-weight: bold;">Cao</td>
-                                    <td>Điều chuyển 1 nhân sự từ Frontend hỗ trợ, tăng ca (crashing).</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>R3</strong></td>
-                                    <td>Phạm vi</td>
-                                    <td>Phòng Đào tạo thay đổi/bổ sung quy chế môn tiên quyết</td>
-                                    <td style="color: #059669; font-weight: bold;">Thấp</td>
-                                    <td style="color: #d97706; font-weight: bold;">Trung bình</td>
-                                    <td>Áp dụng Change Control Board (CCB), họp xét duyệt tác động chi phí.</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>R4</strong></td>
-                                    <td>Nhân lực</td>
-                                    <td>Lập trình viên chính nghỉ việc đột ngột giữa chừng</td>
-                                    <td style="color: #059669; font-weight: bold;">Thấp</td>
-                                    <td style="color: #f43f5e; font-weight: bold;">Rất cao</td>
-                                    <td>Cross-training nhân sự chéo, cập nhật tài liệu kỹ thuật lên Git mỗi ngày.</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
-            </section>
-
-            <!-- SLIDE 14: Conclusion & Deliverables -->
-            <section class="slide" id="slide-14">
+            </section><section class="slide" id="slide-16">
                 <div class="slide-content standard-layout">
                     <div class="slide-header">
-                        <span class="slide-number">14/14</span>
+                        <span class="slide-number">16/16</span>
                         <h2>Tổng Kết Đồ Án & Bài Học Kinh Nghiệm</h2>
                     </div>
                     
