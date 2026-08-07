@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Võ Duy Bình',
             class: 'Nhóm 3 - SW403DE01',
             completedCourses: ['CO101', 'CO102'], // Completed prerequisites
-            registeredClasses: [] // Array of class codes
+            registeredClasses: [], // Array of class codes
+            plannedClasses: [] // Array of class codes for study plan
         },
         
         classes: [
@@ -147,6 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('hsu_portal_state')) {
         try {
             state = JSON.parse(localStorage.getItem('hsu_portal_state'));
+            if (state.student && !state.student.plannedClasses) {
+                state.student.plannedClasses = [];
+            }
         } catch (e) {
             console.error("Error reading localStorage state:", e);
         }
@@ -246,6 +250,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Specific view actions
         if (viewId === 'timetable-view') {
             renderTimetable();
+        } else if (viewId === 'plan-view') {
+            renderStudentPlan();
+        } else if (viewId === 'register-view') {
+            renderStudentClasses();
         }
     }
 
@@ -279,6 +287,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 btnDisabled = 'disabled';
             }
 
+            let planBtnHtml = '';
+            const isPlanned = state.student.plannedClasses.includes(cls.code);
+            if (!isRegistered) {
+                if (isPlanned) {
+                    planBtnHtml = `<button class="info-btn plan-toggle-btn" data-code="${cls.code}" style="font-size: 0.72rem; padding: 4px 8px; margin-left: 5px; cursor: pointer; border-radius: 4px;">Đã lên KH</button>`;
+                } else {
+                    planBtnHtml = `<button class="primary-btn plan-toggle-btn" data-code="${cls.code}" style="font-size: 0.72rem; padding: 4px 8px; margin-left: 5px; background: rgba(37,99,235,0.1); color: var(--primary); border: 1px solid var(--primary); cursor: pointer; border-radius: 4px;">+ KH</button>`;
+                }
+            }
+
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td><strong>${cls.code}</strong></td>
@@ -290,9 +308,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td style="text-align: center;">${isRegistered ? '<span class="status-badge registered">Đã đăng ký</span>' : `<span class="status-badge ${isFull ? 'conflict' : 'registered'}" style="opacity: 0.6;">${isFull ? 'Đã đầy' : 'Đang mở'}</span>`}</td>
                 <td>
                     <button class="${btnClass} action-reg-btn" data-code="${cls.code}" ${btnDisabled}>${btnText}</button>
+                    ${planBtnHtml}
                 </td>
             `;
             tableBody.appendChild(tr);
+        });
+
+        // Bind plan toggle buttons
+        tableBody.querySelectorAll('.plan-toggle-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const code = btn.getAttribute('data-code');
+                const isPlanned = state.student.plannedClasses.includes(code);
+                if (isPlanned) {
+                    removeFromPlan(code);
+                } else {
+                    addToPlan(code);
+                }
+            });
         });
 
         // Render registered classes list at bottom
@@ -405,6 +437,283 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             rulePrereq.className = 'rule-indicator-card success';
             rulePrereqStatus.style.color = 'inherit';
+        }
+    }
+
+    // ==========================================
+    // STUDY PLAN FUNCTIONS
+    // ==========================================
+
+    function addToPlan(classCode) {
+        if (state.student.registeredClasses.includes(classCode)) {
+            showToast('Học phần này đã được đăng ký thành công!', 'info');
+            return;
+        }
+        if (state.student.plannedClasses.includes(classCode)) {
+            showToast('Học phần này đã có trong kế hoạch!', 'info');
+            return;
+        }
+        
+        state.student.plannedClasses.push(classCode);
+        showToast(`Đã thêm ${classCode} vào kế hoạch học tập!`, 'success');
+        
+        saveState();
+        renderStudentPlan();
+        renderStudentClasses();
+    }
+
+    function removeFromPlan(classCode) {
+        state.student.plannedClasses = state.student.plannedClasses.filter(code => code !== classCode);
+        showToast(`Đã xóa ${classCode} khỏi kế hoạch học tập!`, 'info');
+        
+        saveState();
+        renderStudentPlan();
+        renderStudentClasses();
+    }
+
+    function registerAllPlanned() {
+        if (!state.registrationOpen) {
+            showToast('Hệ thống: Cổng đăng ký học phần đã đóng!', 'error');
+            return;
+        }
+
+        if (state.student.plannedClasses.length === 0) {
+            showToast('Kế hoạch của bạn đang trống! Vui lòng chọn môn trước.', 'warning');
+            return;
+        }
+
+        let successCount = 0;
+        let failCount = 0;
+        let failReasons = [];
+
+        const planToRegister = [...state.student.plannedClasses];
+
+        for (let classCode of planToRegister) {
+            const cls = state.classes.find(c => c.code === classCode);
+            if (!cls) continue;
+
+            if (state.student.registeredClasses.includes(classCode)) {
+                successCount++;
+                state.student.plannedClasses = state.student.plannedClasses.filter(code => code !== classCode);
+                continue;
+            }
+
+            if (cls.registered >= cls.maxCap) {
+                failCount++;
+                failReasons.push(`${classCode} (Hết chỗ)`);
+                continue;
+            }
+
+            const registeredClassesList = state.classes.filter(c => state.student.registeredClasses.includes(c.code));
+            let currentCredits = 0;
+            registeredClassesList.forEach(c => currentCredits += c.credits);
+
+            if (currentCredits + cls.credits > 20) {
+                failCount++;
+                failReasons.push(`${classCode} (Vượt quá 20 TC)`);
+                continue;
+            }
+
+            if (cls.prereq && !state.student.completedCourses.includes(cls.prereq)) {
+                failCount++;
+                failReasons.push(`${classCode} (Thiếu môn tiên quyết ${cls.prereq})`);
+                continue;
+            }
+
+            let hasClash = false;
+            for (let reg of registeredClassesList) {
+                if (reg.day === cls.day) {
+                    if ((cls.startPeriod <= reg.endPeriod) && (reg.startPeriod <= cls.endPeriod)) {
+                        hasClash = true;
+                        break;
+                    }
+                }
+            }
+
+            if (hasClash) {
+                failCount++;
+                failReasons.push(`${classCode} (Trùng lịch học)`);
+                continue;
+            }
+
+            state.student.registeredClasses.push(classCode);
+            cls.registered++;
+            successCount++;
+            
+            state.student.plannedClasses = state.student.plannedClasses.filter(code => code !== classCode);
+            logTransaction('Đăng ký 1-Click', classCode, cls.name, 'registered');
+        }
+
+        if (successCount > 0) {
+            showToast(`Đăng ký nhanh thành công ${successCount} học phần!`, 'success');
+        }
+        if (failCount > 0) {
+            showToast(`Có ${failCount} học phần thất bại: ${failReasons.join(', ')}`, 'error');
+        }
+
+        saveState();
+        renderStudentPlan();
+        renderStudentClasses();
+        renderTimetable();
+        renderAdminPortal();
+    }
+
+    function renderStudentPlan() {
+        const openBody = document.getElementById('plan-open-classes-body');
+        const selectedBody = document.getElementById('plan-selected-classes-body');
+        
+        if (!openBody || !selectedBody) return;
+        
+        openBody.innerHTML = '';
+        state.classes.forEach(cls => {
+            const isPlanned = state.student.plannedClasses.includes(cls.code);
+            const isRegistered = state.student.registeredClasses.includes(cls.code);
+            const isFull = cls.registered >= cls.maxCap;
+            
+            const weekdays = ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7'];
+            const scheduleText = `${weekdays[cls.day - 1]} (Tiết ${cls.startPeriod}-${cls.endPeriod})`;
+            
+            let btnClass = 'primary-btn';
+            let btnText = 'Lên kế hoạch';
+            let btnDisabled = '';
+            
+            if (isRegistered) {
+                btnClass = 'success-btn';
+                btnText = 'Đã đăng ký';
+                btnDisabled = 'disabled';
+                btnClass = 'status-badge registered';
+            } else if (isPlanned) {
+                btnClass = 'info-btn';
+                btnText = 'Đã lên KH';
+                btnDisabled = 'disabled';
+            } else if (isFull) {
+                btnText = 'Hết chỗ';
+            }
+
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td><strong>${cls.code}</strong></td>
+                <td>${cls.name}</td>
+                <td style="text-align: center;">${cls.credits}</td>
+                <td>${scheduleText}</td>
+                <td style="text-align: center;">
+                    <button class="${btnClass} plan-add-btn" data-code="${cls.code}" ${btnDisabled} style="font-size: 0.8rem; padding: 5px 10px; cursor: pointer; border-radius: 4px;">${btnText}</button>
+                </td>
+            `;
+            openBody.appendChild(tr);
+        });
+
+        openBody.querySelectorAll('.plan-add-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const code = btn.getAttribute('data-code');
+                addToPlan(code);
+            });
+        });
+
+        selectedBody.innerHTML = '';
+        let totalPlanCredits = 0;
+        let hasValidationErrors = false;
+        let errorsList = [];
+
+        if (state.student.plannedClasses.length === 0) {
+            selectedBody.innerHTML = `
+                <tr>
+                    <td colspan="5" style="text-align: center; color: var(--text-secondary); padding: 40px 0;">Chưa thêm môn học nào vào kế hoạch.</td>
+                </tr>
+            `;
+        } else {
+            const plannedClassesList = state.classes.filter(cls => state.student.plannedClasses.includes(cls.code));
+            const registeredClassesList = state.classes.filter(cls => state.student.registeredClasses.includes(cls.code));
+            
+            plannedClassesList.forEach(cls => {
+                totalPlanCredits += cls.credits;
+                let validationMsg = 'Hợp lệ';
+                let isClash = false;
+                let isPrereqMissing = false;
+                let isClassFull = cls.registered >= cls.maxCap;
+
+                if (cls.prereq && !state.student.completedCourses.includes(cls.prereq)) {
+                    isPrereqMissing = true;
+                    validationMsg = `Thiếu môn tiên quyết: ${cls.prereq}`;
+                }
+
+                for (let reg of registeredClassesList) {
+                    if (reg.day === cls.day) {
+                        if ((cls.startPeriod <= reg.endPeriod) && (reg.startPeriod <= cls.endPeriod)) {
+                            isClash = true;
+                            validationMsg = `Trùng lịch với lớp đã ĐK: ${reg.code}`;
+                            break;
+                        }
+                    }
+                }
+
+                if (!isClash) {
+                    for (let other of plannedClassesList) {
+                        if (other.code !== cls.code && other.day === cls.day) {
+                            if ((cls.startPeriod <= other.endPeriod) && (other.startPeriod <= cls.endPeriod)) {
+                                isClash = true;
+                                validationMsg = `Trùng lịch với lớp trong KH: ${other.code}`;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                if (isClash || isPrereqMissing || isClassFull) {
+                    hasValidationErrors = true;
+                    errorsList.push(cls.code);
+                }
+
+                let badgeHtml = '<span class="status-badge registered">Hợp lệ</span>';
+                if (isClassFull) {
+                    badgeHtml = '<span class="status-badge conflict">Lớp đã đầy</span>';
+                } else if (isPrereqMissing) {
+                    badgeHtml = `<span class="status-badge conflict" title="${validationMsg}">Thiếu tiên quyết</span>`;
+                } else if (isClash) {
+                    badgeHtml = `<span class="status-badge conflict" title="${validationMsg}">Trùng lịch học</span>`;
+                }
+
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><strong>${cls.code}</strong></td>
+                    <td>${cls.name}</td>
+                    <td style="text-align: center;">${cls.credits}</td>
+                    <td>${badgeHtml}</td>
+                    <td style="text-align: center;">
+                        <button class="text-btn plan-remove-btn" data-code="${cls.code}" style="color: var(--danger); font-size: 0.8rem; cursor: pointer;">Xóa</button>
+                    </td>
+                `;
+                selectedBody.appendChild(tr);
+            });
+
+            selectedBody.querySelectorAll('.plan-remove-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const code = btn.getAttribute('data-code');
+                    removeFromPlan(code);
+                });
+            });
+        }
+
+        const planCreditsSum = document.getElementById('plan-credits-sum');
+        const planValidationStatus = document.getElementById('plan-validation-status');
+        
+        planCreditsSum.innerText = `${totalPlanCredits} TC (Giới hạn 12-24 TC)`;
+        
+        if (state.student.plannedClasses.length === 0) {
+            planValidationStatus.innerText = 'Chưa có môn học';
+            planValidationStatus.style.color = 'var(--text-secondary)';
+        } else if (hasValidationErrors) {
+            planValidationStatus.innerText = 'Có lỗi ràng buộc ⚠️';
+            planValidationStatus.style.color = 'var(--danger)';
+        } else if (totalPlanCredits < 12) {
+            planValidationStatus.innerText = 'Chưa đủ 12 TC tối thiểu ⚠️';
+            planValidationStatus.style.color = 'var(--warning)';
+        } else if (totalPlanCredits > 24) {
+            planValidationStatus.innerText = 'Vượt quá 24 TC tối đa ⚠️';
+            planValidationStatus.style.color = 'var(--danger)';
+        } else {
+            planValidationStatus.innerText = 'Hợp lệ & Sẵn sàng đăng ký ✓';
+            planValidationStatus.style.color = 'var(--success)';
         }
     }
 
@@ -1059,6 +1368,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    document.getElementById('plan-register-all-btn').addEventListener('click', () => {
+        registerAllPlanned();
+    });
+
     // Admin Toggle registration open/closed
     document.getElementById('toggle-registration-btn').addEventListener('click', () => {
         state.registrationOpen = !state.registrationOpen;
@@ -1131,5 +1444,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCurriculum();
     renderHistory();
     renderAdminPortal();
+    renderStudentPlan();
     calculatePMSchedule();
 });

@@ -85,6 +85,10 @@
                                 <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
                                 Đăng ký học phần
                             </button>
+                            <button class="menu-item" data-view="plan-view">
+                                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                Kế hoạch học tập
+                            </button>
                             <button class="menu-item" data-view="timetable-view">
                                 <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                                 Thời khóa biểu tuần
@@ -198,6 +202,81 @@
                                             </tr>
                                         </tbody>
                                     </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VIEW: Study Plan -->
+                        <div class="view-pane" id="plan-view">
+                            <div class="view-header-row">
+                                <h2>Kế Hoạch Học Tập & Đăng Ký Nhanh 1-Click</h2>
+                                <div class="registration-status-badge open">Cổng đang mở</div>
+                            </div>
+                            <p class="section-desc">Chuẩn bị trước danh sách môn học mong muốn từ email thông báo của trường HSU. Đăng ký nhanh hàng loạt bằng 1-Click khi cổng mở để tránh sập mạng nghẽn tải!</p>
+
+                            <!-- Plan Summary Banner -->
+                            <div class="plan-summary-box glass-card" style="margin-bottom: 20px; padding: 15px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                                    <div style="display: flex; gap: 30px;">
+                                        <div>
+                                            <span style="color: var(--text-secondary); font-size: 0.85rem;">Tín chỉ kế hoạch:</span>
+                                            <strong style="display: block; font-size: 1.25rem; color: var(--primary);" id="plan-credits-sum">0 TC (Giới hạn 12-24 TC)</strong>
+                                        </div>
+                                        <div>
+                                            <span style="color: var(--text-secondary); font-size: 0.85rem;">Trạng thái kế hoạch:</span>
+                                            <strong style="display: block; font-size: 1.25rem;" id="plan-validation-status">Chưa có môn học</strong>
+                                        </div>
+                                    </div>
+                                    <button class="primary-btn" id="plan-register-all-btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); font-weight: bold; border: none; padding: 12px 24px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2); border-radius: 8px; cursor: pointer; transition: all 0.3s ease;">
+                                        ⚡ Đăng ký nhanh toàn bộ kế hoạch (1-Click)
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Two-column planning interface -->
+                            <div class="two-col-layout" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; min-height: 450px; margin-top: 10px;">
+                                <!-- Left Column: Open classes listing -->
+                                <div class="table-section glass-card" style="display: flex; flex-direction: column; padding: 18px;">
+                                    <h3 style="margin-bottom: 12px; font-size: 1.05rem;">Lớp học mở học kỳ này</h3>
+                                    <div class="responsive-table-wrapper" style="flex: 1; overflow-y: auto; max-height: 500px;">
+                                        <table class="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Mã HP</th>
+                                                    <th>Tên lớp học phần</th>
+                                                    <th style="text-align: center;">TC</th>
+                                                    <th>Lịch học</th>
+                                                    <th style="text-align: center;">Hành động</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="plan-open-classes-body">
+                                                <!-- Dynamic content from JS -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column: Planned classes listing & validation warnings -->
+                                <div class="table-section glass-card" style="display: flex; flex-direction: column; padding: 18px;">
+                                    <h3 style="margin-bottom: 12px; font-size: 1.05rem;">Kế hoạch học tập học kỳ này</h3>
+                                    <div class="responsive-table-wrapper" style="flex: 1; overflow-y: auto; max-height: 500px;">
+                                        <table class="data-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Mã HP</th>
+                                                    <th>Tên lớp HP</th>
+                                                    <th style="text-align: center;">TC</th>
+                                                    <th>Kết quả check lỗi</th>
+                                                    <th style="text-align: center;">Xóa</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="plan-selected-classes-body">
+                                                <tr>
+                                                    <td colspan="5" style="text-align: center; color: var(--text-secondary); padding: 40px 0;">Chưa thêm môn học nào vào kế hoạch.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

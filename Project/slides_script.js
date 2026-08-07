@@ -745,6 +745,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Slide 8: Student Portal
         "Chức Năng Cổng Sinh Viên (Student Portal)": "Student Portal Features",
+        "Lập kế hoạch học tập trước:": "Pre-planned Study List:",
+        "Thêm sẵn các lớp mở từ email thông báo vào Kế hoạch học tập của sinh viên.": "Add opened classes from email notifications to the student's study plan in advance.",
+        "Đăng ký nhanh 1-Click:": "1-Click Batch Registration:",
+        "Đăng ký đồng loạt toàn bộ kế hoạch ngay khi cổng mở để giảm tải hệ thống, tránh sập mạng.": "Register all planned classes simultaneously when the portal opens to reduce system load and prevent crashes.",
         "Đăng Ký Học Phần Tốc Độ Cao": "High-Speed Course Registration",
         "Tìm kiếm & Lọc thông minh:": "Smart Search & Filters:",
         "Lọc theo Khoa/Viện, Mã môn, Thứ trong tuần và Số tín chỉ.": "Filter by department, subject code, day of week, and credit count.",
