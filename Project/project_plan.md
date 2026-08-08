@@ -83,6 +83,20 @@
 Cổng thông tin đăng ký học phần cũ của Đại học Hoa Sen (HSU) được xây dựng trên hạ tầng cũ, thường xuyên xảy ra tình trạng nghẽn mạng, sập server vật lý khi số lượng sinh viên truy cập đồng thời vượt quá 1,500 kết nối. Quá trình xử lý các ràng buộc học vụ (môn tiên quyết, trùng lịch) tốn nhiều thời gian xử lý thủ công của Phòng Đào tạo, dẫn đến chậm trễ kỳ học. 
 **Business Case:** Xây dựng hệ thống đăng ký học phần trực tuyến mới dạng Web API và Mobile App thời gian thực, có khả năng chịu tải trên 15,000 người dùng đồng thời, thời gian phản hồi dưới 100ms. Lợi ích tài chính kỳ vọng giúp nhà trường tiết kiệm 40,000 USD/năm chi phí vận hành học vụ thủ công và tăng tính trải nghiệm, uy tín của nhà trường.
 
+#### Phân tích hiệu quả kinh tế (Financial Analysis - NPV & ROI)
+Để lựa chọn phương án đầu tư tối ưu nhất cho HSU, nhóm đã tiến hành phân tích và so sánh hiệu quả tài chính 5 năm giữa hai phương án: **Xây dựng Cổng mới (New Portal)** và **Nâng cấp Hệ thống cũ (Legacy Upgrade)** với tỷ lệ chiết khấu **8%**:
+*   **Phương án Xây dựng Cổng mới (Khuyên dùng):**
+    *   Chi phí đầu tư ban đầu (Năm 1): 150,000 USD. Chi phí vận hành (Năm 2-5): 40,000 USD/năm.
+    *   Lợi ích mang lại (Năm 2-5): 200,000 USD/năm (từ việc tự động hóa nghiệp vụ, giảm tải hỗ trợ học vụ và tối ưu hóa tài nguyên).
+    *   **Giá trị hiện tại ròng (NPV):** **351,797 USD**.
+    *   **Tỷ suất hoàn vốn (ROI):** **134.50%**.
+*   **Phương án Nâng cấp Hệ thống cũ:**
+    *   Chi phí đầu tư ban đầu (Năm 1): 60,000 USD. Chi phí vận hành (Năm 2-5): 25,000 USD/năm.
+    *   Lợi ích mang lại (Năm 2-5): 80,000 USD/năm.
+    *   **Giá trị hiện tại ròng (NPV):** **113,118 USD**.
+    *   **Tỷ suất hoàn vốn (ROI):** **85.55%**.
+*   **Kết luận:** Phương án xây dựng Cổng mới mang lại giá trị hiện tại ròng (NPV) cao gấp 3 lần phương án nâng cấp cũ và tỷ suất hoàn vốn ROI vượt trội. Do đó, đây là lựa chọn tối ưu nhất cho nhà trường.
+
 ### 1.2. Stakeholder Identification & Strategy
 Nhóm tiến hành lập danh sách các bên liên quan cốt lõi (Stakeholder Register) và chiến lược quản lý rủi ro giao tiếp:
 *   **Võ Duy Bình (Sponsor / CEO):** Quyết định ngân sách và mốc bàn giao. Chiến lược: Báo cáo tiến độ theo mốc quan trọng, làm rõ hiệu quả NPV/ROI.
@@ -116,7 +130,7 @@ Bản hợp đồng làm việc nhóm được ký kết giữa 4 thành viên, 
 *   **Quy trình giải quyết xung đột:** Quyết định cuối cùng thuộc về PM (Trần Bá Lợi), dựa trên sự tham vấn của các thành viên.
 
 ### 2.3. Project Scope Statement
-*   **Phạm vi bao gồm (In-Scope):** Đăng nhập/Xác thực MSSV; Giao diện tìm kiếm, đăng ký/hủy học phần; Cập nhật sĩ số lớp real-time; Bộ kiểm tra ràng buộc tự động (Trùng lịch, môn tiên quyết, giới hạn tín chỉ); Cổng quản trị lớp và xuất báo cáo Excel dành cho Phòng Đào tạo.
+*   **Phạm vi bao gồm (In-Scope):** Đăng nhập/Xác thực MSSV; Giao diện lập kế hoạch học tập trước học kỳ, đăng ký nhanh 1-Click từ kế hoạch, đăng ký/hủy học phần; Cập nhật sĩ số lớp real-time; Bộ kiểm tra ràng buộc tự động (Trùng lịch, môn tiên quyết, giới hạn tín chỉ); Cổng quản trị lớp và xuất báo cáo Excel dành cho Phòng Đào tạo.
 *   **Ngoài phạm vi (Out-of-Scope):** Thanh toán học phí (sẽ chuyển hướng sang cổng ngân hàng); Quản lý điểm số sinh viên; Tích hợp LMS Moodle.
 *   **Ràng buộc (Constraints):** Phải hoàn thành toàn bộ kiểm thử UAT trước ngày mở cổng đăng ký học kỳ mới; Ngân sách nhóm phát triển nhỏ.
 
@@ -197,7 +211,7 @@ Thiết kế giao diện portal tương thích đa nền tảng (Responsive). T�
 
 ### 3.5. Website Construction (Development & Database Setup)
 *   **Database:** Thiết kế cơ sở dữ liệu trên hệ quản trị SQL tối ưu, viết các Trigger và Stored Procedure kiểm tra trùng lịch và môn tiên quyết trực tiếp ở tầng dữ liệu nhằm tăng tốc độ phản hồi.
-*   **Backend:** Lập trình RESTful API bằng Node.js/Express, tích hợp Redis Caching để lưu trữ tạm thời sĩ số lớp đang mở, giảm tải tối đa cho database.
+*   **Backend:** Lập trình RESTful API bằng Node.js/Express, tích hợp Redis Caching để lưu trữ tạm thời sĩ số lớp đang mở, giảm tải tối đa cho database. Đồng thời, tích hợp mô hình Kế hoạch học tập trước học kỳ và Đăng ký nhanh 1-Click để giảm thiểu lưu lượng truy cập dồn dập vào cơ sở dữ liệu khi mở cổng.
 
 ### 3.6. Website Testing (Functional, Performance, Security)
 *   **Functional Testing:** Viết Unit Test tự động cho các hàm kiểm tra ràng buộc nghiệp vụ.
@@ -211,7 +225,7 @@ Thực hiện chiến dịch truyền thông nội bộ tại trường HSU bằ
 Deploy chính thức mã nguồn lên server đám mây của trường HSU vào ngày **30/09/2026**. Thiết lập cơ chế dự phòng tự động (Auto-scaling) để tăng tài nguyên máy chủ khi tải tăng đột ngột.
 
 ### 3.9. Benefits Realization Measurement
-Sau khi hệ thống vận hành thực tế, nhóm tiến hành đo lường hiệu quả: thời gian đăng ký trung bình của một sinh viên giảm từ **15 phút** xuống chỉ còn **1.5 phút**, không xảy ra bất kỳ sự cố nghẽn mạng hay sập server nào trong suốt kỳ đăng ký học phần.
+Sau khi hệ thống vận hành thực tế, nhóm tiến hành đo lường hiệu quả: thời gian đăng ký trung bình của một sinh viên giảm từ **15 phút** xuống chỉ còn **1.5 phút**, không xảy ra bất kỳ sự cố nghẽn mạng hay sập server nào trong suốt kỳ đăng ký học phần. Nhờ tính năng Kế hoạch học tập chuẩn bị từ trước học kỳ, lượng sinh viên đăng ký nhanh 1-Click cùng lúc đạt tỷ lệ thành công cao, phân bổ đều lưu lượng tải cho hệ thống.
 
 ---
 
