@@ -98,12 +98,16 @@ Cổng thông tin đăng ký học phần cũ của Đại học Hoa Sen (HSU) �
 *   **Kết luận:** Phương án xây dựng Cổng mới mang lại giá trị hiện tại ròng (NPV) cao gấp 3 lần phương án nâng cấp cũ và tỷ suất hoàn vốn ROI vượt trội. Do đó, đây là lựa chọn tối ưu nhất cho nhà trường.
 
 ### 1.2. Stakeholder Identification & Strategy
-Nhóm tiến hành lập danh sách các bên liên quan cốt lõi (Stakeholder Register) và chiến lược quản lý rủi ro giao tiếp:
-*   **Võ Duy Bình (Sponsor / CEO):** Quyết định ngân sách và mốc bàn giao. Chiến lược: Báo cáo tiến độ theo mốc quan trọng, làm rõ hiệu quả NPV/ROI.
-*   **Trần Bá Lợi (Project Manager):** Điều phối chung. Chiến lược: Họp giao ban tiến độ hàng tuần, quản lý đường găng.
-*   **Hồng Bảo Khang & Nguyễn Thanh Quang (Dev Team):** Thiết kế database, lập trình API và UI/UX. Chiến lược: Kiểm soát code thông qua Git commit mỗi ngày.
-*   **Phòng Đào tạo HSU (Client):** Chủ sở hữu nghiệp vụ. Chiến lược: Khảo sát quy chế học vụ chi tiết, bàn giao thử nghiệm UAT sớm.
-*   **Sinh viên HSU (End User):** Chiến lược: Tối ưu UI/UX di động, tải trang nhanh để tránh nghẽn.
+Nhóm tiến hành lập danh sách các bên liên quan cốt lõi (Stakeholder Register) và ma trận chiến lược quản lý rủi ro giao tiếp theo chuẩn PMBOK:
+
+| Bên liên quan (Stakeholder) | Vai trò trong dự án | Mức độ quan tâm / Ảnh hưởng | Kênh / Chiến lược truyền thông |
+| :--- | :--- | :--- | :--- |
+| **Võ Duy Bình** | Sponsor / CEO | Rất cao / Quyết định | Báo cáo tiến độ theo cột mốc quan trọng, minh chứng NPV/ROI |
+| **Trần Bá Lợi** | Project Manager (PM) | Rất cao / Cao | Họp giao ban tuần, theo dõi Critical Path, quản lý chỉ số EVM |
+| **Hồng Bảo Khang** | Backend Developer | Cao / Trung bình | Kiểm soát mã nguồn qua Git commit, họp Daily Standup hàng ngày |
+| **Nguyễn Thanh Quang**| UI/UX Dev & Tester | Cao / Trung bình | Báo cáo lỗi UAT, kiểm thử thiết kế giao diện di động phản hồi |
+| **Phòng Đào tạo HSU** | Khách hàng chủ quản | Cao / Quyết định | Khảo sát quy chế học vụ chi tiết, họp nghiệm thu UAT định kỳ |
+| **Sinh viên HSU** | Người dùng cuối | Trung bình / Thấp | Khảo sát mức độ hài lòng, cung cấp tài liệu hướng dẫn sử dụng |
 
 ### 1.3. Project Charter
 Tài liệu Điều lệ dự án đã được ký duyệt chính thức ngày **12/07/2026** với các nội dung cốt lõi:
@@ -135,12 +139,30 @@ Bản hợp đồng làm việc nhóm được ký kết giữa 4 thành viên, 
 *   **Ràng buộc (Constraints):** Phải hoàn thành toàn bộ kiểm thử UAT trước ngày mở cổng đăng ký học kỳ mới; Ngân sách nhóm phát triển nhỏ.
 
 ### 2.4. Work Breakdown Structure (WBS)
-Cấu trúc phân rã công việc chi tiết cho đồ án gồm 5 giai đoạn:
-*   **1.0 Initiating (Khởi tạo):** 1.1 Khảo sát nghiệp vụ; 1.2 Soạn thảo Project Charter; 1.3 Họp Kick-off.
-*   **2.0 Planning (Lập kế hoạch):** 2.1 Team Contract; 2.2 Scope Statement; 2.3 Thiết lập WBS & Gantt Chart; 2.4 Lập Kế hoạch Quản lý rủi ro và giao tiếp.
-*   **3.0 Executing (Thực thi):** 3.1 Khảo sát người dùng; 3.2 Soạn thảo SRS; 3.3 Thiết kế Figma UI/UX; 3.4 Lập trình Database & API Backend; 3.5 Lập trình giao diện Frontend; 3.6 Tích hợp hệ thống.
-*   **4.0 Monitoring & Controlling (Giám sát):** 4.1 Họp giao ban và báo cáo tiến độ tuần; 4.2 Theo dõi đường găng; 4.3 Cập nhật EVM & Risk Register.
-*   **5.0 Closing (Đóng dự án):** 5.1 Kiểm thử chấp nhận UAT; 5.2 Tập huấn vận hành; 5.3 Bàn giao mã nguồn; 5.4 Lập báo cáo tổng kết dự án.
+Cấu trúc phân rã công việc chi tiết và từ điển WBS (WBS Dictionary) của dự án được phân cấp thành các gói công việc cụ thể:
+
+| Mã WBS | Tên gói công việc (WBS Element) | Thành viên phụ trách | Mô tả sản phẩm bàn giao (Deliverable) |
+| :--- | :--- | :--- | :--- |
+| **1.0** | **Initiating (Khởi tạo)** | PM (Lợi) & Sponsor (Bình) | Hồ sơ khởi tạo dự án đã ký duyệt |
+| 1.1 | Khảo sát nghiệp vụ ban đầu | Nhóm 3 | Biên bản ghi nhận nghiệp vụ của Phòng Đào tạo |
+| 1.2 | Soạn thảo Project Charter | PM (Lợi) | File Charter dự án đã ký duyệt |
+| 1.3 | Họp Kick-off dự án | Nhóm 3 | Slide kick-off & Biên bản cuộc họp ban đầu |
+| **2.0** | **Planning (Lập kế hoạch)** | PM (Lợi) | Kế hoạch phát triển phần mềm (SDP) |
+| 2.1 | Team Planning Meeting & Charter | Nhóm 3 | Bản thỏa thuận nhóm (Team Contract) |
+| 2.2 | Scope Statement & WBS | PM (Lợi) | Bản mô tả phạm vi dự án & Cấu trúc WBS |
+| 2.3 | Gantt Chart & Schedule | PM (Lợi) | Tệp tiến độ Excel tự động tính toán ngày |
+| 2.4 | Kế hoạch Quản lý rủi ro & Giao tiếp| Nhóm 3 | Ma trận phân tích rủi ro & Lịch giao tiếp |
+| **3.0** | **Executing (Thực thi)** | Dev Team (Khang & Quang) | Hệ thống Cổng đăng ký hoàn thiện |
+| 3.1 | Khảo sát sinh viên & SRS | Khang (Backend) | Tài liệu đặc tả yêu cầu phần mềm (SRS) |
+| 3.2 | Thiết kế Figma UI/UX | Quang (UI/UX) | Bản mockup thiết kế di động/web trên Figma |
+| 3.3 | Phát triển cơ sở dữ liệu & API | Khang (Backend) | Database SQL, Redis Cache, API Node.js |
+| 3.4 | Phát triển Front-end Web App | Quang (UI/UX) | Giao diện HTML, CSS, JS hoàn chỉnh |
+| **4.0** | **Monitoring & Controlling** | PM (Lợi) | Báo cáo tình trạng sức khỏe dự án |
+| 4.1 | Họp giao ban & Cập nhật tiến độ | PM (Lợi) | Báo cáo tuần, kiểm soát EVM & Đường găng |
+| 4.2 | Quản lý thay đổi & Risk Register | PM (Lợi) | Nhật ký thay đổi (Change Log) & Sổ rủi ro |
+| **5.0** | **Closing (Đóng dự án)** | Nhóm 3 | Biên bản nghiệm thu bàn giao |
+| 5.1 | Kiểm thử chấp nhận UAT | Quang (Tester) | Báo cáo kiểm thử UAT có chữ ký của PDT HSU |
+| 5.2 | Bàn giao mã nguồn & Hướng dẫn | Nhóm 3 | Source code trên GitHub, tài liệu HDSD |
 
 ### 2.5. Schedule and Cost Baseline
 
@@ -160,8 +182,18 @@ Dự án kéo dài trong **12 tuần** (từ ngày 03/08/2026 đến ngày 07/10
 Biểu đồ Gantt tiến độ cơ sở (Schedule Baseline) được thiết lập chi tiết trên MS Project, quy định mốc hoàn thành code complete ở Tuần 9 và chạy Go-live chính thức ở Tuần 11.
 
 ### 2.6. Risk Management Plan
-Quy trình quản lý rủi ro tiến độ được chia làm 4 bước: Nhận diện ➔ Phân tích định tính ➔ Lập phương án ứng phó ➔ Giám sát. 
-Nhóm lập bản đăng ký rủi ro (Risk Register) theo dõi 8 rủi ro chính. Rủi ro nghiêm trọng nhất là **R1: Quá tải hệ thống khi mở cổng đăng ký** (Xác suất: Trung bình, Ảnh hưởng: Rất cao, Điểm: 9) và **R2: Trễ tiến độ API Backend** (Xác suất: Cao, Ảnh hưởng: Cao, Điểm: 6).
+Quy trình quản lý rủi ro dự án tuân thủ tiêu chuẩn PMBOK (Nhận diện ➔ Phân tích định tính ➔ Lập phương án ứng phó ➔ Giám sát). Nhóm xây dựng sổ theo dõi rủi ro (Risk Register) cho các rủi ro tiến độ và kỹ thuật:
+
+| Mã | Mô tả rủi ro | Xác suất | Ảnh hưởng | Điểm (RPN) | Thành viên quản lý | Biện pháp ứng phó (Mitigation Strategy) |
+| :--- | :--- | :---: | :---: | :---: | :--- | :--- |
+| **R1** | Quá tải server khi mở cổng | Trung bình | Rất cao | 9 | Khang (Backend) | Tích hợp Redis Caching, phát triển tính năng **Kế hoạch học tập & Đăng ký nhanh 1-Click** để giảm 90% tải dồn dập |
+| **R2** | Chậm tiến độ hoàn thành API | Cao | Cao | 6 | Lợi (PM) | Crashing (tăng ca), chia nhỏ các task theo chặng chạy nước rút |
+| **R3** | Giao diện không responsive di động | Thấp | Cao | 3 | Quang (UI/UX) | Thiết kế Mobile-first, sử dụng hệ thống lưới CSS linh hoạt |
+| **R4** | Sai lệch công thức tính NPV/ROI | Thấp | Cao | 3 | Bình (Sponsor)| Kiểm tra chéo công thức Excel NPV bằng code trước khi thuyết trình |
+| **R5** | Xung đột thời khóa biểu sinh viên | Trung bình | Trung bình | 4 | Khang (Backend) | Ràng buộc logic kiểm tra xung đột lịch học ngay tại Front-end |
+| **R6** | Thành viên nhóm vắng mặt | Trung bình | Trung bình | 4 | Lợi (PM) | Phân công chéo nhiệm vụ và lưu trữ tài liệu chung trên đám mây |
+| **R7** | Lỗi bảo mật rò rỉ dữ liệu | Thấp | Rất cao | 3 | Khang (Backend) | Sử dụng thư viện bảo mật, mã hóa dữ liệu MSSV của sinh viên |
+| **R8** | Phòng Đào tạo đổi nghiệp vụ UAT | Thấp | Trung bình | 2 | Lợi (PM) | Phê duyệt đặc tả yêu cầu SRS trước khi lập trình Frontend |
 
 ### 2.7. Communication Management Plan
 Quy định luồng giao tiếp thông tin trong dự án để tránh xung đột:
@@ -232,17 +264,23 @@ Sau khi hệ thống vận hành thực tế, nhóm tiến hành đo lường hi
 ## 4. MONITORING AND CONTROLLING (GIÁM SÁT & KIỂM SOÁT)
 
 ### 4.1. Progress Reports (Báo cáo EVM)
-Tại mốc báo cáo ngày **16/09/2026** (Status Date), PM thực hiện tính toán các chỉ số EVM để giám sát sức khỏe dự án:
-*   **BAC (Tổng ngân sách):** 39.150.000 VND
-*   **PV (Giá trị kế hoạch):** 28.900.000 VND
-*   **EV (Giá trị thu được):** 28.000.000 VND
-*   **AC (Chi phí thực tế):** 28.328.500 VND
-*   **SV (Độ lệch tiến độ):** EV - PV = -900.000 VND (Chậm tiến độ nhẹ).
-*   **CV (Độ lệch chi phí):** EV - AC = -328.500 VND (Vượt chi phí nhẹ).
-*   **SPI (Hiệu suất tiến độ):** EV / PV = 0.97 < 1 (Trễ hạn).
-*   **CPI (Hiệu suất chi phí):** EV / AC = 0.99 < 1 (Vượt ngân sách).
-*   **EAC (Dự báo chi phí khi hoàn thành):** BAC / CPI = 39.609.313 VND (Vượt ngân sách cơ sở khoảng 1.2%).
-*   **Biện pháp xử lý:** Tiến hành Crashing (tăng ca) lập trình viên Backend để hoàn thành API đúng hạn và Fast-tracking các kịch bản kiểm thử UAT.
+Tại mốc báo cáo tiến độ giữa kỳ ngày **16/09/2026** (Status Date), PM thực hiện phân tích giá trị thu được (Earned Value Management) để đo lường hiệu suất dự án:
+
+| Chỉ số EVM | Công thức | Giá trị tính toán | Trạng thái / Diễn giải nghiệp vụ |
+| :--- | :--- | :---: | :--- |
+| **BAC** | Ngân sách cơ sở ban đầu | **39.150.000 VND** | Tổng kinh phí dự kiến cho toàn bộ 74 ngày công |
+| **PV** | Kế hoạch tính đến ngày 16/09 | **28.900.000 VND** | Giá trị công việc cần hoàn thành theo kế hoạch |
+| **EV** | Thực tế hoàn thành | **28.000.000 VND** | Giá trị công việc thực tế đã hoàn tất |
+| **AC** | Chi phí thực tế đã tiêu | **28.328.500 VND** | Chi phí thực tế ghi nhận từ bảng lương |
+| **SV** | `EV - PV` | **-900.000 VND** | **Chậm tiến độ** (Giá trị âm biểu thị trễ lịch) |
+| **CV** | `EV - AC` | **-328.500 VND** | **Vượt chi phí** (Giá trị âm biểu thị tiêu vượt định mức) |
+| **SPI** | `EV / PV` | **0.97** | **Trễ tiến độ** (SPI < 1.0, tiến độ đạt 97% so với kế hoạch) |
+| **CPI** | `EV / AC` | **0.99** | **Vượt ngân sách** (CPI < 1.0, hiệu quả chi phí đạt 99%) |
+| **EAC** | `BAC / CPI` | **39.609.313 VND** | Dự kiến chi phí lúc hoàn thành (vượt ngân sách 1.2%) |
+| **VAC** | `BAC - EAC` | **-459.313 VND** | Dự kiến độ lệch chi phí khi kết thúc dự án |
+
+*   **Đánh giá sức khỏe dự án:** Dự án đang chậm tiến độ nhẹ (3%) và vượt chi phí không đáng kể (1.2%).
+*   **Biện pháp khắc phục của PM:** Tiến hành **Crashing** (tăng ca) lập trình viên Backend để hoàn thành API đúng hạn và áp dụng **Fast-tracking** các kịch bản kiểm thử UAT song song với coding Frontend để rút ngắn thời gian về đích.
 
 ### 4.2. Change Request & Control Process
 Mọi yêu cầu thay đổi (Change Request) phát sinh từ Phòng Đào tạo (Ví dụ: Thêm cơ chế lọc nâng cao cho sinh viên diện học bổng) bắt buộc phải điền vào Biểu mẫu yêu cầu thay đổi tiêu chuẩn. Yêu cầu sẽ được họp phê duyệt bởi Ban kiểm soát thay đổi (Change Control Board) để đánh giá tác động chi phí/tiến độ trước khi đưa vào WBS.
