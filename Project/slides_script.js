@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const delayVal3Text = document.getElementById('slide8-delay-val-3');
         
         if (end3 >= end2) {
-            if (bar3) bar3.style.background = '#f43f5e';
+            if (bar3) bar3.style.background = 'linear-gradient(135deg, #f43f5e, #e11d48)';
             if (card3) {
                 card3.style.background = 'rgba(244, 63, 94, 0.05)';
                 card3.style.borderColor = '#f43f5e';
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (floatText3) floatText3.innerText = currentLang === 'en' ? 'Float: 0 weeks (CRITICAL!)' : 'Đệm (Float): 0 tuần (CRITICAL!)';
             if (delayVal3Text && delayVals[3] > 0) delayVal3Text.style.color = '#f43f5e';
         } else {
-            if (bar3) bar3.style.background = '#10b981';
+            if (bar3) bar3.style.background = 'linear-gradient(135deg, #10b981, #059669)';
             if (card3) {
                 card3.style.background = 'rgba(16, 185, 129, 0.05)';
                 card3.style.borderColor = '#10b981';
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const delayVal4Text = document.getElementById('slide8-delay-val-4');
 
         if (end4 >= end2) {
-            if (bar4) bar4.style.background = '#f43f5e';
+            if (bar4) bar4.style.background = 'linear-gradient(135deg, #f43f5e, #e11d48)';
             if (card4) {
                 card4.style.background = 'rgba(244, 63, 94, 0.05)';
                 card4.style.borderColor = '#f43f5e';
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (floatText4) floatText4.innerText = currentLang === 'en' ? 'Float: 0 weeks (CRITICAL!)' : 'Đệm (Float): 0 tuần (CRITICAL!)';
             if (delayVal4Text && delayVals[4] > 0) delayVal4Text.style.color = '#f43f5e';
         } else {
-            if (bar4) bar4.style.background = '#10b981';
+            if (bar4) bar4.style.background = 'linear-gradient(135deg, #10b981, #059669)';
             if (card4) {
                 card4.style.background = 'rgba(16, 185, 129, 0.05)';
                 card4.style.borderColor = '#10b981';

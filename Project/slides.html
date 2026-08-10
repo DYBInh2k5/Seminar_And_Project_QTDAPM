@@ -68,6 +68,56 @@
             max-width: 100%;
             overflow-x: auto;
         }
+
+        /* Floating background glow animations */
+        @keyframes float-glow-1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 20px) scale(1.08); }
+        }
+        @keyframes float-glow-2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(25px, -30px) scale(0.96); }
+        }
+        @keyframes float-glow-3 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-15px, -15px) scale(1.04); }
+        }
+        .glow-sphere-1 {
+            animation: float-glow-1 15s ease-in-out infinite;
+        }
+        .glow-sphere-2 {
+            animation: float-glow-2 18s ease-in-out infinite;
+        }
+        .glow-sphere-3 {
+            animation: float-glow-3 22s ease-in-out infinite;
+        }
+
+        /* Smooth custom premium scrollbar */
+        .slide::-webkit-scrollbar {
+            width: 6px;
+        }
+        .slide::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .slide::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .slide::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Interactive element transitions */
+        .primary-btn, .secondary-btn, .info-btn, .danger-btn, .lang-btn, .icon-btn, .close-btn {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+        .primary-btn:hover, .secondary-btn:hover, .info-btn:hover, .lang-btn:hover:not(.active), .icon-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .primary-btn:active, .secondary-btn:active, .info-btn:active, .icon-btn:active {
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -1077,7 +1127,7 @@
                                     <div style="display: grid; grid-template-columns: 80px 1fr; align-items: center; height: 26px; margin-bottom: 6px; font-size: 0.72rem;">
                                         <div style="font-weight: 600;">1. Yêu cầu</div>
                                         <div style="display: grid; grid-template-columns: repeat(16, 1fr); height: 12px; position: relative;">
-                                            <div id="slide8-bar-1" style="grid-column: 2 / 4; background: #f43f5e; border-radius: 3px; transition: all 0.2s;"></div>
+                                            <div id="slide8-bar-1" style="grid-column: 2 / 4; background: linear-gradient(135deg, #f43f5e, #e11d48); border-radius: 3px; transition: all 0.2s;"></div>
                                         </div>
                                     </div>
                                     
@@ -1085,7 +1135,7 @@
                                     <div style="display: grid; grid-template-columns: 80px 1fr; align-items: center; height: 26px; margin-bottom: 6px; font-size: 0.72rem;">
                                         <div style="font-weight: 600;">2. Backend</div>
                                         <div style="display: grid; grid-template-columns: repeat(16, 1fr); height: 12px; position: relative;">
-                                            <div id="slide8-bar-2" style="grid-column: 4 / 8; background: #f43f5e; border-radius: 3px; transition: all 0.2s;"></div>
+                                            <div id="slide8-bar-2" style="grid-column: 4 / 8; background: linear-gradient(135deg, #f43f5e, #e11d48); border-radius: 3px; transition: all 0.2s;"></div>
                                         </div>
                                     </div>
                                     
@@ -1093,7 +1143,7 @@
                                     <div style="display: grid; grid-template-columns: 80px 1fr; align-items: center; height: 26px; margin-bottom: 6px; font-size: 0.72rem;">
                                         <div style="font-weight: 600;">3. Frontend</div>
                                         <div style="display: grid; grid-template-columns: repeat(16, 1fr); height: 12px; position: relative;">
-                                            <div id="slide8-bar-3" style="grid-column: 4 / 7; background: #10b981; border-radius: 3px; transition: all 0.2s;"></div>
+                                            <div id="slide8-bar-3" style="grid-column: 4 / 7; background: linear-gradient(135deg, #10b981, #059669); border-radius: 3px; transition: all 0.2s;"></div>
                                         </div>
                                     </div>
                                     
@@ -1101,7 +1151,7 @@
                                     <div style="display: grid; grid-template-columns: 80px 1fr; align-items: center; height: 26px; margin-bottom: 4px; font-size: 0.72rem;">
                                         <div style="font-weight: 600;">4. Database</div>
                                         <div style="display: grid; grid-template-columns: repeat(16, 1fr); height: 12px; position: relative;">
-                                            <div id="slide8-bar-4" style="grid-column: 4 / 6; background: #10b981; border-radius: 3px; transition: all 0.2s;"></div>
+                                            <div id="slide8-bar-4" style="grid-column: 4 / 6; background: linear-gradient(135deg, #10b981, #059669); border-radius: 3px; transition: all 0.2s;"></div>
                                         </div>
                                     </div>
                                 </div>

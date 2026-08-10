@@ -69,6 +69,12 @@ body {
     overflow: hidden;
     z-index: 1;
     pointer-events: none;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+[data-theme="light"] .glow-bg-container {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px);
 }
 
 .glow-sphere {
@@ -84,12 +90,22 @@ body {
     mix-blend-mode: multiply;
 }
 
+@keyframes float-glow-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-30px, 30px) scale(1.08); }
+}
+@keyframes float-glow-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, -20px) scale(0.95); }
+}
+
 .glow-1 {
     width: 600px;
     height: 600px;
     background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
     top: -10%;
     right: -10%;
+    animation: float-glow-1 18s ease-in-out infinite;
 }
 
 .glow-2 {
@@ -98,6 +114,7 @@ body {
     background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
     bottom: -10%;
     left: -10%;
+    animation: float-glow-2 22s ease-in-out infinite;
 }
 
 /* Core Container Layout */
@@ -171,6 +188,12 @@ body {
 
 .portal-tab-btn:hover {
     color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-1px);
+}
+
+.portal-tab-btn:active {
+    transform: translateY(0);
 }
 
 .portal-tab-btn.active {
@@ -308,7 +331,8 @@ body {
 
 .menu-item:hover {
     color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(4px);
 }
 
 .menu-item.active {
@@ -528,8 +552,12 @@ body {
     letter-spacing: 0.5px;
 }
 
+.data-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
 .data-table tbody tr:hover {
-    background: rgba(255, 255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.03) !important;
 }
 
 /* Table specific fields */
