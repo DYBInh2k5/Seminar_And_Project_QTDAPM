@@ -17,6 +17,7 @@
 ### DEVELOPMENT TEAM INFORMATION
 *   **Institution:** Hoa Sen University (HSU)
 *   **Course:** Software Project Management (SW403DE01)
+*   **Instructor:** Nguyễn Văn Sơn
 *   **Class/Group:** Group 3
 *   **Members & Roles:**
     1.  **Vo Duy Binh** (MSSV: 22301500) - Project Manager (PM) & UI/UX Designer
