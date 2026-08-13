@@ -20,9 +20,9 @@
 *   **Class/Group:** Group 3
 *   **Members & Roles:**
     1.  **Vo Duy Binh** (MSSV: 22301500) - Project Manager (PM) & UI/UX Designer
-    2.  **Nguyen Van A** (MSSV: 22301501) - Lead Backend Developer
-    3.  **Tran Thi B** (MSSV: 22301502) - Database Engineer
-    4.  **Le Van C** (MSSV: 22301503) - QA/QC Engineer
+    2.  **Hong Bao Khang** (MSSV: 22101347) - Lead Backend & Financial Developer
+    3.  **Tran Ba Loi** (MSSV: 22300236) - Project Manager (PM) & QA Engineer
+    4.  **Nguyen Thanh Quang** (MSSV: 22110739) - Business & Risk Analyst / UI/UX Designer
 
 ---
 
@@ -131,7 +131,7 @@ The Project Charter formally authorizes the project. Key details include:
 
 ### 1.4. Kick-off Meeting Summary
 The Project Kick-off meeting was held on **01/08/2026** at Room 502, HSU Nguyen Van Trang campus.
-*   **Attendees:** Vo Duy Binh (PM), Nguyen Van A (Backend), Tran Thi B (Database), Le Van C (QA), and PGS. TS. Nguyen Hoài Nam (Sponsor).
+*   **Attendees:** Vo Duy Binh (PM), Hong Bao Khang (Backend), Tran Ba Loi (PM/QA), Nguyen Thanh Quang (Analyst), and PGS. TS. Nguyen Hoài Nam (Sponsor).
 *   **Key Decisions:**
     1.  Approved the project schedule baseline (52 working days).
     2.  Agreed on Git flow branching strategy (`main` for release, `dev` for integration).
@@ -141,8 +141,8 @@ The Project Kick-off meeting was held on **01/08/2026** at Room 502, HSU Nguyen 
 | Action Item | Assigned To | Due Date | Status |
 | :--- | :---: | :---: | :---: |
 | Draft Team Charter and rules | Vo Duy Binh | 05/08/2026 | Completed |
-| Conduct student requirement survey | Le Van C | 10/08/2026 | Completed |
-| Initialize Git repository and project structure | Nguyen Van A | 08/08/2026 | Completed |
+| Conduct student requirement survey | Nguyen Thanh Quang | 10/08/2026 | Completed |
+| Initialize Git repository and project structure | Hong Bao Khang | 08/08/2026 | Completed |
 
 ---
 
@@ -151,7 +151,7 @@ The Project Kick-off meeting was held on **01/08/2026** at Room 502, HSU Nguyen 
 ### 2.1. Team Planning Meeting
 The team planning sessions occurred from **02/08/2026** to **05/08/2026**. The team mapped out the Work Breakdown Structure (WBS) and established a **Responsibility Assignment Matrix (RACI)**:
 
-| WBS ID | Task Name | Vo Duy Binh (PM) | Nguyen Van A (Backend) | Tran Thi B (Database) | Le Van C (QA) |
+| WBS ID | Task Name | Vo Duy Binh (Leader) | Hong Bao Khang (Backend) | Tran Ba Loi (PM/QA) | Nguyen Thanh Quang (Analyst) |
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **1.0** | Initiating Phase | **A** | C | C | C |
 | **2.0** | Planning Phase | **A** | C | C | C |
@@ -235,9 +235,9 @@ The project timeline spans from **01/08/2026** to **13/10/2026** (74 calendar da
 #### Task Resources
 Resource allocation is calculated based on daily rates:
 *   **Vo Duy Binh (PM):** 800,000 VND / day
-*   **Nguyen Van A (Lead Dev):** 750,000 VND / day
-*   **Tran Thi B (DB Dev):** 700,000 VND / day
-*   **Le Van C (Tester):** 650,000 VND / day
+*   **Hong Bao Khang (Lead Dev):** 750,000 VND / day
+*   **Tran Ba Loi (PM/QA):** 700,000 VND / day
+*   **Nguyen Thanh Quang (Tester):** 650,000 VND / day
 
 #### Task Durations & Task Dependencies
 The tasks are linked sequentially along the critical path to avoid schedule clashes:
@@ -257,8 +257,8 @@ The team created a Risk Register with Risk Priority Number (RPN) scoring to clas
 
 | Risk ID | Description | Category | Severity (S) | Probability (P) | RPN | Mitigation Strategy | Owner |
 | :---: | :--- | :--- | :---: | :---: | :---: | :--- | :---: |
-| **R1** | **Server overload on registration opening** | Technical | 5 | 4 | **20** | Implement a **Redis Cache** layer to store available classes and available slots. Introduce the **Pre-planned Study List** to pre-plan registrations, allowing students to register with a **1-Click Batch Quick Register** button. | Nguyen Van A |
-| **R2** | **Database table locking during high concurrency** | Technical | 4 | 4 | **16** | Implement optimistic locking on class slots. Avoid long-running SQL transactions and apply database indexes on `mssv` and `ma_lop_hp` fields. | Tran Thi B |
+| **R1** | **Server overload on registration opening** | Technical | 5 | 4 | **20** | Implement a **Redis Cache** layer to store available classes and available slots. Introduce the **Pre-planned Study List** to pre-plan registrations, allowing students to register with a **1-Click Batch Quick Register** button. | Hong Bao Khang |
+| **R2** | **Database table locking during high concurrency** | Technical | 4 | 4 | **16** | Implement optimistic locking on class slots. Avoid long-running SQL transactions and apply database indexes on `mssv` and `ma_lop_hp` fields. | Tran Ba Loi |
 | **R3** | **Students registering for classes without meeting prerequisites** | Operational | 3 | 3 | **9** | Implement real-time client-side prerequisite verification on the web portal. Block the registration request immediately if prerequisites are not met. | Vo Duy Binh |
 | **R4** | **Scope creep from HSU Academic Affairs** | Scope | 4 | 2 | **8** | Establish a strict Change Control Board (CCB) process. Require formal sign-off for any change that alters the WBS baseline. | Vo Duy Binh |
 
@@ -574,9 +574,9 @@ The test metrics recorded across the simulated load phases are detailed below:
 | Member Name | Student ID | Core Project Role | Responsibility & Quality Commitment | Signature |
 | :--- | :---: | :--- | :--- | :---: |
 | **Vo Duy Binh** | 22301500 | Project Manager / UI/UX | Manage schedules, design UI layout, and maintain slide decks. | *BinhVD* |
-| **Nguyen Van A** | 22301501 | Lead Backend Engineer | Build Node.js APIs and integrate Redis caching. | *A_Nguyen* |
-| **Tran Thi B** | 22301502 | Database Developer | Design PostgreSQL database schema and optimize triggers. | *B_Tran* |
-| **Le Van C** | 22301503 | QA/QC Engineer | Design unit test suites and execute load testing tools. | *C_Le* |
+| **Hong Bao Khang** | 22101347 | Lead Backend Engineer | Build Node.js APIs and integrate Redis caching. | *KhangHB* |
+| **Tran Ba Loi** | 22300236 | Project Manager / PM | Manage project budgets, EVM tracking, and quality gates. | *LoiTB* |
+| **Nguyen Thanh Quang** | 22110739 | Risk & Business Analyst | Lead risk assessment, UI validation, and user survey analysis. | *QuangNT* |
 
 **Team Operating Rules:**
 1.  **Deadline Adherence:** Members must complete tasks assigned in the WBS by the agreed due dates. Delays will be reviewed during weekly team status meetings.
