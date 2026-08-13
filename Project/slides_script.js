@@ -814,7 +814,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Slide 11: EVM
         "Báo Cáo Hiệu Suất EVM & Quản Lý Chi Phí": "EVM Performance & Cost Control",
-        "Phân tích giá trị thu được (Earned Value Management) tại thời điểm báo cáo ngày 16/09/2026:": "Earned Value Management (EVM) analysis as of status date September 16, 2026:",
+        "Phân tích giá trị thu được (Earned Value Management) tại thời điểm báo cáo ngày 28/08/2026:": "Earned Value Management (EVM) analysis as of status date August 28, 2026:",
         "Các Chỉ Số Đo Lường Cơ Bản (EVM Metrics)": "Key EVM Performance Metrics",
         "BAC (Ngân sách hoàn thành)": "BAC (Budget at Completion)",
         "PV (Giá trị kế hoạch)": "PV (Planned Value)",
