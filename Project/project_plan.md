@@ -7,11 +7,11 @@
 
 | Version | Date | Description | Author | Approved By |
 | :---: | :---: | :--- | :---: | :---: |
-| **V1.0** | 10/08/2026 | Initial draft of the Project Development Plan, establishing WBS and schedule baselines. | Group 3 | Vo Duy Binh (PM) |
-| **V1.1** | 12/08/2026 | Added PMBOK structured tables, Stakeholder Register, WBS Dictionary, Risk Register, and EVM indicator tables. | Group 3 | Vo Duy Binh (PM) |
-| **V1.2** | 13/08/2026 | Refined closing phase parameters, standard Use Case, and ERD Mermaid diagrams in the appendices. | Group 3 | Vo Duy Binh (PM) |
-| **V2.0** | 13/08/2026 | Bilingual English translation update and final review of all content sections. | Group 3 | Vo Duy Binh (PM) |
-| **V3.0** | 13/08/2026 | Restructured to match the HSU Software Development Plan (SDP) official template exactly. | Group 3 | Vo Duy Binh (PM) |
+| **V1.0** | 22/07/2026 | Initial draft of the Project Development Plan, establishing WBS and schedule baselines. | Group 3 | Vo Duy Binh (PM) |
+| **V1.1** | 24/07/2026 | Added PMBOK structured tables, Stakeholder Register, WBS Dictionary, Risk Register, and EVM indicator tables. | Group 3 | Vo Duy Binh (PM) |
+| **V1.2** | 25/07/2026 | Refined closing phase parameters, standard Use Case, and ERD Mermaid diagrams in the appendices. | Group 3 | Vo Duy Binh (PM) |
+| **V2.0** | 25/07/2026 | Bilingual English translation update and final review of all content sections. | Group 3 | Vo Duy Binh (PM) |
+| **V3.0** | 25/07/2026 | Restructured to match the HSU Software Development Plan (SDP) official template exactly. | Group 3 | Vo Duy Binh (PM) |
 
 ---
 
@@ -50,6 +50,7 @@
         *   [4.1.2. Staffing Plan](#412-staffing-plan)
         *   [4.1.3. Resource Acquisition Plan](#413-resource-acquisition-plan)
         *   [4.1.4. Staff Training Plan](#414-staff-training-plan)
+        *   [4.1.5. Kick-off Meeting Summary](#415-kick-off-meeting-summary)
     *   [4.2. Work Plan](#42-work-plan)
         *   [4.2.1. Work Activities](#421-work-activities)
         *   [4.2.2. Schedule Allocation](#422-schedule-allocation)
@@ -79,6 +80,10 @@
     *   [6.5. Problem Resolution Plan](#65-problem-resolution-plan)
     *   [6.6. Review Plan](#66-review-plan)
 *   [7. ADDITIONAL PLANS](#7-additional-plans)
+        *   [7.1. Website Promotion (Marketing Campaigns)](#71-website-promotion-marketing-campaigns)
+        *   [7.2. Website Roll-out (Go-live)](#72-website-roll-out-go-live)
+        *   [7.3. Benefits Realization Measurement](#73-benefits-realization-measurement)
+        *   [7.4. Business Continuity & Backup Strategy](#74-business-continuity--backup-strategy)
 *   [8. ANNEXES](#8-annexes)
 *   [9. INDEX](#9-index)
 
@@ -145,7 +150,7 @@ The financial indicators demonstrate that the new system delivers superior retur
     2.  Cloud staging resources are available for performance load testing.
 *   **Constraints:**
     1.  **Budget Limit:** Total project execution cost must not exceed **39,150,000 VND**.
-    2.  **Schedule Limit:** The project must be completed within 74 calendar days (52 working days), starting 01/08/2026 and ending 13/10/2026.
+    2.  **Schedule Limit:** The project must be completed within 74 calendar days (52 working days), starting 13/07/2026 and ending 24/09/2026.
     3.  **Resources:** The development team is limited to 4 internal members.
 
 ### 2.3. Project Deliverables
@@ -229,6 +234,21 @@ The team will acquire staging environment resources and software tool access:
 1.  **Backend Training:** Hong Bao Khang will complete a 2-day session on Redis cluster configuration.
 2.  **Operations Training:** Tran Ba Loi will conduct a 1-day training session for HSU registrar admins on slot overrides.
 
+#### 4.1.5. Kick-off Meeting Summary
+The Project Kick-off meeting was held on **13/07/2026** at Room 502, HSU Nguyen Van Trang campus.
+*   **Attendees:** Vo Duy Binh (PM), Hong Bao Khang (Backend), Tran Ba Loi (PM/QA), Nguyen Thanh Quang (Analyst), and PGS. TS. Nguyen Hoài Nam (Sponsor).
+*   **Key Decisions:**
+    1.  Approved the project schedule baseline (52 working days).
+    2.  Agreed on Git flow branching strategy (`main` for release, `dev` for integration).
+    3.  Decided to use vanilla CSS for UI development to keep file sizes under 50KB for rapid page loading.
+*   **Action Items:**
+
+| Action Item | Assigned To | Due Date | Status |
+| :--- | :---: | :---: | :---: |
+| Draft Team Charter and rules | Vo Duy Binh | 17/07/2026 | Completed |
+| Conduct student requirement survey | Nguyen Thanh Quang | 22/07/2026 | Completed |
+| Initialize Git repository and project structure | Hong Bao Khang | 20/07/2026 | Completed |
+
 ### 4.2. Work Plan
 
 #### 4.2.1. Work Activities
@@ -268,7 +288,7 @@ The project is divided into hierarchical tasks defined in the WBS Dictionary:
     *   **5.3 Lessons Learned:** Document project management findings.
 
 #### 4.2.2. Schedule Allocation
-The schedule baseline spans from **01/08/2026** to **13/10/2026** (74 calendar days / 52 working days). Task dependencies are managed to avoid scheduling clashes:
+The schedule baseline spans from **13/07/2026** to **24/09/2026** (74 calendar days / 52 working days). Task dependencies are managed to avoid scheduling clashes:
 *   WBS 1.0 (3 working days, Predecessor: None, Cost: 2,700,000 VND)
 *   WBS 2.0 (8 working days, Predecessor: 1.0, Cost: 7,200,000 VND)
 *   WBS 3.0 (30 working days, Predecessor: 2.0, Cost: 24,650,000 VND)
@@ -289,7 +309,7 @@ The team gathered requirements via:
 Requirement changes must be submitted as formal requests, and are not integrated without a CCB impact assessment.
 
 #### 4.3.2. Schedule Control Plan
-Schedule progress is reviewed bi-weekly against the baseline using Earned Value Management (EVM) metrics. At the mid-point check on **16/09/2026** (Status Date), the PM recorded the following indicators:
+Schedule progress is reviewed bi-weekly against the baseline using Earned Value Management (EVM) metrics. At the mid-point check on **28/08/2026** (Status Date), the PM recorded the following indicators:
 
 *   **BAC (Budget at Completion):** **39,150,000 VND**
 *   **PV (Planned Value):** **28,900,000 VND**
@@ -392,9 +412,9 @@ A private GitHub repository hosts the codebase.
 *   **Release Version Tagging:** Semantic versioning format `vX.Y.Z` (e.g., `v1.0.0`).
 
 #### 6.1.4. Project Baselines and Milestones
-*   **Planning Baseline:** Approved WBS and schedule baseline (13/08/2026).
-*   **UAT Release:** Functionally complete portal code ready for load testing (20/09/2026).
-*   **Final Release:** System handover release version (05/10/2026).
+*   **Planning Baseline:** Approved WBS and schedule baseline (25/07/2026).
+*   **UAT Release:** Functionally complete portal code ready for load testing (01/09/2026).
+*   **Final Release:** System handover release version (16/09/2026).
 
 #### 6.1.5. Change Request Processing and Approval
 1.  Submit Change Request Form to the PM.
@@ -440,6 +460,26 @@ The team conducts project review meetings at key milestones: Initiating, Plannin
 ---
 
 ## 7. ADDITIONAL PLANS
+
+### 7.1. Website Promotion (Marketing Campaigns)
+To prepare students for the new system, HSU Academic Affairs conducted a promotion campaign:
+*   **Email Campaign:** Sent registration guide emails to **10,000 students** one week before the registration portal opened.
+*   **Student Video Guide:** Published a 3-minute video guide on the HSU Student Forum demonstrating the Study Plan and 1-Click registration features.
+*   **Beta Test Program:** Recruited 50 student representatives to participate in a 2-day beta test, using their feedback to refine user messages.
+
+### 7.2. Website Roll-out (Go-live)
+The system was deployed on **11/09/2026** during off-peak hours:
+*   **Database Migration:** Transferred course schedules and student history records from the legacy database.
+*   **Blue-Green Deployment:** Ran parallel server environments (Blue/Green) on the cloud to ensure zero-downtime during the migration.
+*   **CDN & SSL Integration:** Activated a Content Delivery Network (CDN) to serve static assets and set up HTTPS encryption via Let's Encrypt.
+
+### 7.3. Benefits Realization Measurement
+Following the go-live phase, the team measured key portal metrics:
+*   **Registration Time:** Average student registration time dropped from **15 minutes** to **1.5 minutes** (a 90% reduction).
+*   **System Downtime:** The portal recorded **0% downtime** and no system crashes during the peak registration period.
+*   **Operational Cost Savings:** Automating prerequisite validation and slot override requests saved HSU an estimated **$40,000 / year** in manual processing costs.
+
+### 7.4. Business Continuity & Backup Strategy
 *   **Disaster Recovery Plan:** Database transaction logs are backed up hourly.
 *   **Backup Strategy:** Daily database snapshots are stored on AWS S3 with a 30-day retention policy.
 *   **Recovery Objective:** Target Recovery Point Objective (RPO) is 1 hour, and Recovery Time Objective (RTO) is under 2 hours.
@@ -582,7 +622,7 @@ The test metrics recorded across the simulated load phases are detailed below:
 3.  **Collaborative Support:** If a technical blocker persists for more than 4 hours, the developer must raise it with the PM to coordinate support.
 
 #### 2. Project Handover Protocol
-On **05/10/2026**, the project deliverables were transferred to the HSU Academic Affairs office at the Nguyen Van Trang campus:
+On **16/09/2026**, the project deliverables were transferred to the HSU Academic Affairs office at the Nguyen Van Trang campus:
 
 **Representative A (HSU Academic Affairs / Receiver):**
 *   **Name:** PGS. TS. Nguyen Hoài Nam
