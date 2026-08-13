@@ -328,6 +328,10 @@ The web portal features three key interactive views:
 2.  **Study Plan View:** Displays the pre-planned class list, total credits (maximum limit: 24 credits), schedule conflict indicators, and the **⚡ 1-Click Quick Register** button.
 3.  **Timetable View:** Displays a weekly visual calendar grid layout highlighting class times.
 
+> [!NOTE]
+> **[SCREENSHOT PLACEHOLDER: Study Plan View & Planned Courses]**
+> *Please capture a screenshot of your HSU web application showing courses added to the Study Plan, the credit accumulator, and any scheduling conflict alerts.*
+
 #### 3.3.3. Links and Resources
 To support HSU students during registration, the portal includes resources:
 *   An embedded link to the official HSU Academic Regulations and credit rules.
@@ -344,6 +348,10 @@ When a class section is full, students can submit an online request for capacity
 *   The student clicks on a full class, fills in their justification (e.g., "Graduating senior needing this core class"), and submits.
 *   The request appears on the Admin Dashboard for approval. If approved, the student is registered automatically.
 
+> [!NOTE]
+> **[SCREENSHOT PLACEHOLDER: Admin Dashboard - Override Requests Queue]**
+> *Please capture a screenshot of the Academic Registrar's Override Dashboard showing the queue of student capacity requests.*
+
 ---
 
 ### 3.4. Website Design (UI/UX)
@@ -352,11 +360,19 @@ The UI features a fully responsive glassmorphic layout that adapts seamlessly to
 2.  Open the **Study Plan** view.
 3.  Click **"⚡ 1-Click Register"** to complete registration.
 
+> [!NOTE]
+> **[SCREENSHOT PLACEHOLDER: Main Student Portal Dashboard Layout]**
+> *Please capture a screenshot of the premium dark-themed HSU Student Portal homepage, featuring the responsive navigation layout and profile card.*
+
 ---
 
 ### 3.5. Website Construction (Development & Database Setup)
 *   **Database Engine:** PostgreSQL database. Database triggers check for schedule conflicts and verify prerequisite courses at the database layer to ensure data integrity.
 *   **Backend Application:** Node.js/Express application. It utilizes Redis to cache available slots for open classes, preventing concurrent read requests from reaching the main database.
+
+> [!NOTE]
+> **[SCREENSHOT PLACEHOLDER: 1-Click Registration Success & Timetable Update]**
+> *Please capture a screenshot of the portal displaying a green success message after clicking 1-Click Register, showing the updated weekly timetable.*
 
 ---
 
@@ -370,6 +386,10 @@ The team executed a three-stage testing process:
     *   **Results:** Average API latency was **34ms** (well below the 100ms SLA target) with a **0.0% error rate**. CPU usage remained below **65%** and RAM below **50%**.
 *   **Security Testing:**
     *   Scanned the codebase for security vulnerabilities, resolving potential SQL Injection and Cross-Site Scripting (XSS) issues through query parameterization and data sanitization.
+
+> [!NOTE]
+> **[SCREENSHOT PLACEHOLDER: Host Monitoring Dashboard & Simulated Load Stats]**
+> *Please capture a screenshot of the system resources dashboard showing host CPU, RAM utilization, and response latency graphs during simulated load.*
 
 ---
 
