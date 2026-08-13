@@ -423,7 +423,30 @@ The project utilizes a tailored hybrid development process model. High-level pla
 *Note: Due to the high uncertainty of student registration behaviors and rapid UI/UX validation requirements, a pure Waterfall process is NOT used in this project. Phase milestones are tracked predictively, but task executions are handled iteratively.*
 
 #### 5.1.2. Unified Process
-*Note: The Unified Process (UP) is NOT used in this project. The team chose a lightweight Agile model to minimize documentation overhead and focus on direct deployment.*
+Although the team primarily utilizes Agile Sprint cycles for core software construction, we also align our milestones with the four phases of the Rational Unified Process (RUP): Inception, Elaboration, Construction, and Transition.
+
+##### 5.1.2.1. Roles
+The table below maps project team members to standard Unified Process roles and their key responsibilities:
+
+| People | Role | Responsibility |
+| :--- | :--- | :--- |
+| **Vo Duy Binh** | Project Manager / UI/UX | Oversees project schedule, manages budget baselines, and designs responsive portal mockups. |
+| **Hong Bao Khang** | System Analyst / Backend Developer | Defines API requirements, designs Node.js Express routes, and configures Redis cache slots. |
+| **Tran Ba Loi** | Test Manager / Database Developer | Sets up PostgreSQL schema, implements constraint triggers, and manages the testing environment. |
+| **Nguyen Thanh Quang** | Security Specialist / Tester | Executes security scans, conducts Jest unit testing, and manages Artillery load testing. |
+
+##### 5.1.2.2. Artifacts
+The matrix below details the software artifacts generated across the four RUP phases, including how they are utilized, reviewed, and toolsets employed:
+
+| Workflows | Artifacts | Incep | Elab | Const | Trans | How to Use | Review | Tools Used | Templates / Examples |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- | :--- | :--- | :--- |
+| **Requirements** | Use Case Model & SRS | **R** | **G** | **M** | — | Captures student course registration logic and constraints. | Reviewed during weekly planning syncs. | Draw.io, Markdown | Appendix A Use Case |
+| **Analysis & Design** | Database Schema (ERD) | — | **R** | **G** | **M** | Defines tables, foreign keys, and Redis caching maps. | Reviewed by Database Developer and PM. | Draw.io, pgAdmin | Appendix A ERD |
+| **Implementation** | Executable Code (APIs) | — | — | **R** | **G** | Deploys running web portal and API services on staging. | Audited via peer code reviews before PR merge. | VS Code, Express | dev branch release |
+| **Test** | Load Test Logs & Scripts | — | — | **R** | **G** | Validates average API response time under 100ms. | Validated by QA Engineer during UAT phase. | Artillery, Jest | Appendix B Load Logs |
+| **Project Mgmt** | Software Dev Plan (SDP) | **R** | **G** | **M** | **M** | Tracks WBS, Gantt schedule, cost, and EVM metrics. | Audited by PM and Sponsor at milestones. | MS Excel, Git | project_plan.md |
+
+*   *R: Responsible (Create), G: Grow (Elaborate), M: Maintain (Update), —: Not Active*
 
 #### 5.1.3. Agile Process
 The core software construction phase is organized into two 2-week Sprint cycles:
