@@ -403,34 +403,34 @@ Nhóm tổ chức buổi báo cáo thuyết trình đồ án cuối cùng trư�
 Sơ đồ Use Case dưới đây mô tả các chức năng tương tác cốt lõi của Sinh viên, Cán bộ Đào tạo và các tiến trình tự động hóa kiểm tra ràng buộc của hệ thống:
 
 ```mermaid
-leftToRightDirection
-actor Student as "Sinh viên"
-actor Admin as "Cán bộ Đào tạo"
-actor System as "Hệ thống (Redis/DB)"
-
-rectangle "Hệ thống Đăng ký Học phần HSU" {
-    usecase UC1 as "Đăng nhập xác thực"
-    usecase UC2 as "Xem danh sách môn mở"
-    usecase UC3 as "Thêm môn vào Kế hoạch học tập"
-    usecase UC4 as "Đăng ký nhanh 1-Click"
-    usecase UC5 as "Gửi yêu cầu tăng sĩ số"
-    usecase UC6 as "Duyệt yêu cầu tăng sĩ số"
-    usecase UC7 as "Xem báo cáo thống kê"
-    usecase UC8 as "Tự động kiểm tra trùng lịch & môn tiên quyết"
-}
-
-Student --> UC1
-Student --> UC2
-Student --> UC3
-Student --> UC4
-Student --> UC5
-
-Admin --> UC1
-Admin --> UC6
-Admin --> UC7
-
-UC4 .> UC8 : <<include>>
-UC8 --> System
+flowchart LR
+    Student["Sinh viên (Actor)"]
+    Admin["Cán bộ Đào tạo (Actor)"]
+    System["Hệ thống (Redis/DB)"]
+    
+    subgraph HSU ["Hệ thống Đăng ký Học phần HSU"]
+        UC1["Đăng nhập xác thực"]
+        UC2["Xem danh sách môn mở"]
+        UC3["Thêm môn vào Kế hoạch học tập"]
+        UC4["Đăng ký nhanh 1-Click"]
+        UC5["Gửi yêu cầu tăng sĩ số"]
+        UC6["Duyệt yêu cầu tăng sĩ số"]
+        UC7["Xem báo cáo thống kê"]
+        UC8["Tự động kiểm tra trùng lịch & môn tiên quyết"]
+    end
+    
+    Student --> UC1
+    Student --> UC2
+    Student --> UC3
+    Student --> UC4
+    Student --> UC5
+    
+    Admin --> UC1
+    Admin --> UC6
+    Admin --> UC7
+    
+    UC4 -.->|include| UC8
+    UC8 --> System
 ```
 
 #### 2. Sơ đồ Cơ sở dữ liệu quan hệ (ERD)
