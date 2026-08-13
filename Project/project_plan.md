@@ -638,12 +638,23 @@ The adequacy and accuracy of these documents are reviewed at each major mileston
 * **Validation:** Running UAT scenarios with student beta testers to verify system functionality.
 
 ### 6.5. Problem Resolution Plan
+The Problem Resolution Plan details the workflow to report, analyze, classify, and resolve defects or operational issues identified during testing or staging phases.
 
-Bugs identified during QA testing are logged on GitHub Issues and categorized by severity:
+#### 6.5.1. People, Tasks and Responsibilities
+*   **Incident Reporter:** Any tester (Nguyen Thanh Quang) or student representative logs defects on the GitHub Issues page.
+*   **Analysis and Triage:** PM/QA (Tran Ba Loi) reviews logged issues daily, assesses impact, verifies severity, and assigns the issue to the appropriate developer.
+*   **Resolution:** The assigned owner (e.g., Hong Bao Khang for backend bugs, Vo Duy Binh for UI bugs) fixes the bug in a separate hotfix branch, writes a test case, and submits a Pull Request for review.
+*   **Verification:** Tester validates the fix in the staging environment before closing the issue.
 
-* **Severity 1 (Critical):** Blocks registration or causes system crashes. Fix turnaround: 4 hours.
-* **Severity 2 (Major):** Affects system performance or features. Fix turnaround: 24 hours.
-* **Severity 3 (Minor):** Visual or UI/UX issues. Fix turnaround: 72 hours.
+#### 6.5.2. Tool and Techniques
+*   **GitHub Issues:** Serves as the central repository to track bugs, assign task owners, and document resolution histories.
+*   **Slack/Zalo Alerts:** Automated integrations send notifications to the dev group whenever a Severity 1 issue is opened.
+
+#### 6.5.3. Tracking
+Issues are prioritized and tracked based on SLA targets:
+*   **Severity 1 (Critical):** System crashes, database locks, or security issues. Fix turnaround: **4 hours**. Owned by Lead Backend.
+*   **Severity 2 (Major):** Prerequisite check failure, incorrect capacity limits, or timetable overlap errors. Fix turnaround: **24 hours**. Assigned to Developer.
+*   **Severity 3 (Minor):** Visual formatting issues, font size alignment, or browser rendering bugs. Fix turnaround: **72 hours**. Assigned to UI Designer.
 
 ### 6.6. Review Plan
 
